@@ -6,6 +6,15 @@
 
 #include "sys/stat.h"
 
+/**
+ * @brief Access to a PK font.
+ * 
+ * This is a class to allow acces to a PK font generated through the METAFONT
+ * and the gftopk application.
+ * 
+ * This class is to validate the comprehension of the author about the PK file
+ * format.
+ */
 class PKFont
 {
   public:
@@ -25,6 +34,7 @@ class PKFont
       bool      first_nibble_is_black;
       bool      is_a_bitmap;
       uint8_t * bitmap;
+      Glyph() { bitmap = nullptr; }
     };
     
 
@@ -32,6 +42,7 @@ class PKFont
     static constexpr uint8_t MAX_GLYPH_COUNT = 128;
 
     bool initialized;
+    bool memory_owner_is_the_instance;
 
     uint8_t  * memory;
     uint32_t   memory_length;
@@ -399,6 +410,76 @@ class PKFont
       return true;
     }
 
+    bool
+    retrieve_bitmap()
+    {
+      uint32_t  row_size = (glyph_info.bitmap_width + 7) >> 3;
+      uint32_t  size     = row_size * glyph_info.bitmap_height;
+
+      uint8_t * bitmap   = new uint8_t[size];
+
+      if (bitmap == nullptr) {
+        std::cerr << "Unable to allocation bitmap of size " << size << std::endl;
+        return false;
+      }
+      memset(bitmap, 0, size);
+      glyph_info.bitmap = bitmap;
+
+      if (glyph_info.is_a_bitmap) {
+        uint32_t row   = 0, col;
+        uint32_t count = 0;
+        uint8_t  data;
+
+        while (row < glyph_info.bitmap_height) {
+          col = 0;
+          while (col < glyph_info.bitmap_width) {
+            if (count == 0) {
+              if (!getnext8(data)) {
+                delete [] bitmap;
+                glyph_info.bitmap = nullptr;
+                return false;
+              }
+              count = 8;
+            }
+            bitmap[(row * row_size) + (col >> 3)] |= data & (0x80 >> (8 - count));
+            col++; count--;
+          }
+          row++;
+        }
+      }
+      else {
+        uint32_t row = 0, col;
+        uint32_t count = 0;
+
+        bool black = !glyph_info.first_nibble_is_black;
+
+        while (row < glyph_info.bitmap_height) {
+          col = 0;
+          while (col < glyph_info.bitmap_width) {
+            if (count == 0) {
+              if (!get_packed_number(count)) {
+                delete [] bitmap;
+                glyph_info.bitmap = nullptr;
+                return false;
+              }
+              black = !black;
+            }
+            if (black) bitmap[(row * row_size) + (col >> 3)] |= (0x80 >> (col & 0x07));
+            col++; count--;
+          }
+          row++;
+          // if (glyph_info.repeat_count != 0) std::cout << "Repeat count: " << glyph_info.repeat_count << std::endl;
+          while ((row < glyph_info.bitmap_height) && (glyph_info.repeat_count-- > 0)) {
+            bcopy(&bitmap[(row - 1) * row_size], &bitmap[(row) * row_size], row_size);
+            row++;
+          }
+          glyph_info.repeat_count = 0;
+        }
+      }
+
+      return true;
+    }
+
     int 
     load_glyph_table()
     {
@@ -469,6 +550,7 @@ class PKFont
         memory_length(size) { 
           memory_end = memory + memory_length;
           initialized = load_glyph_table();
+          memory_owner_is_the_instance = false;
         }
 
     PKFont(const std::string filename) {
@@ -478,6 +560,7 @@ class PKFont
         FILE * file = fopen(filename.c_str(), "rb");
         memory = new uint8_t[memory_length = file_stat.st_size];
         memory_end = (memory == nullptr) ? nullptr : memory + memory_length;
+        memory_owner_is_the_instance = true;
         if (memory != nullptr) {
           if (fread(memory, memory_length, 1, file) == 1) {
             initialized = load_glyph_table();
@@ -485,14 +568,28 @@ class PKFont
         }
         fclose(file);
       }
+      else {
+        std::cerr << "Unable to stat file %s!" << filename.c_str() << std::endl;
+      }
+    }
+
+   ~PKFont() {
+      if (memory_owner_is_the_instance && (memory != nullptr)) {
+        delete [] memory;
+        memory = nullptr;
+      }
     }
 
     bool
-    read_glyph(uint8_t glyph_code, Glyph * glyph, bool load_bitmap)
+    get_glyph(uint8_t glyph_code, Glyph & glyph, bool load_bitmap)
     {
       if ((glyph_code > MAX_GLYPH_COUNT) ||
-          (glyph_table[glyph_code] == nullptr) || 
-          (glyph == nullptr)) return false;
+          (glyph_table[glyph_code] == nullptr)) {
+        std::cerr << "No entry for glyph code " 
+                 << glyph_code << " 0x" << std::hex << glyph_code
+                 << std::endl;         
+        return false;
+      }
 
       uint8_t temp;
 
@@ -502,76 +599,14 @@ class PKFont
 
       uint8_t byte = *memory_ptr++;
 
-      if (!glyph_preamble(byte)) return false;
-
-      if (load_bitmap) {
-
-        uint32_t  row_size = (glyph_info.bitmap_width + 7) >> 3;
-        uint32_t  size     = row_size * glyph_info.bitmap_height;
-
-        uint8_t * bitmap   = new uint8_t[size];
-
-        if (bitmap == nullptr) {
-          std::cerr << "Unable to allocation bitmap of size " << size << std::endl;
-          return false;
-        }
-        memset(bitmap, 0, size);
-        glyph_info.bitmap = bitmap;
-
-        if (glyph_info.is_a_bitmap) {
-          uint32_t row   = 0, col;
-          uint32_t count = 0;
-          uint8_t  data;
-
-          while (row < glyph_info.bitmap_height) {
-            col = 0;
-            while (col < glyph_info.bitmap_width) {
-              if (count == 0) {
-                if (!getnext8(data)) {
-                  delete [] bitmap;
-                  glyph_info.bitmap = nullptr;
-                  return false;
-                }
-                count = 8;
-              }
-              bitmap[(row * row_size) + (col >> 3)] |= data & (0x80 >> (8 - count));
-              col++; count--;
-            }
-            row++;
-          }
-        }
-        else {
-          uint32_t row = 0, col;
-          uint32_t count = 0;
-
-          bool black = !glyph_info.first_nibble_is_black;
-
-          while (row < glyph_info.bitmap_height) {
-            col = 0;
-            while (col < glyph_info.bitmap_width) {
-              if (count == 0) {
-                if (!get_packed_number(count)) {
-                  delete [] bitmap;
-                  glyph_info.bitmap = nullptr;
-                  return false;
-                }
-                black = !black;
-              }
-              if (black) bitmap[(row * row_size) + (col >> 3)] |= (0x80 >> (col & 0x07));
-              col++; count--;
-            }
-            row++;
-            // if (glyph_info.repeat_count != 0) std::cout << "Repeat count: " << glyph_info.repeat_count << std::endl;
-            while ((row < glyph_info.bitmap_height) && (glyph_info.repeat_count-- > 0)) {
-              bcopy(&bitmap[(row - 1) * row_size], &bitmap[(row) * row_size], row_size);
-              row++;
-            }
-            glyph_info.repeat_count = 0;
-          }
-        }
+      if (!glyph_preamble(byte)) {
+        std::cerr << "Unable to retrieve glyph preamble." << std::endl;
+        return false;
       }
 
-      bcopy(&glyph_info, glyph, sizeof(Glyph));
+      if (load_bitmap && retrieve_bitmap()) {}
+
+      bcopy(&glyph_info, &glyph, sizeof(Glyph));
       return true;
     }
 

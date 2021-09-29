@@ -1,8 +1,8 @@
-#! /usr/bin/bash
+#! /bin/bash
 
 
 FONTS=(cmr8:0 cmr9:0 cmr10:0 cmr12:0 cmr17:0)
-DEVICES=(inkplate6:150 inkplate10:166 inkplate6PLUS:212)
+DEVICES=(inkplate6:166 inkplate10:150 inkplate6PLUS:212)
 
 for device in ${DEVICES[@]}; do
   dev_name=$(echo $device | cut -d ":" -f 1)
