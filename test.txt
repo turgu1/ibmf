@@ -1,0 +1,52 @@
+
+Inkplate10, 8pt, 150dpi
++------------+
+|     XX     |
+|     XX     |
+|     XX     |
+|    X XX    |
+|    X XX    |
+|    X XX    |
+|   X   XX   |
+|   XXXXXX   |
+|   X   XX   |
+|  X     XX  |
+|XXXX   XXXXX|
++------------+
+
+Inkplate6, 8pt, 166dpi
++------------+
+|     XX     |
+|     XX     |
+|     XX     |
+|    X XX    |
+|    X XX    |
+|    X XX    |
+|   X   XX   |
+|   X   XX   |
+|   XXXXXX   |
+|  X     XX  |
+|  X     XX  |
+| XX     XXX |
+|XXXX   XXXXX|
++------------+
+
+Inkplate6plus, 8pt, 212dpi
++----------------+
+|       XX       |
+|       XX       |
+|       XX       |
+|      XXXX      |
+|      XXXX      |
+|     XXXXXX     |
+|     X  XXX     |
+|     X  XXX     |
+|    X    XXX    |
+|    X    XXX    |
+|    X    XXX    |
+|   XXXXXXXXXX   |
+|   X      XXX   |
+|   X      XXX   |
+|  XX      XXXX  |
+|XXXXX    XXXXXXX|
++----------------+
