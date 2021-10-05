@@ -1,0 +1,23 @@
+3f 3 9e 1c 78 41 c0 e 7 f0 f3 8e 1c e0 e7 7 78 7b e7 d3 e7 0 
+Glyph Char Code: 61
+  Metrics: [13, 13] 22
+  Position: [-1, 12]
+  Escapement: [15, 0]
+  Bitmap available: Yes
+  Run-length encoding: No
++-------------+
+| XXXXXX      |
+| XX  XXX     |
+| X   XXX     |
+|      X      |
+|             |
+| XXXX        |
+|   XXXX      |
+|     XXX     |
+|      XX     |
+|      XX    X|
+| X    XX    X|
+| XX  XXX    X|
+|  XXXXX      |
++-------------+
+

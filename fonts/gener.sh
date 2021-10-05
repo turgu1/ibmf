@@ -14,7 +14,6 @@ for device in ${DEVICES[@]}; do
     gftopk "${font_name}.${dev_dpi}gf"
     rm "${font_name}.${dev_dpi}gf"
     rm "${font_name}.log"
-    rm "${font_name}.tfm"
   done
 done
 
