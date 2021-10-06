@@ -376,5 +376,35 @@ class TFM
         std::cout << floor(fixed32_to_double(depths[font_info_entries[i].depth_index], 20) * factor) << ", ";
       }
       std::cout << std::endl << "};" << std::endl;
+
+      std::cout << std::endl << "LigKernStep lig_kerns[] = {" << std::endl;
+      for (int i = 0; i < sizes.nl; i++) {
+        std::cout << "  { "
+                  << ".next_char_code = 0x" << std::hex << +lig_kern_steps[i].next_char_code << ", ";
+        if (lig_kern_steps[i].tag == 1) {
+          std::cout << ".u = { .displacement = " 
+                    << std::dec 
+                    << (round(fixed32_to_double(kerns[lig_kern_steps[i].char_code_or_index], 20) * factor))
+                    << " }, ";
+        }
+        else {
+          std::cout << ".u = { .char_code = 0x" 
+                    << std::hex 
+                    << +lig_kern_steps[i].char_code_or_index 
+                    << " }, ";
+        }
+        std::cout << ".stop = "         << std::dec << (lig_kern_steps[i].stop ? '1' : '0') << ", "
+                  << ".tag = "          << std::dec << +lig_kern_steps[i].tag << " }," << std::endl;
+      }
+      std::cout << "};" << std::endl;
+
+      std::cout << std::endl << "int16_t lig_kern_indexes[] = {";
+      for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
+        if ((i % 20) == 0) std::cout << std::endl << "  ";
+        std::cout << ((font_info_entries[i].tag_field == 1) ? +font_info_entries[i].remainder : -1)
+                  << ", ";
+      }
+      std::cout << std::endl << "};" << std::endl;
+
     }
 };
