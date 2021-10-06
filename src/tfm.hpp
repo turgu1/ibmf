@@ -48,7 +48,8 @@ class TFM
       uint16_t np; // Number of font parameters 
     } sizes;
 
-    typedef uint32_t FIX;
+    typedef int32_t FIX;
+    typedef int16_t FIX16;
     
     union Other {
       uint32_t data;
@@ -144,6 +145,16 @@ class TFM
     }
 
     bool
+    getnextfix(FIX & val) {
+      if ((memory_ptr + 3) >= memory_end) return false;
+      val  = *memory_ptr++ << 24;
+      val |= *memory_ptr++ << 16;
+      val |= *memory_ptr++ << 8;
+      val |= *memory_ptr++;
+      return true;
+    }
+
+    bool
     getnextstr(char * str, uint8_t length) {
       uint8_t l;
       if (!getnext8(l)) return false;
@@ -178,7 +189,7 @@ class TFM
         result =
           getnext32(header.checksum) && 
             ((sizes.lh <=1) || (
-             getnext32(header.design_size) &&
+             getnextfix(header.design_size) &&
              ((sizes.lh <= 2) ||
                getnextstr(header.char_coding_scheme,   sizeof(header.char_coding_scheme)) &&
                ((sizes.lh <= 12) ||
@@ -197,22 +208,22 @@ class TFM
 
           if ((widths = new FIX[sizes.nw]) == nullptr) return false;
           for (int i = 0; i < sizes.nw; i++) {
-            if (!getnext32(widths[i])) return false;
+            if (!getnextfix(widths[i])) return false;
           }
 
           if ((heights = new FIX[sizes.nh]) == nullptr) return false;
           for (int i = 0; i < sizes.nh; i++) {
-            if (!getnext32(heights[i])) return false;
+            if (!getnextfix(heights[i])) return false;
           }
 
           if ((depths = new FIX[sizes.nd]) == nullptr) return false;
           for (int i = 0; i < sizes.nd; i++) {
-            if (!getnext32(depths[i])) return false;
+            if (!getnextfix(depths[i])) return false;
           }
 
           if ((char_ics = new FIX[sizes.ni]) == nullptr) return false;
           for (int i = 0; i < sizes.ni; i++) {
-            if (!getnext32(char_ics[i])) return false;
+            if (!getnextfix(char_ics[i])) return false;
           }
 
           if ((lig_kern_steps = new LigKernStep[sizes.nl]) == nullptr) return false;
@@ -227,7 +238,7 @@ class TFM
 
           if ((kerns = new FIX[sizes.nk]) == nullptr) return false;
           for (int i = 0; i < sizes.nk; i++) {
-            if (!getnext32(kerns[i])) return false;
+            if (!getnextfix(kerns[i])) return false;
           }
 
           for (int i = 0; i < sizes.ne; i++) {
@@ -237,7 +248,7 @@ class TFM
 
           if ((params = new FIX[sizes.np]) == nullptr) return false;
           for (int i = 0; i < sizes.np; i++) {
-            if (!getnext32(params[i])) return false;
+            if (!getnextfix(params[i])) return false;
           }
         }
       }
@@ -286,14 +297,31 @@ class TFM
     }
 
     double 
-    fixed32_to_double(int32_t input, uint8_t fractional_bits) {
+    to_double(FIX input, uint8_t fractional_bits) {
       return ((double)input / (double)(1 << fractional_bits));
     }
 
+    double 
+    to_double(FIX16 input, uint8_t fractional_bits) {
+      return ((double)input / (double)(1 << fractional_bits));
+    }
+
+    FIX16
+    to_fix16(double val, uint8_t fractional_bits) {
+      return trunc(val * (1 << fractional_bits));
+    }
+
     std::string
-    fix_to_string(FIX val) {
+    to_string(FIX val) {
       std::stringstream ss; 
-      ss << fixed32_to_double((int32_t)val, 20);
+      ss << to_double(val, 20);
+      return ss.str();
+    }
+
+    std::string
+    to_string(FIX16 val) {
+      std::stringstream ss; 
+      ss << to_double(val, 6);
       return ss.str();
     }
 
@@ -315,26 +343,26 @@ class TFM
                                                                                    << std::endl;
       std::cout << "Header:" << std::endl 
                 << "              Checksum: " << header.checksum                   << std::endl
-                << "           Design Size: " << fix_to_string(header.design_size) << std::endl
+                << "           Design Size: " << to_string(header.design_size) << std::endl
                 << "    Char Coding Scheme: " << header.char_coding_scheme         << std::endl
                 << "  Parc Font Identifier: " << header.parc_font_identifier       << std::endl<< std::endl;
 
-      double factor = fixed32_to_double(header.design_size, 20) * font_dpi / 72.27;
+      double factor = to_double(header.design_size, 20) * font_dpi / 72.27;
 
       for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
         std::cout << "Char Code: " << (i + sizes.bc) 
                   << " [" 
-                  << fix_to_string(widths[font_info_entries[i].width_index])
+                  << to_string(widths[font_info_entries[i].width_index])
                   << ", "
-                  << fix_to_string(heights[font_info_entries[i].height_index])
+                  << to_string(heights[font_info_entries[i].height_index])
                   << "] "
-                  << fix_to_string(depths[font_info_entries[i].depth_index])
+                  << to_string(depths[font_info_entries[i].depth_index])
                   << " --> ["
-                  << fixed32_to_double(widths[font_info_entries[i].width_index], 20) * factor
+                  << to_double(widths[font_info_entries[i].width_index], 20) * factor
                   << ", "
-                  << fixed32_to_double(heights[font_info_entries[i].height_index], 20) * factor
+                  << to_double(heights[font_info_entries[i].height_index], 20) * factor
                   << "] "
-                  << fixed32_to_double(depths[font_info_entries[i].depth_index], 20) * factor
+                  << to_double(depths[font_info_entries[i].depth_index], 20) * factor
                   << " " << ((font_info_entries[i].tag_field == 1) ? +font_info_entries[i].remainder : -1)
                   << std::endl;
       }
@@ -353,38 +381,40 @@ class TFM
       std::cout << std::endl << "Kerns:" << std::endl;
       for (int i = 0; i < sizes.nk; i++) {
         std::cout << "  [" << i << "]: " 
-                  << fixed32_to_double(kerns[i], 20) 
-                  << " (" << (fixed32_to_double(kerns[i], 20) * factor) << ")"
+                  << to_double(kerns[i], 20) 
+                  << " (" << (to_double(kerns[i], 20) * factor) << ")"
                   << std::endl; 
       }
 
       std::cout << std::endl << "Params:" << std::endl;
-      std::cout << "  Slant: "     << fixed32_to_double(params[0], 20) << " (" << (fixed32_to_double(params[0], 20) * factor) << ")" << std::endl
-                << "  Space: "     << fixed32_to_double(params[1], 20) << " (" << (fixed32_to_double(params[1], 20) * factor) << ")" << std::endl
-                << "  SpStretch: " << fixed32_to_double(params[2], 20) << " (" << (fixed32_to_double(params[2], 20) * factor) << ")" << std::endl
-                << "  SpShrink: "  << fixed32_to_double(params[3], 20) << " (" << (fixed32_to_double(params[3], 20) * factor) << ")" << std::endl
-                << "  xHeight: "   << fixed32_to_double(params[4], 20) << " (" << (fixed32_to_double(params[4], 20) * factor) << ")" << std::endl
-                << "  Quad: "      << fixed32_to_double(params[5], 20) << " (" << (fixed32_to_double(params[5], 20) * factor) << ")" << std::endl
-                << "  Extra: "     << fixed32_to_double(params[6], 20) << " (" << (fixed32_to_double(params[6], 20) * factor) << ")" << std::endl;
+      std::cout << "  Slant: "     << to_double(params[0], 20) << " (" << to_fix16(to_double(params[0], 20) * factor, 6) << ")" << std::endl
+                << "  Space: "     << to_double(params[1], 20) << " (" << to_fix16(to_double(params[1], 20) * factor, 6) << ")" << std::endl
+                << "  SpStretch: " << to_double(params[2], 20) << " (" << to_fix16(to_double(params[2], 20) * factor, 6) << ")" << std::endl
+                << "  SpShrink: "  << to_double(params[3], 20) << " (" << to_fix16(to_double(params[3], 20) * factor, 6) << ")" << std::endl
+                << "  xHeight: "   << to_double(params[4], 20) << " (" << to_fix16(to_double(params[4], 20) * factor, 6) << ")" << std::endl
+                << "  Quad: "      << to_double(params[5], 20) << " (" << to_fix16(to_double(params[5], 20) * factor, 6) << ")" << std::endl
+                << "  Extra: "     << to_double(params[6], 20) << " (" << to_fix16(to_double(params[6], 20) * factor, 6) << ")" << std::endl;
 
-      std::cout << std::endl << "advances[] = {" << std::endl << "  ";
+      std::cout << std::endl << "static constexpr FIX16 advances[] = {";
       for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
-        std::cout << floor(fixed32_to_double(widths[font_info_entries[i].width_index], 20) * factor) << ", ";
+        if ((i % 10) == 0) std::cout << std::endl << "  /* " << i << " */  ";
+        std::cout << to_fix16(to_double(widths[font_info_entries[i].width_index], 20) * factor, 6) << ", ";
       }
-      std::cout << std::endl << "};" << std::endl << "depths[] = {" << std::endl << "  ";
+      std::cout << std::endl << "};" << std::endl << "static constexpr FIX16 depths[] = {";
       for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
-        std::cout << floor(fixed32_to_double(depths[font_info_entries[i].depth_index], 20) * factor) << ", ";
+        if ((i % 10) == 0) std::cout << std::endl << "  /* " << i << " */  ";
+        std::cout << to_fix16(to_double(depths[font_info_entries[i].depth_index], 20) * factor, 6) << ", ";
       }
       std::cout << std::endl << "};" << std::endl;
 
-      std::cout << std::endl << "LigKernStep lig_kerns[] = {" << std::endl;
+      std::cout << std::endl << "static constexpr LigKernStep lig_kerns[] = {" << std::endl;
       for (int i = 0; i < sizes.nl; i++) {
-        std::cout << "  { "
+        std::cout << "/* " << i << " */  { "
                   << ".next_char_code = 0x" << std::hex << +lig_kern_steps[i].next_char_code << ", ";
         if (lig_kern_steps[i].tag == 1) {
-          std::cout << ".u = { .displacement = " 
+          std::cout << ".u = { .kern_idx = " 
                     << std::dec 
-                    << (round(fixed32_to_double(kerns[lig_kern_steps[i].char_code_or_index], 20) * factor))
+                    << +lig_kern_steps[i].char_code_or_index
                     << " }, ";
         }
         else {
@@ -396,11 +426,19 @@ class TFM
         std::cout << ".stop = "         << std::dec << (lig_kern_steps[i].stop ? '1' : '0') << ", "
                   << ".tag = "          << std::dec << +lig_kern_steps[i].tag << " }," << std::endl;
       }
-      std::cout << "};" << std::endl;
+      std::cout << "};"<< std::endl;
 
-      std::cout << std::endl << "int16_t lig_kern_indexes[] = {";
+      std::cout << std::endl << "static constexpr FIX16 kerns[] = {";
+      for (int i = 0; i < sizes.nk; i++) {
+        if ((i % 10) == 0) std::cout << std::endl << "  /* " << i << " */  ";
+        std::cout << to_fix16(to_double(kerns[i], 20) * factor, 6)
+                  << ", ";
+      };
+      std::cout << std::endl << "};" << std::endl;
+
+      std::cout << std::endl << "static constexpr int16_t lig_kern_indexes[] = {";
       for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
-        if ((i % 20) == 0) std::cout << std::endl << "  ";
+        if ((i % 20) == 0) std::cout << std::endl << "  /* " << i << " */  ";
         std::cout << ((font_info_entries[i].tag_field == 1) ? +font_info_entries[i].remainder : -1)
                   << ", ";
       }
