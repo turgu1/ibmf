@@ -41,7 +41,7 @@ class IBMFGener {
       struct GlyphMetric {
         unsigned int dyn_f:4;
         unsigned int first_is_black:1;
-        unsigned int preamble_kind:3;
+        unsigned int filler:3;
       };
 
       struct LigKernStep {
@@ -116,7 +116,7 @@ class IBMFGener {
           glyph.advance            = tfm.to_fix16(tfm.to_double(tfm.get_advance(i), 20) * factor, 6);
           glyph.glyph_metric.dyn_f          = pk_glyph.dyn_f;
           glyph.glyph_metric.first_is_black = pk_glyph.first_nibble_is_black ? 1 : 0;
-          glyph.glyph_metric.preamble_kind  = pk_glyph.preamble_kind;
+          glyph.glyph_metric.filler         = 0;
           glyph.lig_kern_pgm_index          = tfm.get_lig_kern_pgm_index(i);
 
           fwrite(&glyph, sizeof(Glyph), 1, file);

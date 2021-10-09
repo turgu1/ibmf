@@ -2,17 +2,22 @@
 #include "tfm.hpp"
 #include "ibmf_gener.hpp"
 
-constexpr int TEX_FONT_DIR = 1;
-constexpr int IBMF_PREFIX  = 2;
-constexpr int DPI          = 3;
-constexpr int TEX_PREFIX   = 4;
-constexpr int FIRST_POINT  = 5;
+constexpr uint8_t IBMF_VERSION = 1;
+
+constexpr int TEX_FONT_DIR  = 1;
+constexpr int IBMF_PREFIX   = 2;
+constexpr int DPI           = 3;
+constexpr int CHAR_SET      = 4;
+constexpr int TEX_PREFIX    = 5;
+constexpr int FIRST_POINT   = 6;
+
+constexpr int MIN_ARG_COUNT = 7;
 
 int 
 main(int argc, char **argv)
 {
-  if (argc < 6) {
-    std::cerr << "ERROR! Usage: " << argv[0] << "<tex_fonts_dir> <IBMF_font_prefix> <dpi> <tex_font_prefix> <point_size>..." << std::endl;
+  if (argc < MIN_ARG_COUNT) {
+    std::cerr << "ERROR! Usage: " << argv[0] << "<tex_fonts_dir> <IBMF_font_prefix> <dpi> <char_Set> <tex_font_prefix> <point_size>..." << std::endl;
     return 1;
   }
 
@@ -24,14 +29,24 @@ main(int argc, char **argv)
 
     std::cout << "Creating file " << out_filename << " ..." << std::endl;
 
-    uint16_t offset = 0;
-    uint8_t  count  = argc - FIRST_POINT;
+    uint16_t offset   = 0;
+    uint8_t  count    = argc - FIRST_POINT;
 
-    fwrite("IBMF", 4, 1, file);
-    fwrite(&count, 2, 1, file);
+    #pragma pack(push, 1)
+    struct {
+      uint8_t   version:5;
+      uint8_t  char_set:3;
+    } bits;
+    #pragma pack(pop)
+
+    bits.version  = IBMF_VERSION;
+    bits.char_set = atoi(argv[CHAR_SET]);
+
+    fwrite("IBMF",    4, 1, file);
+    fwrite(&count,    1, 1, file);
+    fwrite(&bits,     1, 1, file);
 
     for (int i = FIRST_POINT; i < argc; i++) {
-      uint32_t size = atoi(argv[i]);
       fwrite(&offset, 2, 1, file);
     }
 
@@ -44,7 +59,7 @@ main(int argc, char **argv)
     if (count & 1) fwrite(&filler, 1, 1, file);
 
     for (int i = FIRST_POINT; i < argc; i++) {
-      if (ftell(file) > 65536) {
+      if (ftell(file) >= 65536) {
         std::cerr << "ERROR! Output file is too large (max 64K). Aborting!" << std::endl;
         fclose(file);
         remove(out_filename.c_str());

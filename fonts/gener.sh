@@ -2,16 +2,16 @@
 
 
 FONTS=(
-  cmr:ComputerModern-Regular 
-  cmbx:ComputerModern-Bold 
-  cmti:ComputerModern-Italic 
-  cmbxti:ComputerModern-Bold-Italic
-  cmss:ComputerModernSans-Regular 
-  cmssbx:ComputerModernSans-Bold 
-  cmssi:ComputerModernSans-Italic 
-  cmssxi:ComputerModernSans-Bold-Italic
-  cmtt:ComputerModernTypewriter-Regular 
-  cmitt:ComputerModernTypewriter-Italic
+  cmr:ComputerModern-Regular:0
+  cmbx:ComputerModern-Bold:0
+  cmti:ComputerModern-Italic:0 
+  cmbxti:ComputerModern-BoldItalic:0
+  cmss:ComputerModernSans-Regular:0
+  cmssbx:ComputerModernSans-Bold:0
+  cmssi:ComputerModernSans-Italic:0
+  cmssxi:ComputerModernSans-BoldItalic:0
+  cmtt:ComputerModernTypewriter-Regular:1
+  cmitt:ComputerModernTypewriter-Italic:1
 )
 
 SIZES=(8 9 10 12 14 17 24)
@@ -28,6 +28,7 @@ for device in ${DEVICES[@]}; do
 
     font_name=$(echo $font | cut -d ":" -f 1)
     ibmf_name=$(echo $font | cut -d ":" -f 2)
+    char_set=$(echo $font | cut -d ":" -f 3)
 
     for size in ${SIZES[@]}; do
       mf '\smode="'${dev_name}'"; mag=magstep '${mag_step}'; input 'mf/${font_name}${size}''
@@ -36,7 +37,7 @@ for device in ${DEVICES[@]}; do
       rm "${font_name}${size}.log"
     done
 
-    ../.pio/build/generator_release/program "." ${ibmf_name} ${dev_dpi} ${font_name} ${SIZES[@]}
+    ../.pio/build/generator/program "." ${ibmf_name} ${dev_dpi} ${char_set} ${font_name} ${SIZES[@]}
     rm *pk
     rm *tfm
   done
