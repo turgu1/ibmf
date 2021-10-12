@@ -227,9 +227,6 @@ class PKFont
       if (!getnext8(val8)) return false;
       glyph_info.char_code = val8;
 
-      if (val8 == 0x18) {
-        std::cout << "Found_it" << std::endl;
-      }
       if (!getnext24(val24)) return false;
       glyph_info.tfm_width = val24;
 

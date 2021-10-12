@@ -95,7 +95,7 @@ class IBMFGener {
       header.glyph_count        = tfm.get_glyph_count();
       header.lig_kern_pgm_count = tfm.get_lig_kern_pgm_count();
       header.kern_count         = tfm.get_kern_count();
-      header.slant_correction   = tfm.to_fix16(tfm.to_double(tfm.get_slant_correction(), 20) * factor, 6);
+      header.slant_correction   = tfm.to_fix16(tfm.to_double(tfm.get_slant_correction(), 20), 6);
       header.descender_height   = tfm.to_fix16(tfm.to_double(tfm.get_max_depth(), 20) * factor, 6) >> 6;
 
       fwrite(&header, sizeof(Header), 1, file);
