@@ -2,11 +2,13 @@
 
 (Updated 2021.10.12)
 
+[Still some issue with accents...]
+
 This is a tool to generate IBMF fonts.
 
 IBMF fonts are created from the need of having better-looking fonts to use on low-resolution monochrome displays (i.e. displays with a DPI lower than 250). This is an opiniatre font format that is based on the METAFONT available toolkit that generates bitmap fonts. The format integrates multiple font point sizes in the same file. It is loosely based on the PK font format that uses run-length encoding of bitmaps to compress the information in a small characters bundle. The IBMF font format is described in the file `doc/IBMF Format.md`.
 
-A C++ class that allows for the extraction of characters will be provided, allowing the retrieval of glyphs from the various point bitmaps size available in the font.
+A C++ class (`ibmf_font.hpp`) that allows for the extraction of characters is provided, allowing the retrieval of glyphs from the various point bitmaps size available in the font. Please look at the `latin1_example` program on how to use it.
 
 The `fonts\gener.sh` is used to generate IBMF fonts by:
 
