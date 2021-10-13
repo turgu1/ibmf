@@ -170,12 +170,13 @@ class IBMFFont
 
       struct Glyph {
         uint8_t     char_code;
+        uint8_t     point_size;
         uint8_t     bitmap_width;
         uint8_t     bitmap_height;
         int8_t      horizontal_offset;
         int8_t      vertical_offset;
+        int8_t      advance;
         uint16_t    bitmap_size;
-        FIX16       advance;
         uint8_t     lig_kern_pgm_index; // = 255 if none
         uint8_t     pitch;
         uint8_t   * bitmap;
@@ -230,6 +231,7 @@ class IBMFFont
     uint8_t     * sizes;
 
     uint8_t     * current_font;
+    uint8_t       current_point_size;
 
     Header      * header;
     GlyphInfo   * glyph_info_table[MAX_GLYPH_COUNT];
@@ -637,7 +639,9 @@ class IBMFFont
       memory_owner_is_the_instance = false;
     }
 
-    IBMFFont(const std::string filename, PixelResolution pixel_resolution) {
+    IBMFFont(const std::string filename, PixelResolution pixel_resolution)
+        : pixel_resolution(pixel_resolution) {
+
       struct stat file_stat;
 
       initialized = false;
@@ -731,6 +735,7 @@ class IBMFFont
       if (load_bitmap) retrieve_bitmap(glyph_info, glyph.bitmap, dim, offsets);
 
       glyph.char_code          = glyph_code;
+      glyph.point_size         = current_point_size;
       glyph.bitmap_width       = dim.width;
       glyph.bitmap_height      = dim.height;
       glyph.horizontal_offset  = - glyph_info->horizontal_offset;
@@ -752,20 +757,26 @@ class IBMFFont
       while ((i < preamble->size_count) && (sizes[i] <= size)) i++;
       if (i > 0) i--;
       current_font = memory + preamble->font_offsets[i];
+      current_point_size = sizes[i];
       return load_data();
     }
 
     bool
     show_glyph(const Glyph & glyph)
     {
-      std::cout << "Glyph Char Code: " << std::hex << glyph.char_code << std::dec << std::endl
+      std::cout << "Glyph Char Code: " << std::hex << +glyph.char_code << std::dec << std::endl
+                << "  Point Size: " << +glyph.point_size << std::endl
                 << "  Metrics: [" << std::dec
                 <<      +glyph.bitmap_width  << ", " 
-                <<      +glyph.bitmap_height << "] " << std::endl
+                <<      +glyph.bitmap_height << "] "  << std::endl
                 << "  Position: ["
                 <<      +glyph.horizontal_offset << ", "
                 <<      +glyph.vertical_offset << ']' << std::endl
-                 << "  Bitmap available: " 
+                << "  Advance: " 
+                <<      +glyph.advance                << std::endl
+                << "  Pitch: "
+                <<      +glyph.pitch                  << std::endl
+                << "  Bitmap available: " 
                 <<      ((glyph.bitmap == nullptr) ? "No" : "Yes") << std::endl;
 
       if (glyph.bitmap == nullptr) return true;

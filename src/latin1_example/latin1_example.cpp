@@ -59,9 +59,32 @@ main(int argc, char **argv)
   else {
     IBMFFont::Glyph glyph;
 
+    font.set_font_size(8);
+    font.get_glyph(to_unicode(argv[1]), glyph, true);
+    font.show_glyph(glyph);
+
+    font.set_font_size(9);
+    font.get_glyph(to_unicode(argv[1]), glyph, true);
+    font.show_glyph(glyph);
+
     font.set_font_size(10);
     font.get_glyph(to_unicode(argv[1]), glyph, true);
+    font.show_glyph(glyph);
 
+    font.set_font_size(12);
+    font.get_glyph(to_unicode(argv[1]), glyph, true);
+    font.show_glyph(glyph);
+
+    font.set_font_size(14);
+    font.get_glyph(to_unicode(argv[1]), glyph, true);
+    font.show_glyph(glyph);
+
+    font.set_font_size(17);
+    font.get_glyph(to_unicode(argv[1]), glyph, true);
+    font.show_glyph(glyph);
+
+    font.set_font_size(24);
+    font.get_glyph(to_unicode(argv[1]), glyph, true);
     font.show_glyph(glyph);
   }
 }

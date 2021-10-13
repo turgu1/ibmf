@@ -24,7 +24,7 @@ The targetted fonts suites are:
   - Computer Modern Sans-Serif
   - Typewriter
 
-Each IBMF font contains 8, 9, 10, 12, 14, and 17 points bitmaps.
+Each IBMF font contains 8, 9, 10, 12, 14, 17, and 24 points bitmaps.
 Each Computer Modern font suit produces Regular, Bold, Italic, and Bold-Italic fonts. Only Regular and Italic are available for the Typewriter fonts.
 
 
