@@ -377,12 +377,12 @@ class IBMFFont
     // end;
 
     bool
-    get_packed_number(uint32_t & val)
+    get_packed_number(uint32_t & val, GlyphInfo & glyph)
     {
       uint8_t  nyb;
       uint32_t i, j, k;
 
-      uint8_t dyn_f = glyph_info->glyph_metric.dyn_f;
+      uint8_t dyn_f = glyph.glyph_metric.dyn_f;
 
       while (true) {
         if (!get_nybble(nyb)) return false; i = nyb;
@@ -414,7 +414,7 @@ class IBMFFont
           //   return false;
           // }
           if (i == PK_REPEAT_COUNT) {
-            if (!get_packed_number(repeat_count)) return false;
+            if (!get_packed_number(repeat_count, glyph)) return false;
           }
           else { // i == PK_REPEAT_ONCE
             repeat_count = 1;
@@ -474,7 +474,7 @@ class IBMFFont
                  col < glyph_info->bitmap_width + offsets.x; 
                  col++) {
               if (count == 0) {
-                if (!get_packed_number(count)) {
+                if (!get_packed_number(count, *glyph_info)) {
                   return false;
                 }
                 black = !black;
@@ -491,9 +491,9 @@ class IBMFFont
 
             // if (repeat_count != 0) std::cout << "Repeat count: " << repeat_count << std::endl;
             while ((row < glyph_info->bitmap_height) && (repeat_count-- > 0)) {
-              bcopy(rowp + offsets.x, 
-                           rowp + row_size + offsets.x, 
-                           (glyph_info->bitmap_width + 7) >> 3);
+              bcopy(rowp, 
+                    rowp + row_size, 
+                    row_size);
               row++;
               rowp += row_size;
             }
@@ -549,7 +549,7 @@ class IBMFFont
                  col < (glyph_info->bitmap_width + offsets.x); 
                  col++) {
               if (count == 0) {
-                if (!get_packed_number(count)) {
+                if (!get_packed_number(count, *glyph_info)) {
                   return false;
                 }
                 black = !black;
@@ -566,9 +566,9 @@ class IBMFFont
 
             // if (repeat_count != 0) std::cout << "Repeat count: " << repeat_count << std::endl;
             while ((row < dim.height) && (repeat_count-- > 0)) {
-              bcopy(rowp + offsets.x, 
-                    rowp + row_size + offsets.x, 
-                    (glyph_info->bitmap_width + 7) >> 3);
+              bcopy(rowp, 
+                    rowp + row_size, 
+                    row_size);
               row++;
               rowp += row_size;
             }
@@ -680,11 +680,12 @@ class IBMFFont
     inline uint8_t                         get_char_set() { return preamble->bits.char_set;            }
 
     bool
-    get_glyph(uint8_t       char_code, 
-              Glyph       & glyph, 
-              bool          load_bitmap)
+    get_glyph(uint32_t  char_code,  // unicode character
+              Glyph   & glyph, 
+              bool      load_bitmap,
+              bool      no_trans = false)
     {
-      uint32_t glyph_code = translate(char_code);
+      uint32_t glyph_code = no_trans ? char_code : translate(char_code);
 
       uint8_t     accent      = (glyph_code & 0x0000FF00) >> 8;
       GlyphInfo * accent_info = accent ? glyph_info_table[accent] : nullptr;
@@ -743,7 +744,7 @@ class IBMFFont
       glyph.advance            =   glyph_info->advance >> 6;
       glyph.pitch              =  (pixel_resolution == PixelResolution::ONE_BIT) ?
                                    (dim.width + 7) >> 3 : dim.width;
-      glyph.bitmap_size        = glyph.pitch * glyph.bitmap_width;
+      glyph.bitmap_size        = glyph.pitch * glyph.bitmap_height;
       glyph.lig_kern_pgm_index = glyph_info->lig_kern_pgm_index;
 
       return true;

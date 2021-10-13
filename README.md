@@ -1,6 +1,6 @@
 # IBMF (Integrated Bitmap Font) Font manipulation tools
 
-(Updated 2021.10.12)
+(Updated 2021.10.13)
 
 [Still some issue with accents...]
 
