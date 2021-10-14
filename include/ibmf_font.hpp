@@ -720,6 +720,10 @@ class IBMFFont
       uint8_t added_left = 0;
 
       if (accent_info != nullptr) {
+        offsets.x = ((glyph_info->bitmap_width > accent_info->bitmap_width) ?
+                        ((glyph_info->bitmap_width - accent_info->bitmap_width) >> 1) : 0)
+                    + ((((int32_t)glyph_info->bitmap_height - (header->x_height >> 6)) * header->slant_correction) >> 6);
+
         if (accent_info->vertical_offset >= (header->x_height >> 6)) {
           // Accents that are on top of a main glyph
           dim.height += (accent_info->vertical_offset - (header->x_height >> 6));
@@ -735,6 +739,9 @@ class IBMFFont
           added_left = (accent_info->bitmap_width - glyph_info->bitmap_width) >> 1;
           dim.width = accent_info->bitmap_width;
         }
+        if (dim.width < (offsets.x + accent_info->bitmap_width)) {
+          dim.width = offsets.x + accent_info->bitmap_width;
+        }
       }
 
       uint16_t size = (pixel_resolution == PixelResolution::ONE_BIT) ?
@@ -744,9 +751,6 @@ class IBMFFont
       memset(glyph.bitmap, 0, size);
 
       if (accent_info != nullptr) {
-        offsets.x = (glyph_info->bitmap_width > accent_info->bitmap_width) ?
-          ((glyph_info->bitmap_width - accent_info->bitmap_width) >> 1) : 0;
-
         if (load_bitmap) retrieve_bitmap(accent_info, glyph.bitmap, dim, offsets);
 
         offsets.y = (accent_info->vertical_offset >=  (header->x_height >> 6)) ?

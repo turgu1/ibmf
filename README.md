@@ -2,14 +2,11 @@
 
 (Updated 2021.10.13)
 
-- [x] Some issue with glyph raster size corrected.
+- [x] Some issues with glyph raster size corrected.
 - [x] Issues with accent extraction corrected.
 - [x] Issue when accents are larger than the character.
+- [x] Accents position on Italic characters adjusted.
 - [x] Fonts re-generated.
-
-Remaining issues:
-
-- [ ] Accents position on Italic characters
 
 
 This is a tool to generate IBMF fonts.
@@ -24,8 +21,6 @@ The `fonts\gener.sh` is used to generate IBMF fonts by:
 2) Extracting the information from the PK fonts to generate IBMFsubfonts.
 3) Packing the information in IBMF fonts through PlatformIO built program named `generator`. The resulting fonts are located in the `fonts` folder.
 
-To generate the METAFONT files, you need to have `TeXlive` installed, as well as the `sauter` package from the `sauter.zip` file available on CTAN.
-
 The targetted fonts suites are:
 
   - Computer Modern Roman Serif
@@ -34,5 +29,11 @@ The targetted fonts suites are:
 
 Each IBMF font contains 8, 9, 10, 12, 14, 17, and 24 points bitmaps.
 Each Computer Modern font suit produces Regular, Bold, Italic, and Bold-Italic fonts. Only Regular and Italic are available for the Typewriter fonts.
+
+To generate the METAFONT files through the `gener.sh` script, you need to have `TeXlive` installed, as well as the `sauter` package from the `sauter.zip` file available on CTAN. The `TeXlive` is usually available through available packages for your operating system.
+
+The `sauter` package must be installed manually. A copy of it is supplied in the main folder (file `sauter.zip`). The location to install it on Linux is usually `/usr/share/texlive/texmf-dist/fonts/source/public/`. After that, you must run the application `mktexlsr` from a shell to integrate it to the METAFONT search path.
+
+The `fonts/gener.sh` content can be updated to take into account other DPI than the one generated. As it was built for some devices named `inkplate6`, `inkplate10` and `inkplate6plus`, there are files with extension `.mf` for those devices in the `fonts/` folder that can be renamed and modified to accommodate your needs and modify the content of `fonts/gener.sh` accordingly. 
 
 
