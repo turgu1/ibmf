@@ -246,8 +246,6 @@ class PKFont
       if (!getnext8(val8)) return false;
       glyph_info.vertical_offset = (int8_t) val8;
 
-      glyph_info.raster_size = glyph_info.packet_length - 8;
-
       glyph_info.raster = memory_ptr;
 
       return true;
@@ -283,8 +281,6 @@ class PKFont
 
       if (!getnext16(val16)) return false;
       glyph_info.vertical_offset = (int16_t) val16;
-
-      glyph_info.raster_size = glyph_info.packet_length - 13;
 
       glyph_info.raster = memory_ptr;
 
@@ -322,8 +318,6 @@ class PKFont
       if (!getnext32(val32)) return false;
       glyph_info.vertical_offset = val32;
 
-      glyph_info.raster_size = glyph_info.packet_length - 28;
-      
       glyph_info.raster = memory_ptr;
 
       return true;
@@ -342,15 +336,18 @@ class PKFont
         case 3:
           if (!glyph_short_preamble()) return false;
           glyph_info.packet_length += (byte & 3) << 8;
+          glyph_info.raster_size = glyph_info.packet_length - 8;
           break;
         case 4:
         case 5:
         case 6:
           if (!glyph_medium_preamble()) return false;
           glyph_info.packet_length += (byte & 3) << 16;
+          glyph_info.raster_size = glyph_info.packet_length - 13;
           break;
         case 7:
           if (!glyph_long_preamble()) return false;
+          glyph_info.raster_size = glyph_info.packet_length - 28;
       }
 
       glyph_info.repeat_count = 0;
@@ -541,6 +538,7 @@ class PKFont
               std::cerr << "Glyph format issue..." << std::endl;
             }
             else {
+              std::cout << " " << +glyph_info.char_code;
               if (glyph_info.char_code < MAX_GLYPH_COUNT) { 
                 glyph_count++;
                 memory_ptr += glyph_info.raster_size;
@@ -555,6 +553,7 @@ class PKFont
             // completed = true;
         }
       }
+      std::cout << std::endl;
 
       return result;
     }

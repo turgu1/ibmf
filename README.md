@@ -2,7 +2,15 @@
 
 (Updated 2021.10.13)
 
-[Still some issue with accents...]
+- [x] Some issue with glyph raster size corrected.
+- [x] Issues with accent extraction corrected.
+- [x] Issue when accents are larger than the character.
+- [x] Fonts re-generated.
+
+Remaining issues:
+
+- [ ] Accents position on Italic characters
+
 
 This is a tool to generate IBMF fonts.
 

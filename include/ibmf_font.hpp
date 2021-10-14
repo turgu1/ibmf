@@ -162,10 +162,10 @@ class IBMFFont
         uint8_t     bitmap_height;
         int8_t      horizontal_offset;
         int8_t      vertical_offset;
-        uint8_t     packet_length;
+        uint8_t     lig_kern_pgm_index; // = 255 if none
+        uint16_t    packet_length;
         FIX16       advance;
         GlyphMetric glyph_metric;
-        uint8_t     lig_kern_pgm_index; // = 255 if none
       };
 
       struct Glyph {
@@ -243,6 +243,18 @@ class IBMFFont
 
     GlyphInfo * glyph_info;
 
+    /**
+     * @brief Translate unicode in an internal char code
+     * 
+     * The class allow for latin1+ characters to be plotted into a bitmap. As the
+     * font doesn't contains all accented glyphs, a combination of glyphs must be
+     * used to draw a single bitmap. This method translate some of the supported
+     * unicode values to that combination. The least significant byte will contains 
+     * the main glyph code and the next byte will contain the accent code. 
+     * 
+     * @param charcode The character code in unicode
+     * @return The internal representation of a character
+     */
     uint32_t translate(uint32_t charcode)
     {
       uint32_t glyph_code = charcode;
@@ -377,7 +389,7 @@ class IBMFFont
     // end;
 
     bool
-    get_packed_number(uint32_t & val, GlyphInfo & glyph)
+    get_packed_number(uint32_t & val, const GlyphInfo & glyph)
     {
       uint8_t  nyb;
       uint32_t i, j, k;
@@ -705,6 +717,8 @@ class IBMFFont
       Dim dim     = Dim(glyph_info->bitmap_width, glyph_info->bitmap_height);
       Pos offsets = Pos(0, 0);
 
+      uint8_t added_left = 0;
+
       if (accent_info != nullptr) {
         if (accent_info->vertical_offset >= (header->x_height >> 6)) {
           // Accents that are on top of a main glyph
@@ -717,6 +731,10 @@ class IBMFFont
           if (added_height < 0) dim.height += -added_height;
           offsets.y = glyph_info->vertical_offset - accent_info->vertical_offset;
         }
+        if (glyph_info->bitmap_width < accent_info->bitmap_width)  {
+          added_left = (accent_info->bitmap_width - glyph_info->bitmap_width) >> 1;
+          dim.width = accent_info->bitmap_width;
+        }
       }
 
       uint16_t size = (pixel_resolution == PixelResolution::ONE_BIT) ?
@@ -726,26 +744,29 @@ class IBMFFont
       memset(glyph.bitmap, 0, size);
 
       if (accent_info != nullptr) {
-        offsets.x = ((glyph_info->bitmap_width - accent_info->bitmap_width) >> 1);
+        offsets.x = (glyph_info->bitmap_width > accent_info->bitmap_width) ?
+          ((glyph_info->bitmap_width - accent_info->bitmap_width) >> 1) : 0;
+
         if (load_bitmap) retrieve_bitmap(accent_info, glyph.bitmap, dim, offsets);
+
         offsets.y = (accent_info->vertical_offset >=  (header->x_height >> 6)) ?
           (accent_info->vertical_offset - (header->x_height >> 6)) : 0;
-        offsets.x = 0;
+        offsets.x = added_left;
       }
 
       if (load_bitmap) retrieve_bitmap(glyph_info, glyph.bitmap, dim, offsets);
 
-      glyph.char_code          = glyph_code;
-      glyph.point_size         = current_point_size;
-      glyph.bitmap_width       = dim.width;
-      glyph.bitmap_height      = dim.height;
-      glyph.horizontal_offset  = - glyph_info->horizontal_offset;
-      glyph.vertical_offset    = -(glyph_info->vertical_offset + offsets.y);
+      glyph.char_code          =   glyph_code;
+      glyph.point_size         =   current_point_size;
+      glyph.bitmap_width       =   dim.width;
+      glyph.bitmap_height      =   dim.height;
+      glyph.horizontal_offset  = -(glyph_info->horizontal_offset + offsets.x);
+      glyph.vertical_offset    = -(glyph_info->vertical_offset   + offsets.y);
       glyph.advance            =   glyph_info->advance >> 6;
       glyph.pitch              =  (pixel_resolution == PixelResolution::ONE_BIT) ?
-                                   (dim.width + 7) >> 3 : dim.width;
-      glyph.bitmap_size        = glyph.pitch * glyph.bitmap_height;
-      glyph.lig_kern_pgm_index = glyph_info->lig_kern_pgm_index;
+                                     (dim.width + 7) >> 3 : dim.width;
+      glyph.bitmap_size        =   glyph.pitch * glyph.bitmap_height;
+      glyph.lig_kern_pgm_index =   glyph_info->lig_kern_pgm_index;
 
       return true;
     }
@@ -773,6 +794,7 @@ class IBMFFont
                 << "  Position: ["
                 <<      +glyph.horizontal_offset << ", "
                 <<      +glyph.vertical_offset << ']' << std::endl
+
                 << "  Advance: " 
                 <<      +glyph.advance                << std::endl
                 << "  Pitch: "

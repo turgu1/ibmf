@@ -60,10 +60,10 @@ class IBMFGener {
         uint8_t     bitmap_height;
         int8_t      horizontal_offset;
         int8_t      vertical_offset;
-        uint8_t     packet_length;
+        uint8_t     lig_kern_pgm_index; // = 255 if none
+        uint16_t    packet_length;
         TFM::FIX16  advance;
         GlyphMetric glyph_metric;
-        uint8_t     lig_kern_pgm_index; // = 255 if none
       };
     #pragma pack(pop)
 
