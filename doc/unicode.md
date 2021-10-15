@@ -1,3 +1,4 @@
+
 <style> 
 .no {background-color:red;color:black} 
 .no2 {background-color:orange;color:black;} 
@@ -288,4 +289,3 @@ th,td { text-align: center; }</style>
 </td>
 <td class="no"><span class="UniCtrl" title="U+007F &lt;contrôle&gt; suppression">DEL</span>
 </td></tr></tbody></table>
-</body></html>
