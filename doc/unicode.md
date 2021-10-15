@@ -2,7 +2,8 @@
 <style> 
 .no {background-color:red;color:black} 
 .no2 {background-color:orange;color:black;} 
-th,td { text-align: center; }</style>
+th,td { text-align: center; }
+</style>
 <table class="UniTable script-Latn" border="1" cellspacing="0" cellpadding="2">
 
 <tbody><tr lang="fr" class="lang-fr script-Latn">
