@@ -1,6 +1,6 @@
 # IBMF (Integrated Bitmap Font) Font manipulation tools
 
-(Updated 2021.10.13)
+(Updated 2021.10.14)
 
 - [x] Some issues with glyph raster size corrected.
 - [x] Issues with accent extraction corrected.
@@ -195,7 +195,7 @@ The `IBMFFont` class currently support the follwing characters from Latin9, ISO 
 |374|252|FC|ü|LATIN SMALL LETTER U WITH DIAERESIS
 |375|253|FD|ý|LATIN SMALL LETTER Y WITH ACUTE
 |377|255|FF|ÿ|LATIN SMALL LETTER Y WITH DIAERESIS
-|
+
 
 Available only with the Computer Modern Typewriter font:
 
@@ -208,7 +208,7 @@ Available only with the Computer Modern Typewriter font:
 |123|173|7B|{|Opening brace
 |124|174|7C|'\|'|Vertical bar
 |125|175|7D|}|Closing brace
-|
+
 
 The following character are currently not supported, as the METAFONT generators doesn't supply the appropriate glyphs. It is possible that some of these will appears in the future.
 
@@ -241,4 +241,3 @@ The following character are currently not supported, as the METAFONT generators 
 |360|240|F0|ð|LATIN SMALL LETTER ETH
 |367|247|F7|÷|DIVISION SIGN
 |376|254|FE|þ|LATIN SMALL LETTER THORN
-|
