@@ -12,9 +12,9 @@ static constexpr uint16_t translation[] = {
   /* 0xA3 */ 0x20,    // £
   /* 0xA4 */ 0x20,    // ¤
   /* 0xA5 */ 0x20,    // ¥
-  /* 0xA6 */ 0x20,    // ¦
+  /* 0xA6 */ 0x1553,  // Š
   /* 0xA7 */ 0x20,    // §
-  /* 0xA8 */ 0x7F,    // ˝ Dieresis
+  /* 0xA8 */ 0x1573,  // š
   /* 0xA9 */ 0x20,    // ©
   /* 0xAA */ 0x20,    // Ordfeminine
   /* 0xAB */ 0x20,    // «
@@ -26,17 +26,17 @@ static constexpr uint16_t translation[] = {
   /* 0xB1 */ 0x20,    // Plus Minus
   /* 0xB2 */ 0x20,    // ²
   /* 0xB3 */ 0x20,    // ³
-  /* 0xB4 */ 0x13,    // ’ accute accent
+  /* 0xB4 */ 0x155A,  // Ž
   /* 0xB5 */ 0x20,    // µ
   /* 0xB6 */ 0x20,    // ¶ 
   /* 0xB7 */ 0x20,    // middle dot
-  /* 0xB8 */ 0x18,    // ˛ cedilla
+  /* 0xB8 */ 0x157A,  // ž
   /* 0xB9 */ 0x20,    // ¹
   /* 0xBA */ 0x20,    // 0 superscript
   /* 0xBB */ 0x20,    // »
-  /* 0xBC */ 0x20,    // ¼
-  /* 0xBD */ 0x20,    // ½
-  /* 0xBE */ 0x20,    // ¾
+  /* 0xBC */ 0x1E,    // Œ
+  /* 0xBD */ 0x1B,    // œ
+  /* 0xBE */ 0x7F59,  // Ÿ
   /* 0xBF */ 0x3E,    // ¿
   /* 0xC0 */ 0x1241,  // À
   /* 0xC1 */ 0x1341,  // Á
@@ -260,8 +260,21 @@ class IBMFFont
       uint32_t glyph_code = charcode;
 
       if (preamble->bits.char_set == 0) {
-        if ((charcode >= ' ') && (charcode <= 'z')) {
-          glyph_code = charcode;
+        if ((charcode >= ' ') && (charcode <= '~')) {
+          switch (charcode) {
+            case '<':
+            case '>':
+            case '\\':
+            case '_':
+            case '{':
+            case '|':
+            case '}':
+              glyph_code = ' '; break;
+            case '`':
+              glyph_code = 0x12; break;
+            default:
+              glyph_code = charcode;
+          }
         } else if ((charcode >= 0xA1) && (charcode <= 0xFF)) {
           glyph_code = translation[charcode - 0xA1];
         }
@@ -720,10 +733,21 @@ class IBMFFont
       uint8_t added_left = 0;
 
       if (accent_info != nullptr) {
+
+        // Horizontal adjustment
         offsets.x = ((glyph_info->bitmap_width > accent_info->bitmap_width) ?
                         ((glyph_info->bitmap_width - accent_info->bitmap_width) >> 1) : 0)
-                    + ((((int32_t)glyph_info->bitmap_height - (header->x_height >> 6)) * header->slant_correction) >> 6);
+                    + ((((int32_t)glyph_info->bitmap_height - (header->x_height >> 6)) * header->slant_correction) >> 6)
+                    /*- (accent_info->horizontal_offset - glyph_info->horizontal_offset)*/;
+        if ((offsets.x == 0) && (glyph_info->bitmap_width < accent_info->bitmap_width))  {
+          added_left = (accent_info->bitmap_width - glyph_info->bitmap_width) >> 1;
+          dim.width = accent_info->bitmap_width;
+        }
+        if (dim.width < (offsets.x + accent_info->bitmap_width)) {
+          dim.width = offsets.x + accent_info->bitmap_width;
+        }
 
+        // Vertical adjustment
         if (accent_info->vertical_offset >= (header->x_height >> 6)) {
           // Accents that are on top of a main glyph
           dim.height += (accent_info->vertical_offset - (header->x_height >> 6));
@@ -734,13 +758,6 @@ class IBMFFont
                                  ((-accent_info->vertical_offset) + accent_info->bitmap_height);
           if (added_height < 0) dim.height += -added_height;
           offsets.y = glyph_info->vertical_offset - accent_info->vertical_offset;
-        }
-        if (glyph_info->bitmap_width < accent_info->bitmap_width)  {
-          added_left = (accent_info->bitmap_width - glyph_info->bitmap_width) >> 1;
-          dim.width = accent_info->bitmap_width;
-        }
-        if (dim.width < (offsets.x + accent_info->bitmap_width)) {
-          dim.width = offsets.x + accent_info->bitmap_width;
         }
       }
 

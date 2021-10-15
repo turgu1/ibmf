@@ -6,7 +6,7 @@
 // It must be run with the main project folder as the current folder.
 // For example:
 //
-// .pio/build/ascii_example/program À
+// .pio/build/latin_example/program À
 //
 // It is expected that UTF-8 is used to pass parameters from the shell.
 

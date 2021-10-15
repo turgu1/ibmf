@@ -12,7 +12,9 @@
 
 #include "ibmf_font.hpp"
 
-IBMFFont font("/home/turgu1/Dev/ibmf/fonts/ComputerModernSans-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font1("/home/turgu1/Dev/ibmf/fonts/ComputerModernSans-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font2("/home/turgu1/Dev/ibmf/fonts/ComputerModern-Regular_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font3("/home/turgu1/Dev/ibmf/fonts/ComputerModernTypewriter-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
 
 uint32_t 
 to_unicode(const char *str)
@@ -55,34 +57,24 @@ main(int argc, char **argv)
 {
   IBMFFont::Glyph glyph;
 
-  font.set_font_size(12);
+  if (argc < 2) {
+    std::cout << "Usage: " << argv[0] << " <character> ..." << std::endl;
+    return 1;
+  }
 
-  // // for (int i = 0; i <= 32; i++) {
-  // //   font.get_glyph(i, glyph, true, true);
-  // //   font.show_glyph(glyph);
-  // // }
-  
-  // font.get_glyph(0x5E, glyph, true, true);
-  // font.show_glyph(glyph);
+  font1.set_font_size(24);
+  font2.set_font_size(24);
+  font3.set_font_size(24);
 
-  // font.get_glyph(0xE9, glyph, true);
-  // font.show_glyph(glyph);
+  for (int i = 1; i < argc; i++) {
+    uint32_t char_code = to_unicode(argv[i]);
+    font1.get_glyph(char_code, glyph, true);
+    font1.show_glyph(glyph);
+    font2.get_glyph(char_code, glyph, true);
+    font2.show_glyph(glyph);
+    font3.get_glyph(char_code, glyph, true);
+    font3.show_glyph(glyph);
+  }
 
-  font.get_glyph(to_unicode("Î"), glyph, true);
-  font.show_glyph(glyph);
-
-  // font.get_glyph(to_unicode("Ì"), glyph, true);
-  // font.show_glyph(glyph);
-
-  // font.get_glyph(to_unicode("Ï"), glyph, true);
-  // font.show_glyph(glyph);
-
-  font.get_glyph(to_unicode("î"), glyph, true);
-  font.show_glyph(glyph);
-
-  // font.get_glyph(to_unicode("ì"), glyph, true);
-  // font.show_glyph(glyph);
-
-  // font.get_glyph(to_unicode("ï"), glyph, true);
-  // font.show_glyph(glyph);
+  return 0;
 }
