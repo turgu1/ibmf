@@ -39,7 +39,7 @@ The `fonts/gener.sh` content can be updated to take into account other DPI than 
 The `IBMFFont` class currently support the follwing characters from Latin9, ISO 8859-15 (all other characters will return a space character, no bitmap), for the all Computer Modern (Serif, SansSerif, Typewriter) fonts:
 
 |Dec|Oct|Hex|Ch|Description
-|---|---|--|-|-----------------------------------
+|---|---|--|-|:-----------------------------------
 | 33|041|21|!|Exclamation mark
 | 34|042|22|"|Double quotes (or speech marks)
 | 35|043|23|#|Number
@@ -200,7 +200,7 @@ The `IBMFFont` class currently support the follwing characters from Latin9, ISO 
 Available only with the Computer Modern Typewriter font:
 
 |Dec|Oct|Hex|Ch|Description
-|---|---|--|-|-----------------------------------
+|---|---|--|-|:-----------------------------------
 | 60|074|3C|<|Less than (or open angled bracket)
 | 62|076|3E|>|Greater than (or close angled bracket)
 | 92|134|5C|'\\'|Backslash
@@ -213,7 +213,7 @@ Available only with the Computer Modern Typewriter font:
 The following character are currently not supported, as the METAFONT generators doesn't supply the appropriate glyphs. It is possible that some of these will appears in the future.
 
 |Dec|Oct|Hex|Ch|Description
-|---|---|--|-|-----------------------------------
+|---|---|--|-|:-----------------------------------
 |242|162|A2|¢|CENT SIGN
 |243|163|A3|£|POUND SIGN
 |244|164|A4|€|EURO SIGN
