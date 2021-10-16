@@ -154,5 +154,8 @@ This tool will show on screen in a terminal shell the complete list of supported
 
 There is no parameters to give to the tool. You can modify it's content to, for example, select another font or another point size. Only characters that generate bitmaps are output.
 
+Here is the beginning of the output:
+
+<img src="doc/glyph_proof.png" alt="drawing" width="800"/>
 
 
