@@ -42,7 +42,7 @@ The `IBMFFont` class currently support the follwing UNICODE characters:
 - Uncolored characters are supported
 - Characters colored in RED will return a space character (no bitmap)
 - Characters colored in GREEN will return the equivalent ASCII character
-- Characters in yellow are support throught the Computer Modern Typewriter font
+- Characters in yellow are supported throught the Computer Modern Typewriter font
 
 Table 1 - ASCII codes
 
