@@ -6,15 +6,15 @@
 
 #include "sys/stat.h"
 
-static constexpr uint16_t translation[] = {
+static constexpr uint16_t translation_latin_1[] = {
   /* 0xA1 */ 0x3C,    // ¡
   /* 0xA2 */ 0x20,    // ¢
   /* 0xA3 */ 0x20,    // £
   /* 0xA4 */ 0x20,    // ¤
   /* 0xA5 */ 0x20,    // ¥
-  /* 0xA6 */ 0x1553,  // Š
+  /* 0xA6 */ 0x20,    // ¦
   /* 0xA7 */ 0x20,    // §
-  /* 0xA8 */ 0x1573,  // š
+  /* 0xA8 */ 0x7F,    // ¨
   /* 0xA9 */ 0x20,    // ©
   /* 0xAA */ 0x20,    // Ordfeminine
   /* 0xAB */ 0x20,    // «
@@ -26,11 +26,11 @@ static constexpr uint16_t translation[] = {
   /* 0xB1 */ 0x20,    // Plus Minus
   /* 0xB2 */ 0x20,    // ²
   /* 0xB3 */ 0x20,    // ³
-  /* 0xB4 */ 0x155A,  // Ž
+  /* 0xB4 */ 0x13,    // accute accent
   /* 0xB5 */ 0x20,    // µ
   /* 0xB6 */ 0x20,    // ¶ 
   /* 0xB7 */ 0x20,    // middle dot
-  /* 0xB8 */ 0x157A,  // ž
+  /* 0xB8 */ 0x18,    // cedilla
   /* 0xB9 */ 0x20,    // ¹
   /* 0xBA */ 0x20,    // 0 superscript
   /* 0xBB */ 0x20,    // »
@@ -54,7 +54,7 @@ static constexpr uint16_t translation[] = {
   /* 0xCD */ 0x1349,  // Í
   /* 0xCE */ 0x5E49,  // Î
   /* 0xCF */ 0x7F49,  // Ï
-  /* 0xD0 */ 0x20,    // Ð
+  /* 0xD0 */ 0x44,    // Ð
   /* 0xD1 */ 0x7E4E,  // Ñ
   /* 0xD2 */ 0x124F,  // Ò
   /* 0xD3 */ 0x134F,  // Ó
@@ -102,6 +102,144 @@ static constexpr uint16_t translation[] = {
   /* 0xFD */ 0x1379,  // ý
   /* 0xFE */ 0x20,    // þ
   /* 0xFF */ 0x7F79   // ÿ
+};
+
+static constexpr uint16_t translation_latin_A[] = {
+  /* 0x100 */ 0x1641,  // Ā
+  /* 0x101 */ 0x1661,  // ā
+  /* 0x102 */ 0x1541,  // Ă
+  /* 0x103 */ 0x1561,  // ă
+  /* 0x104 */ 0x41,    // Ą
+  /* 0x105 */ 0x61,    // ą
+  /* 0x106 */ 0x1343,  // Ć
+  /* 0x107 */ 0x1363,  // ć
+  /* 0x108 */ 0x5E43,  // Ĉ
+  /* 0x109 */ 0x5E63,  // ĉ
+  /* 0x10A */ 0x5F43,  // Ċ
+  /* 0x10B */ 0x5F63,  // ċ
+  /* 0x10C */ 0x1443,  // Č
+  /* 0x10D */ 0x1463,  // č
+  /* 0x10E */ 0x1444,  // Ď
+  /* 0x10F */ 0x64,    // ď
+
+  /* 0x110 */ 0x44,    // Đ
+  /* 0x111 */ 0x64,    // đ
+  /* 0x112 */ 0x1645,  // Ē
+  /* 0x113 */ 0x1665,  // ē
+  /* 0x114 */ 0x1545,  // Ĕ
+  /* 0x115 */ 0x1565,  // ĕ
+  /* 0x116 */ 0x5F45,  // Ė 
+  /* 0x117 */ 0x5F65,  // ė
+  /* 0x118 */ 0x45,    // Ę
+  /* 0x119 */ 0x65,    // ę
+  /* 0x11A */ 0x1445,  // Ě
+  /* 0x11B */ 0x1465,  // ě
+  /* 0x11C */ 0x5E47,  // Ĝ
+  /* 0x11D */ 0x5E67,  // ĝ
+  /* 0x11E */ 0x1547,  // Ğ
+  /* 0x11F */ 0x1567,  // ğ
+
+  /* 0x120 */ 0x5F47,  // Ġ
+  /* 0x121 */ 0x5F67,  // ġ
+  /* 0x122 */ 0x1847,  // Ģ
+  /* 0x123 */ 0x67,    // ģ
+  /* 0x124 */ 0x5E48,  // Ĥ
+  /* 0x125 */ 0x5E68,  // ĥ
+  /* 0x126 */ 0x48,    // Ħ
+  /* 0x127 */ 0x68,    // ħ
+  /* 0x128 */ 0x7E49,  // Ĩ
+  /* 0x129 */ 0x7E10,  // ĩ
+  /* 0x12A */ 0x1649,  // Ī
+  /* 0x12B */ 0x1610,  // ī
+  /* 0x12C */ 0x1549,  // Ĭ
+  /* 0x12D */ 0x1510,  // ĭ
+  /* 0x12E */ 0x49,    // Į
+  /* 0x12F */ 0x69,    // į
+
+  /* 0x130 */ 0x5F49,  // İ
+  /* 0x131 */ 0x10,    // ı
+  /* 0x132 */ 0x20,    // Ĳ
+  /* 0x133 */ 0x20,    // ĳ
+  /* 0x134 */ 0x5E4A,  // Ĵ
+  /* 0x135 */ 0x5E11,  // ĵ
+  /* 0x136 */ 0x184B,  // Ķ
+  /* 0x137 */ 0x186B,  // ķ
+  /* 0x138 */ 0x6B,    // ĸ
+  /* 0x139 */ 0x134C,  // Ĺ
+  /* 0x13A */ 0x136C,  // ĺ
+  /* 0x13B */ 0x184C,  // Ļ
+  /* 0x13C */ 0x186C,  // ļ
+  /* 0x13D */ 0x4C,    // Ľ
+  /* 0x13E */ 0x6C,    // ľ
+  /* 0x13F */ 0x4C,    // Ŀ
+
+  /* 0x140 */ 0x6C,    // ŀ
+  /* 0x141 */ 0x4C,    // Ł
+  /* 0x142 */ 0x6C,    // ł
+  /* 0x143 */ 0x134E,  // Ń
+  /* 0x144 */ 0x136E,  // ń
+  /* 0x145 */ 0x184E,  // Ņ
+  /* 0x146 */ 0x186E,  // ņ
+  /* 0x147 */ 0x144E,  // Ň
+  /* 0x148 */ 0x146E,  // ň
+  /* 0x149 */ 0x6E,    // ŉ
+  /* 0x14A */ 0x4E,    // Ŋ
+  /* 0x14B */ 0x6E,    // ŋ
+  /* 0x14C */ 0x164F,  // Ō
+  /* 0x14D */ 0x166F,  // ō
+  /* 0x14E */ 0x154F,  // Ŏ
+  /* 0x14F */ 0x156F,  // ŏ
+
+  /* 0x150 */ 0x7D4F,  // Ő
+  /* 0x151 */ 0x7D6F,  // ő
+  /* 0x152 */ 0x1E,    // Œ
+  /* 0x153 */ 0x1B,    // œ
+  /* 0x154 */ 0x1352,  // Ŕ
+  /* 0x155 */ 0x1372,  // ŕ
+  /* 0x156 */ 0x1852,  // Ŗ
+  /* 0x157 */ 0x1872,  // ŗ
+  /* 0x158 */ 0x1452,  // Ř
+  /* 0x159 */ 0x1472,  // ř
+  /* 0x15A */ 0x1353,  // Ś
+  /* 0x15B */ 0x1373,  // ś
+  /* 0x15C */ 0x5E53,  // Ŝ
+  /* 0x15D */ 0x5E73,  // ŝ
+  /* 0x15E */ 0x1853,  // Ş
+  /* 0x15F */ 0x1873,  // ş
+
+  /* 0x160 */ 0x1453,  // Š
+  /* 0x161 */ 0x1473,  // š
+  /* 0x162 */ 0x1854,  // Ţ
+  /* 0x163 */ 0x1874,  // ţ
+  /* 0x164 */ 0x1454,  // Ť
+  /* 0x165 */ 0x74,    // ť
+  /* 0x166 */ 0x54,    // Ŧ
+  /* 0x167 */ 0x74,    // ŧ
+  /* 0x168 */ 0x7E55,  // Ũ
+  /* 0x169 */ 0x7E75,  // ũ
+  /* 0x16A */ 0x1655,  // Ū
+  /* 0x16B */ 0x1675,  // ū
+  /* 0x16C */ 0x1555,  // Ŭ
+  /* 0x16D */ 0x1575,  // ŭ
+  /* 0x16E */ 0x1755,  // Ů
+  /* 0x16F */ 0x1775,  // ů
+
+  /* 0x170 */ 0x7D55,  // Ű
+  /* 0x171 */ 0x7D75,  // ű
+  /* 0x172 */ 0x55,    // Ų
+  /* 0x173 */ 0x75,    // ų
+  /* 0x174 */ 0x5E57,  // Ŵ
+  /* 0x175 */ 0x5E77,  // ŵ
+  /* 0x176 */ 0x5E59,  // Ŷ
+  /* 0x177 */ 0x5E79,  // ŷ
+  /* 0x178 */ 0x7F59,  // Ÿ
+  /* 0x179 */ 0x135A,  // Ź
+  /* 0x17A */ 0x137A,  // ź
+  /* 0x17B */ 0x5F5A,  // Ż
+  /* 0x17C */ 0x5F7A,  // ż
+  /* 0x17D */ 0x145A,  // Ž
+  /* 0x17E */ 0x147A,  // ž
+  /* 0x17F */ 0x20     // ſ
 };
 
 /**
@@ -260,7 +398,7 @@ class IBMFFont
       uint32_t glyph_code = charcode;
 
       if (preamble->bits.char_set == 0) {
-        if ((charcode >= ' ') && (charcode <= '~')) {
+        if ((charcode >= 0x20) && (charcode <= 0x7E)) {
           switch (charcode) {
             case '<':
             case '>':
@@ -275,8 +413,12 @@ class IBMFFont
             default:
               glyph_code = charcode;
           }
-        } else if ((charcode >= 0xA1) && (charcode <= 0xFF)) {
-          glyph_code = translation[charcode - 0xA1];
+        } 
+        else if ((charcode >= 0xA1) && (charcode <= 0xFF)) {
+          glyph_code = translation_latin_1[charcode - 0xA1];
+        }
+        else if ((charcode >= 0x100) && (charcode <= 0x17F)) {
+          glyph_code = translation_latin_A[charcode - 0x100];
         }
         else {
           switch (charcode) {
@@ -291,9 +433,6 @@ class IBMFFont
             case 0x02C6: glyph_code = 0x5E; break; // circumflex
             case 0x02DA: glyph_code = 0x17; break; // ring
             case 0x02DC: glyph_code = 0x7E; break; // tilde ~
-            case 0x0152: glyph_code = 0x1E; break; // OE
-            case 0x0153: glyph_code = 0x1B; break; // oe 
-            case 0x0131: glyph_code = 0x10; break; // dotless i 
             case 0x201a: glyph_code = 0x2C; break; // comma like ,
             case 0x2032: glyph_code = 0x0C; break; // minute '
             case 0x2033: glyph_code = 0x22; break; // second "
@@ -312,7 +451,10 @@ class IBMFFont
         } else if ((charcode >= 0xA1) && (charcode <= 0xFF)) {
           if       (charcode == 0xA1) glyph_code = 0x0E; // ¡
           else if  (charcode == 0xBF) glyph_code = 0x0F; // ¿
-          else glyph_code = translation[charcode - 0xA1];
+          else glyph_code = translation_latin_1[charcode - 0xA1];
+        }
+        else if ((charcode >= 0x100) && (charcode <= 0x17F)) {
+          glyph_code = translation_latin_A[charcode - 0x100];
         }
         else {
           switch (charcode) {
@@ -328,9 +470,6 @@ class IBMFFont
             case 0x02C6: glyph_code = 0x5E; break; // circumflex
             case 0x02DA: glyph_code = 0x17; break; // ring
             case 0x02DC: glyph_code = 0x7E; break; // tilde ~
-            case 0x0152: glyph_code = 0x1E; break; // OE
-            case 0x0153: glyph_code = 0x1B; break; // oe 
-            case 0x0131: glyph_code = 0x10; break; // dotless i 
             case 0x201a: glyph_code = 0x2C; break; // comma like ,
             case 0x2032: glyph_code = 0x0C; break; // minute '
             case 0x2033: glyph_code = 0x22; break; // second "
