@@ -422,6 +422,10 @@ class IBMFFont
         }
         else {
           switch (charcode) {
+            case 0x2013: // endash
+              glyph_code = 0x7B; break;
+            case 0x2014: // emdash
+              glyph_code = 0x7C; break;
             case 0x2018: // quote left
             case 0x02BB: // reverse apostrophe
               glyph_code = 0x60; break;
@@ -433,7 +437,7 @@ class IBMFFont
             case 0x02C6: glyph_code = 0x5E; break; // circumflex
             case 0x02DA: glyph_code = 0x17; break; // ring
             case 0x02DC: glyph_code = 0x7E; break; // tilde ~
-            case 0x201a: glyph_code = 0x2C; break; // comma like ,
+            case 0x201A: glyph_code = 0x2C; break; // comma like ,
             case 0x2032: glyph_code = 0x0C; break; // minute '
             case 0x2033: glyph_code = 0x22; break; // second "
             case 0x2044: glyph_code = 0x2F; break; // fraction /
@@ -470,7 +474,7 @@ class IBMFFont
             case 0x02C6: glyph_code = 0x5E; break; // circumflex
             case 0x02DA: glyph_code = 0x17; break; // ring
             case 0x02DC: glyph_code = 0x7E; break; // tilde ~
-            case 0x201a: glyph_code = 0x2C; break; // comma like ,
+            case 0x201A: glyph_code = 0x2C; break; // comma like ,
             case 0x2032: glyph_code = 0x0C; break; // minute '
             case 0x2033: glyph_code = 0x22; break; // second "
             case 0x2044: glyph_code = 0x2F; break; // fraction /

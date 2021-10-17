@@ -28,14 +28,14 @@ All C/C++ tools are compiled through the PlatformIO application.
 The `fonts\gener.sh` is used to generate IBMF fonts by:
 
 1) Generating PK fonts from the METAFONT foundry.
-2) Extracting the information from the PK fonts to generate IBMFsubfonts.
+2) Extracting the information from the PK fonts to generate IBMF subfonts.
 3) Packing the information in IBMF fonts through PlatformIO built program named `generator`. The resulting fonts are located in the `fonts` folder.
 
-The targetted fonts suites are:
+The targetted font typefaces are:
 
   - Computer Modern Roman Serif
   - Computer Modern Sans-Serif
-  - Typewriter
+  - Computer Modern Typewriter
 
 Each IBMF font contains 8, 9, 10, 12, 14, 17, and 24 points bitmaps.
 Each Computer Modern font suit produces Regular, Bold, Italic, and Bold-Italic fonts. Only Regular and Italic are available for the Typewriter fonts.
@@ -50,12 +50,12 @@ The `fonts/gener.sh` content can be updated to take into account other DPI than 
 
 The C++ class (`ibmf_font.hpp`) that allows for the extraction of characters is provided, allowing the retrieval of glyphs from the various point bitmaps size available in the font. Please look at the `latin_example` program on how to use it.
 
-The `IBMFFont` class currently support the follwing UNICODE characters:
+The `IBMFFont` class currently support a large portion of the ASCII, latin-1 ans latin-a UNICODE characters as shown in the tables below. 
 
-- Uncolored characters are supported
+- Characters colored in GREEN are supported
 - Characters colored in RED will return a space character (no bitmap) as they are not supported
-- Characters colored in GREEN will return the equivalent ASCII character
-- Characters in YELLOW are supported only throught the Computer Modern Typewriter font
+- Characters colored in GRAY will return the equivalent ASCII character
+- Characters in YELLOW are supported only throught the Computer Modern Typewriter typefaces
 
 ### 2.1 Table 1 - ASCII codes:
 
@@ -68,6 +68,29 @@ The `IBMFFont` class currently support the follwing UNICODE characters:
 ### 2.3 Table 3 - Latin-A codes:
 
 <img src="doc/latin-A.png" alt="drawing" width="600"/>
+
+### 2.4 Other supported characters:
+
+The following characters are also supported:
+
+| Unicode | Description          |
+|:-------:|----------------------|
+| U+02BB  | reverse apostrophe
+| U+02BC  | apostrophe
+| U+02C6  | circumflex
+| U+02DA  | ring
+| U+02DC  | tilde ~
+| U+2013  | endash (Not available with CM Typewriter)
+| U+2014  | emdash (Not available with CM Typewriter)
+| U+2018  | quote left
+| U+2019  | quote right
+| U+201A  | comma like ,
+| U+201C  | quoted left "
+| U+201D  | quoted right
+| U+2032  | minute '
+| U+2033  | second "
+| U+2044  | fraction /
+|
 
 
 ## 3. Simple Example Application

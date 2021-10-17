@@ -6,7 +6,11 @@ Each IBMF file contains a preamble followed by each font.
 
 Each METAFONT-generated font is described using two files: a `PK` font file (the content is tailored to a physical display definition, mainly in dots per inch) and a `TFM` font file (the content are independent metrics of the glyphs, mainly in points). The specific format description of these files can be found in the `pk.pdf` and `tfm.pdf` documents. The IBMF file integrates part of the `PK` and `TFM` files in a single structure described below.
 
-The following subsections describe each of these elements. All values are stored in little-endian order. All *fractional dots count* are a 2-bytes ones-complement fixed-point value using 6 bits fractional part. Unless mentioned otherwise, all values are unsigned numbers.
+The following subsections describe each of these elements. 
+
+- All values are stored in little-endian order. 
+- All *fractional dots count* are a 2-bytes ones-complement fixed-point value using 6 bits fractional part. 
+- Unless mentioned otherwise, all values are unsigned numbers.
 
 ## 1. IBMF Preamble
 
@@ -122,3 +126,18 @@ The fields are the following (They are all bit-sized fields):
 ### 2.4 Kerning Adjustments
 
 This is a vector of fractional dots counts values that represent the horizontal kerning adjustment to apply to the advance value of the current glyph.
+
+## 3. Tables of glyphs
+
+The following tables show all the glyphs that are currently appearing in the `.ibmf` files in the various point sizes. The first table (Character Set 0) is used for the `Computer Modern` and for the `Computer Modern Sans` typefaces. The secont table (Character Set 1) is used for the `Computer Modern Typewrite` typefaces.
+
+Combining the letters with the accents, the `IBMFFont` class is able to produce a large portion of the Latin letters (UNICODE U+00A1 through U+017F).
+
+### 3.1 Character Set 0
+
+<img src="Character Table - CharSet 0.png" alt="drawing" width="800"/>
+
+### 3.2 Character Set 1
+
+<img src="Character Table - CharSet 1.png" alt="drawing" width="800"/>
+

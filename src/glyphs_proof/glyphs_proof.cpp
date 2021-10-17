@@ -6,6 +6,25 @@ char matrix[100][200];
 int  col = 0;
 int  max_row = 0;
 
+
+const uint32_t others[15] = {
+  0x02BB, // reverse apostrophe
+  0x02BC, // apostrophe
+  0x02C6, // circumflex
+  0x02DA, // ring
+  0x02DC, // tilde ~
+  0x2013, // endash
+  0x2014, // emdash
+  0x2018, // quote left
+  0x2019, // quote right
+  0x201C, // quoted left "
+  0x201D, // quoted right
+  0x201A, // comma like ,
+  0x2032, // minute '
+  0x2033, // second "
+  0x2044  // fraction /
+};
+
 inline void clear_matrix() { memset(matrix, ' ', 100 * 200); }
 
 
@@ -59,6 +78,13 @@ main()
 
   for (int i = 0; i < 0x17F; i++) {
     font.get_glyph(i, glyph, true);
+    if (glyph.char_code != ' ') {
+      put(glyph);
+    }
+  }
+
+  for (int i = 0; i < 15; i++) {
+    font.get_glyph(others[i], glyph, true);
     if (glyph.char_code != ' ') {
       put(glyph);
     }
