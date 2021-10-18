@@ -44,18 +44,18 @@ To generate the METAFONT files through the `gener.sh` script, you need to have `
 
 The `sauter` package must be installed manually. A copy of it is supplied in the main folder (file `sauter.zip`). The location to install it on Linux is usually `/usr/share/texlive/texmf-dist/fonts/source/public/`. After that, you must run the `mktexlsr` application from a shell to integrate it to the METAFONT search path.
 
-The `fonts/gener.sh` content can be updated to take into account other DPI than the one generated. As it was built for some devices named `inkplate6`, `inkplate10` and `inkplate6plus`, there are files with extension `.mf` for those devices in the `fonts/` folder that can be renamed and modified to accommodate your needs. You can then modify the content of `fonts/gener.sh` accordingly. 
+The `fonts/gener.sh` content can be updated to take into account other DPI than the one generated. As it was built for some devices named `inkplate-6`, `inkplate-10`, and `inkplate-6plus`, there are files with extension `.mf` for those devices in the `fonts/` folder that can be renamed and modified to accommodate your needs. You can then modify the content of `fonts/gener.sh` accordingly. 
 
 ## 2. C++ access class
 
 The C++ class (`ibmf_font.hpp`) that allows for the extraction of characters is provided, allowing the retrieval of glyphs from the various point bitmaps size available in the font. Please look at the `latin_example` program on how to use it.
 
-The `IBMFFont` class currently support a large portion of the ASCII, latin-1 ans latin-a UNICODE characters as shown in the tables below. 
+The `IBMFFont` class currently supports a large portion of the ASCII, Latin-1, and Latin-A UNICODE characters as shown in the tables below. 
 
 - Characters colored in GREEN are supported
 - Characters colored in RED will return a space character (no bitmap) as they are not supported
 - Characters colored in GRAY will return the equivalent ASCII character
-- Characters in YELLOW are supported only throught the Computer Modern Typewriter typefaces
+- Characters in YELLOW are supported only through the Computer Modern Typewriter typefaces
 
 ### 2.1 Table 1 - ASCII codes:
 
@@ -90,16 +90,15 @@ The following characters are also supported:
 | U+2032  | minute '
 | U+2033  | second "
 | U+2044  | fraction /
-|
 
 
 ## 3. Simple Example Application
 
-The `latin_example` application shows how simple is the access to the IBMFFont class. It accepts a character to show on screen as a serie of spaces and Xs in all available font sizes. It must be used in a terminal shell, the current folder must be the project's main folder. You can change the defaults in the main application source code.
+The `latin_example` application shows how simple is the access to the IBMFFont class. It accepts a character to show on screen as a series of spaces and Xs in all available font sizes. It must be used in a terminal shell, the current folder must be the project's main folder. You can change the defaults in the main application source code.
 
-In the code, the `IBMFFont` class must be instantiated. Before retrieving a glyph through the `get_glyph()` method, you must set the font size through the `set_font_size()` method. That method will choose the size from the available one in the `.ibmf` font file, taking the one that is equal or lower to the requested size. The size is in points (There is 72.27 points in an inch).
+In the code, the `IBMFFont` class must be instantiated. Before retrieving a glyph through the `get_glyph()` method, you must set the font size through the `set_font_size()` method. That method will choose the size from the available one in the `.ibmf` font file, taking the one that is equal or lower to the requested size. The size is in points (There are 72.27 points in an inch).
 
-The application uses a simple method names `to_unicode()` to translate the received parameter from the UTF-8 format to UNICODE. That means that your shell must be using UTF-8 to encode non-ascii characters. This is usually the case on Linux.
+The application uses a simple method named `to_unicode()` to translate the received parameter from the UTF-8 format to UNICODE. That means that your shell must be using UTF-8 to encode non-ASCII characters. This is usually the case on Linux.
 
 Here is an example of use (the first part of the output is shown):
 
@@ -173,9 +172,9 @@ Glyph Char Code: 41
 
 ## 4. Font dump tool
 
-This tool will show on screen in a terminal shell the complete list of supported characters. It uses spaces and Xs to show the characters. As many character as possible to fit on a matrix having a width of 200 columns will be put on each *line*.
+This tool will show on screen in a terminal shell the complete list of supported characters. It uses spaces and Xs to show the characters. As many characters as possible to fit on a matrix having a width of 200 columns will be put on each *line*.
 
-There is no parameters to give to the tool. You can modify it's content to, for example, select another font or another point size. Only characters that generate bitmaps are output.
+There are no parameters to give to the tool. You can modify its content to, for example, select another font or another point size. Only characters that generate bitmaps are output.
 
 Here is the beginning of the output:
 
