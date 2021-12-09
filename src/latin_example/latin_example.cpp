@@ -12,7 +12,7 @@
 
 #include "ibmf_font.hpp"
 
-IBMFFont font("fonts/ComputerModern-Regular_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font("fonts/CM-Regular_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
 
 uint32_t 
 to_unicode(const char *str)

@@ -305,7 +305,7 @@ class TFM
     inline FIX             get_space_size() { return params[1];                                }
     inline FIX               get_x_height() { return params[4];                                }
     inline FIX                get_em_size() { return params[5];                                }
-    inline uint8_t        get_glyph_count() { return sizes.ec - sizes.bc + 1;                  }
+    inline uint16_t       get_glyph_count() { return sizes.ec - sizes.bc + 1;                  }
     inline uint8_t get_lig_kern_pgm_count() { return sizes.nl;                                 }
     inline uint8_t         get_kern_count() { return sizes.nk;                                 }
     inline uint8_t   get_first_glyph_code() { return sizes.bc;                                 }

@@ -1,13 +1,20 @@
 # IBMF (Integrated Bitmap Font) Font manipulation tools
 
-(Updated 2021.10.16)
+(Updated 2021.12.08)
 
-- [x] Some issues with glyph raster size corrected.
-- [x] Issues with accent extraction corrected.
-- [x] Issue when accents are larger than the character.
-- [x] Accents position on Italic characters adjusted.
+The format has been modified to use the European Computer Modern suite of fonts instead of the Computer Modern suite of fonts, to allow for better coverage of accented European characters.
+
+- [x] Corrected some issues with glyph raster size.
+- [x] Corrected issues with accent extraction.
+- [x] Corrected issue when accents are larger than the character.
+- [x] Accents position on Italic characters still need some adjustments.
 - [x] Fonts re-generated.
 - [x] Augmented set of accented characters. See tables below.
+- [x] Support for up to 254 glyphs in fonts (174 glyphs currently used).
+- [x] Support for EC typeset (European Computer Modern) instead of Computer Modern.
+- [x] The `sauter` package is no longer required.
+- [x] Font offsets in preamble are now 4 bytes instead of 2 (IBMF fonts are often larger than 64K).
+- [ ] Documentation need some update.
 
 
 This is a suite of tools to generate and manipulate IBMF fonts.
@@ -25,7 +32,7 @@ All C/C++ tools are compiled through the PlatformIO application.
 
 ## 1. Font Generator
 
-The `fonts\gener.sh` is used to generate IBMF fonts by:
+The `fonts\ec_gener.sh` is used to generate IBMF fonts by:
 
 1) Generating PK fonts from the METAFONT foundry.
 2) Extracting the information from the PK fonts to generate IBMF subfonts.
@@ -33,18 +40,16 @@ The `fonts\gener.sh` is used to generate IBMF fonts by:
 
 The targetted font typefaces are:
 
-  - Computer Modern Roman Serif
-  - Computer Modern Sans-Serif
-  - Computer Modern Typewriter
+  - European Computer Modern Roman Serif
+  - European Computer Modern Sans-Serif
+  - European Computer Modern Typewriter
 
 Each IBMF font contains 8, 9, 10, 12, 14, 17, and 24 points bitmaps.
-Each Computer Modern font suit produces Regular, Bold, Italic, and Bold-Italic fonts. Only Regular and Italic are available for the Typewriter fonts.
+Each European Computer Modern font suite produces Regular, Bold, Italic, and Bold-Italic fonts. Only Regular and Italic are available for the Typewriter fonts.
 
-To generate the METAFONT files through the `gener.sh` script, you need to have `TeXlive` installed, as well as the `sauter` package from the `sauter.zip` file available on CTAN. The `TeXlive` is usually available through packages for your operating system.
+To generate the METAFONT files through the `ec_gener.sh` script, you need to have `TeXlive` installed. The `TeXlive` is usually available through packages for your operating system.
 
-The `sauter` package must be installed manually. A copy of it is supplied in the main folder (file `sauter.zip`). The location to install it on Linux is usually `/usr/share/texlive/texmf-dist/fonts/source/public/`. After that, you must run the `mktexlsr` application from a shell to integrate it to the METAFONT search path.
-
-The `fonts/gener.sh` content can be updated to take into account other DPI than the one generated. As it was built for some devices named `inkplate-6`, `inkplate-10`, and `inkplate-6plus`, there are files with extension `.mf` for those devices in the `fonts/` folder that can be renamed and modified to accommodate your needs. You can then modify the content of `fonts/gener.sh` accordingly. 
+The `fonts/ec_gener.sh` content can be updated to take into account other DPI than the one generated. As it was built for some devices named `inkplate-6`, `inkplate-10`, and `inkplate-6plus`, there are files with extension `.mf` for those devices in the `fonts/` folder that can be renamed and modified to accommodate your needs. You can then modify the content of `fonts/ec_gener.sh` accordingly. 
 
 ## 2. C++ access class
 
@@ -55,7 +60,6 @@ The `IBMFFont` class currently supports a large portion of the ASCII, Latin-1, a
 - Characters colored in GREEN are supported
 - Characters colored in RED will return a space character (no bitmap) as they are not supported
 - Characters colored in GRAY will return the equivalent ASCII character
-- Characters in YELLOW are supported only through the Computer Modern Typewriter typefaces
 
 ### 2.1 Table 1 - ASCII codes:
 
@@ -90,6 +94,7 @@ The following characters are also supported:
 | U+2032  | minute '
 | U+2033  | second "
 | U+2044  | fraction /
+| U+20AC  | euro
 
 
 ## 3. Simple Example Application

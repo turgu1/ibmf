@@ -18,8 +18,8 @@ The following subsections describe each of these elements.
 - 1 byte: Number of individual fonts (NbrFonts).
 - 1 byte:
     - 5 least significant bits: IBMF Format version number. Must be equal to 1.
-    - 3 most significant bits: Character set number (see the Character Tables below).
-- 2 bytes * NbrFonts: byte offset from the beginning of the file to the individual fonts, in the same order as the point sizes.
+    - 3 most significant bits: Character set number (see the Character Table below).
+- 4 bytes * NbrFonts: byte offset from the beginning of the file to the individual fonts, in the same order as the point sizes.
 - 1 byte * NbrFonts: point size of the individual fonts, sorted in ascending point size.
 - [optional 1 byte]: 0, present if NbrFonts is odd, to align on 2-bytes offsets.
 
@@ -42,10 +42,9 @@ Following the preamble, each font's content is appended to the file, one after t
 - 2 bytes: slant correction, in fractional dots count. Used to adjust accent placement on top of italic characters.
 - 1 byte: descender height as dots count.
 - 1 byte: space character size as dots count.
-- 1 byte: glyph count. The number of glyphs that follows.
+- 2 bytes: glyph count. The number of glyphs that follows.
 - 1 byte: ligature and kerning description count.
 - 1 byte: kerning adjustment count.
-- 1 byte: font format version number. The current value is 1.
 
 ### 2.2 Glyphs definition
 
@@ -121,23 +120,18 @@ The fields are the following (They are all bit-sized fields):
 - The least significant 7 bits represent the glyph that must follow the current one to apply the ligature or kerning change. There is a maximum of 128 glyphs in a font, so 7 bits are enough to represent the next character.
 - The next bit if = 1, indicates that it is the last step in the program.
 - The next 7 bits represent 1) a ligature character replacement that merges the two glyphs into one or 2) an index in the kerning adjustment values described below.
-- The next bit, if = 0 indicates that the current step if a ligature. If = 1, it is a kerning step.
+- The next bit, if = 0 indicates that the current step is a ligature. If = 1, it is a kerning step.
 
 ### 2.4 Kerning Adjustments
 
 This is a vector of fractional dots counts values that represent the horizontal kerning adjustment to apply to the advance value of the current glyph.
 
-## 3. Tables of glyphs
+## 3. Table of glyphs
 
-The following tables show all the glyphs that are currently appearing in the `.ibmf` files in the various point sizes. The first table (Character Set 0) is used for the `Computer Modern` and for the `Computer Modern Sans` typefaces. The secont table (Character Set 1) is used for the `Computer Modern Typewrite` typefaces.
+The following table show all the glyphs that are currently appearing in the `.ibmf` files in the various point sizes. The table (Character Set 0) is used for all typefaces. The IBMF format allows for the identification of up to 8 character sets. At this point, only one character set has been defined.
 
-Combining the letters with the accents, the `IBMFFont` class is able to produce a large portion of the Latin letters (UNICODE U+00A1 through U+017F).
+Combining the letters with the accents, the C++ `IBMFFont` class can produce a large portion of the Latin letters (UNICODE U+00A1 through U+017F). For the lacking characters, the `IBMFFont` class replaces them with their non-accented counterpart. 
 
 ### 3.1 Character Set 0
 
 <img src="Character Table - CharSet 0.png" alt="drawing" width="800"/>
-
-### 3.2 Character Set 1
-
-<img src="Character Table - CharSet 1.png" alt="drawing" width="800"/>
-

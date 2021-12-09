@@ -12,13 +12,13 @@ main(int argc, char **argv)
     return 1;
   }
 
-  std::string filename = "../fonts/";
+  std::string filename = "fonts/";
   filename.append(argv[1]).append(".").append(argv[2]).append("pk");
 
   PKFont pk_font(filename);
   char * p = argv[3];
 
-  filename = "../fonts/";
+  filename = "fonts/";
   filename.append(argv[1]).append(".tfm");
   TFM tfm(filename, atoi(argv[2]));
 
@@ -27,7 +27,7 @@ main(int argc, char **argv)
     while (*p) if (pk_font.get_glyph(*p++, glyph, true)) pk_font.show_glyph(glyph);
   }
 
-  tfm.show();
+  //tfm.show();
 
   // PKFont * pk_font;
 

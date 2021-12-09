@@ -12,9 +12,9 @@
 
 #include "ibmf_font.hpp"
 
-IBMFFont font1("/home/turgu1/Dev/ibmf/fonts/ComputerModernSans-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
-IBMFFont font2("/home/turgu1/Dev/ibmf/fonts/ComputerModern-Regular_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
-IBMFFont font3("/home/turgu1/Dev/ibmf/fonts/ComputerModernTypewriter-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font1("/home/turgu1/Dev/ibmf/fonts/CMSans-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font2("/home/turgu1/Dev/ibmf/fonts/CM-Regular_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
+IBMFFont font3("/home/turgu1/Dev/ibmf/fonts/CMTypewriter-Italic_212.ibmf", IBMFFont::PixelResolution::ONE_BIT);
 
 uint32_t 
 to_unicode(const char *str)

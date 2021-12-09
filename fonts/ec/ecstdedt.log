@@ -1,0 +1,1061 @@
+This is TeX, Version 3.14159265 (TeX Live 2019/Debian) (preloaded format=tex 2021.4.17)  27 OCT 2021 14:37
+**ecstdedt.tex
+(./ecstdedt.tex
+\Basis=\toks12
+\Table=\toks13
+\batchoutput=\write0
+\fontoutput=\write1
+\openout0 = `ecfonts.com'.
+
+\Htok=\toks14
+\Workbase=\toks15
+\myc=\count26
+
+generated mf-files:
+-------------------
+
+\openout1 = `ecrm0500.mf'.
+
+ecrm0500.mf 
+\openout1 = `ecrm0600.mf'.
+
+ ecrm0600.mf 
+\openout1 = `ecrm0700.mf'.
+
+ ecrm0700.mf 
+\openout1 = `ecrm0800.mf'.
+
+ ecrm0800.mf 
+\openout1 = `ecrm0900.mf'.
+
+ ecrm0900.mf 
+\openout1 = `ecrm1000.mf'.
+
+ ecrm1000.mf 
+\openout1 = `ecrm1095.mf'.
+
+
+ecrm1095.mf 
+\openout1 = `ecrm1200.mf'.
+
+ ecrm1200.mf 
+\openout1 = `ecrm1440.mf'.
+
+ ecrm1440.mf 
+\openout1 = `ecrm1728.mf'.
+
+ ecrm1728.mf 
+\openout1 = `ecrm2074.mf'.
+
+ ecrm2074.mf 
+\openout1 = `ecrm2488.mf'.
+
+ ecrm2488.mf 
+\openout1 = `ecrm2986.mf'.
+
+
+ecrm2986.mf 
+\openout1 = `ecrm3583.mf'.
+
+ ecrm3583.mf 
+
+\openout1 = `ecsl0500.mf'.
+
+ecsl0500.mf 
+\openout1 = `ecsl0600.mf'.
+
+ ecsl0600.mf 
+\openout1 = `ecsl0700.mf'.
+
+ ecsl0700.mf 
+\openout1 = `ecsl0800.mf'.
+
+ ecsl0800.mf 
+\openout1 = `ecsl0900.mf'.
+
+ ecsl0900.mf 
+\openout1 = `ecsl1000.mf'.
+
+ ecsl1000.mf 
+\openout1 = `ecsl1095.mf'.
+
+
+ecsl1095.mf 
+\openout1 = `ecsl1200.mf'.
+
+ ecsl1200.mf 
+\openout1 = `ecsl1440.mf'.
+
+ ecsl1440.mf 
+\openout1 = `ecsl1728.mf'.
+
+ ecsl1728.mf 
+\openout1 = `ecsl2074.mf'.
+
+ ecsl2074.mf 
+\openout1 = `ecsl2488.mf'.
+
+ ecsl2488.mf 
+\openout1 = `ecsl2986.mf'.
+
+
+ecsl2986.mf 
+\openout1 = `ecsl3583.mf'.
+
+ ecsl3583.mf 
+
+\openout1 = `ecbx0500.mf'.
+
+ecbx0500.mf 
+\openout1 = `ecbx0600.mf'.
+
+ ecbx0600.mf 
+\openout1 = `ecbx0700.mf'.
+
+ ecbx0700.mf 
+\openout1 = `ecbx0800.mf'.
+
+ ecbx0800.mf 
+\openout1 = `ecbx0900.mf'.
+
+ ecbx0900.mf 
+\openout1 = `ecbx1000.mf'.
+
+ ecbx1000.mf 
+\openout1 = `ecbx1095.mf'.
+
+
+ecbx1095.mf 
+\openout1 = `ecbx1200.mf'.
+
+ ecbx1200.mf 
+\openout1 = `ecbx1440.mf'.
+
+ ecbx1440.mf 
+\openout1 = `ecbx1728.mf'.
+
+ ecbx1728.mf 
+\openout1 = `ecbx2074.mf'.
+
+ ecbx2074.mf 
+\openout1 = `ecbx2488.mf'.
+
+ ecbx2488.mf 
+\openout1 = `ecbx2986.mf'.
+
+
+ecbx2986.mf 
+\openout1 = `ecbx3583.mf'.
+
+ ecbx3583.mf 
+
+\openout1 = `ecbl0500.mf'.
+
+ecbl0500.mf 
+\openout1 = `ecbl0600.mf'.
+
+ ecbl0600.mf 
+\openout1 = `ecbl0700.mf'.
+
+ ecbl0700.mf 
+\openout1 = `ecbl0800.mf'.
+
+ ecbl0800.mf 
+\openout1 = `ecbl0900.mf'.
+
+ ecbl0900.mf 
+\openout1 = `ecbl1000.mf'.
+
+ ecbl1000.mf 
+\openout1 = `ecbl1095.mf'.
+
+
+ecbl1095.mf 
+\openout1 = `ecbl1200.mf'.
+
+ ecbl1200.mf 
+\openout1 = `ecbl1440.mf'.
+
+ ecbl1440.mf 
+\openout1 = `ecbl1728.mf'.
+
+ ecbl1728.mf 
+\openout1 = `ecbl2074.mf'.
+
+ ecbl2074.mf 
+\openout1 = `ecbl2488.mf'.
+
+ ecbl2488.mf 
+\openout1 = `ecbl2986.mf'.
+
+
+ecbl2986.mf 
+\openout1 = `ecbl3583.mf'.
+
+ ecbl3583.mf 
+
+\openout1 = `ecrb0500.mf'.
+
+ecrb0500.mf 
+\openout1 = `ecrb0600.mf'.
+
+ ecrb0600.mf 
+\openout1 = `ecrb0700.mf'.
+
+ ecrb0700.mf 
+\openout1 = `ecrb0800.mf'.
+
+ ecrb0800.mf 
+\openout1 = `ecrb0900.mf'.
+
+ ecrb0900.mf 
+\openout1 = `ecrb1000.mf'.
+
+ ecrb1000.mf 
+\openout1 = `ecrb1095.mf'.
+
+
+ecrb1095.mf 
+\openout1 = `ecrb1200.mf'.
+
+ ecrb1200.mf 
+\openout1 = `ecrb1440.mf'.
+
+ ecrb1440.mf 
+\openout1 = `ecrb1728.mf'.
+
+ ecrb1728.mf 
+\openout1 = `ecrb2074.mf'.
+
+ ecrb2074.mf 
+\openout1 = `ecrb2488.mf'.
+
+ ecrb2488.mf 
+\openout1 = `ecrb2986.mf'.
+
+
+ecrb2986.mf 
+\openout1 = `ecrb3583.mf'.
+
+ ecrb3583.mf 
+
+\openout1 = `ecti0500.mf'.
+
+ecti0500.mf 
+\openout1 = `ecti0600.mf'.
+
+ ecti0600.mf 
+\openout1 = `ecti0700.mf'.
+
+ ecti0700.mf 
+\openout1 = `ecti0800.mf'.
+
+ ecti0800.mf 
+\openout1 = `ecti0900.mf'.
+
+ ecti0900.mf 
+\openout1 = `ecti1000.mf'.
+
+ ecti1000.mf 
+\openout1 = `ecti1095.mf'.
+
+
+ecti1095.mf 
+\openout1 = `ecti1200.mf'.
+
+ ecti1200.mf 
+\openout1 = `ecti1440.mf'.
+
+ ecti1440.mf 
+\openout1 = `ecti1728.mf'.
+
+ ecti1728.mf 
+\openout1 = `ecti2074.mf'.
+
+ ecti2074.mf 
+\openout1 = `ecti2488.mf'.
+
+ ecti2488.mf 
+\openout1 = `ecti2986.mf'.
+
+
+ecti2986.mf 
+\openout1 = `ecti3583.mf'.
+
+ ecti3583.mf 
+
+\openout1 = `ecui0500.mf'.
+
+ecui0500.mf 
+\openout1 = `ecui0600.mf'.
+
+ ecui0600.mf 
+\openout1 = `ecui0700.mf'.
+
+ ecui0700.mf 
+\openout1 = `ecui0800.mf'.
+
+ ecui0800.mf 
+\openout1 = `ecui0900.mf'.
+
+ ecui0900.mf 
+\openout1 = `ecui1000.mf'.
+
+ ecui1000.mf 
+\openout1 = `ecui1095.mf'.
+
+
+ecui1095.mf 
+\openout1 = `ecui1200.mf'.
+
+ ecui1200.mf 
+\openout1 = `ecui1440.mf'.
+
+ ecui1440.mf 
+\openout1 = `ecui1728.mf'.
+
+ ecui1728.mf 
+\openout1 = `ecui2074.mf'.
+
+ ecui2074.mf 
+\openout1 = `ecui2488.mf'.
+
+ ecui2488.mf 
+\openout1 = `ecui2986.mf'.
+
+
+ecui2986.mf 
+\openout1 = `ecui3583.mf'.
+
+ ecui3583.mf 
+
+\openout1 = `ecbi0500.mf'.
+
+ecbi0500.mf 
+\openout1 = `ecbi0600.mf'.
+
+ ecbi0600.mf 
+\openout1 = `ecbi0700.mf'.
+
+ ecbi0700.mf 
+\openout1 = `ecbi0800.mf'.
+
+ ecbi0800.mf 
+\openout1 = `ecbi0900.mf'.
+
+ ecbi0900.mf 
+\openout1 = `ecbi1000.mf'.
+
+ ecbi1000.mf 
+\openout1 = `ecbi1095.mf'.
+
+
+ecbi1095.mf 
+\openout1 = `ecbi1200.mf'.
+
+ ecbi1200.mf 
+\openout1 = `ecbi1440.mf'.
+
+ ecbi1440.mf 
+\openout1 = `ecbi1728.mf'.
+
+ ecbi1728.mf 
+\openout1 = `ecbi2074.mf'.
+
+ ecbi2074.mf 
+\openout1 = `ecbi2488.mf'.
+
+ ecbi2488.mf 
+\openout1 = `ecbi2986.mf'.
+
+
+ecbi2986.mf 
+\openout1 = `ecbi3583.mf'.
+
+ ecbi3583.mf 
+
+\openout1 = `eccc0500.mf'.
+
+eccc0500.mf 
+\openout1 = `eccc0600.mf'.
+
+ eccc0600.mf 
+\openout1 = `eccc0700.mf'.
+
+ eccc0700.mf 
+\openout1 = `eccc0800.mf'.
+
+ eccc0800.mf 
+\openout1 = `eccc0900.mf'.
+
+ eccc0900.mf 
+\openout1 = `eccc1000.mf'.
+
+ eccc1000.mf 
+\openout1 = `eccc1095.mf'.
+
+
+eccc1095.mf 
+\openout1 = `eccc1200.mf'.
+
+ eccc1200.mf 
+\openout1 = `eccc1440.mf'.
+
+ eccc1440.mf 
+\openout1 = `eccc1728.mf'.
+
+ eccc1728.mf 
+\openout1 = `eccc2074.mf'.
+
+ eccc2074.mf 
+\openout1 = `eccc2488.mf'.
+
+ eccc2488.mf 
+\openout1 = `eccc2986.mf'.
+
+
+eccc2986.mf 
+\openout1 = `eccc3583.mf'.
+
+ eccc3583.mf 
+
+\openout1 = `ecxc0500.mf'.
+
+ecxc0500.mf 
+\openout1 = `ecxc0600.mf'.
+
+ ecxc0600.mf 
+\openout1 = `ecxc0700.mf'.
+
+ ecxc0700.mf 
+\openout1 = `ecxc0800.mf'.
+
+ ecxc0800.mf 
+\openout1 = `ecxc0900.mf'.
+
+ ecxc0900.mf 
+\openout1 = `ecxc1000.mf'.
+
+ ecxc1000.mf 
+\openout1 = `ecxc1095.mf'.
+
+
+ecxc1095.mf 
+\openout1 = `ecxc1200.mf'.
+
+ ecxc1200.mf 
+\openout1 = `ecxc1440.mf'.
+
+ ecxc1440.mf 
+\openout1 = `ecxc1728.mf'.
+
+ ecxc1728.mf 
+\openout1 = `ecxc2074.mf'.
+
+ ecxc2074.mf 
+\openout1 = `ecxc2488.mf'.
+
+ ecxc2488.mf 
+\openout1 = `ecxc2986.mf'.
+
+
+ecxc2986.mf 
+\openout1 = `ecxc3583.mf'.
+
+ ecxc3583.mf 
+
+\openout1 = `ecsc0500.mf'.
+
+ecsc0500.mf 
+\openout1 = `ecsc0600.mf'.
+
+ ecsc0600.mf 
+\openout1 = `ecsc0700.mf'.
+
+ ecsc0700.mf 
+\openout1 = `ecsc0800.mf'.
+
+ ecsc0800.mf 
+\openout1 = `ecsc0900.mf'.
+
+ ecsc0900.mf 
+\openout1 = `ecsc1000.mf'.
+
+ ecsc1000.mf 
+\openout1 = `ecsc1095.mf'.
+
+
+ecsc1095.mf 
+\openout1 = `ecsc1200.mf'.
+
+ ecsc1200.mf 
+\openout1 = `ecsc1440.mf'.
+
+ ecsc1440.mf 
+\openout1 = `ecsc1728.mf'.
+
+ ecsc1728.mf 
+\openout1 = `ecsc2074.mf'.
+
+ ecsc2074.mf 
+\openout1 = `ecsc2488.mf'.
+
+ ecsc2488.mf 
+\openout1 = `ecsc2986.mf'.
+
+
+ecsc2986.mf 
+\openout1 = `ecsc3583.mf'.
+
+ ecsc3583.mf 
+
+\openout1 = `ecoc0500.mf'.
+
+ecoc0500.mf 
+\openout1 = `ecoc0600.mf'.
+
+ ecoc0600.mf 
+\openout1 = `ecoc0700.mf'.
+
+ ecoc0700.mf 
+\openout1 = `ecoc0800.mf'.
+
+ ecoc0800.mf 
+\openout1 = `ecoc0900.mf'.
+
+ ecoc0900.mf 
+\openout1 = `ecoc1000.mf'.
+
+ ecoc1000.mf 
+\openout1 = `ecoc1095.mf'.
+
+
+ecoc1095.mf 
+\openout1 = `ecoc1200.mf'.
+
+ ecoc1200.mf 
+\openout1 = `ecoc1440.mf'.
+
+ ecoc1440.mf 
+\openout1 = `ecoc1728.mf'.
+
+ ecoc1728.mf 
+\openout1 = `ecoc2074.mf'.
+
+ ecoc2074.mf 
+\openout1 = `ecoc2488.mf'.
+
+ ecoc2488.mf 
+\openout1 = `ecoc2986.mf'.
+
+
+ecoc2986.mf 
+\openout1 = `ecoc3583.mf'.
+
+ ecoc3583.mf 
+
+\openout1 = `ecci0500.mf'.
+
+ecci0500.mf 
+\openout1 = `ecci0600.mf'.
+
+ ecci0600.mf 
+\openout1 = `ecci0700.mf'.
+
+ ecci0700.mf 
+\openout1 = `ecci0800.mf'.
+
+ ecci0800.mf 
+\openout1 = `ecci0900.mf'.
+
+ ecci0900.mf 
+\openout1 = `ecci1000.mf'.
+
+ ecci1000.mf 
+\openout1 = `ecci1095.mf'.
+
+
+ecci1095.mf 
+\openout1 = `ecci1200.mf'.
+
+ ecci1200.mf 
+\openout1 = `ecci1440.mf'.
+
+ ecci1440.mf 
+\openout1 = `ecci1728.mf'.
+
+ ecci1728.mf 
+\openout1 = `ecci2074.mf'.
+
+ ecci2074.mf 
+\openout1 = `ecci2488.mf'.
+
+ ecci2488.mf 
+\openout1 = `ecci2986.mf'.
+
+
+ecci2986.mf 
+\openout1 = `ecci3583.mf'.
+
+ ecci3583.mf 
+
+\openout1 = `ectt0800.mf'.
+
+ectt0800.mf 
+\openout1 = `ectt0900.mf'.
+
+ ectt0900.mf 
+\openout1 = `ectt1000.mf'.
+
+ ectt1000.mf 
+\openout1 = `ectt1095.mf'.
+
+ ectt1095.mf 
+\openout1 = `ectt1200.mf'.
+
+ ectt1200.mf 
+\openout1 = `ectt1440.mf'.
+
+ ectt1440.mf 
+\openout1 = `ectt1728.mf'.
+
+
+ectt1728.mf 
+\openout1 = `ectt2074.mf'.
+
+ ectt2074.mf 
+\openout1 = `ectt2488.mf'.
+
+ ectt2488.mf 
+\openout1 = `ectt2986.mf'.
+
+ ectt2986.mf 
+\openout1 = `ectt3583.mf'.
+
+ ectt3583.mf 
+
+\openout1 = `ecit0800.mf'.
+
+ecit0800.mf 
+\openout1 = `ecit0900.mf'.
+
+ ecit0900.mf 
+\openout1 = `ecit1000.mf'.
+
+ ecit1000.mf 
+\openout1 = `ecit1095.mf'.
+
+ ecit1095.mf 
+\openout1 = `ecit1200.mf'.
+
+ ecit1200.mf 
+\openout1 = `ecit1440.mf'.
+
+ ecit1440.mf 
+\openout1 = `ecit1728.mf'.
+
+
+ecit1728.mf 
+\openout1 = `ecit2074.mf'.
+
+ ecit2074.mf 
+\openout1 = `ecit2488.mf'.
+
+ ecit2488.mf 
+\openout1 = `ecit2986.mf'.
+
+ ecit2986.mf 
+\openout1 = `ecit3583.mf'.
+
+ ecit3583.mf 
+
+\openout1 = `ecvt0800.mf'.
+
+ecvt0800.mf 
+\openout1 = `ecvt0900.mf'.
+
+ ecvt0900.mf 
+\openout1 = `ecvt1000.mf'.
+
+ ecvt1000.mf 
+\openout1 = `ecvt1095.mf'.
+
+ ecvt1095.mf 
+\openout1 = `ecvt1200.mf'.
+
+ ecvt1200.mf 
+\openout1 = `ecvt1440.mf'.
+
+ ecvt1440.mf 
+\openout1 = `ecvt1728.mf'.
+
+
+ecvt1728.mf 
+\openout1 = `ecvt2074.mf'.
+
+ ecvt2074.mf 
+\openout1 = `ecvt2488.mf'.
+
+ ecvt2488.mf 
+\openout1 = `ecvt2986.mf'.
+
+ ecvt2986.mf 
+\openout1 = `ecvt3583.mf'.
+
+ ecvt3583.mf 
+
+\openout1 = `ecvi0800.mf'.
+
+ecvi0800.mf 
+\openout1 = `ecvi0900.mf'.
+
+ ecvi0900.mf 
+\openout1 = `ecvi1000.mf'.
+
+ ecvi1000.mf 
+\openout1 = `ecvi1095.mf'.
+
+ ecvi1095.mf 
+\openout1 = `ecvi1200.mf'.
+
+ ecvi1200.mf 
+\openout1 = `ecvi1440.mf'.
+
+ ecvi1440.mf 
+\openout1 = `ecvi1728.mf'.
+
+
+ecvi1728.mf 
+\openout1 = `ecvi2074.mf'.
+
+ ecvi2074.mf 
+\openout1 = `ecvi2488.mf'.
+
+ ecvi2488.mf 
+\openout1 = `ecvi2986.mf'.
+
+ ecvi2986.mf 
+\openout1 = `ecvi3583.mf'.
+
+ ecvi3583.mf 
+
+\openout1 = `ectc0800.mf'.
+
+ectc0800.mf 
+\openout1 = `ectc0900.mf'.
+
+ ectc0900.mf 
+\openout1 = `ectc1000.mf'.
+
+ ectc1000.mf 
+\openout1 = `ectc1095.mf'.
+
+ ectc1095.mf 
+\openout1 = `ectc1200.mf'.
+
+ ectc1200.mf 
+\openout1 = `ectc1440.mf'.
+
+ ectc1440.mf 
+\openout1 = `ectc1728.mf'.
+
+
+ectc1728.mf 
+\openout1 = `ectc2074.mf'.
+
+ ectc2074.mf 
+\openout1 = `ectc2488.mf'.
+
+ ectc2488.mf 
+\openout1 = `ectc2986.mf'.
+
+ ectc2986.mf 
+\openout1 = `ectc3583.mf'.
+
+ ectc3583.mf 
+
+\openout1 = `ecst0800.mf'.
+
+ecst0800.mf 
+\openout1 = `ecst0900.mf'.
+
+ ecst0900.mf 
+\openout1 = `ecst1000.mf'.
+
+ ecst1000.mf 
+\openout1 = `ecst1095.mf'.
+
+ ecst1095.mf 
+\openout1 = `ecst1200.mf'.
+
+ ecst1200.mf 
+\openout1 = `ecst1440.mf'.
+
+ ecst1440.mf 
+\openout1 = `ecst1728.mf'.
+
+
+ecst1728.mf 
+\openout1 = `ecst2074.mf'.
+
+ ecst2074.mf 
+\openout1 = `ecst2488.mf'.
+
+ ecst2488.mf 
+\openout1 = `ecst2986.mf'.
+
+ ecst2986.mf 
+\openout1 = `ecst3583.mf'.
+
+ ecst3583.mf 
+
+\openout1 = `ecss0500.mf'.
+
+ecss0500.mf 
+\openout1 = `ecss0600.mf'.
+
+ ecss0600.mf 
+\openout1 = `ecss0700.mf'.
+
+ ecss0700.mf 
+\openout1 = `ecss0800.mf'.
+
+ ecss0800.mf 
+\openout1 = `ecss0900.mf'.
+
+ ecss0900.mf 
+\openout1 = `ecss1000.mf'.
+
+ ecss1000.mf 
+\openout1 = `ecss1095.mf'.
+
+
+ecss1095.mf 
+\openout1 = `ecss1200.mf'.
+
+ ecss1200.mf 
+\openout1 = `ecss1440.mf'.
+
+ ecss1440.mf 
+\openout1 = `ecss1728.mf'.
+
+ ecss1728.mf 
+\openout1 = `ecss2074.mf'.
+
+ ecss2074.mf 
+\openout1 = `ecss2488.mf'.
+
+ ecss2488.mf 
+\openout1 = `ecss2986.mf'.
+
+
+ecss2986.mf 
+\openout1 = `ecss3583.mf'.
+
+ ecss3583.mf 
+
+\openout1 = `ecsi0500.mf'.
+
+ecsi0500.mf 
+\openout1 = `ecsi0600.mf'.
+
+ ecsi0600.mf 
+\openout1 = `ecsi0700.mf'.
+
+ ecsi0700.mf 
+\openout1 = `ecsi0800.mf'.
+
+ ecsi0800.mf 
+\openout1 = `ecsi0900.mf'.
+
+ ecsi0900.mf 
+\openout1 = `ecsi1000.mf'.
+
+ ecsi1000.mf 
+\openout1 = `ecsi1095.mf'.
+
+
+ecsi1095.mf 
+\openout1 = `ecsi1200.mf'.
+
+ ecsi1200.mf 
+\openout1 = `ecsi1440.mf'.
+
+ ecsi1440.mf 
+\openout1 = `ecsi1728.mf'.
+
+ ecsi1728.mf 
+\openout1 = `ecsi2074.mf'.
+
+ ecsi2074.mf 
+\openout1 = `ecsi2488.mf'.
+
+ ecsi2488.mf 
+\openout1 = `ecsi2986.mf'.
+
+
+ecsi2986.mf 
+\openout1 = `ecsi3583.mf'.
+
+ ecsi3583.mf 
+
+\openout1 = `ecsx0500.mf'.
+
+ecsx0500.mf 
+\openout1 = `ecsx0600.mf'.
+
+ ecsx0600.mf 
+\openout1 = `ecsx0700.mf'.
+
+ ecsx0700.mf 
+\openout1 = `ecsx0800.mf'.
+
+ ecsx0800.mf 
+\openout1 = `ecsx0900.mf'.
+
+ ecsx0900.mf 
+\openout1 = `ecsx1000.mf'.
+
+ ecsx1000.mf 
+\openout1 = `ecsx1095.mf'.
+
+
+ecsx1095.mf 
+\openout1 = `ecsx1200.mf'.
+
+ ecsx1200.mf 
+\openout1 = `ecsx1440.mf'.
+
+ ecsx1440.mf 
+\openout1 = `ecsx1728.mf'.
+
+ ecsx1728.mf 
+\openout1 = `ecsx2074.mf'.
+
+ ecsx2074.mf 
+\openout1 = `ecsx2488.mf'.
+
+ ecsx2488.mf 
+\openout1 = `ecsx2986.mf'.
+
+
+ecsx2986.mf 
+\openout1 = `ecsx3583.mf'.
+
+ ecsx3583.mf 
+
+\openout1 = `ecso0500.mf'.
+
+ecso0500.mf 
+\openout1 = `ecso0600.mf'.
+
+ ecso0600.mf 
+\openout1 = `ecso0700.mf'.
+
+ ecso0700.mf 
+\openout1 = `ecso0800.mf'.
+
+ ecso0800.mf 
+\openout1 = `ecso0900.mf'.
+
+ ecso0900.mf 
+\openout1 = `ecso1000.mf'.
+
+ ecso1000.mf 
+\openout1 = `ecso1095.mf'.
+
+
+ecso1095.mf 
+\openout1 = `ecso1200.mf'.
+
+ ecso1200.mf 
+\openout1 = `ecso1440.mf'.
+
+ ecso1440.mf 
+\openout1 = `ecso1728.mf'.
+
+ ecso1728.mf 
+\openout1 = `ecso2074.mf'.
+
+ ecso2074.mf 
+\openout1 = `ecso2488.mf'.
+
+ ecso2488.mf 
+\openout1 = `ecso2986.mf'.
+
+
+ecso2986.mf 
+\openout1 = `ecso3583.mf'.
+
+ ecso3583.mf 
+
+\openout1 = `ecdh0500.mf'.
+
+ecdh0500.mf 
+\openout1 = `ecdh0600.mf'.
+
+ ecdh0600.mf 
+\openout1 = `ecdh0700.mf'.
+
+ ecdh0700.mf 
+\openout1 = `ecdh0800.mf'.
+
+ ecdh0800.mf 
+\openout1 = `ecdh0900.mf'.
+
+ ecdh0900.mf 
+\openout1 = `ecdh1000.mf'.
+
+ ecdh1000.mf 
+\openout1 = `ecdh1095.mf'.
+
+
+ecdh1095.mf 
+\openout1 = `ecdh1200.mf'.
+
+ ecdh1200.mf 
+\openout1 = `ecdh1440.mf'.
+
+ ecdh1440.mf 
+\openout1 = `ecdh1728.mf'.
+
+ ecdh1728.mf 
+\openout1 = `ecdh2074.mf'.
+
+ ecdh2074.mf 
+\openout1 = `ecdh2488.mf'.
+
+ ecdh2488.mf 
+\openout1 = `ecdh2986.mf'.
+
+
+ecdh2986.mf 
+\openout1 = `ecdh3583.mf'.
+
+ ecdh3583.mf 
+Overfull \hbox (398.20105pt too wide) detected at line 364
+[]
+
+\hbox(302.5+3.5)x391.46176
+.\vbox(302.5+3.5)x789.66281
+..\glue 6.0 plus 2.0 minus 2.0
+..\hbox(8.5+3.5)x789.66281
+...\glue(\tabskip) 0.0
+...\hbox(8.5+3.5)x42.43864 []
+...\glue(\tabskip) 0.0
+...\hbox(8.5+3.5)x25.00002 []
+...\glue(\tabskip) 0.0
+...etc.
+..\glue(\baselineskip) 0.0
+..\hbox(8.5+3.5)x789.66281
+...\glue(\tabskip) 0.0
+...\hbox(8.5+3.5)x42.43864, glue set 7.96638fil []
+...\glue(\tabskip) 0.0
+...\hbox(8.5+3.5)x25.00002 []
+...\glue(\tabskip) 0.0
+...etc.
+..\glue(\baselineskip) 0.0
+..etc.
+
+[1] )
+Output written on ecstdedt.dvi (1 page, 4836 bytes).

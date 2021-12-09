@@ -41,7 +41,7 @@ class PKFont
     
 
   private:
-    static constexpr uint8_t MAX_GLYPH_COUNT = 128;
+    static constexpr uint16_t MAX_GLYPH_COUNT = 256;
 
     bool initialized;
     bool memory_owner_is_the_instance;
@@ -496,7 +496,7 @@ class PKFont
 
     int 
     load_glyph_table() {
-      for (uint8_t i = 0; i < MAX_GLYPH_COUNT; i++) glyph_table[i] = nullptr;
+      for (uint16_t i = 0; i < MAX_GLYPH_COUNT; i++) glyph_table[i] = nullptr;
       glyph_count = 0;
 
       uint8_t byte;
@@ -606,8 +606,7 @@ class PKFont
 
     bool
     get_glyph(uint8_t glyph_code, Glyph & glyph, bool load_bitmap) {
-      if ((glyph_code > MAX_GLYPH_COUNT) ||
-          (glyph_table[glyph_code] == nullptr)) {
+      if (glyph_table[glyph_code] == nullptr) {
         std::cerr << "No entry for glyph code " 
                  << glyph_code << " 0x" << std::hex << glyph_code
                  << std::endl;         

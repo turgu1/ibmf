@@ -1,8 +1,0 @@
-% This is inkplate6.mf as of 2021/09/26
-proofing:=0;
-fontmaking:=1;
-tracingtitles:=0;
-pixels_per_inch:=300;
-blacker:=0.65;
-fillin:=-0.1;
-o_correction:=.5;

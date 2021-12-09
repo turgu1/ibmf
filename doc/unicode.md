@@ -144,11 +144,11 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+003B point-virgule">;</span>
 </td>
-<td class="no2"><span class="Uni" title="U+003C signe inférieur à">&lt;</span>
+<td class="yes"><span class="Uni" title="U+003C signe inférieur à">&lt;</span>
 </td>
 <td class="yes"><span class="Uni" title="U+003D signe égal à">=</span>
 </td>
-<td class="no2"><span class="Uni" title="U+003E signe supérieur à">&gt;</span>
+<td class="yes"><span class="Uni" title="U+003E signe supérieur à">&gt;</span>
 </td>
 <td class="yes"><span class="Uni" title="U+003F point d’interrogation">?</span>
 </td></tr>
@@ -214,7 +214,7 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+005B crochet gauche">&#91;</span>
 </td>
-<td class="no2"><span class="Uni" title="U+005C barre oblique inversée">&#92;</span>
+<td class="yes"><span class="Uni" title="U+005C barre oblique inversée">&#92;</span>
 </td>
 <td class="yes"><span class="Uni" title="U+005D crochet droit">&#93;</span>
 </td>
@@ -282,11 +282,11 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+007A lettre latine minuscule z">z</span>
 </td>
-<td class="no2"><span class="Uni" title="U+007B accolade gauche">&#123;</span>
+<td class="yes"><span class="Uni" title="U+007B accolade gauche">&#123;</span>
 </td>
-<td class="no2"><span class="Uni" title="U+007C barre verticale">&#124;</span>
+<td class="yes"><span class="Uni" title="U+007C barre verticale">&#124;</span>
 </td>
-<td class="no2"><span class="Uni" title="U+007D accolade droite">&#125;</span>
+<td class="yes"><span class="Uni" title="U+007D accolade droite">&#125;</span>
 </td>
 <td class="yes"><span class="Uni" title="U+007E tilde">~</span>
 </td>
@@ -379,31 +379,31 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+00A1 point d’exclamation renversé">¡</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A2 symbole centime">¢</span>
+<td class="yes"><span class="Uni" title="U+00A2 symbole centime">¢</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A3 symbole livre">£</span>
+<td class="yes"><span class="Uni" title="U+00A3 symbole livre">£</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A4 symbole monétaire">¤</span>
+<td class="yes"><span class="Uni" title="U+00A4 symbole monétaire">¤</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A5 symbole yen">¥</span>
+<td class="yes"><span class="Uni" title="U+00A5 symbole yen">¥</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A6 barre verticale discontinue">¦</span>
+<td class="yes"><span class="Uni" title="U+00A6 barre verticale discontinue">¦</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A7 paragraphe">§</span>
+<td class="yes"><span class="Uni" title="U+00A7 paragraphe">§</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00A8 tréma">¨</span>
 </td>
-<td class="no"><span class="Uni" title="U+00A9 symbole copyright">©</span>
+<td class="yes"><span class="Uni" title="U+00A9 symbole copyright">©</span>
 </td>
-<td class="no"><span class="Uni" title="U+00AA indicateur ordinal féminin">ª</span>
+<td class="yes"><span class="Uni" title="U+00AA indicateur ordinal féminin">ª</span>
 </td>
-<td class="no"><span class="Uni" title="U+00AB guillemet gauche">«</span>
+<td class="yes"><span class="Uni" title="U+00AB guillemet gauche">«</span>
 </td>
-<td class="no"><span class="Uni" title="U+00AC signe négation">¬</span>
+<td class="yes"><span class="Uni" title="U+00AC signe négation">¬</span>
 </td>
-<td class="no"<span class="UniCtrl" title="U+00AD coupure de mot conditionnelle"><span style="font-size:20px">-</span><br />SHY</span>
+<td class="yes"<span class="UniCtrl" title="U+00AD coupure de mot conditionnelle"><span style="font-size:20px">-</span><br />SHY</span>
 </td>
-<td class="no"><span class="Uni" title="U+00AE symbole marque déposée">®</span>
+<td class="yes"><span class="Uni" title="U+00AE symbole marque déposée">®</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00AF macron">¯</span>
 </td></tr>
@@ -412,33 +412,33 @@ th,td { text-align: center; }
 </th>
 <td class="yes"><span class="Uni" title="U+00B0 symbole degré">°</span>
 </td>
-<td class="no"><span class="Uni" title="U+00B1 signe plus-ou-moins">±</span>
+<td class="yes"><span class="Uni" title="U+00B1 signe plus-ou-moins">±</span>
 </td>
-<td class="no"><span class="Uni" title="U+00B2 exposant deux">²</span>
+<td class="yes"><span class="Uni" title="U+00B2 exposant deux">²</span>
 </td>
-<td class="no"><span class="Uni" title="U+00B3 exposant trois">³</span>
+<td class="yes"><span class="Uni" title="U+00B3 exposant trois">³</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00B4 accent aigu">´</span>
 </td>
-<td class="no"><span class="Uni" title="U+00B5 symbole micro">µ</span>
+<td class="yes"><span class="Uni" title="U+00B5 symbole micro">µ</span>
 </td>
-<td class="no"><span class="Uni" title="U+00B6 pied-de-mouche">¶</span>
+<td class="yes"><span class="Uni" title="U+00B6 pied-de-mouche">¶</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00B7 point médian">·</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00B8 cédille">¸</span>
 </td>
-<td class="no"><span class="Uni" title="U+00B9 exposant un">¹</span>
+<td class="yes"><span class="Uni" title="U+00B9 exposant un">¹</span>
 </td>
-<td class="no"><span class="Uni" title="U+00BA indicateur ordinal masculin">º</span>
+<td class="yes"><span class="Uni" title="U+00BA indicateur ordinal masculin">º</span>
 </td>
-<td class="no"><span class="Uni" title="U+00BB guillemet droit">»</span>
+<td class="yes"><span class="Uni" title="U+00BB guillemet droit">»</span>
 </td>
-<td class="no"><span class="Uni" title="U+00BC fraction un quart">¼</span>
+<td class="yes"><span class="Uni" title="U+00BC fraction un quart">¼</span>
 </td>
-<td class="no"><span class="Uni" title="U+00BD fraction un demi">½</span>
+<td class="yes"><span class="Uni" title="U+00BD fraction un demi">½</span>
 </td>
-<td class="no"><span class="Uni" title="U+00BE fraction trois quarts">¾</span>
+<td class="yes"><span class="Uni" title="U+00BE fraction trois quarts">¾</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00BF point d’interrogation renversé">¿</span>
 </td></tr>
@@ -480,7 +480,7 @@ th,td { text-align: center; }
 <tr>
 <th scope="row" lang="fr" class="UniRow lang-fr script-Latn">U+00D0
 </th>
-<td class="no3"><span class="Uni" title="U+00D0 lettre majuscule latine eth">Ð</span>
+<td class="yes"><span class="Uni" title="U+00D0 lettre majuscule latine eth">Ð</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00D1 lettre majuscule latine n tilde">Ñ</span>
 </td>
@@ -494,7 +494,7 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+00D6 lettre majuscule latine o tréma">Ö</span>
 </td>
-<td class="no"><span class="Uni" title="U+00D7 signe multiplication">×</span>
+<td class="yes"><span class="Uni" title="U+00D7 signe multiplication">×</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00D8 lettre majuscule latine o barré obliquement">Ø</span>
 </td>
@@ -508,7 +508,7 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+00DD lettre majuscule latine u accent aigu">Ý</span>
 </td>
-<td class="no"><span class="Uni" title="U+00DE lettre majuscule latine thorn">Þ</span>
+<td class="yes"><span class="Uni" title="U+00DE lettre majuscule latine thorn">Þ</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00DF lettre minuscule latine s dur">ß</span>
 </td></tr>
@@ -550,7 +550,7 @@ th,td { text-align: center; }
 <tr>
 <th scope="row" lang="fr" class="UniRow lang-fr script-Latn">U+00F0
 </th>
-<td class="no"><span class="Uni" title="U+00F0 lettre minuscule latine eth">ð</span>
+<td class="yes"><span class="Uni" title="U+00F0 lettre minuscule latine eth">ð</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00F1 lettre minuscule latine n tilde">ñ</span>
 </td>
@@ -564,7 +564,7 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+00F6 lettre minuscule latine o tréma">ö</span>
 </td>
-<td class="no"><span class="Uni" title="U+00F7 signe division">÷</span>
+<td class="yes"><span class="Uni" title="U+00F7 signe division">÷</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00F8 lettre minuscule latine o barré obliquement">ø</span>
 </td>
@@ -578,7 +578,7 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+00FD lettre minuscule latine u accent aigu">ý</span>
 </td>
-<td class="no"><span class="Uni" title="U+00FE lettre minuscule latine thorn">þ</span>
+<td class="yes"><span class="Uni" title="U+00FE lettre minuscule latine thorn">þ</span>
 </td>
 <td class="yes"><span class="Uni" title="U+00FF lettre minuscule latine y tréma">ÿ</span>
 </td></tr></tbody></table>
@@ -603,9 +603,9 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+0103 lettre minuscule latine a brève">ă</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0104 lettre majuscule latine a ogonek">Ą</span>
+<td class="yes"><span class="Uni" title="U+0104 lettre majuscule latine a ogonek">Ą</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0105 lettre minuscule latine a ogonek">ą</span>
+<td class="yes"><span class="Uni" title="U+0105 lettre minuscule latine a ogonek">ą</span>
 </td>
 <td class="yes"><span class="Uni" title="U+0106 lettre majuscule latine c accent aigu">Ć</span>
 </td>
@@ -625,14 +625,14 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+010E lettre majuscule latine d caron">Ď</span>
 </td>
-<td class="no3"><span class="Uni" title="U+010F lettre minuscule latine d caron">ď</span>
+<td class="yes"><span class="Uni" title="U+010F lettre minuscule latine d caron">ď</span>
 </td></tr>
 <tr>
 <th scope="row" lang="fr" class="UniRow lang-fr script-Latn">U+0110
 </th>
-<td class="no3"><span class="Uni" title="U+0110 lettre majuscule latine d barré">Đ</span>
+<td class="yes"><span class="Uni" title="U+0110 lettre majuscule latine d barré">Đ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0111 lettre minuscule latine d barré">đ</span>
+<td class="yes"><span class="Uni" title="U+0111 lettre minuscule latine d barré">đ</span>
 </td>
 <td class="yes"><span class="Uni" title="U+0112 lettre majuscule latine e macron">Ē</span>
 </td>
@@ -646,9 +646,9 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+0117 lettre minuscule latine e point en chef">ė</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0118 lettre majuscule latine e ogonek">Ę</span>
+<td class="yes"><span class="Uni" title="U+0118 lettre majuscule latine e ogonek">Ę</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0119 lettre minuscule latine e ogonek">ę</span>
+<td class="yes"><span class="Uni" title="U+0119 lettre minuscule latine e ogonek">ę</span>
 </td>
 <td class="yes"><span class="Uni" title="U+011A lettre majuscule latine e caron">Ě</span>
 </td>
@@ -693,9 +693,9 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+012D lettre minuscule latine i brève">ĭ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+012E lettre majuscule latine i ogonek">Į</span>
+<td class="yes"><span class="Uni" title="U+012E lettre majuscule latine i ogonek">Į</span>
 </td>
-<td class="no3"><span class="Uni" title="U+012F lettre minuscule latine i ogonek">į</span>
+<td class="yes"><span class="Uni" title="U+012F lettre minuscule latine i ogonek">į</span>
 </td></tr>
 <tr>
 <th scope="row" lang="fr" class="UniRow lang-fr script-Latn">U+0130
@@ -704,9 +704,9 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+0131 lettre minuscule latine i sans point">ı</span>
 </td>
-<td class="no"><span class="Uni" title="U+0132 digramme soudé majuscule latin ij">Ĳ</span>
+<td class="yes"><span class="Uni" title="U+0132 digramme soudé majuscule latin ij">Ĳ</span>
 </td>
-<td class="no"><span class="Uni" title="U+0133 digramme soudé minuscule latin ij">ĳ</span>
+<td class="yes"><span class="Uni" title="U+0133 digramme soudé minuscule latin ij">ĳ</span>
 </td>
 <td class="yes"><span class="Uni" title="U+0134 lettre majuscule latine j circonflexe">Ĵ</span>
 </td>
@@ -726,9 +726,9 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+013C lettre minuscule latine l cédille">ļ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+013D lettre majuscule latine l caron">Ľ</span>
+<td class="yes"><span class="Uni" title="U+013D lettre majuscule latine l caron">Ľ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+013E lettre minuscule latine l caron">ľ</span>
+<td class="yes"><span class="Uni" title="U+013E lettre minuscule latine l caron">ľ</span>
 </td>
 <td class="no3"><span class="Uni" title="U+013F lettre majuscule latine l point médian">Ŀ</span>
 </td></tr>
@@ -737,9 +737,9 @@ th,td { text-align: center; }
 </th>
 <td class="no3"><span class="Uni" title="U+0140 lettre minuscule latine l caron">ŀ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0141 lettre majuscule latine l barré">Ł</span>
+<td class="yes"><span class="Uni" title="U+0141 lettre majuscule latine l barré">Ł</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0142 lettre minuscule latine l barré">ł</span>
+<td class="yes"><span class="Uni" title="U+0142 lettre minuscule latine l barré">ł</span>
 </td>
 <td class="yes"><span class="Uni" title="U+0143 lettre majuscule latine n accent aigu">Ń</span>
 </td>
@@ -753,11 +753,11 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+0148 lettre minuscule latine n caron">ň</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0149 lettre minuscule latine n précédée d’une apostrophe">ŉ</span>
+<td class="yes"><span class="Uni" title="U+0149 lettre minuscule latine n précédée d’une apostrophe">ŉ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+014A lettre majuscule latine eng">Ŋ</span>
+<td class="yes"><span class="Uni" title="U+014A lettre majuscule latine eng">Ŋ</span>
 </td>
-<td class="no3"><span class="Uni" title="U+014B lettre minuscule latine eng">ŋ</span>
+<td class="yes"><span class="Uni" title="U+014B lettre minuscule latine eng">ŋ</span>
 </td>
 <td class="yes"><span class="Uni" title="U+014C lettre majuscule latine o mcaron">Ō</span>
 </td>
@@ -815,7 +815,7 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+0164 lettre majuscule latine t caron">Ť</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0165 lettre minuscule latine t caron">ť</span>
+<td class="yes"><span class="Uni" title="U+0165 lettre minuscule latine t caron">ť</span>
 </td>
 <td class="no3"><span class="Uni" title="U+0166 lettre majuscule latine t barré">Ŧ</span>
 </td>
@@ -844,9 +844,9 @@ th,td { text-align: center; }
 </td>
 <td class="yes"><span class="Uni" title="U+0171 lettre minuscule latine u double accent aigu">ű</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0172 lettre majuscule latine u ogonek">Ų</span>
+<td class="yes"><span class="Uni" title="U+0172 lettre majuscule latine u ogonek">Ų</span>
 </td>
-<td class="no3"><span class="Uni" title="U+0173 lettre minuscule latine u ogonek">ų</span>
+<td class="yes"><span class="Uni" title="U+0173 lettre minuscule latine u ogonek">ų</span>
 </td>
 <td class="yes"><span class="Uni" title="U+0174 lettre majuscule latine w accent circonflexe">Ŵ</span>
 </td>

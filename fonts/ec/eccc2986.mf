@@ -1,0 +1,6 @@
+% This is eccc2986.mf in text format as of October, 27,  2021
+if unknown exbase: input exbase fi;
+
+
+gensize:=29.86;
+generate eccc

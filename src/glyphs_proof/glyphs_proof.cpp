@@ -1,13 +1,13 @@
 #include "ibmf_font.hpp"
 
-IBMFFont font("/home/turgu1/Dev/ibmf/fonts/ComputerModern-Regular_166.ibmf", IBMFFont::PixelResolution::EIGHT_BITS);
+IBMFFont font("/home/turgu1/Dev/ibmf/fonts/EC-Regular_212.ibmf", IBMFFont::PixelResolution::EIGHT_BITS);
 
 char matrix[100][200];
-int  col = 0;
+int  col     = 0;
 int  max_row = 0;
 
 
-const uint32_t others[15] = {
+const uint32_t others[16] = {
   0x02BB, // reverse apostrophe
   0x02BC, // apostrophe
   0x02C6, // circumflex
@@ -22,11 +22,15 @@ const uint32_t others[15] = {
   0x201A, // comma like ,
   0x2032, // minute '
   0x2033, // second "
-  0x2044  // fraction /
+  0x2044, // fraction /
+  0x20AC  // Euro
 };
 
-inline void clear_matrix() { memset(matrix, ' ', 100 * 200); }
-
+inline void clear_matrix() { 
+  memset(matrix, ' ', 100 * 200); 
+  col     = 0;
+  max_row = 0;
+}
 
 void show() 
 {
@@ -42,7 +46,7 @@ void show()
 }
 
 void
-put(const IBMFFont::Glyph & glyph)
+put(const IBMFFont::Glyph & glyph, int code)
 {
   if (col + glyph.bitmap_width >= 200) {
     show();
@@ -55,6 +59,9 @@ put(const IBMFFont::Glyph & glyph)
 
   int row_size = glyph.bitmap_width;
   uint8_t * rowp = glyph.bitmap;
+
+  sprintf(&matrix[first_row][col], "%04x:", code);
+  matrix[first_row++][col+5] = ' ';
 
   for (int j = 0; j < glyph.bitmap_height; j++) {
     for (int i = 0; i < glyph.bitmap_width; i++) {
@@ -70,7 +77,10 @@ int
 main()
 {
 
-  font.set_font_size(12);
+  if (!font.set_font_size(10)) {
+    std::cerr << "Font size 10 not available!" << std::endl;
+    return 1;
+  }
 
   IBMFFont::Glyph glyph;
 
@@ -79,18 +89,27 @@ main()
   for (int i = 0; i < 0x17F; i++) {
     font.get_glyph(i, glyph, true);
     if (glyph.char_code != ' ') {
-      put(glyph);
+      put(glyph, i);
     }
   }
 
-  for (int i = 0; i < 15; i++) {
+  for (int i = 0; i < 16; i++) {
     font.get_glyph(others[i], glyph, true);
     if (glyph.char_code != ' ') {
-      put(glyph);
+      put(glyph, others[i]);
     }
   }
 
   if (col > 0) show();
+
+  std::cout << std::endl << std::endl << "----------" << std::endl << std::endl;
+
+  clear_matrix();
+
+  for (int i = 0; i < font.get_glyph_count(); i++) {
+    font.get_glyph(i, glyph, true, true);
+    put(glyph, i);
+  }
 
   return 0;
 }

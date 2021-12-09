@@ -1,0 +1,6 @@
+% This is ecvt0900.mf in text format as of October, 27,  2021
+if unknown exbase: input exbase fi;
+
+
+gensize:=9;
+generate ecvt
