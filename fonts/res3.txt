@@ -1,0 +1,57 @@
+OLD LKS idx: 62... New LKS idx: 0
+OLD LKS idx: 94... New LKS idx: 17
+OLD LKS idx: 97... New LKS idx: 19
+OLD LKS idx: 60... New LKS idx: 21
+OLD LKS idx: 100... New LKS idx: 40
+OLD LKS idx: 48... New LKS idx: 41
+OLD LKS idx: 28... New LKS idx: 42
+OLD LKS idx: 52... New LKS idx: 51
+OLD LKS idx: 42... New LKS idx: 52
+OLD LKS idx: 51... New LKS idx: 55
+OLD LKS idx: 46... New LKS idx: 56
+OLD LKS idx: 49... New LKS idx: 57
+OLD LKS idx: 50... New LKS idx: 58
+OLD LKS idx: 53... New LKS idx: 59
+OLD LKS idx: 335... New LKS idx: 60
+OLD LKS idx: 274... New LKS idx: 66
+OLD LKS idx: 185... New LKS idx: 75
+OLD LKS idx: 400... New LKS idx: -1
+OLD LKS idx: 229... New LKS idx: 101
+OLD LKS idx: 391... New LKS idx: 110
+Pgm at 66 is being used again!
+OLD LKS idx: 146... New LKS idx: 115
+OLD LKS idx: 365... New LKS idx: 128
+OLD LKS idx: 247... New LKS idx: 141
+Pgm at 75 is being used again!
+Pgm at 75 is being used again!
+OLD LKS idx: 213... New LKS idx: 150
+OLD LKS idx: 248... New LKS idx: 156
+OLD LKS idx: 38... New LKS idx: 164
+OLD LKS idx: 329... New LKS idx: 167
+OLD LKS idx: 306... New LKS idx: 176
+OLD LKS idx: 304... New LKS idx: 177
+OLD LKS idx: 401... New LKS idx: -1
+OLD LKS idx: 17... New LKS idx: 178
+OLD LKS idx: 399... New LKS idx: 188
+OLD LKS idx: 290... New LKS idx: 189
+OLD LKS idx: 102... New LKS idx: 192
+Pgm at 189 is being used again!
+Pgm at 189 is being used again!
+Pgm at 176 is being used again!
+Pgm at 176 is being used again!
+OLD LKS idx: 331... New LKS idx: 208
+OLD LKS idx: 334... New LKS idx: 215
+OLD LKS idx: 104... New LKS idx: 221
+OLD LKS idx: 115... New LKS idx: 235
+OLD LKS idx: 156... New LKS idx: 247
+Pgm at 110 is being used again!
+Pgm at 110 is being used again!
+OLD LKS idx: 405... New LKS idx: 258
+OLD LKS idx: 292... New LKS idx: 270
+Pgm at 208 is being used again!
+Pgm at 66 is being used again!
+Pgm at 66 is being used again!
+Pgm at 176 is being used again!
+Number of resulting Ligature/Kern entries: 271 Overflow Count: 2
+ABORTED!!! TOO MANY LIGATURE/KERN STRUCT!!!
+Completed!

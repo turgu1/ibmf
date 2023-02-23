@@ -439,7 +439,7 @@ class PKFont
                 glyph_info.bitmap = nullptr;
                 return false;
               }
-              std::cout << std::hex << +data << ' ';
+              std::cout << std::hex << +data << std::dec << ' ';
               count = 0;
               raster_count--;
             }
@@ -528,7 +528,7 @@ class PKFont
           case 0xfd:
           case 0xfe:
           case 0xff:
-            std::cerr << "Unkown command byte: " << std::hex << +byte << std::endl;
+            std::cerr << "Unkown command byte: " << std::hex << +byte << std::dec << std::endl;
             result = false;
             completed = true;
             break;
@@ -546,7 +546,7 @@ class PKFont
               }
               else {
                 std::cerr << "Char code out of limits: " 
-                          << std::hex << "0x" << glyph_info.char_code << std::endl; 
+                          << std::hex << "0x" << glyph_info.char_code << std::dec << std::endl; 
               }
             }
           }
@@ -608,7 +608,7 @@ class PKFont
     get_glyph(uint8_t glyph_code, Glyph & glyph, bool load_bitmap) {
       if (glyph_table[glyph_code] == nullptr) {
         std::cerr << "No entry for glyph code " 
-                 << glyph_code << " 0x" << std::hex << glyph_code
+                 << glyph_code << " 0x" << std::hex << glyph_code << std::dec
                  << std::endl;         
         return false;
       }

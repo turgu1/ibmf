@@ -1,0 +1,1653 @@
+This is METAFONT, Version 2.71828182 (TeX Live 2022/dev/Debian) (preloaded base=mf)
+(ec/ecrm1000.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exbase.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/ecrm.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exroman.mf
+ Ok (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exaccess.mf
+ Ok) (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/expseudo.mf
+ Ok) (inkplate6plus.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exruwest.mf
+ Ok (inkplate6plus.mf) [192] (inkplate6plus.mf) [193] [194] [195] [196]
+[197] [198] [199] (inkplate6plus.mf) [200] (inkplate6plus.mf) [201] [202]
+[203] (inkplate6plus.mf) [204] (inkplate6plus.mf) [205] [206] [207] [208]
+[209] (inkplate6plus.mf) [210] (inkplate6plus.mf) [211] [212] [213] [214]
+[215] [216] (inkplate6plus.mf) [217] (inkplate6plus.mf) [218] [219] [220]
+(inkplate6plus.mf) [221] [222] [223])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrlwest.mf
+ Ok (inkplate6plus.mf) [224] (inkplate6plus.mf) [225] [226] [227] [228]
+[229] [230] [231] (inkplate6plus.mf) [232] (inkplate6plus.mf) [233] [234]
+[235] (inkplate6plus.mf) [236] (inkplate6plus.mf) [237] [238] [239] [240]
+[241] (inkplate6plus.mf) [242] (inkplate6plus.mf) [243] [244] [245] [246]
+[247] [248] (inkplate6plus.mf) [249] (inkplate6plus.mf) [250] [251] [252]
+(inkplate6plus.mf) [253] [254] [255])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrueast.mf
+ Ok [128] [129] (inkplate6plus.mf) [130] [131] [132] [133] [134] [135]
+(inkplate6plus.mf) [136] [137] (inkplate6plus.mf) [138] (inkplate6plus.mf)
+[139] [140] [141] (inkplate6plus.mf) [142] (inkplate6plus.mf) [143] [144]
+(inkplate6plus.mf) [145] [146] [147] [148] [149] (inkplate6plus.mf) [150]
+[151] [152] (inkplate6plus.mf) [153] [154] (inkplate6plus.mf) [155] [156]
+(inkplate6plus.mf) [157])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrleast.mf
+ Ok [158] [160] [161] (inkplate6plus.mf) [162] [163] [164] [165] [166] [167]
+(inkplate6plus.mf) [168] [169] (inkplate6plus.mf) [170] (inkplate6plus.mf)
+[171] [172] [173] (inkplate6plus.mf) [174] (inkplate6plus.mf) [175] [176]
+(inkplate6plus.mf) [177] [178] [179] [180] [181] (inkplate6plus.mf) [182]
+[183] [184] (inkplate6plus.mf) [185] [186] (inkplate6plus.mf) [187] [188])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exbraces.mf
+ Ok [94] [126] [23] [40] [41] [60] [124] [62] [91] [93] [92] [123] [125]
+[95] [127] [32])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/expunct.mf
+ Ok [14] [15] (inkplate6plus.mf) [19] (inkplate6plus.mf) [20] [13] [18]
+[33] [39] [42] [43] [44] [46] [47] [58] [59] [61] [96] [189] [17] [45] [16]
+[21] [22]) (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exaccent.mf
+ Ok (inkplate6plus.mf) [0] (inkplate6plus.mf) [1] [2] [3] [4] (inkplate6plus.mf
+) [5] [6] [7] [8] [9] (inkplate6plus.mf) [10] [11] [12])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exsign.mf
+ Ok [24] [34] [35] [36] [37] [64] [191] [159])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrlig.mf
+ Ok [25] [26] [28] [27] [29] [30] [31])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exromp.mf
+ Ok [38] [63] [190])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrulett.mf
+ Ok [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrllett.mf
+ Ok [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
+[121] [122])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrdigit.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrligtb.mf
+ Ok) ) ) )
+(some charht values had to be adjusted by as much as 0.06586pt)
+Font metrics written on ecrm1000.tfm.
+Output written on ecrm1000.212gf (256 characters, 20096 bytes).
+Transcript written on ecrm1000.log.
+This is METAFONT, Version 2.71828182 (TeX Live 2022/dev/Debian) (preloaded base=mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/tcrm1000.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exbase.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/tcrm.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txsymb.mf
+ Ok (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exaccess.mf
+ Ok) (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txpseudo.mf
+ Ok) (inkplate6plus.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txaccent.mf
+ Ok (inkplate6plus.mf) [0] (inkplate6plus.mf) [1] [2] [3] [4] (inkplate6plus.mf
+) [5] [6] [7] [8] [9] (inkplate6plus.mf) [10] [11] [12] [27] [29])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txgen.mf
+ Ok [100] [109] [98] [99] [108])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txsymbol.mf
+ Ok [13] [18] [21] [22] [23] [24] [25] [26] [28] [31] [32] [36] [39] [44]
+[45] [46] [42] [47] [60] [61] [62] [77] [79] [87] [110] [91] [93] [94] [95]
+[96] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+[138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]
+[150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161]
+[162] [163] [164] [165] [166] [167] [168] [169] [171] [172] [173] [174]
+[175] [177] [176] [180] [181] [182] [183] [184] [187] [191] [214] [246])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txromod.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txrsuper.mf
+ Ok [185] [178] [179] [170] [186])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txrfract.mf
+ Ok [188] [189] [190]) ) ) )
+(some charht values had to be adjusted by as much as 0.06943pt)
+Font metrics written on tcrm1000.tfm.
+Output written on tcrm1000.212gf (128 characters, 9212 bytes).
+Transcript written on tcrm1000.log.
+Creating file EC-Regular_212.ibmf ...
+ 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 94 126 23 40 41 60 124 62 91 93 92 123 125 95 127 32 14 15 19 20 13 18 33 39 42 43 44 46 47 58 59 61 96 189 17 45 16 21 22 0 1 2 3 4 5 6 7 8 9 10 11 12 24 34 35 36 37 64 191 159 25 26 28 27 29 30 31 38 63 190 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 48 49 50 51 52 53 54 55 56 57
+Sizes:
+                Length of file in 32 bits words: 771
+                          Length of header data: 2
+                   First Character code in font: 0
+                    Last Character code in font: 255
+                 Number of words in width table: 41
+                Number of words in height table: 16
+                 Number of words in depth table: 11
+     Number of words in italic correction table: 8
+       Number of words in ligature/kern program: 406
+                  Number of words in kern table: 9
+  Number of words in extensible character table: 0
+                     Number of font parameters : 16
+
+Header:
+              Checksum: 204597937
+           Design Size: 10
+    Char Coding Scheme: 
+  Parc Font Identifier: 
+
+Char Code: 0 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 1 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 2 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 3 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 4 [0.499878, 0.663332] 0 --> [14.6636, 19.4585] 0 -1
+Char Code: 5 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 6 [0.749817, 0.64151] 0 --> [21.9955, 18.8183] 0 -1
+Char Code: 7 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 8 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 9 [0.499878, 0.663332] 0 --> [14.6636, 19.4585] 0 -1
+Char Code: 10 [0.27771, 0.663332] 0 --> [8.14647, 19.4585] 0 -1
+Char Code: 11 [0.444336, 0] 0.170097 --> [13.0343, 0] 4.98971 -1
+Char Code: 12 [0.27771, 0] 0.194397 --> [8.14647, 0] 5.70253 -1
+Char Code: 13 [0.27771, 0.10553] 0.194397 --> [8.14647, 3.09566] 5.70253 62
+Char Code: 14 [0.444336, 0.483215] 0 --> [13.0343, 14.1749] 0 -1
+Char Code: 15 [0.444336, 0.483215] 0 --> [13.0343, 14.1749] 0 -1
+Char Code: 16 [0.333252, 0.688721] 0 --> [9.77576, 20.2032] 0 94
+Char Code: 17 [0.333252, 0.688721] 0 --> [9.77576, 20.2032] 0 97
+Char Code: 18 [0.333252, 0.10553] 0.194397 --> [9.77576, 3.09566] 5.70253 60
+Char Code: 19 [0.55542, 0.483215] 0 --> [16.2929, 14.1749] 0 -1
+Char Code: 20 [0.55542, 0.483215] 0 --> [16.2929, 14.1749] 0 100
+Char Code: 21 [0.499878, 0.43045] 0 --> [14.6636, 12.627] 0 48
+Char Code: 22 [0.999756, 0.43045] 0 --> [29.3273, 12.627] 0 -1
+Char Code: 23 [0, 0.43045] 0 --> [0, 12.627] 0 54
+Char Code: 24 [0.388794, 0.749817] 0.055542 --> [11.4051, 21.9955] 1.62929 -1
+Char Code: 25 [0.27771, 0.43045] 0 --> [8.14647, 12.627] 0 -1
+Char Code: 26 [0.305481, 0.43045] 0.194397 --> [8.96111, 12.627] 5.70253 -1
+Char Code: 27 [0.583191, 0.688721] 0 --> [17.1076, 20.2032] 0 28
+Char Code: 28 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 -1
+Char Code: 29 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 -1
+Char Code: 30 [0.83313, 0.688721] 0 --> [24.4394, 20.2032] 0 -1
+Char Code: 31 [0.83313, 0.688721] 0 --> [24.4394, 20.2032] 0 -1
+Char Code: 32 [0.499878, 0.43045] 0.0971985 --> [14.6636, 12.627] 2.85126 -1
+Char Code: 33 [0.27771, 0.688721] 0 --> [8.14647, 20.2032] 0 52
+Char Code: 34 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 35 [0.83313, 0.688721] 0.194397 --> [24.4394, 20.2032] 5.70253 -1
+Char Code: 36 [0.499878, 0.749817] 0.055542 --> [14.6636, 21.9955] 1.62929 -1
+Char Code: 37 [0.83313, 0.749817] 0.055542 --> [24.4394, 21.9955] 1.62929 -1
+Char Code: 38 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 -1
+Char Code: 39 [0.27771, 0.688721] 0 --> [8.14647, 20.2032] 0 42
+Char Code: 40 [0.388794, 0.749817] 0.249939 --> [11.4051, 21.9955] 7.33182 -1
+Char Code: 41 [0.388794, 0.749817] 0.249939 --> [11.4051, 21.9955] 7.33182 -1
+Char Code: 42 [0.499878, 0.749817] 0 --> [14.6636, 21.9955] 0 -1
+Char Code: 43 [0.777588, 0.583191] 0.083313 --> [22.8101, 17.1076] 2.44394 -1
+Char Code: 44 [0.27771, 0.10553] 0.194397 --> [8.14647, 3.09566] 5.70253 51
+Char Code: 45 [0.333252, 0.43045] 0 --> [9.77576, 12.627] 0 46
+Char Code: 46 [0.27771, 0.10553] 0 --> [8.14647, 3.09566] 0 -1
+Char Code: 47 [0.499878, 0.749817] 0.249939 --> [14.6636, 21.9955] 7.33182 -1
+Char Code: 48 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 49 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 50 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 51 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 52 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 53 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 54 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 55 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 56 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 57 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 58 [0.27771, 0.43045] 0 --> [8.14647, 12.627] 0 -1
+Char Code: 59 [0.27771, 0.43045] 0.194397 --> [8.14647, 12.627] 5.70253 -1
+Char Code: 60 [0.777588, 0.53331] 0.039093 --> [22.8101, 15.6443] 1.14677 49
+Char Code: 61 [0.777588, 0.366789] -0.133089 --> [22.8101, 10.7595] -3.90409 -1
+Char Code: 62 [0.777588, 0.53331] 0.039093 --> [22.8101, 15.6443] 1.14677 50
+Char Code: 63 [0.472107, 0.688721] 0 --> [13.849, 20.2032] 0 53
+Char Code: 64 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 -1
+Char Code: 65 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 8
+Char Code: 66 [0.70816, 0.688721] 0 --> [20.7735, 20.2032] 0 -1
+Char Code: 67 [0.722046, 0.688721] 0 --> [21.1808, 20.2032] 0 -1
+Char Code: 68 [0.763702, 0.688721] 0 --> [22.4028, 20.2032] 0 16
+Char Code: 69 [0.680389, 0.688721] 0 --> [19.9588, 20.2032] 0 -1
+Char Code: 70 [0.652618, 0.688721] 0 --> [19.1442, 20.2032] 0 185
+Char Code: 71 [0.784531, 0.688721] 0 --> [23.0138, 20.2032] 0 -1
+Char Code: 72 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 -1
+Char Code: 73 [0.361023, 0.688721] 0 --> [10.5904, 20.2032] 0 3
+Char Code: 74 [0.513763, 0.688721] 0 --> [15.071, 20.2032] 0 -1
+Char Code: 75 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 229
+Char Code: 76 [0.624847, 0.688721] 0 --> [18.3295, 20.2032] 0 5
+Char Code: 77 [0.916443, 0.688721] 0 --> [26.8833, 20.2032] 0 -1
+Char Code: 78 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 -1
+Char Code: 79 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 16
+Char Code: 80 [0.680389, 0.688721] 0 --> [19.9588, 20.2032] 0 146
+Char Code: 81 [0.777588, 0.688721] 0.194397 --> [22.8101, 20.2032] 5.70253 -1
+Char Code: 82 [0.735931, 0.688721] 0 --> [21.5881, 20.2032] 0 6
+Char Code: 83 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 -1
+Char Code: 84 [0.722046, 0.688721] 0 --> [21.1808, 20.2032] 0 247
+Char Code: 85 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 -1
+Char Code: 86 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 185
+Char Code: 87 [1.02753, 0.688721] 0 --> [30.1419, 20.2032] 0 185
+Char Code: 88 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 213
+Char Code: 89 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 248
+Char Code: 90 [0.610962, 0.688721] 0 --> [17.9222, 20.2032] 0 -1
+Char Code: 91 [0.27771, 0.749817] 0.249939 --> [8.14647, 21.9955] 7.33182 -1
+Char Code: 92 [0.499878, 0.749817] 0.249939 --> [14.6636, 21.9955] 7.33182 -1
+Char Code: 93 [0.27771, 0.749817] 0.249939 --> [8.14647, 21.9955] 7.33182 -1
+Char Code: 94 [0.610962, 0.688721] 0 --> [17.9222, 20.2032] 0 -1
+Char Code: 95 [0.777588, 0] 0.232794 --> [22.8101, 0] 6.82888 -1
+Char Code: 96 [0.27771, 0.688721] 0 --> [8.14647, 20.2032] 0 38
+Char Code: 97 [0.499878, 0.43045] 0 --> [14.6636, 12.627] 0 11
+Char Code: 98 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 12
+Char Code: 99 [0.444336, 0.43045] 0 --> [13.0343, 12.627] 0 13
+Char Code: 100 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 -1
+Char Code: 101 [0.444336, 0.43045] 0 --> [13.0343, 12.627] 0 2
+Char Code: 102 [0.305481, 0.688721] 0 --> [8.96111, 20.2032] 0 17
+Char Code: 103 [0.499878, 0.43045] 0.194397 --> [14.6636, 12.627] 5.70253 4
+Char Code: 104 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 15
+Char Code: 105 [0.27771, 0.663332] 0 --> [8.14647, 19.4585] 0 -1
+Char Code: 106 [0.305481, 0.663332] 0.194397 --> [8.96111, 19.4585] 5.70253 -1
+Char Code: 107 [0.527649, 0.688721] 0 --> [15.4783, 20.2032] 0 102
+Char Code: 108 [0.27771, 0.688721] 0 --> [8.14647, 20.2032] 0 -1
+Char Code: 109 [0.83313, 0.43045] 0 --> [24.4394, 12.627] 0 15
+Char Code: 110 [0.55542, 0.43045] 0 --> [16.2929, 12.627] 0 15
+Char Code: 111 [0.499878, 0.43045] 0 --> [14.6636, 12.627] 0 12
+Char Code: 112 [0.55542, 0.43045] 0.194397 --> [16.2929, 12.627] 5.70253 12
+Char Code: 113 [0.527649, 0.43045] 0.194397 --> [15.4783, 12.627] 5.70253 -1
+Char Code: 114 [0.391571, 0.43045] 0 --> [11.4865, 12.627] 0 -1
+Char Code: 115 [0.394348, 0.43045] 0 --> [11.568, 12.627] 0 -1
+Char Code: 116 [0.388794, 0.614931] 0 --> [11.4051, 18.0387] 0 10
+Char Code: 117 [0.55542, 0.43045] 0 --> [16.2929, 12.627] 0 9
+Char Code: 118 [0.527649, 0.43045] 0 --> [15.4783, 12.627] 0 104
+Char Code: 119 [0.722046, 0.43045] 0 --> [21.1808, 12.627] 0 115
+Char Code: 120 [0.527649, 0.43045] 0 --> [15.4783, 12.627] 0 -1
+Char Code: 121 [0.527649, 0.43045] 0.194397 --> [15.4783, 12.627] 5.70253 156
+Char Code: 122 [0.444336, 0.43045] 0 --> [13.0343, 12.627] 0 -1
+Char Code: 123 [0.499878, 0.749817] 0.249939 --> [14.6636, 21.9955] 7.33182 -1
+Char Code: 124 [0.27771, 0.749817] 0.249939 --> [8.14647, 21.9955] 7.33182 -1
+Char Code: 125 [0.499878, 0.749817] 0.249939 --> [14.6636, 21.9955] 7.33182 -1
+Char Code: 126 [0.610962, 0.663332] 0 --> [17.9222, 19.4585] 0 -1
+Char Code: 127 [0.166626, 0.43045] 0 --> [4.88788, 12.627] 0 -1
+Char Code: 128 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 8
+Char Code: 129 [0.749817, 0.688721] 0.194397 --> [21.9955, 20.2032] 5.70253 -1
+Char Code: 130 [0.722046, 0.856377] 0 --> [21.1808, 25.1213] 0 7
+Char Code: 131 [0.722046, 0.891449] 0 --> [21.1808, 26.1502] 0 -1
+Char Code: 132 [0.763702, 0.891449] 0 --> [22.4028, 26.1502] 0 16
+Char Code: 133 [0.680389, 0.891449] 0 --> [19.9588, 26.1502] 0 -1
+Char Code: 134 [0.680389, 0.688721] 0.194397 --> [19.9588, 20.2032] 5.70253 -1
+Char Code: 135 [0.784531, 0.891449] 0 --> [23.0138, 26.1502] 0 -1
+Char Code: 136 [0.624847, 0.856377] 0 --> [18.3295, 25.1213] 0 5
+Char Code: 137 [0.624847, 0.891449] 0 --> [18.3295, 26.1502] 0 5
+Char Code: 138 [0.624847, 0.688721] 0 --> [18.3295, 20.2032] 0 5
+Char Code: 139 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 -1
+Char Code: 140 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 -1
+Char Code: 141 [0.791473, 0.688721] 0 --> [23.2174, 20.2032] 0 -1
+Char Code: 142 [0.777588, 0.856377] 0 --> [22.8101, 25.1213] 0 16
+Char Code: 143 [0.735931, 0.856377] 0 --> [21.5881, 25.1213] 0 6
+Char Code: 144 [0.735931, 0.891449] 0 --> [21.5881, 26.1502] 0 -1
+Char Code: 145 [0.55542, 0.856377] 0 --> [16.2929, 25.1213] 0 -1
+Char Code: 146 [0.55542, 0.891449] 0 --> [16.2929, 26.1502] 0 -1
+Char Code: 147 [0.55542, 0.688721] 0.170097 --> [16.2929, 20.2032] 4.98971 -1
+Char Code: 148 [0.722046, 0.891449] 0 --> [21.1808, 26.1502] 0 247
+Char Code: 149 [0.722046, 0.688721] 0.170097 --> [21.1808, 20.2032] 4.98971 247
+Char Code: 150 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 -1
+Char Code: 151 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 -1
+Char Code: 152 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 248
+Char Code: 153 [0.610962, 0.856377] 0 --> [17.9222, 25.1213] 0 -1
+Char Code: 154 [0.610962, 0.891449] 0 --> [17.9222, 26.1502] 0 -1
+Char Code: 155 [0.610962, 0.856377] 0 --> [17.9222, 25.1213] 0 -1
+Char Code: 156 [0.860901, 0.688721] 0 --> [25.254, 20.2032] 0 -1
+Char Code: 157 [0.361023, 0.856377] 0 --> [10.5904, 25.1213] 0 -1
+Char Code: 158 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 -1
+Char Code: 159 [0.444336, 0.688721] 0.194397 --> [13.0343, 20.2032] 5.70253 -1
+Char Code: 160 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 11
+Char Code: 161 [0.499878, 0.43045] 0.194397 --> [14.6636, 12.627] 5.70253 1
+Char Code: 162 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 13
+Char Code: 163 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 13
+Char Code: 164 [0.674835, 0.688721] 0 --> [19.7959, 20.2032] 0 -1
+Char Code: 165 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 -1
+Char Code: 166 [0.444336, 0.43045] 0.194397 --> [13.0343, 12.627] 5.70253 -1
+Char Code: 167 [0.499878, 0.64151] 0.194397 --> [14.6636, 18.8183] 5.70253 -1
+Char Code: 168 [0.27771, 0.856377] 0 --> [8.14647, 25.1213] 0 -1
+Char Code: 169 [0.402679, 0.688721] 0 --> [11.8124, 20.2032] 0 -1
+Char Code: 170 [0.336029, 0.688721] 0 --> [9.85722, 20.2032] 0 0
+Char Code: 171 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 14
+Char Code: 172 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 14
+Char Code: 173 [0.55542, 0.43045] 0.194397 --> [16.2929, 12.627] 5.70253 14
+Char Code: 174 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 12
+Char Code: 175 [0.391571, 0.64151] 0 --> [11.4865, 18.8183] 0 -1
+Char Code: 176 [0.391571, 0.64151] 0 --> [11.4865, 18.8183] 0 -1
+Char Code: 177 [0.394348, 0.64151] 0 --> [11.568, 18.8183] 0 -1
+Char Code: 178 [0.394348, 0.64151] 0 --> [11.568, 18.8183] 0 -1
+Char Code: 179 [0.394348, 0.43045] 0.170097 --> [11.568, 12.627] 4.98971 -1
+Char Code: 180 [0.388794, 0.688721] 0 --> [11.4051, 20.2032] 0 10
+Char Code: 181 [0.388794, 0.614931] 0.170097 --> [11.4051, 18.0387] 4.98971 10
+Char Code: 182 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 9
+Char Code: 183 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 9
+Char Code: 184 [0.527649, 0.663332] 0.194397 --> [15.4783, 19.4585] 5.70253 156
+Char Code: 185 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 -1
+Char Code: 186 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 -1
+Char Code: 187 [0.444336, 0.663332] 0 --> [13.0343, 19.4585] 0 -1
+Char Code: 188 [0.583191, 0.663332] 0.194397 --> [17.1076, 19.4585] 5.70253 -1
+Char Code: 189 [0.27771, 0.499878] 0.194397 --> [8.14647, 14.6636] 5.70253 -1
+Char Code: 190 [0.472107, 0.499878] 0.194397 --> [13.849, 14.6636] 5.70253 -1
+Char Code: 191 [0.638733, 0.688721] 0 --> [18.7369, 20.2032] 0 -1
+Char Code: 192 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 8
+Char Code: 193 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 8
+Char Code: 194 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 8
+Char Code: 195 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 8
+Char Code: 196 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 8
+Char Code: 197 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 8
+Char Code: 198 [0.902557, 0.688721] 0 --> [26.476, 20.2032] 0 -1
+Char Code: 199 [0.722046, 0.688721] 0.170097 --> [21.1808, 20.2032] 4.98971 -1
+Char Code: 200 [0.680389, 0.856377] 0 --> [19.9588, 25.1213] 0 -1
+Char Code: 201 [0.680389, 0.856377] 0 --> [19.9588, 25.1213] 0 -1
+Char Code: 202 [0.680389, 0.891449] 0 --> [19.9588, 26.1502] 0 -1
+Char Code: 203 [0.680389, 0.891449] 0 --> [19.9588, 26.1502] 0 -1
+Char Code: 204 [0.361023, 0.856377] 0 --> [10.5904, 25.1213] 0 -1
+Char Code: 205 [0.361023, 0.856377] 0 --> [10.5904, 25.1213] 0 -1
+Char Code: 206 [0.361023, 0.891449] 0 --> [10.5904, 26.1502] 0 -1
+Char Code: 207 [0.361023, 0.891449] 0 --> [10.5904, 26.1502] 0 -1
+Char Code: 208 [0.763702, 0.688721] 0 --> [22.4028, 20.2032] 0 16
+Char Code: 209 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 -1
+Char Code: 210 [0.777588, 0.856377] 0 --> [22.8101, 25.1213] 0 16
+Char Code: 211 [0.777588, 0.856377] 0 --> [22.8101, 25.1213] 0 16
+Char Code: 212 [0.777588, 0.891449] 0 --> [22.8101, 26.1502] 0 16
+Char Code: 213 [0.777588, 0.891449] 0 --> [22.8101, 26.1502] 0 16
+Char Code: 214 [0.777588, 0.891449] 0 --> [22.8101, 26.1502] 0 16
+Char Code: 215 [1.01364, 0.688721] 0 --> [29.7346, 20.2032] 0 -1
+Char Code: 216 [0.777588, 0.731766] 0.0485992 --> [22.8101, 21.4659] 1.42563 16
+Char Code: 217 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 -1
+Char Code: 218 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 -1
+Char Code: 219 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 -1
+Char Code: 220 [0.749817, 0.891449] 0 --> [21.9955, 26.1502] 0 -1
+Char Code: 221 [0.749817, 0.856377] 0 --> [21.9955, 25.1213] 0 248
+Char Code: 222 [0.624847, 0.688721] 0 --> [18.3295, 20.2032] 0 -1
+Char Code: 223 [1.11084, 0.688721] 0 --> [32.5859, 20.2032] 0 -1
+Char Code: 224 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 11
+Char Code: 225 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 11
+Char Code: 226 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 11
+Char Code: 227 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 11
+Char Code: 228 [0.499878, 0.663332] 0 --> [14.6636, 19.4585] 0 11
+Char Code: 229 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 11
+Char Code: 230 [0.722046, 0.43045] 0 --> [21.1808, 12.627] 0 -1
+Char Code: 231 [0.444336, 0.43045] 0.170097 --> [13.0343, 12.627] 4.98971 13
+Char Code: 232 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 -1
+Char Code: 233 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 -1
+Char Code: 234 [0.444336, 0.64151] 0 --> [13.0343, 18.8183] 0 -1
+Char Code: 235 [0.444336, 0.663332] 0 --> [13.0343, 19.4585] 0 -1
+Char Code: 236 [0.27771, 0.64151] 0 --> [8.14647, 18.8183] 0 -1
+Char Code: 237 [0.27771, 0.64151] 0 --> [8.14647, 18.8183] 0 -1
+Char Code: 238 [0.27771, 0.64151] 0 --> [8.14647, 18.8183] 0 -1
+Char Code: 239 [0.333252, 0.663332] 0 --> [9.77576, 19.4585] 0 -1
+Char Code: 240 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 241 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 14
+Char Code: 242 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 12
+Char Code: 243 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 12
+Char Code: 244 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 12
+Char Code: 245 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 12
+Char Code: 246 [0.499878, 0.663332] 0 --> [14.6636, 19.4585] 0 12
+Char Code: 247 [0.777588, 0.43045] 0 --> [22.8101, 12.627] 0 -1
+Char Code: 248 [0.499878, 0.53331] 0.0971985 --> [14.6636, 15.6443] 2.85126 12
+Char Code: 249 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 9
+Char Code: 250 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 9
+Char Code: 251 [0.55542, 0.64151] 0 --> [16.2929, 18.8183] 0 9
+Char Code: 252 [0.55542, 0.663332] 0 --> [16.2929, 19.4585] 0 9
+Char Code: 253 [0.527649, 0.64151] 0.194397 --> [15.4783, 18.8183] 5.70253 156
+Char Code: 254 [0.55542, 0.688721] 0.194397 --> [16.2929, 20.2032] 5.70253 -1
+Char Code: 255 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+
+Ligature / Kern programs:
+  [0]:  Whole skip: 255, Goto: 405
+  [1]:  Whole skip: 255, Goto: 402
+  [2]:  Whole skip: 255, Goto: 401
+  [3]:  Whole skip: 255, Goto: 400
+  [4]:  Whole skip: 255, Goto: 399
+  [5]:  Whole skip: 255, Goto: 391
+  [6]:  Whole skip: 255, Goto: 365
+  [7]:  Whole skip: 255, Goto: 338
+  [8]:  Whole skip: 255, Goto: 335
+  [9]:  Whole skip: 255, Goto: 334
+  [10]:  Whole skip: 255, Goto: 331
+  [11]:  Whole skip: 255, Goto: 329
+  [12]:  Whole skip: 255, Goto: 306
+  [13]:  Whole skip: 255, Goto: 304
+  [14]:  Whole skip: 255, Goto: 292
+  [15]:  Whole skip: 255, Goto: 290
+  [16]:  Whole skip: 255, Goto: 274
+  [17]:  Whole skip: 0, Stop: No, NxtChar: 105, IsKern: No, Lig char: 28, OpCodes: a:0, b:0, c:0
+  [18]:  Whole skip: 0, Stop: No, NxtChar: 102, IsKern: No, Lig char: 27, OpCodes: a:0, b:0, c:0
+  [19]:  Whole skip: 0, Stop: No, NxtChar: 108, IsKern: No, Lig char: 29, OpCodes: a:0, b:0, c:0
+  [20]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 0
+  [21]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 0
+  [22]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 0
+  [23]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 0
+  [24]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 0
+  [25]:  Whole skip: 0, Stop: No, NxtChar: 33, IsKern: Yes, Kern Idx: 0
+  [26]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [27]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+  [28]:  Whole skip: 0, Stop: No, NxtChar: 105, IsKern: No, Lig char: 30, OpCodes: a:0, b:0, c:0
+  [29]:  Whole skip: 0, Stop: No, NxtChar: 108, IsKern: No, Lig char: 31, OpCodes: a:0, b:0, c:0
+  [30]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 0
+  [31]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 0
+  [32]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 0
+  [33]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 0
+  [34]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 0
+  [35]:  Whole skip: 0, Stop: No, NxtChar: 33, IsKern: Yes, Kern Idx: 0
+  [36]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [37]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+  [38]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: No, Lig char: 16, OpCodes: a:0, b:0, c:0
+  [39]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 1
+  [40]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 1
+  [41]:  Whole skip: 128, Stop: Yes, NxtChar: 33, IsKern: Yes, Kern Idx: 1
+  [42]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: No, Lig char: 17, OpCodes: a:0, b:0, c:0
+  [43]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 1
+  [44]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 1
+  [45]:  Whole skip: 128, Stop: Yes, NxtChar: 33, IsKern: Yes, Kern Idx: 1
+  [46]:  Whole skip: 0, Stop: No, NxtChar: 45, IsKern: No, Lig char: 21, OpCodes: a:0, b:0, c:0
+  [47]:  Whole skip: 128, Stop: Yes, NxtChar: 127, IsKern: No, Lig char: 127, OpCodes: a:0, b:0, c:0
+  [48]:  Whole skip: 128, Stop: Yes, NxtChar: 45, IsKern: No, Lig char: 22, OpCodes: a:0, b:0, c:0
+  [49]:  Whole skip: 128, Stop: Yes, NxtChar: 60, IsKern: No, Lig char: 19, OpCodes: a:0, b:0, c:0
+  [50]:  Whole skip: 128, Stop: Yes, NxtChar: 62, IsKern: No, Lig char: 20, OpCodes: a:0, b:0, c:0
+  [51]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: No, Lig char: 18, OpCodes: a:0, b:0, c:0
+  [52]:  Whole skip: 128, Stop: Yes, NxtChar: 96, IsKern: No, Lig char: 189, OpCodes: a:0, b:0, c:0
+  [53]:  Whole skip: 128, Stop: Yes, NxtChar: 96, IsKern: No, Lig char: 190, OpCodes: a:0, b:0, c:0
+  [54]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 2
+  [55]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 2
+  [56]:  Whole skip: 0, Stop: No, NxtChar: 18, IsKern: Yes, Kern Idx: 2
+  [57]:  Whole skip: 0, Stop: No, NxtChar: 45, IsKern: Yes, Kern Idx: 2
+  [58]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 2
+  [59]:  Whole skip: 128, Stop: Yes, NxtChar: 39, IsKern: Yes, Kern Idx: 2
+  [60]:  Whole skip: 0, Stop: No, NxtChar: 13, IsKern: Yes, Kern Idx: 1
+  [61]:  Whole skip: 0, Stop: No, NxtChar: 44, IsKern: Yes, Kern Idx: 1
+  [62]:  Whole skip: 0, Stop: No, NxtChar: 18, IsKern: Yes, Kern Idx: 1
+  [63]:  Whole skip: 0, Stop: No, NxtChar: 106, IsKern: Yes, Kern Idx: 1
+  [64]:  Whole skip: 0, Stop: No, NxtChar: 26, IsKern: Yes, Kern Idx: 1
+  [65]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 3
+  [66]:  Whole skip: 0, Stop: No, NxtChar: 167, IsKern: Yes, Kern Idx: 3
+  [67]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 3
+  [68]:  Whole skip: 0, Stop: No, NxtChar: 184, IsKern: Yes, Kern Idx: 3
+  [69]:  Whole skip: 0, Stop: No, NxtChar: 253, IsKern: Yes, Kern Idx: 3
+  [70]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [71]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 5
+  [72]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 6
+  [73]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [74]:  Whole skip: 0, Stop: No, NxtChar: 89, IsKern: Yes, Kern Idx: 4
+  [75]:  Whole skip: 0, Stop: No, NxtChar: 152, IsKern: Yes, Kern Idx: 4
+  [76]:  Whole skip: 0, Stop: No, NxtChar: 221, IsKern: Yes, Kern Idx: 4
+  [77]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [78]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [79]:  Whole skip: 0, Stop: No, NxtChar: 210, IsKern: Yes, Kern Idx: 7
+  [80]:  Whole skip: 0, Stop: No, NxtChar: 211, IsKern: Yes, Kern Idx: 7
+  [81]:  Whole skip: 0, Stop: No, NxtChar: 212, IsKern: Yes, Kern Idx: 7
+  [82]:  Whole skip: 0, Stop: No, NxtChar: 213, IsKern: Yes, Kern Idx: 7
+  [83]:  Whole skip: 0, Stop: No, NxtChar: 214, IsKern: Yes, Kern Idx: 7
+  [84]:  Whole skip: 0, Stop: No, NxtChar: 215, IsKern: Yes, Kern Idx: 7
+  [85]:  Whole skip: 0, Stop: No, NxtChar: 216, IsKern: Yes, Kern Idx: 7
+  [86]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [87]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [88]:  Whole skip: 0, Stop: No, NxtChar: 130, IsKern: Yes, Kern Idx: 7
+  [89]:  Whole skip: 0, Stop: No, NxtChar: 131, IsKern: Yes, Kern Idx: 7
+  [90]:  Whole skip: 0, Stop: No, NxtChar: 135, IsKern: Yes, Kern Idx: 7
+  [91]:  Whole skip: 0, Stop: No, NxtChar: 199, IsKern: Yes, Kern Idx: 7
+  [92]:  Whole skip: 0, Stop: No, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [93]:  Whole skip: 128, Stop: Yes, NxtChar: 23, IsKern: Yes, Kern Idx: 2
+  [94]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 1
+  [95]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 1
+  [96]:  Whole skip: 128, Stop: Yes, NxtChar: 23, IsKern: Yes, Kern Idx: 2
+  [97]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 1
+  [98]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 1
+  [99]:  Whole skip: 128, Stop: Yes, NxtChar: 23, IsKern: Yes, Kern Idx: 2
+  [100]:  Whole skip: 0, Stop: No, NxtChar: 46, IsKern: Yes, Kern Idx: 4
+  [101]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: Yes, Kern Idx: 4
+  [102]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [103]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 4
+  [104]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 5
+  [105]:  Whole skip: 0, Stop: No, NxtChar: 160, IsKern: Yes, Kern Idx: 5
+  [106]:  Whole skip: 0, Stop: No, NxtChar: 161, IsKern: Yes, Kern Idx: 5
+  [107]:  Whole skip: 0, Stop: No, NxtChar: 224, IsKern: Yes, Kern Idx: 5
+  [108]:  Whole skip: 0, Stop: No, NxtChar: 225, IsKern: Yes, Kern Idx: 5
+  [109]:  Whole skip: 0, Stop: No, NxtChar: 226, IsKern: Yes, Kern Idx: 5
+  [110]:  Whole skip: 0, Stop: No, NxtChar: 226, IsKern: Yes, Kern Idx: 5
+  [111]:  Whole skip: 0, Stop: No, NxtChar: 227, IsKern: Yes, Kern Idx: 5
+  [112]:  Whole skip: 0, Stop: No, NxtChar: 228, IsKern: Yes, Kern Idx: 5
+  [113]:  Whole skip: 0, Stop: No, NxtChar: 229, IsKern: Yes, Kern Idx: 5
+  [114]:  Whole skip: 0, Stop: No, NxtChar: 230, IsKern: Yes, Kern Idx: 5
+  [115]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [116]:  Whole skip: 0, Stop: No, NxtChar: 165, IsKern: Yes, Kern Idx: 7
+  [117]:  Whole skip: 0, Stop: No, NxtChar: 166, IsKern: Yes, Kern Idx: 7
+  [118]:  Whole skip: 0, Stop: No, NxtChar: 232, IsKern: Yes, Kern Idx: 7
+  [119]:  Whole skip: 0, Stop: No, NxtChar: 233, IsKern: Yes, Kern Idx: 7
+  [120]:  Whole skip: 0, Stop: No, NxtChar: 234, IsKern: Yes, Kern Idx: 7
+  [121]:  Whole skip: 0, Stop: No, NxtChar: 235, IsKern: Yes, Kern Idx: 7
+  [122]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [123]:  Whole skip: 0, Stop: No, NxtChar: 160, IsKern: Yes, Kern Idx: 7
+  [124]:  Whole skip: 0, Stop: No, NxtChar: 161, IsKern: Yes, Kern Idx: 7
+  [125]:  Whole skip: 0, Stop: No, NxtChar: 224, IsKern: Yes, Kern Idx: 7
+  [126]:  Whole skip: 0, Stop: No, NxtChar: 225, IsKern: Yes, Kern Idx: 7
+  [127]:  Whole skip: 0, Stop: No, NxtChar: 226, IsKern: Yes, Kern Idx: 7
+  [128]:  Whole skip: 0, Stop: No, NxtChar: 226, IsKern: Yes, Kern Idx: 7
+  [129]:  Whole skip: 0, Stop: No, NxtChar: 227, IsKern: Yes, Kern Idx: 7
+  [130]:  Whole skip: 0, Stop: No, NxtChar: 228, IsKern: Yes, Kern Idx: 7
+  [131]:  Whole skip: 0, Stop: No, NxtChar: 229, IsKern: Yes, Kern Idx: 7
+  [132]:  Whole skip: 0, Stop: No, NxtChar: 230, IsKern: Yes, Kern Idx: 7
+  [133]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [134]:  Whole skip: 0, Stop: No, NxtChar: 174, IsKern: Yes, Kern Idx: 7
+  [135]:  Whole skip: 0, Stop: No, NxtChar: 242, IsKern: Yes, Kern Idx: 7
+  [136]:  Whole skip: 0, Stop: No, NxtChar: 243, IsKern: Yes, Kern Idx: 7
+  [137]:  Whole skip: 0, Stop: No, NxtChar: 244, IsKern: Yes, Kern Idx: 7
+  [138]:  Whole skip: 0, Stop: No, NxtChar: 245, IsKern: Yes, Kern Idx: 7
+  [139]:  Whole skip: 0, Stop: No, NxtChar: 246, IsKern: Yes, Kern Idx: 7
+  [140]:  Whole skip: 0, Stop: No, NxtChar: 247, IsKern: Yes, Kern Idx: 7
+  [141]:  Whole skip: 0, Stop: No, NxtChar: 248, IsKern: Yes, Kern Idx: 7
+  [142]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [143]:  Whole skip: 0, Stop: No, NxtChar: 162, IsKern: Yes, Kern Idx: 7
+  [144]:  Whole skip: 0, Stop: No, NxtChar: 163, IsKern: Yes, Kern Idx: 7
+  [145]:  Whole skip: 128, Stop: Yes, NxtChar: 231, IsKern: Yes, Kern Idx: 7
+  [146]:  Whole skip: 0, Stop: No, NxtChar: 65, IsKern: Yes, Kern Idx: 4
+  [147]:  Whole skip: 0, Stop: No, NxtChar: 128, IsKern: Yes, Kern Idx: 4
+  [148]:  Whole skip: 0, Stop: No, NxtChar: 129, IsKern: Yes, Kern Idx: 4
+  [149]:  Whole skip: 0, Stop: No, NxtChar: 192, IsKern: Yes, Kern Idx: 4
+  [150]:  Whole skip: 0, Stop: No, NxtChar: 193, IsKern: Yes, Kern Idx: 4
+  [151]:  Whole skip: 0, Stop: No, NxtChar: 194, IsKern: Yes, Kern Idx: 4
+  [152]:  Whole skip: 0, Stop: No, NxtChar: 195, IsKern: Yes, Kern Idx: 4
+  [153]:  Whole skip: 0, Stop: No, NxtChar: 196, IsKern: Yes, Kern Idx: 4
+  [154]:  Whole skip: 0, Stop: No, NxtChar: 197, IsKern: Yes, Kern Idx: 4
+  [155]:  Whole skip: 0, Stop: No, NxtChar: 198, IsKern: Yes, Kern Idx: 4
+  [156]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [157]:  Whole skip: 0, Stop: No, NxtChar: 174, IsKern: Yes, Kern Idx: 7
+  [158]:  Whole skip: 0, Stop: No, NxtChar: 242, IsKern: Yes, Kern Idx: 7
+  [159]:  Whole skip: 0, Stop: No, NxtChar: 243, IsKern: Yes, Kern Idx: 7
+  [160]:  Whole skip: 0, Stop: No, NxtChar: 244, IsKern: Yes, Kern Idx: 7
+  [161]:  Whole skip: 0, Stop: No, NxtChar: 245, IsKern: Yes, Kern Idx: 7
+  [162]:  Whole skip: 0, Stop: No, NxtChar: 246, IsKern: Yes, Kern Idx: 7
+  [163]:  Whole skip: 0, Stop: No, NxtChar: 247, IsKern: Yes, Kern Idx: 7
+  [164]:  Whole skip: 0, Stop: No, NxtChar: 248, IsKern: Yes, Kern Idx: 7
+  [165]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [166]:  Whole skip: 0, Stop: No, NxtChar: 165, IsKern: Yes, Kern Idx: 7
+  [167]:  Whole skip: 0, Stop: No, NxtChar: 166, IsKern: Yes, Kern Idx: 7
+  [168]:  Whole skip: 0, Stop: No, NxtChar: 232, IsKern: Yes, Kern Idx: 7
+  [169]:  Whole skip: 0, Stop: No, NxtChar: 233, IsKern: Yes, Kern Idx: 7
+  [170]:  Whole skip: 0, Stop: No, NxtChar: 234, IsKern: Yes, Kern Idx: 7
+  [171]:  Whole skip: 0, Stop: No, NxtChar: 235, IsKern: Yes, Kern Idx: 7
+  [172]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [173]:  Whole skip: 0, Stop: No, NxtChar: 160, IsKern: Yes, Kern Idx: 7
+  [174]:  Whole skip: 0, Stop: No, NxtChar: 161, IsKern: Yes, Kern Idx: 7
+  [175]:  Whole skip: 0, Stop: No, NxtChar: 224, IsKern: Yes, Kern Idx: 7
+  [176]:  Whole skip: 0, Stop: No, NxtChar: 225, IsKern: Yes, Kern Idx: 7
+  [177]:  Whole skip: 0, Stop: No, NxtChar: 226, IsKern: Yes, Kern Idx: 7
+  [178]:  Whole skip: 0, Stop: No, NxtChar: 226, IsKern: Yes, Kern Idx: 7
+  [179]:  Whole skip: 0, Stop: No, NxtChar: 227, IsKern: Yes, Kern Idx: 7
+  [180]:  Whole skip: 0, Stop: No, NxtChar: 228, IsKern: Yes, Kern Idx: 7
+  [181]:  Whole skip: 0, Stop: No, NxtChar: 229, IsKern: Yes, Kern Idx: 7
+  [182]:  Whole skip: 0, Stop: No, NxtChar: 230, IsKern: Yes, Kern Idx: 7
+  [183]:  Whole skip: 0, Stop: No, NxtChar: 46, IsKern: Yes, Kern Idx: 4
+  [184]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: Yes, Kern Idx: 4
+  [185]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 4
+  [186]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 4
+  [187]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 4
+  [188]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 4
+  [189]:  Whole skip: 0, Stop: No, NxtChar: 117, IsKern: Yes, Kern Idx: 4
+  [190]:  Whole skip: 0, Stop: No, NxtChar: 114, IsKern: Yes, Kern Idx: 4
+  [191]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [192]:  Whole skip: 0, Stop: No, NxtChar: 115, IsKern: Yes, Kern Idx: 4
+  [193]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 4
+  [194]:  Whole skip: 0, Stop: No, NxtChar: 100, IsKern: Yes, Kern Idx: 4
+  [195]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 4
+  [196]:  Whole skip: 0, Stop: No, NxtChar: 109, IsKern: Yes, Kern Idx: 4
+  [197]:  Whole skip: 0, Stop: No, NxtChar: 110, IsKern: Yes, Kern Idx: 4
+  [198]:  Whole skip: 0, Stop: No, NxtChar: 112, IsKern: Yes, Kern Idx: 4
+  [199]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 4
+  [200]:  Whole skip: 0, Stop: No, NxtChar: 122, IsKern: Yes, Kern Idx: 4
+  [201]:  Whole skip: 0, Stop: No, NxtChar: 230, IsKern: Yes, Kern Idx: 4
+  [202]:  Whole skip: 0, Stop: No, NxtChar: 248, IsKern: Yes, Kern Idx: 4
+  [203]:  Whole skip: 0, Stop: No, NxtChar: 65, IsKern: Yes, Kern Idx: 6
+  [204]:  Whole skip: 0, Stop: No, NxtChar: 128, IsKern: Yes, Kern Idx: 6
+  [205]:  Whole skip: 0, Stop: No, NxtChar: 129, IsKern: Yes, Kern Idx: 6
+  [206]:  Whole skip: 0, Stop: No, NxtChar: 192, IsKern: Yes, Kern Idx: 6
+  [207]:  Whole skip: 0, Stop: No, NxtChar: 193, IsKern: Yes, Kern Idx: 6
+  [208]:  Whole skip: 0, Stop: No, NxtChar: 194, IsKern: Yes, Kern Idx: 6
+  [209]:  Whole skip: 0, Stop: No, NxtChar: 195, IsKern: Yes, Kern Idx: 6
+  [210]:  Whole skip: 0, Stop: No, NxtChar: 196, IsKern: Yes, Kern Idx: 6
+  [211]:  Whole skip: 0, Stop: No, NxtChar: 197, IsKern: Yes, Kern Idx: 6
+  [212]:  Whole skip: 0, Stop: No, NxtChar: 198, IsKern: Yes, Kern Idx: 6
+  [213]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [214]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [215]:  Whole skip: 0, Stop: No, NxtChar: 210, IsKern: Yes, Kern Idx: 7
+  [216]:  Whole skip: 0, Stop: No, NxtChar: 211, IsKern: Yes, Kern Idx: 7
+  [217]:  Whole skip: 0, Stop: No, NxtChar: 212, IsKern: Yes, Kern Idx: 7
+  [218]:  Whole skip: 0, Stop: No, NxtChar: 213, IsKern: Yes, Kern Idx: 7
+  [219]:  Whole skip: 0, Stop: No, NxtChar: 214, IsKern: Yes, Kern Idx: 7
+  [220]:  Whole skip: 0, Stop: No, NxtChar: 215, IsKern: Yes, Kern Idx: 7
+  [221]:  Whole skip: 0, Stop: No, NxtChar: 216, IsKern: Yes, Kern Idx: 7
+  [222]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [223]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [224]:  Whole skip: 0, Stop: No, NxtChar: 130, IsKern: Yes, Kern Idx: 7
+  [225]:  Whole skip: 0, Stop: No, NxtChar: 131, IsKern: Yes, Kern Idx: 7
+  [226]:  Whole skip: 0, Stop: No, NxtChar: 135, IsKern: Yes, Kern Idx: 7
+  [227]:  Whole skip: 0, Stop: No, NxtChar: 199, IsKern: Yes, Kern Idx: 7
+  [228]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [229]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [230]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 7
+  [231]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [232]:  Whole skip: 0, Stop: No, NxtChar: 174, IsKern: Yes, Kern Idx: 7
+  [233]:  Whole skip: 0, Stop: No, NxtChar: 242, IsKern: Yes, Kern Idx: 7
+  [234]:  Whole skip: 0, Stop: No, NxtChar: 243, IsKern: Yes, Kern Idx: 7
+  [235]:  Whole skip: 0, Stop: No, NxtChar: 244, IsKern: Yes, Kern Idx: 7
+  [236]:  Whole skip: 0, Stop: No, NxtChar: 245, IsKern: Yes, Kern Idx: 7
+  [237]:  Whole skip: 0, Stop: No, NxtChar: 246, IsKern: Yes, Kern Idx: 7
+  [238]:  Whole skip: 0, Stop: No, NxtChar: 247, IsKern: Yes, Kern Idx: 7
+  [239]:  Whole skip: 0, Stop: No, NxtChar: 248, IsKern: Yes, Kern Idx: 7
+  [240]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [241]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [242]:  Whole skip: 0, Stop: No, NxtChar: 130, IsKern: Yes, Kern Idx: 7
+  [243]:  Whole skip: 0, Stop: No, NxtChar: 131, IsKern: Yes, Kern Idx: 7
+  [244]:  Whole skip: 0, Stop: No, NxtChar: 135, IsKern: Yes, Kern Idx: 7
+  [245]:  Whole skip: 0, Stop: No, NxtChar: 199, IsKern: Yes, Kern Idx: 7
+  [246]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [247]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 7
+  [248]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 4
+  [249]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 4
+  [250]:  Whole skip: 0, Stop: No, NxtChar: 114, IsKern: Yes, Kern Idx: 4
+  [251]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 4
+  [252]:  Whole skip: 0, Stop: No, NxtChar: 117, IsKern: Yes, Kern Idx: 4
+  [253]:  Whole skip: 0, Stop: No, NxtChar: 110, IsKern: Yes, Kern Idx: 4
+  [254]:  Whole skip: 0, Stop: No, NxtChar: 25, IsKern: Yes, Kern Idx: 4
+  [255]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 4
+  [256]:  Whole skip: 0, Stop: No, NxtChar: 100, IsKern: Yes, Kern Idx: 4
+  [257]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 4
+  [258]:  Whole skip: 0, Stop: No, NxtChar: 112, IsKern: Yes, Kern Idx: 4
+  [259]:  Whole skip: 0, Stop: No, NxtChar: 115, IsKern: Yes, Kern Idx: 4
+  [260]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [261]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 4
+  [262]:  Whole skip: 0, Stop: No, NxtChar: 120, IsKern: Yes, Kern Idx: 4
+  [263]:  Whole skip: 0, Stop: No, NxtChar: 122, IsKern: Yes, Kern Idx: 4
+  [264]:  Whole skip: 0, Stop: No, NxtChar: 65, IsKern: Yes, Kern Idx: 4
+  [265]:  Whole skip: 0, Stop: No, NxtChar: 128, IsKern: Yes, Kern Idx: 4
+  [266]:  Whole skip: 0, Stop: No, NxtChar: 129, IsKern: Yes, Kern Idx: 4
+  [267]:  Whole skip: 0, Stop: No, NxtChar: 192, IsKern: Yes, Kern Idx: 4
+  [268]:  Whole skip: 0, Stop: No, NxtChar: 193, IsKern: Yes, Kern Idx: 4
+  [269]:  Whole skip: 0, Stop: No, NxtChar: 194, IsKern: Yes, Kern Idx: 4
+  [270]:  Whole skip: 0, Stop: No, NxtChar: 195, IsKern: Yes, Kern Idx: 4
+  [271]:  Whole skip: 0, Stop: No, NxtChar: 196, IsKern: Yes, Kern Idx: 4
+  [272]:  Whole skip: 0, Stop: No, NxtChar: 197, IsKern: Yes, Kern Idx: 4
+  [273]:  Whole skip: 128, Stop: Yes, NxtChar: 198, IsKern: Yes, Kern Idx: 4
+  [274]:  Whole skip: 0, Stop: No, NxtChar: 88, IsKern: Yes, Kern Idx: 7
+  [275]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 7
+  [276]:  Whole skip: 0, Stop: No, NxtChar: 65, IsKern: Yes, Kern Idx: 7
+  [277]:  Whole skip: 0, Stop: No, NxtChar: 128, IsKern: Yes, Kern Idx: 7
+  [278]:  Whole skip: 0, Stop: No, NxtChar: 129, IsKern: Yes, Kern Idx: 7
+  [279]:  Whole skip: 0, Stop: No, NxtChar: 192, IsKern: Yes, Kern Idx: 7
+  [280]:  Whole skip: 0, Stop: No, NxtChar: 193, IsKern: Yes, Kern Idx: 7
+  [281]:  Whole skip: 0, Stop: No, NxtChar: 194, IsKern: Yes, Kern Idx: 7
+  [282]:  Whole skip: 0, Stop: No, NxtChar: 195, IsKern: Yes, Kern Idx: 7
+  [283]:  Whole skip: 0, Stop: No, NxtChar: 196, IsKern: Yes, Kern Idx: 7
+  [284]:  Whole skip: 0, Stop: No, NxtChar: 197, IsKern: Yes, Kern Idx: 7
+  [285]:  Whole skip: 0, Stop: No, NxtChar: 198, IsKern: Yes, Kern Idx: 7
+  [286]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 7
+  [287]:  Whole skip: 0, Stop: No, NxtChar: 89, IsKern: Yes, Kern Idx: 7
+  [288]:  Whole skip: 0, Stop: No, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [289]:  Whole skip: 128, Stop: Yes, NxtChar: 221, IsKern: Yes, Kern Idx: 7
+  [290]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [291]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 4
+  [292]:  Whole skip: 0, Stop: No, NxtChar: 116, IsKern: Yes, Kern Idx: 7
+  [293]:  Whole skip: 0, Stop: No, NxtChar: 117, IsKern: Yes, Kern Idx: 7
+  [294]:  Whole skip: 0, Stop: No, NxtChar: 182, IsKern: Yes, Kern Idx: 7
+  [295]:  Whole skip: 0, Stop: No, NxtChar: 183, IsKern: Yes, Kern Idx: 7
+  [296]:  Whole skip: 0, Stop: No, NxtChar: 249, IsKern: Yes, Kern Idx: 7
+  [297]:  Whole skip: 0, Stop: No, NxtChar: 250, IsKern: Yes, Kern Idx: 7
+  [298]:  Whole skip: 0, Stop: No, NxtChar: 251, IsKern: Yes, Kern Idx: 7
+  [299]:  Whole skip: 0, Stop: No, NxtChar: 252, IsKern: Yes, Kern Idx: 7
+  [300]:  Whole skip: 0, Stop: No, NxtChar: 98, IsKern: Yes, Kern Idx: 7
+  [301]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 7
+  [302]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 7
+  [303]:  Whole skip: 128, Stop: Yes, NxtChar: 119, IsKern: Yes, Kern Idx: 7
+  [304]:  Whole skip: 0, Stop: No, NxtChar: 104, IsKern: Yes, Kern Idx: 7
+  [305]:  Whole skip: 128, Stop: Yes, NxtChar: 107, IsKern: Yes, Kern Idx: 7
+  [306]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 8
+  [307]:  Whole skip: 0, Stop: No, NxtChar: 165, IsKern: Yes, Kern Idx: 8
+  [308]:  Whole skip: 0, Stop: No, NxtChar: 166, IsKern: Yes, Kern Idx: 8
+  [309]:  Whole skip: 0, Stop: No, NxtChar: 232, IsKern: Yes, Kern Idx: 8
+  [310]:  Whole skip: 0, Stop: No, NxtChar: 233, IsKern: Yes, Kern Idx: 8
+  [311]:  Whole skip: 0, Stop: No, NxtChar: 234, IsKern: Yes, Kern Idx: 8
+  [312]:  Whole skip: 0, Stop: No, NxtChar: 235, IsKern: Yes, Kern Idx: 8
+  [313]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 8
+  [314]:  Whole skip: 0, Stop: No, NxtChar: 174, IsKern: Yes, Kern Idx: 8
+  [315]:  Whole skip: 0, Stop: No, NxtChar: 242, IsKern: Yes, Kern Idx: 8
+  [316]:  Whole skip: 0, Stop: No, NxtChar: 243, IsKern: Yes, Kern Idx: 8
+  [317]:  Whole skip: 0, Stop: No, NxtChar: 244, IsKern: Yes, Kern Idx: 8
+  [318]:  Whole skip: 0, Stop: No, NxtChar: 245, IsKern: Yes, Kern Idx: 8
+  [319]:  Whole skip: 0, Stop: No, NxtChar: 246, IsKern: Yes, Kern Idx: 8
+  [320]:  Whole skip: 0, Stop: No, NxtChar: 247, IsKern: Yes, Kern Idx: 8
+  [321]:  Whole skip: 0, Stop: No, NxtChar: 248, IsKern: Yes, Kern Idx: 8
+  [322]:  Whole skip: 0, Stop: No, NxtChar: 120, IsKern: Yes, Kern Idx: 7
+  [323]:  Whole skip: 0, Stop: No, NxtChar: 100, IsKern: Yes, Kern Idx: 8
+  [324]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 8
+  [325]:  Whole skip: 0, Stop: No, NxtChar: 162, IsKern: Yes, Kern Idx: 8
+  [326]:  Whole skip: 0, Stop: No, NxtChar: 163, IsKern: Yes, Kern Idx: 8
+  [327]:  Whole skip: 0, Stop: No, NxtChar: 231, IsKern: Yes, Kern Idx: 8
+  [328]:  Whole skip: 0, Stop: No, NxtChar: 113, IsKern: Yes, Kern Idx: 8
+  [329]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 7
+  [330]:  Whole skip: 0, Stop: No, NxtChar: 106, IsKern: Yes, Kern Idx: 3
+  [331]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 7
+  [332]:  Whole skip: 0, Stop: No, NxtChar: 184, IsKern: Yes, Kern Idx: 7
+  [333]:  Whole skip: 0, Stop: No, NxtChar: 253, IsKern: Yes, Kern Idx: 7
+  [334]:  Whole skip: 128, Stop: Yes, NxtChar: 119, IsKern: Yes, Kern Idx: 7
+  [335]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 4
+  [336]:  Whole skip: 0, Stop: No, NxtChar: 184, IsKern: Yes, Kern Idx: 4
+  [337]:  Whole skip: 0, Stop: No, NxtChar: 253, IsKern: Yes, Kern Idx: 4
+  [338]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 6
+  [339]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 4
+  [340]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [341]:  Whole skip: 0, Stop: No, NxtChar: 162, IsKern: Yes, Kern Idx: 7
+  [342]:  Whole skip: 0, Stop: No, NxtChar: 163, IsKern: Yes, Kern Idx: 7
+  [343]:  Whole skip: 0, Stop: No, NxtChar: 231, IsKern: Yes, Kern Idx: 7
+  [344]:  Whole skip: 0, Stop: No, NxtChar: 100, IsKern: Yes, Kern Idx: 7
+  [345]:  Whole skip: 0, Stop: No, NxtChar: 164, IsKern: Yes, Kern Idx: 7
+  [346]:  Whole skip: 0, Stop: No, NxtChar: 158, IsKern: Yes, Kern Idx: 7
+  [347]:  Whole skip: 0, Stop: No, NxtChar: 240, IsKern: Yes, Kern Idx: 7
+  [348]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [349]:  Whole skip: 0, Stop: No, NxtChar: 165, IsKern: Yes, Kern Idx: 7
+  [350]:  Whole skip: 0, Stop: No, NxtChar: 166, IsKern: Yes, Kern Idx: 7
+  [351]:  Whole skip: 0, Stop: No, NxtChar: 232, IsKern: Yes, Kern Idx: 7
+  [352]:  Whole skip: 0, Stop: No, NxtChar: 233, IsKern: Yes, Kern Idx: 7
+  [353]:  Whole skip: 0, Stop: No, NxtChar: 234, IsKern: Yes, Kern Idx: 7
+  [354]:  Whole skip: 0, Stop: No, NxtChar: 235, IsKern: Yes, Kern Idx: 7
+  [355]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [356]:  Whole skip: 0, Stop: No, NxtChar: 174, IsKern: Yes, Kern Idx: 7
+  [357]:  Whole skip: 0, Stop: No, NxtChar: 242, IsKern: Yes, Kern Idx: 7
+  [358]:  Whole skip: 0, Stop: No, NxtChar: 243, IsKern: Yes, Kern Idx: 7
+  [359]:  Whole skip: 0, Stop: No, NxtChar: 244, IsKern: Yes, Kern Idx: 7
+  [360]:  Whole skip: 0, Stop: No, NxtChar: 245, IsKern: Yes, Kern Idx: 7
+  [361]:  Whole skip: 0, Stop: No, NxtChar: 246, IsKern: Yes, Kern Idx: 7
+  [362]:  Whole skip: 0, Stop: No, NxtChar: 247, IsKern: Yes, Kern Idx: 7
+  [363]:  Whole skip: 0, Stop: No, NxtChar: 248, IsKern: Yes, Kern Idx: 7
+  [364]:  Whole skip: 0, Stop: No, NxtChar: 113, IsKern: Yes, Kern Idx: 7
+  [365]:  Whole skip: 0, Stop: No, NxtChar: 116, IsKern: Yes, Kern Idx: 7
+  [366]:  Whole skip: 0, Stop: No, NxtChar: 180, IsKern: Yes, Kern Idx: 7
+  [367]:  Whole skip: 0, Stop: No, NxtChar: 181, IsKern: Yes, Kern Idx: 7
+  [368]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [369]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [370]:  Whole skip: 0, Stop: No, NxtChar: 130, IsKern: Yes, Kern Idx: 7
+  [371]:  Whole skip: 0, Stop: No, NxtChar: 131, IsKern: Yes, Kern Idx: 7
+  [372]:  Whole skip: 0, Stop: No, NxtChar: 135, IsKern: Yes, Kern Idx: 7
+  [373]:  Whole skip: 0, Stop: No, NxtChar: 199, IsKern: Yes, Kern Idx: 7
+  [374]:  Whole skip: 0, Stop: No, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [375]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [376]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [377]:  Whole skip: 0, Stop: No, NxtChar: 210, IsKern: Yes, Kern Idx: 7
+  [378]:  Whole skip: 0, Stop: No, NxtChar: 211, IsKern: Yes, Kern Idx: 7
+  [379]:  Whole skip: 0, Stop: No, NxtChar: 212, IsKern: Yes, Kern Idx: 7
+  [380]:  Whole skip: 0, Stop: No, NxtChar: 213, IsKern: Yes, Kern Idx: 7
+  [381]:  Whole skip: 0, Stop: No, NxtChar: 214, IsKern: Yes, Kern Idx: 7
+  [382]:  Whole skip: 0, Stop: No, NxtChar: 215, IsKern: Yes, Kern Idx: 7
+  [383]:  Whole skip: 0, Stop: No, NxtChar: 216, IsKern: Yes, Kern Idx: 7
+  [384]:  Whole skip: 0, Stop: No, NxtChar: 85, IsKern: Yes, Kern Idx: 7
+  [385]:  Whole skip: 0, Stop: No, NxtChar: 150, IsKern: Yes, Kern Idx: 7
+  [386]:  Whole skip: 0, Stop: No, NxtChar: 151, IsKern: Yes, Kern Idx: 7
+  [387]:  Whole skip: 0, Stop: No, NxtChar: 217, IsKern: Yes, Kern Idx: 7
+  [388]:  Whole skip: 0, Stop: No, NxtChar: 218, IsKern: Yes, Kern Idx: 7
+  [389]:  Whole skip: 0, Stop: No, NxtChar: 219, IsKern: Yes, Kern Idx: 7
+  [390]:  Whole skip: 0, Stop: No, NxtChar: 220, IsKern: Yes, Kern Idx: 7
+  [391]:  Whole skip: 0, Stop: No, NxtChar: 84, IsKern: Yes, Kern Idx: 4
+  [392]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 4
+  [393]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 4
+  [394]:  Whole skip: 0, Stop: No, NxtChar: 89, IsKern: Yes, Kern Idx: 4
+  [395]:  Whole skip: 0, Stop: No, NxtChar: 152, IsKern: Yes, Kern Idx: 4
+  [396]:  Whole skip: 0, Stop: No, NxtChar: 221, IsKern: Yes, Kern Idx: 4
+  [397]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 6
+  [398]:  Whole skip: 128, Stop: Yes, NxtChar: 87, IsKern: Yes, Kern Idx: 6
+  [399]:  Whole skip: 128, Stop: Yes, NxtChar: 106, IsKern: Yes, Kern Idx: 8
+  [400]:  Whole skip: 128, Stop: Yes, NxtChar: 73, IsKern: Yes, Kern Idx: 8
+  [401]:  Whole skip: 128, Stop: Yes, NxtChar: 86, IsKern: Yes, Kern Idx: 4
+  [402]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 8
+  [403]:  Whole skip: 0, Stop: No, NxtChar: 112, IsKern: Yes, Kern Idx: 8
+  [404]:  Whole skip: 128, Stop: Yes, NxtChar: 119, IsKern: Yes, Kern Idx: 7
+  [405]:  Whole skip: 128, Stop: Yes, NxtChar: 39, IsKern: Yes, Kern Idx: 8
+
+Kerns:
+  [0]: 0.0777588 (2.28101)
+  [1]: 0.111084 (3.25859)
+  [2]: 0.083313 (2.44394)
+  [3]: 0.055542 (1.62929)
+  [4]: -0.083313 (-2.44394)
+  [5]: -0.055542 (-1.62929)
+  [6]: -0.111084 (-3.25859)
+  [7]: -0.027771 (-0.814647)
+  [8]: 0.027771 (0.814647)
+
+Params:
+  Slant: 0 (0)
+  Space: 0.333252 (625)
+  SpStretch: 0.166626 (312)
+  SpShrink: 0.111084 (208)
+  xHeight: 0.43045 (808)
+  Quad: 0.999756 (1876)
+  Extra: 0.111084 (208)
+
+static constexpr FIX16 advances[] = {
+  /* 0 */  14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 21.9844, 14.6562, 14.6562, 14.6562, 
+  /* 10 */  8.14062, 13.0312, 8.14062, 8.14062, 13.0312, 13.0312, 9.76562, 9.76562, 9.76562, 16.2812, 
+  /* 20 */  16.2812, 14.6562, 29.3125, 0, 11.3906, 8.14062, 8.95312, 17.0938, 16.2812, 16.2812, 
+  /* 30 */  24.4375, 24.4375, 14.6562, 8.14062, 14.6562, 24.4375, 14.6562, 24.4375, 22.7969, 8.14062, 
+  /* 40 */  11.3906, 11.3906, 14.6562, 22.7969, 8.14062, 9.76562, 8.14062, 14.6562, 14.6562, 14.6562, 
+  /* 50 */  14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 8.14062, 8.14062, 
+  /* 60 */  22.7969, 22.7969, 22.7969, 13.8438, 22.7969, 21.9844, 20.7656, 21.1719, 22.3906, 19.9531, 
+  /* 70 */  19.1406, 23, 21.9844, 10.5781, 15.0625, 22.7969, 18.3281, 26.875, 21.9844, 22.7969, 
+  /* 80 */  19.9531, 22.7969, 21.5781, 16.2812, 21.1719, 21.9844, 21.9844, 30.1406, 21.9844, 21.9844, 
+  /* 90 */  17.9219, 8.14062, 14.6562, 8.14062, 17.9219, 22.7969, 8.14062, 14.6562, 16.2812, 13.0312, 
+  /* 100 */  16.2812, 13.0312, 8.95312, 14.6562, 16.2812, 8.14062, 8.95312, 15.4688, 8.14062, 24.4375, 
+  /* 110 */  16.2812, 14.6562, 16.2812, 15.4688, 11.4844, 11.5625, 11.3906, 16.2812, 15.4688, 21.1719, 
+  /* 120 */  15.4688, 15.4688, 13.0312, 14.6562, 8.14062, 14.6562, 17.9219, 4.875, 21.9844, 21.9844, 
+  /* 130 */  21.1719, 21.1719, 22.3906, 19.9531, 19.9531, 23, 18.3281, 18.3281, 18.3281, 21.9844, 
+  /* 140 */  21.9844, 23.2031, 22.7969, 21.5781, 21.5781, 16.2812, 16.2812, 16.2812, 21.1719, 21.1719, 
+  /* 150 */  21.9844, 21.9844, 21.9844, 17.9219, 17.9219, 17.9219, 25.25, 10.5781, 16.2812, 13.0312, 
+  /* 160 */  14.6562, 14.6562, 13.0312, 13.0312, 19.7812, 13.0312, 13.0312, 14.6562, 8.14062, 11.7969, 
+  /* 170 */  9.84375, 16.2812, 16.2812, 16.2812, 14.6562, 11.4844, 11.4844, 11.5625, 11.5625, 11.5625, 
+  /* 180 */  11.3906, 11.3906, 16.2812, 16.2812, 15.4688, 13.0312, 13.0312, 13.0312, 17.0938, 8.14062, 
+  /* 190 */  13.8438, 18.7344, 21.9844, 21.9844, 21.9844, 21.9844, 21.9844, 21.9844, 26.4688, 21.1719, 
+  /* 200 */  19.9531, 19.9531, 19.9531, 19.9531, 10.5781, 10.5781, 10.5781, 10.5781, 22.3906, 21.9844, 
+  /* 210 */  22.7969, 22.7969, 22.7969, 22.7969, 22.7969, 29.7344, 22.7969, 21.9844, 21.9844, 21.9844, 
+  /* 220 */  21.9844, 21.9844, 18.3281, 32.5781, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 
+  /* 230 */  21.1719, 13.0312, 13.0312, 13.0312, 13.0312, 13.0312, 8.14062, 8.14062, 8.14062, 9.76562, 
+  /* 240 */  14.6562, 16.2812, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 22.7969, 14.6562, 16.2812, 
+  /* 250 */  16.2812, 16.2812, 16.2812, 15.4688, 16.2812, 14.6562, 
+};
+static constexpr FIX16 depths[] = {
+  /* 0 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 10 */  0, 4.98438, 5.6875, 5.6875, 0, 0, 0, 0, 5.6875, 0, 
+  /* 20 */  0, 0, 0, 0, 1.625, 0, 5.6875, 0, 0, 0, 
+  /* 30 */  0, 0, 2.84375, 0, 0, 5.6875, 1.625, 1.625, 0, 0, 
+  /* 40 */  7.32812, 7.32812, 0, 2.4375, 5.6875, 0, 0, 7.32812, 0, 0, 
+  /* 50 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 5.6875, 
+  /* 60 */  1.14062, -3.89062, 1.14062, 0, 0, 0, 0, 0, 0, 0, 
+  /* 70 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 80 */  0, 5.6875, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 90 */  0, 7.32812, 7.32812, 7.32812, 0, 6.82812, 0, 0, 0, 0, 
+  /* 100 */  0, 0, 0, 5.6875, 0, 0, 5.6875, 0, 0, 0, 
+  /* 110 */  0, 0, 5.6875, 5.6875, 0, 0, 0, 0, 0, 0, 
+  /* 120 */  0, 5.6875, 0, 7.32812, 7.32812, 7.32812, 0, 0, 0, 5.6875, 
+  /* 130 */  0, 0, 0, 0, 5.6875, 0, 0, 0, 0, 0, 
+  /* 140 */  0, 0, 0, 0, 0, 0, 0, 4.98438, 0, 4.98438, 
+  /* 150 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 5.6875, 
+  /* 160 */  0, 5.6875, 0, 0, 0, 0, 5.6875, 5.6875, 0, 0, 
+  /* 170 */  0, 0, 0, 5.6875, 0, 0, 0, 0, 0, 4.98438, 
+  /* 180 */  0, 4.98438, 0, 0, 5.6875, 0, 0, 0, 5.6875, 5.6875, 
+  /* 190 */  5.6875, 0, 0, 0, 0, 0, 0, 0, 0, 4.98438, 
+  /* 200 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 210 */  0, 0, 0, 0, 0, 0, 1.42188, 0, 0, 0, 
+  /* 220 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 230 */  0, 4.98438, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 240 */  0, 0, 0, 0, 0, 0, 0, 0, 2.84375, 0, 
+  /* 250 */  0, 0, 0, 5.6875, 5.6875, 0, 
+};
+
+static constexpr LigKernStep lig_kerns[] = {
+/* 0 */  { .next_char_code = 0x17, .u = { .char_code = 0x95 }, .stop = Yes, .is_a_kern = No },
+/* 1 */  { .next_char_code = 0x17, .u = { .char_code = 0x92 }, .stop = Yes, .is_a_kern = No },
+/* 2 */  { .next_char_code = 0x17, .u = { .char_code = 0x91 }, .stop = Yes, .is_a_kern = No },
+/* 3 */  { .next_char_code = 0x17, .u = { .char_code = 0x90 }, .stop = Yes, .is_a_kern = No },
+/* 4 */  { .next_char_code = 0x17, .u = { .char_code = 0x8f }, .stop = Yes, .is_a_kern = No },
+/* 5 */  { .next_char_code = 0x17, .u = { .char_code = 0x87 }, .stop = Yes, .is_a_kern = No },
+/* 6 */  { .next_char_code = 0x17, .u = { .char_code = 0x6d }, .stop = Yes, .is_a_kern = No },
+/* 7 */  { .next_char_code = 0x17, .u = { .char_code = 0x52 }, .stop = Yes, .is_a_kern = No },
+/* 8 */  { .next_char_code = 0x17, .u = { .char_code = 0x4f }, .stop = Yes, .is_a_kern = No },
+/* 9 */  { .next_char_code = 0x17, .u = { .char_code = 0x4e }, .stop = Yes, .is_a_kern = No },
+/* a */  { .next_char_code = 0x17, .u = { .char_code = 0x4b }, .stop = Yes, .is_a_kern = No },
+/* b */  { .next_char_code = 0x17, .u = { .char_code = 0x49 }, .stop = Yes, .is_a_kern = No },
+/* c */  { .next_char_code = 0x17, .u = { .char_code = 0x32 }, .stop = Yes, .is_a_kern = No },
+/* d */  { .next_char_code = 0x17, .u = { .char_code = 0x30 }, .stop = Yes, .is_a_kern = No },
+/* e */  { .next_char_code = 0x17, .u = { .char_code = 0x24 }, .stop = Yes, .is_a_kern = No },
+/* f */  { .next_char_code = 0x17, .u = { .char_code = 0x22 }, .stop = Yes, .is_a_kern = No },
+/* 10 */  { .next_char_code = 0x17, .u = { .char_code = 0x12 }, .stop = Yes, .is_a_kern = No },
+/* 11 */  { .next_char_code = 0x69, .u = { .char_code = 0x1c }, .stop = No, .is_a_kern = No },
+/* 12 */  { .next_char_code = 0x66, .u = { .char_code = 0x1b }, .stop = No, .is_a_kern = No },
+/* 13 */  { .next_char_code = 0x6c, .u = { .char_code = 0x1d }, .stop = No, .is_a_kern = No },
+/* 14 */  { .next_char_code = 0x27, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 21 */  { .next_char_code = 0x60, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 22 */  { .next_char_code = 0x10, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 23 */  { .next_char_code = 0x11, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 24 */  { .next_char_code = 0x3f, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 25 */  { .next_char_code = 0x21, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 26 */  { .next_char_code = 0x29, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 27 */  { .next_char_code = 0x5d, .u = { .kern_idx = 0 }, .stop = Yes, .is_a_kern = Yes },
+/* 28 */  { .next_char_code = 0x69, .u = { .char_code = 0x1e }, .stop = No, .is_a_kern = No },
+/* 1d */  { .next_char_code = 0x6c, .u = { .char_code = 0x1f }, .stop = No, .is_a_kern = No },
+/* 1e */  { .next_char_code = 0x27, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 31 */  { .next_char_code = 0x60, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 32 */  { .next_char_code = 0x10, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 33 */  { .next_char_code = 0x11, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 34 */  { .next_char_code = 0x3f, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 35 */  { .next_char_code = 0x21, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 36 */  { .next_char_code = 0x29, .u = { .kern_idx = 0 }, .stop = No, .is_a_kern = Yes },
+/* 37 */  { .next_char_code = 0x5d, .u = { .kern_idx = 0 }, .stop = Yes, .is_a_kern = Yes },
+/* 38 */  { .next_char_code = 0x60, .u = { .char_code = 0x10 }, .stop = No, .is_a_kern = No },
+/* 27 */  { .next_char_code = 0x10, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 40 */  { .next_char_code = 0x3f, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 41 */  { .next_char_code = 0x21, .u = { .kern_idx = 1 }, .stop = Yes, .is_a_kern = Yes },
+/* 42 */  { .next_char_code = 0x27, .u = { .char_code = 0x11 }, .stop = No, .is_a_kern = No },
+/* 2b */  { .next_char_code = 0x11, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 44 */  { .next_char_code = 0x3f, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 45 */  { .next_char_code = 0x21, .u = { .kern_idx = 1 }, .stop = Yes, .is_a_kern = Yes },
+/* 46 */  { .next_char_code = 0x2d, .u = { .char_code = 0x15 }, .stop = No, .is_a_kern = No },
+/* 2f */  { .next_char_code = 0x7f, .u = { .char_code = 0x7f }, .stop = Yes, .is_a_kern = No },
+/* 30 */  { .next_char_code = 0x2d, .u = { .char_code = 0x16 }, .stop = Yes, .is_a_kern = No },
+/* 31 */  { .next_char_code = 0x3c, .u = { .char_code = 0x13 }, .stop = Yes, .is_a_kern = No },
+/* 32 */  { .next_char_code = 0x3e, .u = { .char_code = 0x14 }, .stop = Yes, .is_a_kern = No },
+/* 33 */  { .next_char_code = 0x2c, .u = { .char_code = 0x12 }, .stop = Yes, .is_a_kern = No },
+/* 34 */  { .next_char_code = 0x60, .u = { .char_code = 0xbd }, .stop = Yes, .is_a_kern = No },
+/* 35 */  { .next_char_code = 0x60, .u = { .char_code = 0xbe }, .stop = Yes, .is_a_kern = No },
+/* 36 */  { .next_char_code = 0x10, .u = { .kern_idx = 2 }, .stop = No, .is_a_kern = Yes },
+/* 55 */  { .next_char_code = 0x11, .u = { .kern_idx = 2 }, .stop = No, .is_a_kern = Yes },
+/* 56 */  { .next_char_code = 0x12, .u = { .kern_idx = 2 }, .stop = No, .is_a_kern = Yes },
+/* 57 */  { .next_char_code = 0x2d, .u = { .kern_idx = 2 }, .stop = No, .is_a_kern = Yes },
+/* 58 */  { .next_char_code = 0x60, .u = { .kern_idx = 2 }, .stop = No, .is_a_kern = Yes },
+/* 59 */  { .next_char_code = 0x27, .u = { .kern_idx = 2 }, .stop = Yes, .is_a_kern = Yes },
+/* 60 */  { .next_char_code = 0xd, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 61 */  { .next_char_code = 0x2c, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 62 */  { .next_char_code = 0x12, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 63 */  { .next_char_code = 0x6a, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 64 */  { .next_char_code = 0x1a, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 65 */  { .next_char_code = 0x67, .u = { .kern_idx = 3 }, .stop = No, .is_a_kern = Yes },
+/* 66 */  { .next_char_code = 0xa7, .u = { .kern_idx = 3 }, .stop = No, .is_a_kern = Yes },
+/* 67 */  { .next_char_code = 0x79, .u = { .kern_idx = 3 }, .stop = No, .is_a_kern = Yes },
+/* 68 */  { .next_char_code = 0xb8, .u = { .kern_idx = 3 }, .stop = No, .is_a_kern = Yes },
+/* 69 */  { .next_char_code = 0xfd, .u = { .kern_idx = 3 }, .stop = No, .is_a_kern = Yes },
+/* 70 */  { .next_char_code = 0x76, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 71 */  { .next_char_code = 0x77, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 72 */  { .next_char_code = 0x56, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 73 */  { .next_char_code = 0x57, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 74 */  { .next_char_code = 0x59, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 75 */  { .next_char_code = 0x98, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 76 */  { .next_char_code = 0xdd, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 77 */  { .next_char_code = 0x4f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 78 */  { .next_char_code = 0x8e, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 79 */  { .next_char_code = 0xd2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 80 */  { .next_char_code = 0xd3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 81 */  { .next_char_code = 0xd4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 82 */  { .next_char_code = 0xd5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 83 */  { .next_char_code = 0xd6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 84 */  { .next_char_code = 0xd7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 85 */  { .next_char_code = 0xd8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 86 */  { .next_char_code = 0x43, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 87 */  { .next_char_code = 0x47, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 88 */  { .next_char_code = 0x82, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 89 */  { .next_char_code = 0x83, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 90 */  { .next_char_code = 0x87, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 91 */  { .next_char_code = 0xc7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 92 */  { .next_char_code = 0x51, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 93 */  { .next_char_code = 0x17, .u = { .kern_idx = 2 }, .stop = Yes, .is_a_kern = Yes },
+/* 94 */  { .next_char_code = 0x60, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 95 */  { .next_char_code = 0x10, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 96 */  { .next_char_code = 0x17, .u = { .kern_idx = 2 }, .stop = Yes, .is_a_kern = Yes },
+/* 97 */  { .next_char_code = 0x27, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 98 */  { .next_char_code = 0x11, .u = { .kern_idx = 1 }, .stop = No, .is_a_kern = Yes },
+/* 99 */  { .next_char_code = 0x17, .u = { .kern_idx = 2 }, .stop = Yes, .is_a_kern = Yes },
+/* 100 */  { .next_char_code = 0x2e, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 101 */  { .next_char_code = 0x2c, .u = { .kern_idx = 4 }, .stop = Yes, .is_a_kern = Yes },
+/* 102 */  { .next_char_code = 0x57, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 103 */  { .next_char_code = 0x56, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 104 */  { .next_char_code = 0x61, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 105 */  { .next_char_code = 0xa0, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 106 */  { .next_char_code = 0xa1, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 107 */  { .next_char_code = 0xe0, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 108 */  { .next_char_code = 0xe1, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 109 */  { .next_char_code = 0xe2, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 110 */  { .next_char_code = 0xe2, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 111 */  { .next_char_code = 0xe3, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 112 */  { .next_char_code = 0xe4, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 113 */  { .next_char_code = 0xe5, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 114 */  { .next_char_code = 0xe6, .u = { .kern_idx = 5 }, .stop = No, .is_a_kern = Yes },
+/* 115 */  { .next_char_code = 0x65, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 116 */  { .next_char_code = 0xa5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 117 */  { .next_char_code = 0xa6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 118 */  { .next_char_code = 0xe8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 119 */  { .next_char_code = 0xe9, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 120 */  { .next_char_code = 0xea, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 121 */  { .next_char_code = 0xeb, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 122 */  { .next_char_code = 0x61, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 123 */  { .next_char_code = 0xa0, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 124 */  { .next_char_code = 0xa1, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 125 */  { .next_char_code = 0xe0, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 126 */  { .next_char_code = 0xe1, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 127 */  { .next_char_code = 0xe2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 128 */  { .next_char_code = 0xe2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 129 */  { .next_char_code = 0xe3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 130 */  { .next_char_code = 0xe4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 131 */  { .next_char_code = 0xe5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 132 */  { .next_char_code = 0xe6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 133 */  { .next_char_code = 0x6f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 134 */  { .next_char_code = 0xae, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 135 */  { .next_char_code = 0xf2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 136 */  { .next_char_code = 0xf3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 137 */  { .next_char_code = 0xf4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 138 */  { .next_char_code = 0xf5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 139 */  { .next_char_code = 0xf6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 140 */  { .next_char_code = 0xf7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 141 */  { .next_char_code = 0xf8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 142 */  { .next_char_code = 0x63, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 143 */  { .next_char_code = 0xa2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 144 */  { .next_char_code = 0xa3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 145 */  { .next_char_code = 0xe7, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 146 */  { .next_char_code = 0x41, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 147 */  { .next_char_code = 0x80, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 148 */  { .next_char_code = 0x81, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 149 */  { .next_char_code = 0xc0, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 150 */  { .next_char_code = 0xc1, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 151 */  { .next_char_code = 0xc2, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 152 */  { .next_char_code = 0xc3, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 153 */  { .next_char_code = 0xc4, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 154 */  { .next_char_code = 0xc5, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 155 */  { .next_char_code = 0xc6, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 156 */  { .next_char_code = 0x6f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 157 */  { .next_char_code = 0xae, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 158 */  { .next_char_code = 0xf2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 159 */  { .next_char_code = 0xf3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 160 */  { .next_char_code = 0xf4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 161 */  { .next_char_code = 0xf5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 162 */  { .next_char_code = 0xf6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 163 */  { .next_char_code = 0xf7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 164 */  { .next_char_code = 0xf8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 165 */  { .next_char_code = 0x65, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 166 */  { .next_char_code = 0xa5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 167 */  { .next_char_code = 0xa6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 168 */  { .next_char_code = 0xe8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 169 */  { .next_char_code = 0xe9, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 170 */  { .next_char_code = 0xea, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 171 */  { .next_char_code = 0xeb, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 172 */  { .next_char_code = 0x61, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 173 */  { .next_char_code = 0xa0, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 174 */  { .next_char_code = 0xa1, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 175 */  { .next_char_code = 0xe0, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 176 */  { .next_char_code = 0xe1, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 177 */  { .next_char_code = 0xe2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 178 */  { .next_char_code = 0xe2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 179 */  { .next_char_code = 0xe3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 180 */  { .next_char_code = 0xe4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 181 */  { .next_char_code = 0xe5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 182 */  { .next_char_code = 0xe6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 183 */  { .next_char_code = 0x2e, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 184 */  { .next_char_code = 0x2c, .u = { .kern_idx = 4 }, .stop = Yes, .is_a_kern = Yes },
+/* 185 */  { .next_char_code = 0x6f, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 186 */  { .next_char_code = 0x61, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 187 */  { .next_char_code = 0x65, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 188 */  { .next_char_code = 0x79, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 189 */  { .next_char_code = 0x75, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 190 */  { .next_char_code = 0x72, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 191 */  { .next_char_code = 0x76, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 192 */  { .next_char_code = 0x73, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 193 */  { .next_char_code = 0x63, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 194 */  { .next_char_code = 0x64, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 195 */  { .next_char_code = 0x67, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 196 */  { .next_char_code = 0x6d, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 197 */  { .next_char_code = 0x6e, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 198 */  { .next_char_code = 0x70, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 199 */  { .next_char_code = 0x77, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 200 */  { .next_char_code = 0x7a, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 201 */  { .next_char_code = 0xe6, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 202 */  { .next_char_code = 0xf8, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 203 */  { .next_char_code = 0x41, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 204 */  { .next_char_code = 0x80, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 205 */  { .next_char_code = 0x81, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 206 */  { .next_char_code = 0xc0, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 207 */  { .next_char_code = 0xc1, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 208 */  { .next_char_code = 0xc2, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 209 */  { .next_char_code = 0xc3, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 210 */  { .next_char_code = 0xc4, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 211 */  { .next_char_code = 0xc5, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 212 */  { .next_char_code = 0xc6, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 213 */  { .next_char_code = 0x4f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 214 */  { .next_char_code = 0x8e, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 215 */  { .next_char_code = 0xd2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 216 */  { .next_char_code = 0xd3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 217 */  { .next_char_code = 0xd4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 218 */  { .next_char_code = 0xd5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 219 */  { .next_char_code = 0xd6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 220 */  { .next_char_code = 0xd7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 221 */  { .next_char_code = 0xd8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 222 */  { .next_char_code = 0x43, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 223 */  { .next_char_code = 0x47, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 224 */  { .next_char_code = 0x82, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 225 */  { .next_char_code = 0x83, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 226 */  { .next_char_code = 0x87, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 227 */  { .next_char_code = 0xc7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 228 */  { .next_char_code = 0x51, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 229 */  { .next_char_code = 0x76, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 230 */  { .next_char_code = 0x77, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 231 */  { .next_char_code = 0x6f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 232 */  { .next_char_code = 0xae, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 233 */  { .next_char_code = 0xf2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 234 */  { .next_char_code = 0xf3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 235 */  { .next_char_code = 0xf4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 236 */  { .next_char_code = 0xf5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 237 */  { .next_char_code = 0xf6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 238 */  { .next_char_code = 0xf7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 239 */  { .next_char_code = 0xf8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 240 */  { .next_char_code = 0x43, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 241 */  { .next_char_code = 0x47, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 242 */  { .next_char_code = 0x82, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 243 */  { .next_char_code = 0x83, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 244 */  { .next_char_code = 0x87, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 245 */  { .next_char_code = 0xc7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 246 */  { .next_char_code = 0x51, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 247 */  { .next_char_code = 0x79, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 248 */  { .next_char_code = 0x65, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 249 */  { .next_char_code = 0x6f, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 250 */  { .next_char_code = 0x72, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 251 */  { .next_char_code = 0x61, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 252 */  { .next_char_code = 0x75, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 253 */  { .next_char_code = 0x6e, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 254 */  { .next_char_code = 0x19, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 255 */  { .next_char_code = 0x63, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 256 */  { .next_char_code = 0x64, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 257 */  { .next_char_code = 0x67, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 258 */  { .next_char_code = 0x70, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 259 */  { .next_char_code = 0x73, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 260 */  { .next_char_code = 0x76, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 261 */  { .next_char_code = 0x77, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 262 */  { .next_char_code = 0x78, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 263 */  { .next_char_code = 0x7a, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 264 */  { .next_char_code = 0x41, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 265 */  { .next_char_code = 0x80, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 266 */  { .next_char_code = 0x81, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 267 */  { .next_char_code = 0xc0, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 268 */  { .next_char_code = 0xc1, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 269 */  { .next_char_code = 0xc2, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 270 */  { .next_char_code = 0xc3, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 271 */  { .next_char_code = 0xc4, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 272 */  { .next_char_code = 0xc5, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 273 */  { .next_char_code = 0xc6, .u = { .kern_idx = 4 }, .stop = Yes, .is_a_kern = Yes },
+/* 274 */  { .next_char_code = 0x58, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 275 */  { .next_char_code = 0x57, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 276 */  { .next_char_code = 0x41, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 277 */  { .next_char_code = 0x80, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 278 */  { .next_char_code = 0x81, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 279 */  { .next_char_code = 0xc0, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 280 */  { .next_char_code = 0xc1, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 281 */  { .next_char_code = 0xc2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 282 */  { .next_char_code = 0xc3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 283 */  { .next_char_code = 0xc4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 284 */  { .next_char_code = 0xc5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 285 */  { .next_char_code = 0xc6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 286 */  { .next_char_code = 0x56, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 287 */  { .next_char_code = 0x59, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 288 */  { .next_char_code = 0x98, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 289 */  { .next_char_code = 0xdd, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 290 */  { .next_char_code = 0x57, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 291 */  { .next_char_code = 0x56, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 292 */  { .next_char_code = 0x74, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 293 */  { .next_char_code = 0x75, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 294 */  { .next_char_code = 0xb6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 295 */  { .next_char_code = 0xb7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 296 */  { .next_char_code = 0xf9, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 297 */  { .next_char_code = 0xfa, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 298 */  { .next_char_code = 0xfb, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 299 */  { .next_char_code = 0xfc, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 300 */  { .next_char_code = 0x62, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 301 */  { .next_char_code = 0x79, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 302 */  { .next_char_code = 0x76, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 303 */  { .next_char_code = 0x77, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 304 */  { .next_char_code = 0x68, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 305 */  { .next_char_code = 0x6b, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 306 */  { .next_char_code = 0x65, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 307 */  { .next_char_code = 0xa5, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 308 */  { .next_char_code = 0xa6, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 309 */  { .next_char_code = 0xe8, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 310 */  { .next_char_code = 0xe9, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 311 */  { .next_char_code = 0xea, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 312 */  { .next_char_code = 0xeb, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 313 */  { .next_char_code = 0x6f, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 314 */  { .next_char_code = 0xae, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 315 */  { .next_char_code = 0xf2, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 316 */  { .next_char_code = 0xf3, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 317 */  { .next_char_code = 0xf4, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 318 */  { .next_char_code = 0xf5, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 319 */  { .next_char_code = 0xf6, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 320 */  { .next_char_code = 0xf7, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 321 */  { .next_char_code = 0xf8, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 322 */  { .next_char_code = 0x78, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 323 */  { .next_char_code = 0x64, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 324 */  { .next_char_code = 0x63, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 325 */  { .next_char_code = 0xa2, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 326 */  { .next_char_code = 0xa3, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 327 */  { .next_char_code = 0xe7, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 328 */  { .next_char_code = 0x71, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 329 */  { .next_char_code = 0x76, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 330 */  { .next_char_code = 0x6a, .u = { .kern_idx = 3 }, .stop = No, .is_a_kern = Yes },
+/* 331 */  { .next_char_code = 0x79, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 332 */  { .next_char_code = 0xb8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 333 */  { .next_char_code = 0xfd, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 334 */  { .next_char_code = 0x77, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 335 */  { .next_char_code = 0x79, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 336 */  { .next_char_code = 0xb8, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 337 */  { .next_char_code = 0xfd, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 338 */  { .next_char_code = 0x76, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 339 */  { .next_char_code = 0x77, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 340 */  { .next_char_code = 0x63, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 341 */  { .next_char_code = 0xa2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 342 */  { .next_char_code = 0xa3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 343 */  { .next_char_code = 0xe7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 344 */  { .next_char_code = 0x64, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 345 */  { .next_char_code = 0xa4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 346 */  { .next_char_code = 0x9e, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 347 */  { .next_char_code = 0xf0, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 348 */  { .next_char_code = 0x65, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 349 */  { .next_char_code = 0xa5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 350 */  { .next_char_code = 0xa6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 351 */  { .next_char_code = 0xe8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 352 */  { .next_char_code = 0xe9, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 353 */  { .next_char_code = 0xea, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 354 */  { .next_char_code = 0xeb, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 355 */  { .next_char_code = 0x6f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 356 */  { .next_char_code = 0xae, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 357 */  { .next_char_code = 0xf2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 358 */  { .next_char_code = 0xf3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 359 */  { .next_char_code = 0xf4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 360 */  { .next_char_code = 0xf5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 361 */  { .next_char_code = 0xf6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 362 */  { .next_char_code = 0xf7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 363 */  { .next_char_code = 0xf8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 364 */  { .next_char_code = 0x71, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 365 */  { .next_char_code = 0x74, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 366 */  { .next_char_code = 0xb4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 367 */  { .next_char_code = 0xb5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 368 */  { .next_char_code = 0x43, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 369 */  { .next_char_code = 0x47, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 370 */  { .next_char_code = 0x82, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 371 */  { .next_char_code = 0x83, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 372 */  { .next_char_code = 0x87, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 373 */  { .next_char_code = 0xc7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 374 */  { .next_char_code = 0x51, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 375 */  { .next_char_code = 0x4f, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 376 */  { .next_char_code = 0x8e, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 377 */  { .next_char_code = 0xd2, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 378 */  { .next_char_code = 0xd3, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 379 */  { .next_char_code = 0xd4, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 380 */  { .next_char_code = 0xd5, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 381 */  { .next_char_code = 0xd6, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 382 */  { .next_char_code = 0xd7, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 383 */  { .next_char_code = 0xd8, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 384 */  { .next_char_code = 0x55, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 385 */  { .next_char_code = 0x96, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 386 */  { .next_char_code = 0x97, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 387 */  { .next_char_code = 0xd9, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 388 */  { .next_char_code = 0xda, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 389 */  { .next_char_code = 0xdb, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 390 */  { .next_char_code = 0xdc, .u = { .kern_idx = 7 }, .stop = No, .is_a_kern = Yes },
+/* 391 */  { .next_char_code = 0x54, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 392 */  { .next_char_code = 0x94, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 393 */  { .next_char_code = 0x95, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 394 */  { .next_char_code = 0x59, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 395 */  { .next_char_code = 0x98, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 396 */  { .next_char_code = 0xdd, .u = { .kern_idx = 4 }, .stop = No, .is_a_kern = Yes },
+/* 397 */  { .next_char_code = 0x56, .u = { .kern_idx = 6 }, .stop = No, .is_a_kern = Yes },
+/* 398 */  { .next_char_code = 0x57, .u = { .kern_idx = 6 }, .stop = Yes, .is_a_kern = Yes },
+/* 399 */  { .next_char_code = 0x6a, .u = { .kern_idx = 8 }, .stop = Yes, .is_a_kern = Yes },
+/* 400 */  { .next_char_code = 0x49, .u = { .kern_idx = 8 }, .stop = Yes, .is_a_kern = Yes },
+/* 401 */  { .next_char_code = 0x56, .u = { .kern_idx = 4 }, .stop = Yes, .is_a_kern = Yes },
+/* 402 */  { .next_char_code = 0x67, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 403 */  { .next_char_code = 0x70, .u = { .kern_idx = 8 }, .stop = No, .is_a_kern = Yes },
+/* 404 */  { .next_char_code = 0x77, .u = { .kern_idx = 7 }, .stop = Yes, .is_a_kern = Yes },
+/* 405 */  { .next_char_code = 0x27, .u = { .kern_idx = 8 }, .stop = Yes, .is_a_kern = Yes },
+};
+
+static constexpr FIX16 kerns[] = {
+  /* 0 */  145, 208, 156, 104, -156, -104, -208, -52, 52, 
+};
+
+static constexpr int16_t lig_kern_indexes[] = {
+  /* 0 */  -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, 94, 97, 60, -1, 
+  /* 20 */  100, 48, -1, 54, -1, -1, -1, 28, -1, -1, -1, -1, -1, 52, -1, -1, -1, -1, -1, 42, 
+  /* 40 */  -1, -1, -1, -1, 51, 46, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 
+  /* 60 */  49, -1, 50, 53, -1, 8, -1, -1, 16, -1, 185, -1, -1, 3, -1, 229, 5, -1, -1, 16, 
+  /* 80 */  146, -1, 6, -1, 247, -1, 185, 185, 213, 248, -1, -1, -1, -1, -1, -1, 38, 11, 12, 13, 
+  /* 100 */  -1, 2, 17, 4, 15, -1, -1, 102, -1, 15, 15, 12, 12, -1, -1, -1, 10, 9, 104, 115, 
+  /* 120 */  -1, 156, -1, -1, -1, -1, -1, -1, 8, -1, 7, -1, 16, -1, -1, -1, 5, 5, 5, -1, 
+  /* 140 */  -1, -1, 16, 6, -1, -1, -1, -1, 247, 247, -1, -1, 248, -1, -1, -1, -1, -1, -1, -1, 
+  /* 160 */  11, 1, 13, 13, -1, -1, -1, -1, -1, -1, 0, 14, 14, 14, 12, -1, -1, -1, -1, -1, 
+  /* 180 */  10, 10, 9, 9, 156, -1, -1, -1, -1, -1, -1, -1, 8, 8, 8, 8, 8, 8, -1, -1, 
+  /* 200 */  -1, -1, -1, -1, -1, -1, -1, -1, 16, -1, 16, 16, 16, 16, 16, -1, 16, -1, -1, -1, 
+  /* 220 */  -1, 248, -1, -1, 11, 11, 11, 11, 11, 11, -1, 13, -1, -1, -1, -1, -1, -1, -1, -1, 
+  /* 240 */  -1, 14, 12, 12, 12, 12, 12, -1, 12, 9, 9, 9, 9, 156, -1, -1, 
+};
+ 0 1 2 3 4 5 6 7 8 9 10 11 12 27 29 100 109 98 99 108 13 18 21 22 23 24 25 26 28 31 32 36 39 44 45 46 42 47 60 61 62 77 79 87 110 91 93 94 95 96 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 171 172 173 174 175 177 176 180 181 182 183 184 187 191 214 246 48 49 50 51 52 53 54 55 56 57 185 178 179 170 186 188 189 190
+Sizes:
+                Length of file in 32 bits words: 343
+                          Length of header data: 2
+                   First Character code in font: 0
+                    Last Character code in font: 246
+                 Number of words in width table: 33
+                Number of words in height table: 16
+                 Number of words in depth table: 12
+     Number of words in italic correction table: 9
+       Number of words in ligature/kern program: 2
+                  Number of words in kern table: 0
+  Number of words in extensible character table: 0
+                     Number of font parameters : 16
+
+Header:
+              Checksum: 3157912729
+           Design Size: 10
+    Char Coding Scheme: 
+  Parc Font Identifier: 
+
+Char Code: 0 [0.499878, 0.606005] 0 --> [14.6636, 17.7768] 0 -1
+Char Code: 1 [0.499878, 0.606005] 0 --> [14.6636, 17.7768] 0 -1
+Char Code: 2 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 3 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 4 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 5 [0.499878, 0.606005] 0 --> [14.6636, 17.7768] 0 -1
+Char Code: 6 [0.749817, 0.64151] 0 --> [21.9955, 18.8183] 0 -1
+Char Code: 7 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 8 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 9 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 10 [0.27771, 0.606005] 0 --> [8.14647, 17.7768] 0 -1
+Char Code: 11 [0.444336, 0] 0.170097 --> [13.0343, 0] 4.98971 -1
+Char Code: 12 [0.27771, 0] 0.194397 --> [8.14647, 0] 5.70253 -1
+Char Code: 13 [0.388794, 0.10553] 0.194397 --> [11.4051, 3.09566] 5.70253 -1
+Char Code: 14 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 15 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 16 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 17 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 18 [0.499878, 0.10553] 0.194397 --> [14.6636, 3.09566] 5.70253 -1
+Char Code: 19 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 20 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 21 [0.666504, 0.437393] 0 --> [19.5515, 12.8307] 0 -1
+Char Code: 22 [0.749817, 0.437393] 0 --> [21.9955, 12.8307] 0 -1
+Char Code: 23 [0, 0.688721] 0 --> [0, 20.2032] 0 -1
+Char Code: 24 [0.999756, 0.366789] -0.133089 --> [29.3273, 10.7595] -3.90409 -1
+Char Code: 25 [0.999756, 0.366789] -0.133089 --> [29.3273, 10.7595] -3.90409 -1
+Char Code: 26 [0.27771, 0.688721] 0 --> [8.14647, 20.2032] 0 -1
+Char Code: 27 [0.333252, 0.946991] 0 --> [9.77576, 27.7794] 0 -1
+Char Code: 28 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 29 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 30 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 31 [0, 0.688721] 0 --> [0, 20.2032] 0 -1
+Char Code: 32 [0.55542, 0.688721] 0 --> [16.2929, 20.2032] 0 -1
+Char Code: 33 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 34 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 35 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 36 [0.499878, 0.749817] 0.055542 --> [14.6636, 21.9955] 1.62929 -1
+Char Code: 37 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 38 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 39 [0.27771, 0.688721] 0 --> [8.14647, 20.2032] 0 -1
+Char Code: 40 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 41 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 42 [0.499878, 0.465164] -0.0347137 --> [14.6636, 13.6453] -1.01831 -1
+Char Code: 43 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 44 [0.27771, 0.10553] 0.194397 --> [8.14647, 3.09566] 5.70253 -1
+Char Code: 45 [0.333252, 0.366789] -0.133089 --> [9.77576, 10.7595] -3.90409 1
+Char Code: 46 [0.27771, 0.10553] 0 --> [8.14647, 3.09566] 0 -1
+Char Code: 47 [0.499878, 0.749817] 0.249939 --> [14.6636, 21.9955] 7.33182 -1
+Char Code: 48 [0.499878, 0.437393] 0 --> [14.6636, 12.8307] 0 -1
+Char Code: 49 [0.499878, 0.437393] 0 --> [14.6636, 12.8307] 0 -1
+Char Code: 50 [0.499878, 0.437393] 0 --> [14.6636, 12.8307] 0 -1
+Char Code: 51 [0.499878, 0.437393] 0.194397 --> [14.6636, 12.8307] 5.70253 -1
+Char Code: 52 [0.499878, 0.437393] 0.194397 --> [14.6636, 12.8307] 5.70253 -1
+Char Code: 53 [0.499878, 0.437393] 0.194397 --> [14.6636, 12.8307] 5.70253 -1
+Char Code: 54 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 55 [0.499878, 0.437393] 0.194397 --> [14.6636, 12.8307] 5.70253 -1
+Char Code: 56 [0.499878, 0.64151] 0 --> [14.6636, 18.8183] 0 -1
+Char Code: 57 [0.499878, 0.437393] 0.194397 --> [14.6636, 12.8307] 5.70253 -1
+Char Code: 58 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 59 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 60 [0.388794, 0.749817] 0.249939 --> [11.4051, 21.9955] 7.33182 -1
+Char Code: 61 [0.777588, 0.583191] 0.083313 --> [22.8101, 17.1076] 2.44394 -1
+Char Code: 62 [0.388794, 0.749817] 0.249939 --> [11.4051, 21.9955] 7.33182 -1
+Char Code: 63 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 64 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 65 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 66 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 67 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 68 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 69 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 70 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 71 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 72 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 73 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 74 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 75 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 76 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 77 [0.722046, 0.688721] 0 --> [21.1808, 20.2032] 0 -1
+Char Code: 78 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 79 [1.11084, 0.749817] 0.249939 --> [32.5859, 21.9955] 7.33182 -1
+Char Code: 80 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 81 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 82 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 83 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 84 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 85 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 86 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 87 [0.722046, 0.688721] 0 --> [21.1808, 20.2032] 0 -1
+Char Code: 88 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 89 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 90 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 91 [0.402679, 0.749817] 0.249939 --> [11.8124, 21.9955] 7.33182 -1
+Char Code: 92 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 93 [0.402679, 0.749817] 0.249939 --> [11.8124, 21.9955] 7.33182 -1
+Char Code: 94 [0.499878, 0.688721] 0.194397 --> [14.6636, 20.2032] 5.70253 -1
+Char Code: 95 [0.499878, 0.688721] 0.194397 --> [14.6636, 20.2032] 5.70253 -1
+Char Code: 96 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 97 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 98 [0.499878, 0.465164] -0.0347137 --> [14.6636, 13.6453] -1.01831 -1
+Char Code: 99 [0.499878, 0.465164] -0.0347137 --> [14.6636, 13.6453] -1.01831 -1
+Char Code: 100 [0.499878, 0.606005] 0.0263844 --> [14.6636, 17.7768] 0.77397 -1
+Char Code: 101 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 102 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 103 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 104 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 105 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 106 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 107 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 108 [0.999756, 0.688721] 0 --> [29.3273, 20.2032] 0 -1
+Char Code: 109 [0.499878, 0.465164] -0.0347137 --> [14.6636, 13.6453] -1.01831 -1
+Char Code: 110 [0.610962, 0.688721] 0 --> [17.9222, 20.2032] 0 -1
+Char Code: 111 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 112 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 113 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 114 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 115 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 116 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 117 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 118 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 119 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 120 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 121 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 122 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 123 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 124 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 125 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 126 [0.610962, 0.122986] 0 --> [17.9222, 3.60772] 0 -1
+Char Code: 127 [0.166626, 0.366789] -0.133089 --> [4.88788, 10.7595] -3.90409 -1
+Char Code: 128 [0.610962, 0.688721] 0 --> [17.9222, 20.2032] 0 -1
+Char Code: 129 [0.610962, 0.688721] 0 --> [17.9222, 20.2032] 0 -1
+Char Code: 130 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 131 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 132 [0.444336, 0.688721] 0.194397 --> [13.0343, 20.2032] 5.70253 -1
+Char Code: 133 [0.444336, 0.688721] 0.194397 --> [13.0343, 20.2032] 5.70253 -1
+Char Code: 134 [0.499878, 0.749817] 0.249939 --> [14.6636, 21.9955] 7.33182 -1
+Char Code: 135 [1.16638, 0.749817] 0.055542 --> [34.2152, 21.9955] 1.62929 -1
+Char Code: 136 [0.499878, 0.437393] -0.055542 --> [14.6636, 12.8307] -1.62929 -1
+Char Code: 137 [0.944214, 0.688721] 0 --> [27.698, 20.2032] 0 -1
+Char Code: 138 [0.610962, 0.749817] 0.055542 --> [17.9222, 21.9955] 1.62929 -1
+Char Code: 139 [0.499878, 0.52302] 0.0971985 --> [14.6636, 15.3425] 2.85126 -1
+Char Code: 140 [0.305481, 0.688721] 0 --> [8.96111, 20.2032] 0 -1
+Char Code: 141 [0.722046, 0.749817] 0.055542 --> [21.1808, 21.9955] 1.62929 -1
+Char Code: 142 [1.02753, 0.688721] 0 --> [30.1419, 20.2032] 0 -1
+Char Code: 143 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 -1
+Char Code: 144 [0.784531, 0.749817] 0.055542 --> [23.0138, 21.9955] 1.62929 -1
+Char Code: 145 [0.694275, 0.688721] 0 --> [20.3662, 20.2032] 0 -1
+Char Code: 146 [0.638733, 0.688721] 0 --> [18.7369, 20.2032] 0 -1
+Char Code: 147 [0.735931, 0.688721] 0 --> [21.5881, 20.2032] 0 -1
+Char Code: 148 [0.472107, 0.688721] 0 --> [13.849, 20.2032] 0 -1
+Char Code: 149 [0.472107, 0.499878] 0.194397 --> [13.849, 14.6636] 5.70253 -1
+Char Code: 150 [0.55542, 0.749817] 0 --> [16.2929, 21.9955] 0 -1
+Char Code: 151 [0.666504, 0.749817] 0 --> [19.5515, 21.9955] 0 -1
+Char Code: 152 [1.51259, 0.749817] 0.055542 --> [44.3711, 21.9955] 1.62929 -1
+Char Code: 153 [0.472107, 0.688721] 0.194397 --> [13.849, 20.2032] 5.70253 -1
+Char Code: 154 [0.70816, 0.749817] 0.055542 --> [20.7735, 21.9955] 1.62929 -1
+Char Code: 155 [0.916443, 0.688721] 0 --> [26.8833, 20.2032] 0 -1
+Char Code: 156 [0.499878, 0.749817] 0 --> [14.6636, 21.9955] 0 -1
+Char Code: 157 [0.676224, 0.688721] 0 --> [19.8366, 20.2032] 0 -1
+Char Code: 158 [0.499878, 0.437393] -0.055542 --> [14.6636, 12.8307] -1.62929 -1
+Char Code: 159 [0.666504, 0.749817] 0 --> [19.5515, 21.9955] 0 -1
+Char Code: 160 [0.361023, 0.749817] 0.249939 --> [10.5904, 21.9955] 7.33182 -1
+Char Code: 161 [0.361023, 0.749817] 0.249939 --> [10.5904, 21.9955] 7.33182 -1
+Char Code: 162 [0.499878, 0.52302] 0.0971985 --> [14.6636, 15.3425] 2.85126 -1
+Char Code: 163 [0.638733, 0.688721] 0 --> [18.7369, 20.2032] 0 -1
+Char Code: 164 [0.736473, 0.553439] 0 --> [21.604, 16.2348] 0 -1
+Char Code: 165 [0.749817, 0.688721] 0 --> [21.9955, 20.2032] 0 -1
+Char Code: 166 [0.166626, 0.749817] 0.249939 --> [4.88788, 21.9955] 7.33182 -1
+Char Code: 167 [0.444336, 0.688721] 0.194397 --> [13.0343, 20.2032] 5.70253 -1
+Char Code: 168 [0.499878, 0.667696] 0 --> [14.6636, 19.5865] 0 -1
+Char Code: 169 [1.11084, 0.749817] 0.249939 --> [32.5859, 21.9955] 7.33182 -1
+Char Code: 170 [0.444336, 0.749817] 0 --> [13.0343, 21.9955] 0 -1
+Char Code: 171 [1.11084, 0.749817] 0.249939 --> [32.5859, 21.9955] 7.33182 -1
+Char Code: 172 [0.666504, 0.437393] 0 --> [19.5515, 12.8307] 0 -1
+Char Code: 173 [1.11084, 0.749817] 0.249939 --> [32.5859, 21.9955] 7.33182 -1
+Char Code: 174 [1.11084, 0.749817] 0.249939 --> [32.5859, 21.9955] 7.33182 -1
+Char Code: 175 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 -1
+Char Code: 176 [0.333252, 0.688721] 0 --> [9.77576, 20.2032] 0 -1
+Char Code: 177 [0.777588, 0.583191] 0.083313 --> [22.8101, 17.1076] 2.44394 -1
+Char Code: 178 [0.444336, 0.749817] 0 --> [13.0343, 21.9955] 0 -1
+Char Code: 179 [0.444336, 0.749817] 0 --> [13.0343, 21.9955] 0 -1
+Char Code: 180 [0.499878, 0.688721] 0 --> [14.6636, 20.2032] 0 -1
+Char Code: 181 [0.55542, 0.437393] 0.194397 --> [16.2929, 12.8307] 5.70253 -1
+Char Code: 182 [0.610962, 0.688721] 0.194397 --> [17.9222, 20.2032] 5.70253 -1
+Char Code: 183 [0.27771, 0.437393] 0 --> [8.14647, 12.8307] 0 -1
+Char Code: 184 [0.629474, 0.52302] 0 --> [18.4653, 15.3425] 0 -1
+Char Code: 185 [0.444336, 0.749817] 0 --> [13.0343, 21.9955] 0 -1
+Char Code: 186 [0.444336, 0.749817] 0 --> [13.0343, 21.9955] 0 -1
+Char Code: 187 [0.472107, 0.749817] 0.20994 --> [13.849, 21.9955] 6.15847 -1
+Char Code: 188 [0.444336, 0.749817] 0.194397 --> [13.0343, 21.9955] 5.70253 -1
+Char Code: 189 [0.444336, 0.749817] 0.194397 --> [13.0343, 21.9955] 5.70253 -1
+Char Code: 190 [0.444336, 0.749817] 0.194397 --> [13.0343, 21.9955] 5.70253 -1
+Char Code: 191 [0.777588, 0.688721] 0 --> [22.8101, 20.2032] 0 -1
+Char Code: 192 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 193 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 194 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 195 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 196 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 197 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 198 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 199 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 200 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 201 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 202 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 203 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 204 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 205 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 206 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 207 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 208 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 209 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 210 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 211 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 212 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 213 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 214 [0.777588, 0.583191] 0.083313 --> [22.8101, 17.1076] 2.44394 -1
+Char Code: 215 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 216 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 217 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 218 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 219 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 220 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 221 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 222 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 223 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 224 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 225 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 226 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 227 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 228 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 229 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 230 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 231 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 232 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 233 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 234 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 235 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 236 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 237 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 238 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 239 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 240 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 241 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 242 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 243 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 244 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 245 [0, 0] 0 --> [0, 0] 0 -1
+Char Code: 246 [0.777588, 0.583191] 0.083313 --> [22.8101, 17.1076] 2.44394 -1
+
+Ligature / Kern programs:
+  [0]:  Whole skip: 255, Goto: 0
+  [1]:  Whole skip: 128, Stop: Yes, NxtChar: 127, IsKern: No, Lig char: 127, OpCodes: a:0, b:0, c:0
+
+Kerns:
+
+Params:
+  Slant: 0 (0)
+  Space: 0.333252 (625)
+  SpStretch: 0.166626 (312)
+  SpShrink: 0.111084 (208)
+  xHeight: 0.43045 (808)
+  Quad: 0.999756 (1876)
+  Extra: 0.111084 (208)
+
+static constexpr FIX16 advances[] = {
+  /* 0 */  14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 21.9844, 14.6562, 14.6562, 14.6562, 
+  /* 10 */  8.14062, 13.0312, 8.14062, 11.3906, 0, 0, 0, 0, 14.6562, 0, 
+  /* 20 */  0, 19.5469, 21.9844, 0, 29.3125, 29.3125, 8.14062, 9.76562, 14.6562, 14.6562, 
+  /* 30 */  0, 0, 16.2812, 0, 0, 0, 14.6562, 0, 0, 8.14062, 
+  /* 40 */  0, 0, 14.6562, 0, 8.14062, 9.76562, 8.14062, 14.6562, 14.6562, 14.6562, 
+  /* 50 */  14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 14.6562, 0, 0, 
+  /* 60 */  11.3906, 22.7969, 11.3906, 0, 0, 0, 0, 0, 0, 0, 
+  /* 70 */  0, 0, 0, 0, 0, 0, 0, 21.1719, 0, 32.5781, 
+  /* 80 */  0, 0, 0, 0, 0, 0, 0, 21.1719, 0, 0, 
+  /* 90 */  0, 11.7969, 0, 11.7969, 14.6562, 14.6562, 14.6562, 0, 14.6562, 14.6562, 
+  /* 100 */  14.6562, 0, 0, 0, 0, 0, 0, 0, 29.3125, 14.6562, 
+  /* 110 */  17.9219, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 120 */  0, 0, 0, 0, 0, 0, 17.9219, 4.875, 17.9219, 17.9219, 
+  /* 130 */  14.6562, 14.6562, 13.0312, 13.0312, 14.6562, 34.2031, 14.6562, 27.6875, 17.9219, 14.6562, 
+  /* 140 */  8.95312, 21.1719, 30.1406, 22.7969, 23, 20.3594, 18.7344, 21.5781, 13.8438, 13.8438, 
+  /* 150 */  16.2812, 19.5469, 44.3594, 13.8438, 20.7656, 26.875, 14.6562, 19.8281, 14.6562, 19.5469, 
+  /* 160 */  10.5781, 10.5781, 14.6562, 18.7344, 21.5938, 21.9844, 4.875, 13.0312, 14.6562, 32.5781, 
+  /* 170 */  13.0312, 32.5781, 19.5469, 32.5781, 32.5781, 22.7969, 9.76562, 22.7969, 13.0312, 13.0312, 
+  /* 180 */  14.6562, 16.2812, 17.9219, 8.14062, 18.4531, 13.0312, 13.0312, 13.8438, 13.0312, 13.0312, 
+  /* 190 */  13.0312, 22.7969, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 200 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 210 */  0, 0, 0, 0, 22.7969, 0, 0, 0, 0, 0, 
+  /* 220 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 230 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 240 */  0, 0, 0, 0, 0, 0, 22.7969, 
+};
+static constexpr FIX16 depths[] = {
+  /* 0 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 10 */  0, 4.98438, 5.6875, 5.6875, 0, 0, 0, 0, 5.6875, 0, 
+  /* 20 */  0, 0, 0, 0, -3.89062, -3.89062, 0, 0, 0, 0, 
+  /* 30 */  0, 0, 0, 0, 0, 0, 1.625, 0, 0, 0, 
+  /* 40 */  0, 0, -1.01562, 0, 5.6875, -3.89062, 0, 7.32812, 0, 0, 
+  /* 50 */  0, 5.6875, 5.6875, 5.6875, 0, 5.6875, 0, 5.6875, 0, 0, 
+  /* 60 */  7.32812, 2.4375, 7.32812, 0, 0, 0, 0, 0, 0, 0, 
+  /* 70 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 7.32812, 
+  /* 80 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 90 */  0, 7.32812, 0, 7.32812, 5.6875, 5.6875, 0, 0, -1.01562, -1.01562, 
+  /* 100 */  0.765625, 0, 0, 0, 0, 0, 0, 0, 0, -1.01562, 
+  /* 110 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 120 */  0, 0, 0, 0, 0, 0, 0, -3.89062, 0, 0, 
+  /* 130 */  0, 0, 5.6875, 5.6875, 7.32812, 1.625, -1.625, 0, 1.625, 2.84375, 
+  /* 140 */  0, 1.625, 0, 0, 1.625, 0, 0, 0, 0, 5.6875, 
+  /* 150 */  0, 0, 1.625, 5.6875, 1.625, 0, 0, 0, -1.625, 0, 
+  /* 160 */  7.32812, 7.32812, 2.84375, 0, 0, 0, 7.32812, 5.6875, 0, 7.32812, 
+  /* 170 */  0, 7.32812, 0, 7.32812, 7.32812, 0, 0, 2.4375, 0, 0, 
+  /* 180 */  0, 5.6875, 5.6875, 0, 0, 0, 0, 6.15625, 5.6875, 5.6875, 
+  /* 190 */  5.6875, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 200 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 210 */  0, 0, 0, 0, 2.4375, 0, 0, 0, 0, 0, 
+  /* 220 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 230 */  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+  /* 240 */  0, 0, 0, 0, 0, 0, 2.4375, 
+};
+
+static constexpr LigKernStep lig_kerns[] = {
+/* 0 */  { .next_char_code = 0x17, .u = { .char_code = 0x0 }, .stop = Yes, .is_a_kern = No },
+/* 1 */  { .next_char_code = 0x7f, .u = { .char_code = 0x7f }, .stop = Yes, .is_a_kern = No },
+};
+
+static constexpr FIX16 kerns[] = {
+};
+
+static constexpr int16_t lig_kern_indexes[] = {
+  /* 0 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 14 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 28 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 1, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 3c */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 50 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 64 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 78 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* 8c */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* a0 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* b4 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* c8 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* dc */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+  /* f0 */  ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, ffffffff, 
+};
+Reading Header....
+Reading Glyphs....
+Reading Lig/Kern....
