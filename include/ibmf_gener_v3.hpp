@@ -41,7 +41,7 @@ class IBMFGener {
         uint8_t    descender_height;
         uint8_t    space_size;
         uint16_t   glyph_count;
-        uint8_t    lig_kern_pgm_count;
+        uint16_t   lig_kern_pgm_count;
         uint8_t    kern_count;
       };
 
@@ -71,9 +71,9 @@ class IBMFGener {
       int new_lig_kern_idx; // need to be larger for cases that goes beyond 255
     };
 
-    std::vector<TFM::LigKernStep> lig_kerns;
+    std::vector<TFM::LigKernStep *> lig_kerns;
 
-    std::vector<GlyphInfo> glyphs;
+    std::vector<GlyphInfo *> glyphs;
 
     // uint8_t compute_max_descender_height() {
     //   uint8_t max = 0;
@@ -111,22 +111,23 @@ class IBMFGener {
     }
 
     void read_glyph(uint8_t pk_char_code, uint8_t ibmf_char_code) {
-      GlyphInfo glyph_info;
+      GlyphInfo * glyph_info = new GlyphInfo;
       PKFont::Glyph pk_glyph;
       if (pk.get_glyph(pk_char_code, pk_glyph, false)) {
-        glyph_info.glyph.char_code                   = ibmf_char_code;
-        glyph_info.glyph.bitmap_width                = pk_glyph.bitmap_width;
-        glyph_info.glyph.bitmap_height               = pk_glyph.bitmap_height;
-        glyph_info.glyph.horizontal_offset           = pk_glyph.horizontal_offset;
-        glyph_info.glyph.vertical_offset             = pk_glyph.vertical_offset;
-        glyph_info.glyph.packet_length               = pk_glyph.raster_size;
-        glyph_info.glyph.advance                     = tfm.to_fix16(tfm.to_double(tfm.get_advance(pk_char_code), 20) * factor, 6);
-        glyph_info.glyph.glyph_metric.dyn_f          = pk_glyph.dyn_f;
-        glyph_info.glyph.glyph_metric.first_is_black = pk_glyph.first_nibble_is_black ? 1 : 0;
-        glyph_info.glyph.glyph_metric.filler         = 0;
-        glyph_info.glyph.lig_kern_pgm_index          = tfm.get_lig_kern_pgm_index(pk_char_code);
+        glyph_info->glyph.char_code                   = ibmf_char_code;
+        glyph_info->glyph.bitmap_width                = pk_glyph.bitmap_width;
+        glyph_info->glyph.bitmap_height               = pk_glyph.bitmap_height;
+        glyph_info->glyph.horizontal_offset           = pk_glyph.horizontal_offset;
+        glyph_info->glyph.vertical_offset             = pk_glyph.vertical_offset;
+        glyph_info->glyph.packet_length               = pk_glyph.raster_size;
+        glyph_info->glyph.advance                     = tfm.to_fix16(tfm.to_double(tfm.get_advance(pk_char_code), 20) * factor, 6);
+        glyph_info->glyph.glyph_metric.dyn_f          = pk_glyph.dyn_f;
+        glyph_info->glyph.glyph_metric.first_is_black = pk_glyph.first_nibble_is_black ? 1 : 0;
+        glyph_info->glyph.glyph_metric.filler         = 0;
+        glyph_info->glyph.lig_kern_pgm_index          = tfm.get_lig_kern_pgm_index(pk_char_code);
 
-        glyph_info.old_char_code = pk_char_code;
+        glyph_info->old_char_code    = pk_char_code;
+        glyph_info->old_lig_kern_idx = glyph_info->glyph.lig_kern_pgm_index;
         
         glyphs.push_back(glyph_info);
         // fwrite(&glyph, sizeof(Glyph), 1, file);
@@ -135,22 +136,23 @@ class IBMFGener {
     }
 
     void read2_glyph(uint8_t pk_char_code, uint8_t ibmf_char_code) {
-      GlyphInfo glyph_info;
+      GlyphInfo * glyph_info = new GlyphInfo;
       PKFont::Glyph pk_glyph;
       if (pk2.get_glyph(pk_char_code, pk_glyph, false)) {
-        glyph_info.glyph.char_code                   = ibmf_char_code;
-        glyph_info.glyph.bitmap_width                = pk_glyph.bitmap_width;
-        glyph_info.glyph.bitmap_height               = pk_glyph.bitmap_height;
-        glyph_info.glyph.horizontal_offset           = pk_glyph.horizontal_offset;
-        glyph_info.glyph.vertical_offset             = pk_glyph.vertical_offset;
-        glyph_info.glyph.packet_length               = pk_glyph.raster_size;
-        glyph_info.glyph.advance                     = tfm2.to_fix16(tfm2.to_double(tfm2.get_advance(pk_char_code), 20) * factor, 6);
-        glyph_info.glyph.glyph_metric.dyn_f          = pk_glyph.dyn_f;
-        glyph_info.glyph.glyph_metric.first_is_black = pk_glyph.first_nibble_is_black ? 1 : 0;
-        glyph_info.glyph.glyph_metric.filler         = 0;
-        glyph_info.glyph.lig_kern_pgm_index          = 255;
+        glyph_info->glyph.char_code                   = ibmf_char_code;
+        glyph_info->glyph.bitmap_width                = pk_glyph.bitmap_width;
+        glyph_info->glyph.bitmap_height               = pk_glyph.bitmap_height;
+        glyph_info->glyph.horizontal_offset           = pk_glyph.horizontal_offset;
+        glyph_info->glyph.vertical_offset             = pk_glyph.vertical_offset;
+        glyph_info->glyph.packet_length               = pk_glyph.raster_size;
+        glyph_info->glyph.advance                     = tfm2.to_fix16(tfm2.to_double(tfm2.get_advance(pk_char_code), 20) * factor, 6);
+        glyph_info->glyph.glyph_metric.dyn_f          = pk_glyph.dyn_f;
+        glyph_info->glyph.glyph_metric.first_is_black = pk_glyph.first_nibble_is_black ? 1 : 0;
+        glyph_info->glyph.glyph_metric.filler         = 0;
+        glyph_info->glyph.lig_kern_pgm_index          = 255;
 
-        glyph_info.old_char_code = pk_char_code;
+        glyph_info->old_char_code = pk_char_code;
+        glyph_info->old_lig_kern_idx = 255;
 
         glyphs.push_back(glyph_info);
         // fwrite(&glyph, sizeof(Glyph), 1, file);
@@ -226,49 +228,56 @@ class IBMFGener {
 
     int get_char_idx(uint8_t pk_char_code) {
       for (int idx = 0; idx < glyphs.size(); idx++) {
-        if (glyphs[idx].old_char_code == pk_char_code) return idx;
+        if (glyphs[idx]->old_char_code == pk_char_code) return idx;
       }
       return -1;
     }
 
     int get_new_lig_kern_idx(int last_idx, int old_lig_kern_idx) {
       for (int i = 0; i < last_idx; i++) {
-        if (glyphs[i].old_lig_kern_idx == old_lig_kern_idx) return glyphs[i].new_lig_kern_idx;
+        if (glyphs[i]->old_lig_kern_idx == old_lig_kern_idx) return glyphs[i]->new_lig_kern_idx;
       }
       return -1;
     }
 
     int 
-    read_lig_kerns() {
-      TFM::LigKernStep lks;
+    read_lig_kerns() 
+    {
+      TFM::LigKernStep * lks;
 
       lig_kerns.clear();
       lig_kerns.reserve(500);
 
       std::cout << "Reading and reshuffling Lig/Kern...." << std::endl << std::flush;
 
-      for (int i = 0; i < glyphs.size(); i++) {
-        int idx;
-        if ((idx = glyphs[i].glyph.lig_kern_pgm_index) < 255) {
-          glyphs[i].old_lig_kern_idx = glyphs[i].glyph.lig_kern_pgm_index;
+      int glyph_idx = 0;
+      for (auto & g : glyphs) {
+        int tfm_idx;
+        if ((tfm_idx = g->glyph.lig_kern_pgm_index) < 255) {
+          std::cout << tfm_idx << " a..." << std::endl;
+          g->old_lig_kern_idx = g->glyph.lig_kern_pgm_index;
 
           int new_idx;
 
           // Check if the same pgm has been used in the preceeding glyphs. If so,
           // point to that pgm again
-          if ((new_idx = get_new_lig_kern_idx(i, glyphs[i].old_lig_kern_idx)) != -1) {
-            glyphs[i].new_lig_kern_idx = new_idx;
-            std::cout << "Pgm at " << new_idx << " is being used again!" << std::endl;
+          if ((new_idx = get_new_lig_kern_idx(glyph_idx, g->old_lig_kern_idx)) != -1) {
+            g->new_lig_kern_idx = new_idx;
           }
           else {
-            lks = tfm.get_lig_kern_step(idx);
-            if (lks.skip.whole > 128) {
-              idx = ((lks.op_code.d.displ_high << 8) + lks.remainder.displ_low);
-              lks = tfm.get_lig_kern_step(idx);
+            // Was not used before, so we create one
+            lks = new TFM::LigKernStep;
+            *lks = tfm.get_lig_kern_step(tfm_idx);
+            if (lks->skip.whole > 128) {
+              tfm_idx = ((lks->op_code.d.displ_high << 8) + lks->remainder.displ_low);
+              *lks = tfm.get_lig_kern_step(tfm_idx);
+              std::cout << tfm_idx << " b..." << std::endl;
             }
-            std::cout << "OLD LKS idx: " << idx;
+
             bool first = true;
             do {
+next:
+              std::cout << "loop start" << std::endl;
               int next_char_idx;
               int replacement_char_idx;
 
@@ -276,40 +285,54 @@ class IBMFGener {
               // 1. steps that relate of next-chars that were not retrieved
               // 2. steps that relate to replacement-chars that are not retrieved
 
-              if (((next_char_idx = get_char_idx(lks.next_char)) != -1) &&
-                  (lks.op_code.d.is_a_kern || 
-                  ((replacement_char_idx = get_char_idx(lks.remainder.replacement_char)) != -1))) { 
+              bool kept = false;
+              if (((next_char_idx = get_char_idx(lks->next_char)) != -1) &&
+                  (lks->op_code.d.is_a_kern || 
+                   ((replacement_char_idx = get_char_idx(lks->remainder.replacement_char)) != -1))) { 
               
-                lks.next_char = next_char_idx;
-                lks.remainder.replacement_char = replacement_char_idx;
+                lks->next_char = next_char_idx;
+                if (!lks->op_code.d.is_a_kern) lks->remainder.replacement_char = replacement_char_idx;
+
                 if (first) {
                   first = false;
-                  glyphs[i].new_lig_kern_idx = lig_kerns.size();
+                  g->new_lig_kern_idx = lig_kerns.size();
                 }
+
                 lig_kerns.push_back(lks);
+                std::cout << tfm_idx << " Saved at idx " << (lig_kerns.size() - 1) << "..." << std::endl;
+                kept = true;
               }
 
-              if (!lks.skip.s.stop)  {
-                lks = tfm.get_lig_kern_step(++idx);
+              if (!lks->skip.s.stop) {
+                if (kept) lks = new TFM::LigKernStep;
+                *lks = tfm.get_lig_kern_step(++tfm_idx);
+                std::cout << tfm_idx << " c..." << " stop:" << (lks->skip.s.stop ? "YES" : "no") <<  std::endl;
+                goto next;
               }
-            } while (!lks.skip.s.stop);
+              else if (!kept && !first) {
+                lig_kerns[lig_kerns.size() - 1]->skip.s.stop = true;
+                std::cout << "Last mark as stop step... " << (lig_kerns.size() - 1) << std::endl;
+              }
+
+              if (tfm_idx >= tfm.get_lig_kern_pgm_count()) std::cout << "GOING BEYOND THE END OF THE ARRAY!!!" << tfm_idx << std::endl;
+
+            } while (!lks->skip.s.stop);
 
             if (first) {
-              glyphs[i].new_lig_kern_idx = -1;
+              g->new_lig_kern_idx = -1;
             }
-
-            std::cout << "... New LKS idx: " << +glyphs[i].new_lig_kern_idx << std::endl;
           }
         }
         else {
-          glyphs[i].new_lig_kern_idx = -1;
+          g->new_lig_kern_idx = -1;
         }
+        glyph_idx += 1;
       }
 
       std::set<int> overflow_list;
 
       for (auto & g : glyphs) {
-        if (g.new_lig_kern_idx > 254) overflow_list.insert(g.new_lig_kern_idx);
+        if (g->new_lig_kern_idx > 254) overflow_list.insert(g->new_lig_kern_idx);
       }
 
       std::cout << "Number of resulting Ligature/Kern entries: " 
@@ -324,7 +347,7 @@ class IBMFGener {
 
         std::set<int> all_pgms;
         for (auto & g : glyphs) {
-          if (g.new_lig_kern_idx >= 0) all_pgms.insert(g.new_lig_kern_idx);
+          if (g->new_lig_kern_idx >= 0) all_pgms.insert(g->new_lig_kern_idx);
         }
 
         // Put them in a vector such that we can access them through indices.
@@ -347,30 +370,64 @@ class IBMFGener {
           else break;
         }
 
-        // Starting at index i, all items must go down for an amount of space_required
+        // Starting at index all[i], all items must go down for an amount of space_required
         // The corresponding indices in the glyphs table must be adjusted accordingly.
 
-        int lig_kern_idx = all[i];
+        int first_idx = all[i];
+        int new_lig_kern_idx = all[i];
 
         for (auto idx = overflow_list.rbegin(); idx != overflow_list.rend(); idx++) {
           std::cout << *idx << " treatment: " << std::endl;
-          TFM::LigKernStep lks;
-          memset(&lks, 0, sizeof(TFM::LigKernStep));
-          lks.skip.whole = 255;
-          lks.op_code.d.displ_high = (*idx + space_required) >> 8;
-          lks.remainder.displ_low = (*idx + space_required) & 0xFF;
+          TFM::LigKernStep * lks = new TFM::LigKernStep;
+          memset(lks, 0, sizeof(TFM::LigKernStep));
+          lks->skip.whole = 255;
+          lks->op_code.d.displ_high = (*idx + space_required) >> 8;
+          lks->remainder.displ_low = (*idx + space_required) & 0xFF;
 
-          lig_kerns.insert(lig_kerns.begin() + i, lks);
+          lig_kerns.insert(lig_kerns.begin() + new_lig_kern_idx, lks);
           for (auto & g : glyphs) {
-            if (g.new_lig_kern_idx == *idx) {
-              std::cout << "Char Code " << +g.glyph.char_code << "With index in lig/kern " << +g.new_lig_kern_idx << " is modified for " << i << std::endl;
-              g.new_lig_kern_idx = i;
+            if (g->new_lig_kern_idx == *idx) {
+              std::cout << "   Char Code " 
+                        << +g->glyph.char_code 
+                        << " with index in lig/kern " 
+                        << +g->new_lig_kern_idx 
+                        << " is modified for " 
+                        << new_lig_kern_idx 
+                        << std::endl;
+              g->new_lig_kern_idx = -new_lig_kern_idx;
             }
           }
-          i++;
+          new_lig_kern_idx++;
         }
-        std::cout << std::endl;
+
+        std::cout << first_idx << " treatment: " << std::endl;
+        for (auto & g : glyphs) {
+          if (g->new_lig_kern_idx == first_idx) {
+            std::cout << "   Char Code " 
+                      << +g->glyph.char_code 
+                      << " with index in lig/kern " 
+                      << +g->new_lig_kern_idx 
+                      << " is modified for " 
+                      << new_lig_kern_idx 
+                      << std::endl;
+            g->new_lig_kern_idx = first_idx;
+          }
+        }
+      
+        for (auto & g : glyphs) {
+          if (g->new_lig_kern_idx == -1) {
+            g->glyph.lig_kern_pgm_index = 255;
+          }
+          else if (g->new_lig_kern_idx < 0) {
+            g->glyph.lig_kern_pgm_index = -g->new_lig_kern_idx;
+          }
+          else {
+            g->glyph.lig_kern_pgm_index = g->new_lig_kern_idx;
+          }
+        }
       }
+
+      header.lig_kern_pgm_count = lig_kerns.size();
       return lig_kerns.size();
     }
 
@@ -383,10 +440,10 @@ class IBMFGener {
       // Glyphs data
       for (auto & g : glyphs) {
         PKFont::Glyph pk_glyph;
-        pk.get_glyph(g.old_char_code, pk_glyph, false);
+        pk.get_glyph(g->old_char_code, pk_glyph, false);
 
-        fwrite(&g.glyph, sizeof(Glyph), 1, file);
-        fwrite(pk_glyph.raster, g.glyph.packet_length, 1, file);
+        fwrite(&g->glyph, sizeof(Glyph), 1, file);
+        fwrite(pk_glyph.raster, g->glyph.packet_length, 1, file);
       }
 
       // ligature / kerns struct
@@ -405,17 +462,95 @@ class IBMFGener {
       }
     }
 
+    void
+    show() {
+      int i = 0;
+
+      std::cout << std::endl << "----------- Header: ----------" << std::endl;
+
+      std::cout << "DPI: " << header.dpi
+                << ", point size: "       << +header.point_size
+                << ", line height: "      << +header.line_height
+                << ", x height: "         << +((float) header.x_height   / 64.0)        
+                << ", em size: "          << +((float) header.em_size    / 64.0)        
+                << ", space size: "       << +((float) header.space_size / 64.0)        
+                << ", glyph count: "      << +header.glyph_count        
+                << ", lig kern count: "   << +header.lig_kern_pgm_count 
+                << ", kern_count: "       << +header.kern_count         
+                << ", slant corr: "       << +header.slant_correction   
+                << ", descender height: " << +header.descender_height
+                << std::endl;
+
+      std::cout << std::endl << "----------- Glyphs: ----------" << std::endl;
+      for (auto & g : glyphs) {
+
+        std::cout << "  [" << i << "]: "
+                  << "char_code : "     << +g->glyph.char_code                   
+                  << ", width: "        << +g->glyph.bitmap_width                
+                  << ", height: "       << +g->glyph.bitmap_height               
+                  << ", hoffset: "      << +g->glyph.horizontal_offset           
+                  << ", voffset: "      << +g->glyph.vertical_offset             
+                  << ", pkt_len: "      << +g->glyph.packet_length               
+                  << ", advance: "      << +((float)g->glyph.advance / 64.0)                    
+                  << ", dyn_f: "        << +g->glyph.glyph_metric.dyn_f          
+                  << ", first_black: "  << +g->glyph.glyph_metric.first_is_black 
+                  << ", Lig_kern_idx: " << +g->glyph.lig_kern_pgm_index  
+                  << ", Old Index: "    << +g->old_lig_kern_idx        
+                  << std::endl;
+        i++;
+      }
+
+      i = 0;
+      std::cout << std::endl << "----------- Ligature / Kern programs: ----------" << std::endl;
+      for (auto entry : lig_kerns) {
+        if (entry->skip.whole > 128) {
+          std::cout << "  [" << i << "]:  "
+                    << "Whole skip: " << +entry->skip.whole << ", "
+                    << "Goto: " << +((entry->op_code.d.displ_high << 8) + entry->remainder.displ_low);
+        }
+        else {
+          std::cout << "  [" << i << "]:  "
+                    << "Whole skip: " << +entry->skip.whole << ", "
+                    << "Stop: "       << (entry->skip.s.stop ? "Yes" : "No") << ", "
+                    << "NxtChar: "    << +entry->next_char << ", "
+                    << "IsKern: "     << (entry->op_code.d.is_a_kern ? "Yes" : "No") << ", "
+                    << (entry->op_code.d.is_a_kern ? "Kern Idx: " : "Lig char: ")
+                    << (entry->op_code.d.is_a_kern
+                            ? +((entry->op_code.d.displ_high << 8) + entry->remainder.displ_low) 
+                            : +entry->remainder.replacement_char)
+                    << std::dec;
+          if (!entry->op_code.d.is_a_kern) {
+            std::cout << ", OpCodes: a:" 
+                      << +entry->op_code.op.a_op
+                      << ", b:"
+                      << +entry->op_code.op.b_op
+                      << ", c:"
+                      << +entry->op_code.op.c_op;
+          }
+        }
+
+        std::cout << std::endl;
+        i++;       
+      }
+
+      // i = 0;
+      // std::cout << std::endl << "----------- Ligature / Kern programs: ----------" << std::endl;
+
+      // for (auto & entry : lig_kerns) {
+      //   std::cout << "  [" << i << "]:  "
+
+      //   i++;
+      // }
+    }
+
   public:
     IBMFGener(FILE * file, char * dpi, TFM & tfm, TFM & tfm2, PKFont & pk, PKFont & pk2, uint8_t char_set) 
       : file(file), tfm(tfm), tfm2(tfm2), pk(pk), pk2(pk2), char_set(char_set) {
       read_header(atoi(dpi), char_set == 0 ? 0xAE : tfm.get_glyph_count());
       read_glyphs();
-      int count;
-      if ((count = read_lig_kerns()) < 255) {
-        write_everything();
-      }
-      else {
-        std::cout << "ABORTED!!! TOO MANY LIGATURE/KERN STRUCT!!!" << std::endl;
-      }
+      //show();
+      read_lig_kerns();
+      write_everything();
+      show();
     }
 };

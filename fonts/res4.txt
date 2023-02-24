@@ -1,0 +1,2057 @@
+This is METAFONT, Version 2.71828182 (TeX Live 2022/dev/Debian) (preloaded base=mf)
+(ec/ecrm1000.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exbase.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/ecrm.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exroman.mf
+ Ok (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exaccess.mf
+ Ok) (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/expseudo.mf
+ Ok) (inkplate6plus.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exruwest.mf
+ Ok (inkplate6plus.mf) [192] (inkplate6plus.mf) [193] [194] [195] [196]
+[197] [198] [199] (inkplate6plus.mf) [200] (inkplate6plus.mf) [201] [202]
+[203] (inkplate6plus.mf) [204] (inkplate6plus.mf) [205] [206] [207] [208]
+[209] (inkplate6plus.mf) [210] (inkplate6plus.mf) [211] [212] [213] [214]
+[215] [216] (inkplate6plus.mf) [217] (inkplate6plus.mf) [218] [219] [220]
+(inkplate6plus.mf) [221] [222] [223])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrlwest.mf
+ Ok (inkplate6plus.mf) [224] (inkplate6plus.mf) [225] [226] [227] [228]
+[229] [230] [231] (inkplate6plus.mf) [232] (inkplate6plus.mf) [233] [234]
+[235] (inkplate6plus.mf) [236] (inkplate6plus.mf) [237] [238] [239] [240]
+[241] (inkplate6plus.mf) [242] (inkplate6plus.mf) [243] [244] [245] [246]
+[247] [248] (inkplate6plus.mf) [249] (inkplate6plus.mf) [250] [251] [252]
+(inkplate6plus.mf) [253] [254] [255])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrueast.mf
+ Ok [128] [129] (inkplate6plus.mf) [130] [131] [132] [133] [134] [135]
+(inkplate6plus.mf) [136] [137] (inkplate6plus.mf) [138] (inkplate6plus.mf)
+[139] [140] [141] (inkplate6plus.mf) [142] (inkplate6plus.mf) [143] [144]
+(inkplate6plus.mf) [145] [146] [147] [148] [149] (inkplate6plus.mf) [150]
+[151] [152] (inkplate6plus.mf) [153] [154] (inkplate6plus.mf) [155] [156]
+(inkplate6plus.mf) [157])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrleast.mf
+ Ok [158] [160] [161] (inkplate6plus.mf) [162] [163] [164] [165] [166] [167]
+(inkplate6plus.mf) [168] [169] (inkplate6plus.mf) [170] (inkplate6plus.mf)
+[171] [172] [173] (inkplate6plus.mf) [174] (inkplate6plus.mf) [175] [176]
+(inkplate6plus.mf) [177] [178] [179] [180] [181] (inkplate6plus.mf) [182]
+[183] [184] (inkplate6plus.mf) [185] [186] (inkplate6plus.mf) [187] [188])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exbraces.mf
+ Ok [94] [126] [23] [40] [41] [60] [124] [62] [91] [93] [92] [123] [125]
+[95] [127] [32])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/expunct.mf
+ Ok [14] [15] (inkplate6plus.mf) [19] (inkplate6plus.mf) [20] [13] [18]
+[33] [39] [42] [43] [44] [46] [47] [58] [59] [61] [96] [189] [17] [45] [16]
+[21] [22]) (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exaccent.mf
+ Ok (inkplate6plus.mf) [0] (inkplate6plus.mf) [1] [2] [3] [4] (inkplate6plus.mf
+) [5] [6] [7] [8] [9] (inkplate6plus.mf) [10] [11] [12])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exsign.mf
+ Ok [24] [34] [35] [36] [37] [64] [191] [159])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrlig.mf
+ Ok [25] [26] [28] [27] [29] [30] [31])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exromp.mf
+ Ok [38] [63] [190])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrulett.mf
+ Ok [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrllett.mf
+ Ok [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
+[121] [122])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrdigit.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exrligtb.mf
+ Ok) ) ) )
+(some charht values had to be adjusted by as much as 0.06586pt)
+Font metrics written on ecrm1000.tfm.
+Output written on ecrm1000.212gf (256 characters, 20096 bytes).
+Transcript written on ecrm1000.log.
+This is METAFONT, Version 2.71828182 (TeX Live 2022/dev/Debian) (preloaded base=mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/tcrm1000.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exbase.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/tcrm.mf
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txsymb.mf
+ Ok (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/exaccess.mf
+ Ok) (/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txpseudo.mf
+ Ok) (inkplate6plus.mf)
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txaccent.mf
+ Ok (inkplate6plus.mf) [0] (inkplate6plus.mf) [1] [2] [3] [4] (inkplate6plus.mf
+) [5] [6] [7] [8] [9] (inkplate6plus.mf) [10] [11] [12] [27] [29])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txgen.mf
+ Ok [100] [109] [98] [99] [108])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txsymbol.mf
+ Ok [13] [18] [21] [22] [23] [24] [25] [26] [28] [31] [32] [36] [39] [44]
+[45] [46] [42] [47] [60] [61] [62] [77] [79] [87] [110] [91] [93] [94] [95]
+[96] [126] [127] [128] [129] [130] [131] [132] [133] [134] [135] [136] [137]
+[138] [139] [140] [141] [142] [143] [144] [145] [146] [147] [148] [149]
+[150] [151] [152] [153] [154] [155] [156] [157] [158] [159] [160] [161]
+[162] [163] [164] [165] [166] [167] [168] [169] [171] [172] [173] [174]
+[175] [177] [176] [180] [181] [182] [183] [184] [187] [191] [214] [246])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txromod.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txrsuper.mf
+ Ok [185] [178] [179] [170] [186])
+(/usr/share/texlive/texmf-dist/fonts/source/jknappen/ec/txrfract.mf
+ Ok [188] [189] [190]) ) ) )
+(some charht values had to be adjusted by as much as 0.06943pt)
+Font metrics written on tcrm1000.tfm.
+Output written on tcrm1000.212gf (128 characters, 9212 bytes).
+Transcript written on tcrm1000.log.
+Creating file EC-Regular_212.ibmf ...
+ 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 94 126 23 40 41 60 124 62 91 93 92 123 125 95 127 32 14 15 19 20 13 18 33 39 42 43 44 46 47 58 59 61 96 189 17 45 16 21 22 0 1 2 3 4 5 6 7 8 9 10 11 12 24 34 35 36 37 64 191 159 25 26 28 27 29 30 31 38 63 190 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 48 49 50 51 52 53 54 55 56 57
+ 0 1 2 3 4 5 6 7 8 9 10 11 12 27 29 100 109 98 99 108 13 18 21 22 23 24 25 26 28 31 32 36 39 44 45 46 42 47 60 61 62 77 79 87 110 91 93 94 95 96 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 171 172 173 174 175 177 176 180 181 182 183 184 187 191 214 246 48 49 50 51 52 53 54 55 56 57 185 178 179 170 186 188 189 190
+Reading Header....
+Reading Glyphs....
+Reading and reshuffling Lig/Kern....
+62 a...
+loop start
+62 Saved at idx 0...
+63 c... stop:no
+loop start
+63 Saved at idx 1...
+64 c... stop:no
+loop start
+64 Saved at idx 2...
+65 c... stop:no
+loop start
+65 Saved at idx 3...
+66 c... stop:no
+loop start
+67 c... stop:no
+loop start
+67 Saved at idx 4...
+68 c... stop:no
+loop start
+69 c... stop:no
+loop start
+70 c... stop:no
+loop start
+70 Saved at idx 5...
+71 c... stop:no
+loop start
+71 Saved at idx 6...
+72 c... stop:no
+loop start
+72 Saved at idx 7...
+73 c... stop:no
+loop start
+73 Saved at idx 8...
+74 c... stop:no
+loop start
+74 Saved at idx 9...
+75 c... stop:no
+loop start
+76 c... stop:no
+loop start
+77 c... stop:no
+loop start
+77 Saved at idx 10...
+78 c... stop:no
+loop start
+79 c... stop:no
+loop start
+80 c... stop:no
+loop start
+81 c... stop:no
+loop start
+82 c... stop:no
+loop start
+83 c... stop:no
+loop start
+83 Saved at idx 11...
+84 c... stop:no
+loop start
+84 Saved at idx 12...
+85 c... stop:no
+loop start
+85 Saved at idx 13...
+86 c... stop:no
+loop start
+86 Saved at idx 14...
+87 c... stop:no
+loop start
+87 Saved at idx 15...
+88 c... stop:no
+loop start
+89 c... stop:no
+loop start
+90 c... stop:no
+loop start
+91 c... stop:no
+loop start
+92 c... stop:no
+loop start
+92 Saved at idx 16...
+93 c... stop:YES
+loop start
+Last mark as stop step... 16
+94 a...
+loop start
+94 Saved at idx 17...
+95 c... stop:no
+loop start
+95 Saved at idx 18...
+96 c... stop:YES
+loop start
+Last mark as stop step... 18
+97 a...
+loop start
+97 Saved at idx 19...
+98 c... stop:no
+loop start
+98 Saved at idx 20...
+99 c... stop:YES
+loop start
+Last mark as stop step... 20
+60 a...
+loop start
+60 Saved at idx 21...
+61 c... stop:no
+loop start
+61 Saved at idx 22...
+62 c... stop:no
+loop start
+62 Saved at idx 23...
+63 c... stop:no
+loop start
+63 Saved at idx 24...
+64 c... stop:no
+loop start
+64 Saved at idx 25...
+65 c... stop:no
+loop start
+65 Saved at idx 26...
+66 c... stop:no
+loop start
+67 c... stop:no
+loop start
+67 Saved at idx 27...
+68 c... stop:no
+loop start
+69 c... stop:no
+loop start
+70 c... stop:no
+loop start
+70 Saved at idx 28...
+71 c... stop:no
+loop start
+71 Saved at idx 29...
+72 c... stop:no
+loop start
+72 Saved at idx 30...
+73 c... stop:no
+loop start
+73 Saved at idx 31...
+74 c... stop:no
+loop start
+74 Saved at idx 32...
+75 c... stop:no
+loop start
+76 c... stop:no
+loop start
+77 c... stop:no
+loop start
+77 Saved at idx 33...
+78 c... stop:no
+loop start
+79 c... stop:no
+loop start
+80 c... stop:no
+loop start
+81 c... stop:no
+loop start
+82 c... stop:no
+loop start
+83 c... stop:no
+loop start
+83 Saved at idx 34...
+84 c... stop:no
+loop start
+84 Saved at idx 35...
+85 c... stop:no
+loop start
+85 Saved at idx 36...
+86 c... stop:no
+loop start
+86 Saved at idx 37...
+87 c... stop:no
+loop start
+87 Saved at idx 38...
+88 c... stop:no
+loop start
+89 c... stop:no
+loop start
+90 c... stop:no
+loop start
+91 c... stop:no
+loop start
+92 c... stop:no
+loop start
+92 Saved at idx 39...
+93 c... stop:YES
+loop start
+Last mark as stop step... 39
+100 a...
+loop start
+100 Saved at idx 40...
+101 c... stop:YES
+loop start
+101 Saved at idx 41...
+48 a...
+loop start
+48 Saved at idx 42...
+28 a...
+loop start
+28 Saved at idx 43...
+29 c... stop:no
+loop start
+29 Saved at idx 44...
+30 c... stop:no
+loop start
+30 Saved at idx 45...
+31 c... stop:no
+loop start
+31 Saved at idx 46...
+32 c... stop:no
+loop start
+32 Saved at idx 47...
+33 c... stop:no
+loop start
+33 Saved at idx 48...
+34 c... stop:no
+loop start
+34 Saved at idx 49...
+35 c... stop:no
+loop start
+35 Saved at idx 50...
+36 c... stop:no
+loop start
+36 Saved at idx 51...
+37 c... stop:YES
+loop start
+37 Saved at idx 52...
+52 a...
+loop start
+52 Saved at idx 53...
+42 a...
+loop start
+42 Saved at idx 54...
+43 c... stop:no
+loop start
+43 Saved at idx 55...
+44 c... stop:no
+loop start
+44 Saved at idx 56...
+45 c... stop:YES
+loop start
+45 Saved at idx 57...
+51 a...
+loop start
+51 Saved at idx 58...
+46 a...
+loop start
+46 Saved at idx 59...
+47 c... stop:YES
+loop start
+Last mark as stop step... 59
+49 a...
+loop start
+49 Saved at idx 60...
+50 a...
+loop start
+50 Saved at idx 61...
+53 a...
+loop start
+53 Saved at idx 62...
+8 a...
+335 b...
+loop start
+336 c... stop:no
+loop start
+337 c... stop:no
+loop start
+338 c... stop:no
+loop start
+339 c... stop:no
+loop start
+339 Saved at idx 63...
+340 c... stop:no
+loop start
+340 Saved at idx 64...
+341 c... stop:no
+loop start
+341 Saved at idx 65...
+342 c... stop:no
+loop start
+342 Saved at idx 66...
+343 c... stop:no
+loop start
+343 Saved at idx 67...
+344 c... stop:no
+loop start
+345 c... stop:no
+loop start
+346 c... stop:no
+loop start
+347 c... stop:no
+loop start
+348 c... stop:no
+loop start
+348 Saved at idx 68...
+349 c... stop:YES
+loop start
+Last mark as stop step... 68
+16 a...
+274 b...
+loop start
+274 Saved at idx 69...
+275 c... stop:no
+loop start
+275 Saved at idx 70...
+276 c... stop:no
+loop start
+276 Saved at idx 71...
+277 c... stop:no
+loop start
+277 Saved at idx 72...
+278 c... stop:no
+loop start
+278 Saved at idx 73...
+279 c... stop:no
+loop start
+279 Saved at idx 74...
+280 c... stop:no
+loop start
+280 Saved at idx 75...
+281 c... stop:no
+loop start
+281 Saved at idx 76...
+282 c... stop:no
+loop start
+282 Saved at idx 77...
+283 c... stop:YES
+loop start
+283 Saved at idx 78...
+185 a...
+loop start
+185 Saved at idx 79...
+186 c... stop:no
+loop start
+186 Saved at idx 80...
+187 c... stop:no
+loop start
+187 Saved at idx 81...
+188 c... stop:no
+loop start
+188 Saved at idx 82...
+189 c... stop:no
+loop start
+189 Saved at idx 83...
+190 c... stop:no
+loop start
+190 Saved at idx 84...
+191 c... stop:no
+loop start
+191 Saved at idx 85...
+192 c... stop:no
+loop start
+192 Saved at idx 86...
+193 c... stop:no
+loop start
+193 Saved at idx 87...
+194 c... stop:no
+loop start
+194 Saved at idx 88...
+195 c... stop:no
+loop start
+195 Saved at idx 89...
+196 c... stop:no
+loop start
+196 Saved at idx 90...
+197 c... stop:no
+loop start
+197 Saved at idx 91...
+198 c... stop:no
+loop start
+198 Saved at idx 92...
+199 c... stop:no
+loop start
+199 Saved at idx 93...
+200 c... stop:no
+loop start
+200 Saved at idx 94...
+201 c... stop:no
+loop start
+201 Saved at idx 95...
+202 c... stop:no
+loop start
+202 Saved at idx 96...
+203 c... stop:no
+loop start
+203 Saved at idx 97...
+204 c... stop:no
+loop start
+205 c... stop:no
+loop start
+206 c... stop:no
+loop start
+207 c... stop:no
+loop start
+208 c... stop:no
+loop start
+209 c... stop:no
+loop start
+210 c... stop:no
+loop start
+211 c... stop:no
+loop start
+212 c... stop:no
+loop start
+212 Saved at idx 98...
+213 c... stop:no
+loop start
+213 Saved at idx 99...
+214 c... stop:no
+loop start
+215 c... stop:no
+loop start
+216 c... stop:no
+loop start
+217 c... stop:no
+loop start
+218 c... stop:no
+loop start
+219 c... stop:no
+loop start
+219 Saved at idx 100...
+220 c... stop:no
+loop start
+220 Saved at idx 101...
+221 c... stop:no
+loop start
+221 Saved at idx 102...
+222 c... stop:no
+loop start
+222 Saved at idx 103...
+223 c... stop:no
+loop start
+223 Saved at idx 104...
+224 c... stop:no
+loop start
+225 c... stop:no
+loop start
+226 c... stop:no
+loop start
+227 c... stop:no
+loop start
+228 c... stop:YES
+loop start
+228 Saved at idx 105...
+3 a...
+400 b...
+loop start
+401 c... stop:YES
+loop start
+229 a...
+loop start
+229 Saved at idx 106...
+230 c... stop:no
+loop start
+230 Saved at idx 107...
+231 c... stop:no
+loop start
+231 Saved at idx 108...
+232 c... stop:no
+loop start
+232 Saved at idx 109...
+233 c... stop:no
+loop start
+234 c... stop:no
+loop start
+235 c... stop:no
+loop start
+236 c... stop:no
+loop start
+237 c... stop:no
+loop start
+237 Saved at idx 110...
+238 c... stop:no
+loop start
+238 Saved at idx 111...
+239 c... stop:no
+loop start
+239 Saved at idx 112...
+240 c... stop:no
+loop start
+240 Saved at idx 113...
+241 c... stop:no
+loop start
+241 Saved at idx 114...
+242 c... stop:no
+loop start
+243 c... stop:no
+loop start
+244 c... stop:no
+loop start
+245 c... stop:no
+loop start
+246 c... stop:YES
+loop start
+246 Saved at idx 115...
+5 a...
+391 b...
+loop start
+392 c... stop:no
+loop start
+393 c... stop:no
+loop start
+394 c... stop:no
+loop start
+395 c... stop:no
+loop start
+395 Saved at idx 116...
+396 c... stop:no
+loop start
+396 Saved at idx 117...
+397 c... stop:no
+loop start
+397 Saved at idx 118...
+398 c... stop:no
+loop start
+398 Saved at idx 119...
+399 c... stop:no
+loop start
+399 Saved at idx 120...
+400 c... stop:no
+loop start
+401 c... stop:YES
+loop start
+Last mark as stop step... 120
+16 a...
+146 a...
+loop start
+146 Saved at idx 121...
+147 c... stop:no
+loop start
+148 c... stop:no
+loop start
+149 c... stop:no
+loop start
+150 c... stop:no
+loop start
+151 c... stop:no
+loop start
+152 c... stop:no
+loop start
+153 c... stop:no
+loop start
+154 c... stop:no
+loop start
+155 c... stop:no
+loop start
+155 Saved at idx 122...
+156 c... stop:no
+loop start
+156 Saved at idx 123...
+157 c... stop:no
+loop start
+157 Saved at idx 124...
+158 c... stop:no
+loop start
+159 c... stop:no
+loop start
+160 c... stop:no
+loop start
+161 c... stop:no
+loop start
+162 c... stop:no
+loop start
+162 Saved at idx 125...
+163 c... stop:no
+loop start
+163 Saved at idx 126...
+164 c... stop:no
+loop start
+164 Saved at idx 127...
+165 c... stop:no
+loop start
+165 Saved at idx 128...
+166 c... stop:no
+loop start
+166 Saved at idx 129...
+167 c... stop:no
+loop start
+167 Saved at idx 130...
+168 c... stop:no
+loop start
+169 c... stop:no
+loop start
+170 c... stop:no
+loop start
+171 c... stop:no
+loop start
+172 c... stop:no
+loop start
+172 Saved at idx 131...
+173 c... stop:no
+loop start
+174 c... stop:no
+loop start
+175 c... stop:no
+loop start
+176 c... stop:no
+loop start
+177 c... stop:no
+loop start
+178 c... stop:no
+loop start
+179 c... stop:no
+loop start
+180 c... stop:no
+loop start
+181 c... stop:no
+loop start
+182 c... stop:no
+loop start
+182 Saved at idx 132...
+183 c... stop:no
+loop start
+183 Saved at idx 133...
+184 c... stop:YES
+loop start
+184 Saved at idx 134...
+6 a...
+365 b...
+loop start
+366 c... stop:no
+loop start
+367 c... stop:no
+loop start
+368 c... stop:no
+loop start
+369 c... stop:no
+loop start
+370 c... stop:no
+loop start
+370 Saved at idx 135...
+371 c... stop:no
+loop start
+371 Saved at idx 136...
+372 c... stop:no
+loop start
+372 Saved at idx 137...
+373 c... stop:no
+loop start
+373 Saved at idx 138...
+374 c... stop:no
+loop start
+375 c... stop:no
+loop start
+376 c... stop:no
+loop start
+377 c... stop:no
+loop start
+378 c... stop:no
+loop start
+378 Saved at idx 139...
+379 c... stop:no
+loop start
+380 c... stop:no
+loop start
+381 c... stop:no
+loop start
+382 c... stop:no
+loop start
+383 c... stop:no
+loop start
+384 c... stop:no
+loop start
+385 c... stop:no
+loop start
+386 c... stop:no
+loop start
+387 c... stop:no
+loop start
+388 c... stop:no
+loop start
+388 Saved at idx 140...
+389 c... stop:no
+loop start
+389 Saved at idx 141...
+390 c... stop:no
+loop start
+390 Saved at idx 142...
+391 c... stop:no
+loop start
+392 c... stop:no
+loop start
+393 c... stop:no
+loop start
+394 c... stop:no
+loop start
+395 c... stop:no
+loop start
+395 Saved at idx 143...
+396 c... stop:no
+loop start
+396 Saved at idx 144...
+397 c... stop:no
+loop start
+397 Saved at idx 145...
+398 c... stop:no
+loop start
+398 Saved at idx 146...
+399 c... stop:no
+loop start
+399 Saved at idx 147...
+400 c... stop:no
+loop start
+401 c... stop:YES
+loop start
+Last mark as stop step... 147
+247 a...
+loop start
+247 Saved at idx 148...
+248 c... stop:no
+loop start
+248 Saved at idx 149...
+249 c... stop:no
+loop start
+249 Saved at idx 150...
+250 c... stop:no
+loop start
+250 Saved at idx 151...
+251 c... stop:no
+loop start
+251 Saved at idx 152...
+252 c... stop:no
+loop start
+252 Saved at idx 153...
+253 c... stop:no
+loop start
+253 Saved at idx 154...
+254 c... stop:no
+loop start
+254 Saved at idx 155...
+255 c... stop:no
+loop start
+255 Saved at idx 156...
+256 c... stop:YES
+loop start
+Last mark as stop step... 156
+185 a...
+185 a...
+213 a...
+loop start
+213 Saved at idx 157...
+214 c... stop:no
+loop start
+215 c... stop:no
+loop start
+216 c... stop:no
+loop start
+217 c... stop:no
+loop start
+218 c... stop:no
+loop start
+219 c... stop:no
+loop start
+219 Saved at idx 158...
+220 c... stop:no
+loop start
+220 Saved at idx 159...
+221 c... stop:no
+loop start
+221 Saved at idx 160...
+222 c... stop:no
+loop start
+222 Saved at idx 161...
+223 c... stop:no
+loop start
+223 Saved at idx 162...
+224 c... stop:no
+loop start
+225 c... stop:no
+loop start
+226 c... stop:no
+loop start
+227 c... stop:no
+loop start
+228 c... stop:YES
+loop start
+228 Saved at idx 163...
+248 a...
+loop start
+248 Saved at idx 164...
+249 c... stop:no
+loop start
+249 Saved at idx 165...
+250 c... stop:no
+loop start
+250 Saved at idx 166...
+251 c... stop:no
+loop start
+251 Saved at idx 167...
+252 c... stop:no
+loop start
+252 Saved at idx 168...
+253 c... stop:no
+loop start
+253 Saved at idx 169...
+254 c... stop:no
+loop start
+254 Saved at idx 170...
+255 c... stop:no
+loop start
+255 Saved at idx 171...
+256 c... stop:YES
+loop start
+Last mark as stop step... 171
+38 a...
+loop start
+38 Saved at idx 172...
+39 c... stop:no
+loop start
+39 Saved at idx 173...
+40 c... stop:no
+loop start
+40 Saved at idx 174...
+41 c... stop:YES
+loop start
+41 Saved at idx 175...
+11 a...
+329 b...
+loop start
+329 Saved at idx 176...
+330 c... stop:no
+loop start
+330 Saved at idx 177...
+331 c... stop:no
+loop start
+332 c... stop:no
+loop start
+333 c... stop:no
+loop start
+333 Saved at idx 178...
+334 c... stop:no
+loop start
+335 c... stop:no
+loop start
+336 c... stop:no
+loop start
+337 c... stop:no
+loop start
+338 c... stop:no
+loop start
+339 c... stop:no
+loop start
+339 Saved at idx 179...
+340 c... stop:no
+loop start
+340 Saved at idx 180...
+341 c... stop:no
+loop start
+341 Saved at idx 181...
+342 c... stop:no
+loop start
+342 Saved at idx 182...
+343 c... stop:no
+loop start
+343 Saved at idx 183...
+344 c... stop:no
+loop start
+345 c... stop:no
+loop start
+346 c... stop:no
+loop start
+347 c... stop:no
+loop start
+348 c... stop:no
+loop start
+348 Saved at idx 184...
+349 c... stop:YES
+loop start
+Last mark as stop step... 184
+12 a...
+306 b...
+loop start
+306 Saved at idx 185...
+13 a...
+304 b...
+loop start
+304 Saved at idx 186...
+2 a...
+401 b...
+loop start
+17 a...
+loop start
+17 Saved at idx 187...
+18 c... stop:no
+loop start
+18 Saved at idx 188...
+19 c... stop:no
+loop start
+19 Saved at idx 189...
+20 c... stop:no
+loop start
+20 Saved at idx 190...
+21 c... stop:no
+loop start
+21 Saved at idx 191...
+22 c... stop:no
+loop start
+22 Saved at idx 192...
+23 c... stop:no
+loop start
+23 Saved at idx 193...
+24 c... stop:no
+loop start
+24 Saved at idx 194...
+25 c... stop:no
+loop start
+25 Saved at idx 195...
+26 c... stop:no
+loop start
+26 Saved at idx 196...
+27 c... stop:YES
+loop start
+27 Saved at idx 197...
+4 a...
+399 b...
+loop start
+399 Saved at idx 198...
+400 c... stop:no
+loop start
+401 c... stop:YES
+loop start
+Last mark as stop step... 198
+15 a...
+290 b...
+loop start
+290 Saved at idx 199...
+291 c... stop:no
+loop start
+291 Saved at idx 200...
+292 c... stop:no
+loop start
+292 Saved at idx 201...
+293 c... stop:YES
+loop start
+293 Saved at idx 202...
+102 a...
+loop start
+102 Saved at idx 203...
+103 c... stop:no
+loop start
+103 Saved at idx 204...
+104 c... stop:no
+loop start
+104 Saved at idx 205...
+105 c... stop:no
+loop start
+106 c... stop:no
+loop start
+107 c... stop:no
+loop start
+108 c... stop:no
+loop start
+109 c... stop:no
+loop start
+110 c... stop:no
+loop start
+111 c... stop:no
+loop start
+112 c... stop:no
+loop start
+113 c... stop:no
+loop start
+114 c... stop:no
+loop start
+114 Saved at idx 206...
+115 c... stop:no
+loop start
+115 Saved at idx 207...
+116 c... stop:no
+loop start
+116 Saved at idx 208...
+117 c... stop:no
+loop start
+117 Saved at idx 209...
+118 c... stop:no
+loop start
+119 c... stop:no
+loop start
+120 c... stop:no
+loop start
+121 c... stop:no
+loop start
+122 c... stop:no
+loop start
+122 Saved at idx 210...
+123 c... stop:no
+loop start
+124 c... stop:no
+loop start
+125 c... stop:no
+loop start
+126 c... stop:no
+loop start
+127 c... stop:no
+loop start
+128 c... stop:no
+loop start
+129 c... stop:no
+loop start
+130 c... stop:no
+loop start
+131 c... stop:no
+loop start
+132 c... stop:no
+loop start
+132 Saved at idx 211...
+133 c... stop:no
+loop start
+133 Saved at idx 212...
+134 c... stop:no
+loop start
+134 Saved at idx 213...
+135 c... stop:no
+loop start
+136 c... stop:no
+loop start
+137 c... stop:no
+loop start
+138 c... stop:no
+loop start
+139 c... stop:no
+loop start
+139 Saved at idx 214...
+140 c... stop:no
+loop start
+140 Saved at idx 215...
+141 c... stop:no
+loop start
+141 Saved at idx 216...
+142 c... stop:no
+loop start
+142 Saved at idx 217...
+143 c... stop:no
+loop start
+143 Saved at idx 218...
+144 c... stop:no
+loop start
+145 c... stop:YES
+loop start
+Last mark as stop step... 218
+15 a...
+15 a...
+12 a...
+12 a...
+10 a...
+331 b...
+loop start
+332 c... stop:no
+loop start
+333 c... stop:no
+loop start
+333 Saved at idx 219...
+334 c... stop:no
+loop start
+335 c... stop:no
+loop start
+336 c... stop:no
+loop start
+337 c... stop:no
+loop start
+338 c... stop:no
+loop start
+339 c... stop:no
+loop start
+339 Saved at idx 220...
+340 c... stop:no
+loop start
+340 Saved at idx 221...
+341 c... stop:no
+loop start
+341 Saved at idx 222...
+342 c... stop:no
+loop start
+342 Saved at idx 223...
+343 c... stop:no
+loop start
+343 Saved at idx 224...
+344 c... stop:no
+loop start
+345 c... stop:no
+loop start
+346 c... stop:no
+loop start
+347 c... stop:no
+loop start
+348 c... stop:no
+loop start
+348 Saved at idx 225...
+349 c... stop:YES
+loop start
+Last mark as stop step... 225
+9 a...
+334 b...
+loop start
+335 c... stop:no
+loop start
+336 c... stop:no
+loop start
+337 c... stop:no
+loop start
+338 c... stop:no
+loop start
+339 c... stop:no
+loop start
+339 Saved at idx 226...
+340 c... stop:no
+loop start
+340 Saved at idx 227...
+341 c... stop:no
+loop start
+341 Saved at idx 228...
+342 c... stop:no
+loop start
+342 Saved at idx 229...
+343 c... stop:no
+loop start
+343 Saved at idx 230...
+344 c... stop:no
+loop start
+345 c... stop:no
+loop start
+346 c... stop:no
+loop start
+347 c... stop:no
+loop start
+348 c... stop:no
+loop start
+348 Saved at idx 231...
+349 c... stop:YES
+loop start
+Last mark as stop step... 231
+104 a...
+loop start
+104 Saved at idx 232...
+105 c... stop:no
+loop start
+106 c... stop:no
+loop start
+107 c... stop:no
+loop start
+108 c... stop:no
+loop start
+109 c... stop:no
+loop start
+110 c... stop:no
+loop start
+111 c... stop:no
+loop start
+112 c... stop:no
+loop start
+113 c... stop:no
+loop start
+114 c... stop:no
+loop start
+114 Saved at idx 233...
+115 c... stop:no
+loop start
+115 Saved at idx 234...
+116 c... stop:no
+loop start
+116 Saved at idx 235...
+117 c... stop:no
+loop start
+117 Saved at idx 236...
+118 c... stop:no
+loop start
+119 c... stop:no
+loop start
+120 c... stop:no
+loop start
+121 c... stop:no
+loop start
+122 c... stop:no
+loop start
+122 Saved at idx 237...
+123 c... stop:no
+loop start
+124 c... stop:no
+loop start
+125 c... stop:no
+loop start
+126 c... stop:no
+loop start
+127 c... stop:no
+loop start
+128 c... stop:no
+loop start
+129 c... stop:no
+loop start
+130 c... stop:no
+loop start
+131 c... stop:no
+loop start
+132 c... stop:no
+loop start
+132 Saved at idx 238...
+133 c... stop:no
+loop start
+133 Saved at idx 239...
+134 c... stop:no
+loop start
+134 Saved at idx 240...
+135 c... stop:no
+loop start
+136 c... stop:no
+loop start
+137 c... stop:no
+loop start
+138 c... stop:no
+loop start
+139 c... stop:no
+loop start
+139 Saved at idx 241...
+140 c... stop:no
+loop start
+140 Saved at idx 242...
+141 c... stop:no
+loop start
+141 Saved at idx 243...
+142 c... stop:no
+loop start
+142 Saved at idx 244...
+143 c... stop:no
+loop start
+143 Saved at idx 245...
+144 c... stop:no
+loop start
+145 c... stop:YES
+loop start
+Last mark as stop step... 245
+115 a...
+loop start
+115 Saved at idx 246...
+116 c... stop:no
+loop start
+116 Saved at idx 247...
+117 c... stop:no
+loop start
+117 Saved at idx 248...
+118 c... stop:no
+loop start
+119 c... stop:no
+loop start
+120 c... stop:no
+loop start
+121 c... stop:no
+loop start
+122 c... stop:no
+loop start
+122 Saved at idx 249...
+123 c... stop:no
+loop start
+124 c... stop:no
+loop start
+125 c... stop:no
+loop start
+126 c... stop:no
+loop start
+127 c... stop:no
+loop start
+128 c... stop:no
+loop start
+129 c... stop:no
+loop start
+130 c... stop:no
+loop start
+131 c... stop:no
+loop start
+132 c... stop:no
+loop start
+132 Saved at idx 250...
+133 c... stop:no
+loop start
+133 Saved at idx 251...
+134 c... stop:no
+loop start
+134 Saved at idx 252...
+135 c... stop:no
+loop start
+136 c... stop:no
+loop start
+137 c... stop:no
+loop start
+138 c... stop:no
+loop start
+139 c... stop:no
+loop start
+139 Saved at idx 253...
+140 c... stop:no
+loop start
+140 Saved at idx 254...
+141 c... stop:no
+loop start
+141 Saved at idx 255...
+142 c... stop:no
+loop start
+142 Saved at idx 256...
+143 c... stop:no
+loop start
+143 Saved at idx 257...
+144 c... stop:no
+loop start
+145 c... stop:YES
+loop start
+Last mark as stop step... 257
+156 a...
+loop start
+156 Saved at idx 258...
+157 c... stop:no
+loop start
+157 Saved at idx 259...
+158 c... stop:no
+loop start
+159 c... stop:no
+loop start
+160 c... stop:no
+loop start
+161 c... stop:no
+loop start
+162 c... stop:no
+loop start
+162 Saved at idx 260...
+163 c... stop:no
+loop start
+163 Saved at idx 261...
+164 c... stop:no
+loop start
+164 Saved at idx 262...
+165 c... stop:no
+loop start
+165 Saved at idx 263...
+166 c... stop:no
+loop start
+166 Saved at idx 264...
+167 c... stop:no
+loop start
+167 Saved at idx 265...
+168 c... stop:no
+loop start
+169 c... stop:no
+loop start
+170 c... stop:no
+loop start
+171 c... stop:no
+loop start
+172 c... stop:no
+loop start
+172 Saved at idx 266...
+173 c... stop:no
+loop start
+174 c... stop:no
+loop start
+175 c... stop:no
+loop start
+176 c... stop:no
+loop start
+177 c... stop:no
+loop start
+178 c... stop:no
+loop start
+179 c... stop:no
+loop start
+180 c... stop:no
+loop start
+181 c... stop:no
+loop start
+182 c... stop:no
+loop start
+182 Saved at idx 267...
+183 c... stop:no
+loop start
+183 Saved at idx 268...
+184 c... stop:YES
+loop start
+184 Saved at idx 269...
+5 a...
+5 a...
+0 a...
+405 b...
+loop start
+406 c... stop:no
+loop start
+407 c... stop:no
+loop start
+408 c... stop:no
+loop start
+409 c... stop:no
+loop start
+410 c... stop:no
+loop start
+411 c... stop:no
+loop start
+411 Saved at idx 270...
+412 c... stop:no
+loop start
+412 Saved at idx 271...
+413 c... stop:no
+loop start
+413 Saved at idx 272...
+414 c... stop:no
+loop start
+415 c... stop:no
+loop start
+416 c... stop:no
+loop start
+417 c... stop:no
+loop start
+418 c... stop:no
+loop start
+418 Saved at idx 273...
+419 c... stop:no
+loop start
+419 Saved at idx 274...
+420 c... stop:no
+loop start
+420 Saved at idx 275...
+421 c... stop:no
+loop start
+421 Saved at idx 276...
+422 c... stop:no
+loop start
+422 Saved at idx 277...
+423 c... stop:no
+loop start
+423 Saved at idx 278...
+424 c... stop:no
+loop start
+425 c... stop:no
+loop start
+426 c... stop:no
+loop start
+427 c... stop:no
+loop start
+428 c... stop:no
+loop start
+428 Saved at idx 279...
+429 c... stop:no
+loop start
+430 c... stop:no
+loop start
+431 c... stop:no
+loop start
+432 c... stop:no
+loop start
+433 c... stop:no
+loop start
+434 c... stop:no
+loop start
+435 c... stop:no
+loop start
+436 c... stop:no
+loop start
+437 c... stop:no
+loop start
+438 c... stop:no
+loop start
+438 Saved at idx 280...
+439 c... stop:no
+loop start
+439 Saved at idx 281...
+440 c... stop:YES
+loop start
+440 Saved at idx 282...
+GOING BEYOND THE END OF THE ARRAY!!!440
+14 a...
+292 b...
+loop start
+292 Saved at idx 283...
+293 c... stop:YES
+loop start
+293 Saved at idx 284...
+10 a...
+16 a...
+16 a...
+12 a...
+Number of resulting Ligature/Kern entries: 285 Overflow Count: 3
+283 treatment: 
+   Char Code 136 with index in lig/kern 283 is modified for 246
+270 treatment: 
+   Char Code 135 with index in lig/kern 270 is modified for 247
+258 treatment: 
+   Char Code 121 with index in lig/kern 258 is modified for 248
+246 treatment: 
+   Char Code 119 with index in lig/kern 246 is modified for 249
+
+----------- Header: ----------
+DPI: 212, point size: 10, line height: 29, x height: 12.625, em size: 29.3125, space size: 0.140625, glyph count: 174, lig kern count: 288, kern_count: 9, slant corr: 0, descender height: 7
+
+----------- Glyphs: ----------
+  [0]: char_code : 0, width: 5, height: 4, hoffset: -3, voffset: 18, pkt_len: 3, advance: 14.6562, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [1]: char_code : 1, width: 5, height: 4, hoffset: -6, voffset: 18, pkt_len: 3, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [2]: char_code : 2, width: 6, height: 3, hoffset: -5, voffset: 17, pkt_len: 3, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [3]: char_code : 3, width: 10, height: 3, hoffset: -2, voffset: 19, pkt_len: 4, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [4]: char_code : 4, width: 10, height: 4, hoffset: -2, voffset: 18, pkt_len: 5, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [5]: char_code : 5, width: 10, height: 4, hoffset: -4, voffset: 18, pkt_len: 5, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [6]: char_code : 6, width: 5, height: 5, hoffset: -8, voffset: 18, pkt_len: 4, advance: 21.9844, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [7]: char_code : 7, width: 8, height: 4, hoffset: -4, voffset: 18, pkt_len: 4, advance: 14.6562, dyn_f: 14, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [8]: char_code : 8, width: 8, height: 5, hoffset: -3, voffset: 18, pkt_len: 5, advance: 14.6562, dyn_f: 14, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [9]: char_code : 9, width: 10, height: 1, hoffset: -2, voffset: 18, pkt_len: 1, advance: 14.6562, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [10]: char_code : 10, width: 5, height: 4, hoffset: -1, voffset: 20, pkt_len: 3, advance: 8.14062, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [11]: char_code : 11, width: 8, height: 6, hoffset: -2, voffset: -1, pkt_len: 6, advance: 13.0312, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [12]: char_code : 12, width: 6, height: 7, hoffset: 0, voffset: 0, pkt_len: 6, advance: 8.14062, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [13]: char_code : 13, width: 4, height: 10, hoffset: -2, voffset: 3, pkt_len: 5, advance: 8.14062, dyn_f: 14, first_black: 1, Lig_kern_idx: 0, Old Index: 62
+  [14]: char_code : 14, width: 6, height: 15, hoffset: -3, voffset: 14, pkt_len: 12, advance: 13.0312, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [15]: char_code : 15, width: 6, height: 15, hoffset: -3, voffset: 14, pkt_len: 12, advance: 13.0312, dyn_f: 14, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [16]: char_code : 16, width: 9, height: 10, hoffset: 0, voffset: 19, pkt_len: 12, advance: 9.76562, dyn_f: 14, first_black: 0, Lig_kern_idx: 17, Old Index: 94
+  [17]: char_code : 17, width: 9, height: 10, hoffset: 0, voffset: 19, pkt_len: 12, advance: 9.76562, dyn_f: 14, first_black: 1, Lig_kern_idx: 19, Old Index: 97
+  [18]: char_code : 18, width: 9, height: 10, hoffset: 0, voffset: 3, pkt_len: 12, advance: 9.76562, dyn_f: 14, first_black: 1, Lig_kern_idx: 21, Old Index: 60
+  [19]: char_code : 19, width: 12, height: 15, hoffset: -2, voffset: 14, pkt_len: 23, advance: 16.2812, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [20]: char_code : 20, width: 12, height: 15, hoffset: -1, voffset: 14, pkt_len: 23, advance: 16.2812, dyn_f: 14, first_black: 1, Lig_kern_idx: 40, Old Index: 100
+  [21]: char_code : 21, width: 14, height: 1, hoffset: 0, voffset: 8, pkt_len: 1, advance: 14.6562, dyn_f: 12, first_black: 1, Lig_kern_idx: 42, Old Index: 48
+  [22]: char_code : 22, width: 28, height: 1, hoffset: 0, voffset: 8, pkt_len: 1, advance: 29.3125, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [23]: char_code : 23, width: 9, height: 21, hoffset: -2, voffset: 14, pkt_len: 16, advance: 13.8438, dyn_f: 11, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [24]: char_code : 24, width: 8, height: 12, hoffset: -1, voffset: 9, pkt_len: 12, advance: 11.3906, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [25]: char_code : 25, width: 7, height: 13, hoffset: 0, voffset: 12, pkt_len: 5, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [26]: char_code : 26, width: 8, height: 19, hoffset: 2, voffset: 12, pkt_len: 8, advance: 8.95312, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [27]: char_code : 27, width: 18, height: 20, hoffset: 0, voffset: 19, pkt_len: 21, advance: 17.0938, dyn_f: 12, first_black: 0, Lig_kern_idx: 43, Old Index: 28
+  [28]: char_code : 28, width: 15, height: 20, hoffset: 0, voffset: 19, pkt_len: 16, advance: 16.2812, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [29]: char_code : 29, width: 15, height: 20, hoffset: 0, voffset: 19, pkt_len: 15, advance: 16.2812, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [30]: char_code : 30, width: 23, height: 20, hoffset: 0, voffset: 19, pkt_len: 24, advance: 24.4375, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [31]: char_code : 31, width: 23, height: 20, hoffset: 0, voffset: 19, pkt_len: 22, advance: 24.4375, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [32]: char_code : 32, width: 4, height: 21, hoffset: -2, voffset: 14, pkt_len: 5, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [33]: char_code : 33, width: 4, height: 20, hoffset: -2, voffset: 19, pkt_len: 5, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 53, Old Index: 52
+  [34]: char_code : 34, width: 10, height: 9, hoffset: -2, voffset: 19, pkt_len: 8, advance: 14.6562, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [35]: char_code : 35, width: 19, height: 26, hoffset: -2, voffset: 19, pkt_len: 30, advance: 24.4375, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [36]: char_code : 36, width: 10, height: 24, hoffset: -2, voffset: 21, pkt_len: 29, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [37]: char_code : 37, width: 19, height: 24, hoffset: -2, voffset: 21, pkt_len: 57, advance: 24.4375, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [38]: char_code : 38, width: 20, height: 20, hoffset: -1, voffset: 19, pkt_len: 45, advance: 22.7969, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [39]: char_code : 39, width: 4, height: 10, hoffset: -2, voffset: 19, pkt_len: 5, advance: 8.14062, dyn_f: 14, first_black: 1, Lig_kern_idx: 54, Old Index: 42
+  [40]: char_code : 40, width: 6, height: 30, hoffset: -3, voffset: 21, pkt_len: 18, advance: 11.3906, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [41]: char_code : 41, width: 6, height: 30, hoffset: -1, voffset: 21, pkt_len: 18, advance: 11.3906, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [42]: char_code : 42, width: 10, height: 13, hoffset: -2, voffset: 21, pkt_len: 17, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [43]: char_code : 43, width: 18, height: 20, hoffset: -2, voffset: 16, pkt_len: 6, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [44]: char_code : 44, width: 4, height: 10, hoffset: -2, voffset: 3, pkt_len: 5, advance: 8.14062, dyn_f: 14, first_black: 1, Lig_kern_idx: 58, Old Index: 51
+  [45]: char_code : 45, width: 8, height: 2, hoffset: 0, voffset: 7, pkt_len: 1, advance: 9.76562, dyn_f: 12, first_black: 1, Lig_kern_idx: 59, Old Index: 46
+  [46]: char_code : 46, width: 4, height: 4, hoffset: -2, voffset: 3, pkt_len: 1, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [47]: char_code : 47, width: 10, height: 29, hoffset: -2, voffset: 21, pkt_len: 25, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [48]: char_code : 48, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 19, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [49]: char_code : 49, width: 10, height: 19, hoffset: -2, voffset: 18, pkt_len: 9, advance: 14.6562, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [50]: char_code : 50, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 22, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [51]: char_code : 51, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 18, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [52]: char_code : 52, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 23, advance: 14.6562, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [53]: char_code : 53, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 20, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [54]: char_code : 54, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 26, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [55]: char_code : 55, width: 12, height: 20, hoffset: -2, voffset: 19, pkt_len: 17, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [56]: char_code : 56, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 26, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [57]: char_code : 57, width: 12, height: 19, hoffset: -1, voffset: 18, pkt_len: 27, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [58]: char_code : 58, width: 4, height: 13, hoffset: -2, voffset: 12, pkt_len: 3, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [59]: char_code : 59, width: 4, height: 19, hoffset: -2, voffset: 12, pkt_len: 10, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [60]: char_code : 60, width: 18, height: 18, hoffset: -2, voffset: 15, pkt_len: 25, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 60, Old Index: 49
+  [61]: char_code : 61, width: 18, height: 8, hoffset: -2, voffset: 10, pkt_len: 3, advance: 22.7969, dyn_f: 6, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [62]: char_code : 62, width: 18, height: 18, hoffset: -2, voffset: 15, pkt_len: 25, advance: 22.7969, dyn_f: 12, first_black: 1, Lig_kern_idx: 61, Old Index: 50
+  [63]: char_code : 63, width: 9, height: 20, hoffset: -2, voffset: 19, pkt_len: 13, advance: 13.8438, dyn_f: 11, first_black: 0, Lig_kern_idx: 62, Old Index: 53
+  [64]: char_code : 64, width: 18, height: 20, hoffset: -2, voffset: 19, pkt_len: 45, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [65]: char_code : 65, width: 19, height: 20, hoffset: -1, voffset: 19, pkt_len: 26, advance: 21.9844, dyn_f: 12, first_black: 0, Lig_kern_idx: 63, Old Index: 8
+  [66]: char_code : 66, width: 18, height: 20, hoffset: 0, voffset: 19, pkt_len: 27, advance: 20.7656, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [67]: char_code : 67, width: 16, height: 20, hoffset: -2, voffset: 19, pkt_len: 26, advance: 21.1719, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [68]: char_code : 68, width: 19, height: 20, hoffset: 0, voffset: 19, pkt_len: 26, advance: 22.3906, dyn_f: 13, first_black: 1, Lig_kern_idx: 69, Old Index: 16
+  [69]: char_code : 69, width: 18, height: 20, hoffset: 0, voffset: 19, pkt_len: 34, advance: 19.9531, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [70]: char_code : 70, width: 17, height: 20, hoffset: 0, voffset: 19, pkt_len: 25, advance: 19.1406, dyn_f: 12, first_black: 1, Lig_kern_idx: 79, Old Index: 185
+  [71]: char_code : 71, width: 19, height: 20, hoffset: -2, voffset: 19, pkt_len: 32, advance: 23, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [72]: char_code : 72, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 13, advance: 21.9844, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [73]: char_code : 73, width: 9, height: 20, hoffset: -1, voffset: 19, pkt_len: 5, advance: 10.5781, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 3
+  [74]: char_code : 74, width: 12, height: 20, hoffset: -1, voffset: 19, pkt_len: 12, advance: 15.0625, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [75]: char_code : 75, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 34, advance: 22.7969, dyn_f: 13, first_black: 1, Lig_kern_idx: 106, Old Index: 229
+  [76]: char_code : 76, width: 16, height: 20, hoffset: 0, voffset: 19, pkt_len: 16, advance: 18.3281, dyn_f: 13, first_black: 1, Lig_kern_idx: 116, Old Index: 5
+  [77]: char_code : 77, width: 26, height: 20, hoffset: 0, voffset: 19, pkt_len: 40, advance: 26.875, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [78]: char_code : 78, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 46, advance: 21.9844, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [79]: char_code : 79, width: 18, height: 20, hoffset: -2, voffset: 19, pkt_len: 25, advance: 22.7969, dyn_f: 13, first_black: 0, Lig_kern_idx: 69, Old Index: 16
+  [80]: char_code : 80, width: 17, height: 20, hoffset: 0, voffset: 19, pkt_len: 19, advance: 19.9531, dyn_f: 13, first_black: 1, Lig_kern_idx: 121, Old Index: 146
+  [81]: char_code : 81, width: 18, height: 26, hoffset: -2, voffset: 19, pkt_len: 37, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [82]: char_code : 82, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 33, advance: 21.5781, dyn_f: 13, first_black: 1, Lig_kern_idx: 135, Old Index: 6
+  [83]: char_code : 83, width: 13, height: 20, hoffset: -1, voffset: 19, pkt_len: 25, advance: 16.2812, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [84]: char_code : 84, width: 18, height: 20, hoffset: -1, voffset: 19, pkt_len: 18, advance: 21.1719, dyn_f: 12, first_black: 0, Lig_kern_idx: 148, Old Index: 247
+  [85]: char_code : 85, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 14, advance: 21.9844, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [86]: char_code : 86, width: 19, height: 20, hoffset: -1, voffset: 19, pkt_len: 25, advance: 21.9844, dyn_f: 12, first_black: 1, Lig_kern_idx: 79, Old Index: 185
+  [87]: char_code : 87, width: 27, height: 20, hoffset: -1, voffset: 19, pkt_len: 32, advance: 30.1406, dyn_f: 13, first_black: 1, Lig_kern_idx: 79, Old Index: 185
+  [88]: char_code : 88, width: 19, height: 20, hoffset: -1, voffset: 19, pkt_len: 35, advance: 21.9844, dyn_f: 12, first_black: 1, Lig_kern_idx: 157, Old Index: 213
+  [89]: char_code : 89, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 26, advance: 21.9844, dyn_f: 12, first_black: 1, Lig_kern_idx: 164, Old Index: 248
+  [90]: char_code : 90, width: 14, height: 20, hoffset: -2, voffset: 19, pkt_len: 30, advance: 17.9219, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [91]: char_code : 91, width: 6, height: 29, hoffset: -1, voffset: 21, pkt_len: 3, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [92]: char_code : 92, width: 10, height: 29, hoffset: -2, voffset: 21, pkt_len: 24, advance: 14.6562, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [93]: char_code : 93, width: 6, height: 29, hoffset: 0, voffset: 21, pkt_len: 3, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [94]: char_code : 94, width: 11, height: 4, hoffset: -3, voffset: 17, pkt_len: 6, advance: 17.9219, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [95]: char_code : 95, width: 18, height: 2, hoffset: -2, voffset: -6, pkt_len: 1, advance: 22.7969, dyn_f: 11, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [96]: char_code : 96, width: 4, height: 10, hoffset: -2, voffset: 19, pkt_len: 5, advance: 8.14062, dyn_f: 14, first_black: 0, Lig_kern_idx: 172, Old Index: 38
+  [97]: char_code : 97, width: 13, height: 13, hoffset: -1, voffset: 12, pkt_len: 22, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 176, Old Index: 11
+  [98]: char_code : 98, width: 14, height: 20, hoffset: 0, voffset: 19, pkt_len: 22, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 185, Old Index: 12
+  [99]: char_code : 99, width: 10, height: 13, hoffset: -1, voffset: 12, pkt_len: 14, advance: 13.0312, dyn_f: 13, first_black: 0, Lig_kern_idx: 186, Old Index: 13
+  [100]: char_code : 100, width: 14, height: 20, hoffset: -1, voffset: 19, pkt_len: 21, advance: 16.2812, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [101]: char_code : 101, width: 10, height: 13, hoffset: -1, voffset: 12, pkt_len: 14, advance: 13.0312, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 2
+  [102]: char_code : 102, width: 10, height: 20, hoffset: 0, voffset: 19, pkt_len: 13, advance: 8.95312, dyn_f: 13, first_black: 0, Lig_kern_idx: 187, Old Index: 17
+  [103]: char_code : 103, width: 13, height: 20, hoffset: -1, voffset: 12, pkt_len: 26, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 198, Old Index: 4
+  [104]: char_code : 104, width: 15, height: 20, hoffset: 0, voffset: 19, pkt_len: 15, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 199, Old Index: 15
+  [105]: char_code : 105, width: 7, height: 21, hoffset: 0, voffset: 20, pkt_len: 8, advance: 8.14062, dyn_f: 11, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [106]: char_code : 106, width: 8, height: 27, hoffset: 2, voffset: 20, pkt_len: 11, advance: 8.95312, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [107]: char_code : 107, width: 13, height: 20, hoffset: 0, voffset: 19, pkt_len: 23, advance: 15.4688, dyn_f: 13, first_black: 1, Lig_kern_idx: 203, Old Index: 102
+  [108]: char_code : 108, width: 7, height: 20, hoffset: 0, voffset: 19, pkt_len: 5, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [109]: char_code : 109, width: 23, height: 13, hoffset: 0, voffset: 12, pkt_len: 17, advance: 24.4375, dyn_f: 13, first_black: 1, Lig_kern_idx: 199, Old Index: 15
+  [110]: char_code : 110, width: 15, height: 13, hoffset: 0, voffset: 12, pkt_len: 12, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 199, Old Index: 15
+  [111]: char_code : 111, width: 12, height: 13, hoffset: -1, voffset: 12, pkt_len: 16, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 185, Old Index: 12
+  [112]: char_code : 112, width: 14, height: 19, hoffset: 0, voffset: 12, pkt_len: 23, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 185, Old Index: 12
+  [113]: char_code : 113, width: 14, height: 19, hoffset: -1, voffset: 12, pkt_len: 24, advance: 15.4688, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [114]: char_code : 114, width: 10, height: 13, hoffset: 0, voffset: 12, pkt_len: 11, advance: 11.4844, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [115]: char_code : 115, width: 9, height: 13, hoffset: -1, voffset: 12, pkt_len: 15, advance: 11.5625, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [116]: char_code : 116, width: 9, height: 18, hoffset: 0, voffset: 17, pkt_len: 14, advance: 11.3906, dyn_f: 13, first_black: 0, Lig_kern_idx: 219, Old Index: 10
+  [117]: char_code : 117, width: 15, height: 13, hoffset: 0, voffset: 12, pkt_len: 11, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 226, Old Index: 9
+  [118]: char_code : 118, width: 12, height: 13, hoffset: -1, voffset: 12, pkt_len: 14, advance: 15.4688, dyn_f: 13, first_black: 1, Lig_kern_idx: 232, Old Index: 104
+  [119]: char_code : 119, width: 18, height: 13, hoffset: -1, voffset: 12, pkt_len: 25, advance: 21.1719, dyn_f: 13, first_black: 1, Lig_kern_idx: 246, Old Index: 115
+  [120]: char_code : 120, width: 14, height: 13, hoffset: 0, voffset: 12, pkt_len: 19, advance: 15.4688, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [121]: char_code : 121, width: 12, height: 19, hoffset: -1, voffset: 12, pkt_len: 22, advance: 15.4688, dyn_f: 13, first_black: 1, Lig_kern_idx: 248, Old Index: 156
+  [122]: char_code : 122, width: 10, height: 13, hoffset: -1, voffset: 12, pkt_len: 17, advance: 13.0312, dyn_f: 14, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [123]: char_code : 123, width: 10, height: 29, hoffset: -2, voffset: 21, pkt_len: 15, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [124]: char_code : 124, width: 2, height: 29, hoffset: -3, voffset: 21, pkt_len: 1, advance: 8.14062, dyn_f: 10, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [125]: char_code : 125, width: 10, height: 29, hoffset: -2, voffset: 21, pkt_len: 15, advance: 14.6562, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [126]: char_code : 126, width: 13, height: 3, hoffset: -2, voffset: 19, pkt_len: 5, advance: 17.9219, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [127]: char_code : 127, width: 16, height: 24, hoffset: 0, voffset: 23, pkt_len: 26, advance: 18.3281, dyn_f: 13, first_black: 0, Lig_kern_idx: 116, Old Index: 5
+  [128]: char_code : 128, width: 16, height: 20, hoffset: 0, voffset: 19, pkt_len: 28, advance: 18.3281, dyn_f: 13, first_black: 1, Lig_kern_idx: 116, Old Index: 5
+  [129]: char_code : 129, width: 20, height: 20, hoffset: 0, voffset: 19, pkt_len: 22, advance: 23.2031, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [130]: char_code : 130, width: 23, height: 20, hoffset: 0, voffset: 19, pkt_len: 17, advance: 25.25, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [131]: char_code : 131, width: 14, height: 20, hoffset: -1, voffset: 19, pkt_len: 23, advance: 16.2812, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [132]: char_code : 132, width: 8, height: 26, hoffset: -2, voffset: 19, pkt_len: 26, advance: 13.0312, dyn_f: 14, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [133]: char_code : 133, width: 17, height: 22, hoffset: -1, voffset: 21, pkt_len: 32, advance: 19.7812, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [134]: char_code : 134, width: 10, height: 22, hoffset: 0, voffset: 21, pkt_len: 16, advance: 11.7969, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [135]: char_code : 135, width: 7, height: 20, hoffset: -1, voffset: 19, pkt_len: 14, advance: 9.84375, dyn_f: 12, first_black: 1, Lig_kern_idx: 247, Old Index: 0
+  [136]: char_code : 136, width: 13, height: 19, hoffset: 0, voffset: 12, pkt_len: 16, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 246, Old Index: 14
+  [137]: char_code : 137, width: 10, height: 23, hoffset: 0, voffset: 22, pkt_len: 23, advance: 11.3906, dyn_f: 13, first_black: 0, Lig_kern_idx: 219, Old Index: 10
+  [138]: char_code : 138, width: 13, height: 27, hoffset: -1, voffset: 20, pkt_len: 18, advance: 17.0938, dyn_f: 10, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [139]: char_code : 139, width: 15, height: 20, hoffset: -2, voffset: 19, pkt_len: 23, advance: 18.7344, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [140]: char_code : 140, width: 23, height: 20, hoffset: -1, voffset: 19, pkt_len: 51, advance: 26.4688, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [141]: char_code : 141, width: 19, height: 20, hoffset: 0, voffset: 19, pkt_len: 30, advance: 22.3906, dyn_f: 12, first_black: 1, Lig_kern_idx: 69, Old Index: 16
+  [142]: char_code : 142, width: 26, height: 20, hoffset: -2, voffset: 19, pkt_len: 57, advance: 29.7344, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [143]: char_code : 143, width: 18, height: 22, hoffset: -2, voffset: 20, pkt_len: 47, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 69, Old Index: 16
+  [144]: char_code : 144, width: 15, height: 20, hoffset: 0, voffset: 19, pkt_len: 18, advance: 18.3281, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [145]: char_code : 145, width: 28, height: 20, hoffset: -2, voffset: 19, pkt_len: 48, advance: 32.5781, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [146]: char_code : 146, width: 18, height: 13, hoffset: -1, voffset: 12, pkt_len: 29, advance: 21.1719, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [147]: char_code : 147, width: 12, height: 20, hoffset: -1, voffset: 19, pkt_len: 24, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [148]: char_code : 148, width: 20, height: 13, hoffset: -1, voffset: 12, pkt_len: 27, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [149]: char_code : 149, width: 12, height: 18, hoffset: -1, voffset: 14, pkt_len: 27, advance: 14.6562, dyn_f: 14, first_black: 0, Lig_kern_idx: 185, Old Index: 12
+  [150]: char_code : 150, width: 14, height: 26, hoffset: 0, voffset: 19, pkt_len: 26, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [151]: char_code : 151, width: 13, height: 20, hoffset: 0, voffset: 19, pkt_len: 30, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [152]: char_code : 152, width: 12, height: 19, hoffset: -1, voffset: 15, pkt_len: 27, advance: 14.6562, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [153]: char_code : 153, width: 18, height: 18, hoffset: -2, voffset: 16, pkt_len: 31, advance: 21.5938, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [154]: char_code : 154, width: 21, height: 20, hoffset: 0, voffset: 19, pkt_len: 28, advance: 21.9844, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [155]: char_code : 155, width: 2, height: 30, hoffset: -1, voffset: 21, pkt_len: 3, advance: 4.875, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [156]: char_code : 156, width: 28, height: 29, hoffset: -2, voffset: 21, pkt_len: 69, advance: 32.5781, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [157]: char_code : 157, width: 11, height: 14, hoffset: -1, voffset: 21, pkt_len: 19, advance: 13.0312, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [158]: char_code : 158, width: 15, height: 9, hoffset: -2, voffset: 10, pkt_len: 4, advance: 19.5469, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [159]: char_code : 159, width: 28, height: 29, hoffset: -2, voffset: 21, pkt_len: 71, advance: 32.5781, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [160]: char_code : 160, width: 18, height: 20, hoffset: -2, voffset: 18, pkt_len: 7, advance: 22.7969, dyn_f: 11, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [161]: char_code : 161, width: 10, height: 12, hoffset: -1, voffset: 21, pkt_len: 13, advance: 13.0312, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [162]: char_code : 162, width: 10, height: 12, hoffset: -1, voffset: 21, pkt_len: 12, advance: 13.0312, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [163]: char_code : 163, width: 15, height: 19, hoffset: 0, voffset: 12, pkt_len: 15, advance: 16.2812, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [164]: char_code : 164, width: 14, height: 26, hoffset: -2, voffset: 19, pkt_len: 21, advance: 17.9219, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [165]: char_code : 165, width: 4, height: 4, hoffset: -2, voffset: 8, pkt_len: 1, advance: 8.14062, dyn_f: 12, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [166]: char_code : 166, width: 8, height: 12, hoffset: -2, voffset: 21, pkt_len: 7, advance: 13.0312, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [167]: char_code : 167, width: 11, height: 14, hoffset: -1, voffset: 21, pkt_len: 15, advance: 13.0312, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [168]: char_code : 168, width: 14, height: 14, hoffset: -4, voffset: 13, pkt_len: 21, advance: 22.7969, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255
+  [169]: char_code : 169, width: 12, height: 28, hoffset: 0, voffset: 21, pkt_len: 21, advance: 13.0312, dyn_f: 11, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [170]: char_code : 170, width: 12, height: 28, hoffset: 0, voffset: 21, pkt_len: 24, advance: 13.0312, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [171]: char_code : 171, width: 12, height: 28, hoffset: 0, voffset: 21, pkt_len: 27, advance: 13.0312, dyn_f: 11, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [172]: char_code : 172, width: 17, height: 18, hoffset: -2, voffset: 15, pkt_len: 13, advance: 22.7969, dyn_f: 13, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+  [173]: char_code : 173, width: 18, height: 20, hoffset: -2, voffset: 19, pkt_len: 41, advance: 22.7969, dyn_f: 12, first_black: 0, Lig_kern_idx: 255, Old Index: 255
+
+----------- Ligature / Kern programs: ----------
+  [0]:  Whole skip: 0, Stop: No, NxtChar: 18, IsKern: Yes, Kern Idx: 1
+  [1]:  Whole skip: 0, Stop: No, NxtChar: 106, IsKern: Yes, Kern Idx: 1
+  [2]:  Whole skip: 0, Stop: No, NxtChar: 26, IsKern: Yes, Kern Idx: 1
+  [3]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 3
+  [4]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 3
+  [5]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [6]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 5
+  [7]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 6
+  [8]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [9]:  Whole skip: 0, Stop: No, NxtChar: 89, IsKern: Yes, Kern Idx: 4
+  [10]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [11]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [12]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [13]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [14]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [15]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [16]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [17]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 1
+  [18]:  Whole skip: 128, Stop: Yes, NxtChar: 16, IsKern: Yes, Kern Idx: 1
+  [19]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 1
+  [20]:  Whole skip: 128, Stop: Yes, NxtChar: 17, IsKern: Yes, Kern Idx: 1
+  [21]:  Whole skip: 0, Stop: No, NxtChar: 13, IsKern: Yes, Kern Idx: 1
+  [22]:  Whole skip: 0, Stop: No, NxtChar: 44, IsKern: Yes, Kern Idx: 1
+  [23]:  Whole skip: 0, Stop: No, NxtChar: 18, IsKern: Yes, Kern Idx: 1
+  [24]:  Whole skip: 0, Stop: No, NxtChar: 106, IsKern: Yes, Kern Idx: 1
+  [25]:  Whole skip: 0, Stop: No, NxtChar: 26, IsKern: Yes, Kern Idx: 1
+  [26]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 3
+  [27]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 3
+  [28]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [29]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 5
+  [30]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 6
+  [31]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [32]:  Whole skip: 0, Stop: No, NxtChar: 89, IsKern: Yes, Kern Idx: 4
+  [33]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [34]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [35]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [36]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [37]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [38]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [39]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [40]:  Whole skip: 0, Stop: No, NxtChar: 46, IsKern: Yes, Kern Idx: 4
+  [41]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: Yes, Kern Idx: 4
+  [42]:  Whole skip: 128, Stop: Yes, NxtChar: 45, IsKern: No, Lig char: 22, OpCodes: a:0, b:0, c:0
+  [43]:  Whole skip: 0, Stop: No, NxtChar: 105, IsKern: No, Lig char: 30, OpCodes: a:0, b:0, c:0
+  [44]:  Whole skip: 0, Stop: No, NxtChar: 108, IsKern: No, Lig char: 31, OpCodes: a:0, b:0, c:0
+  [45]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 0
+  [46]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 0
+  [47]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 0
+  [48]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 0
+  [49]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 0
+  [50]:  Whole skip: 0, Stop: No, NxtChar: 33, IsKern: Yes, Kern Idx: 0
+  [51]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [52]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+  [53]:  Whole skip: 128, Stop: Yes, NxtChar: 96, IsKern: No, Lig char: 32, OpCodes: a:0, b:0, c:0
+  [54]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: No, Lig char: 17, OpCodes: a:0, b:0, c:0
+  [55]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 1
+  [56]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 1
+  [57]:  Whole skip: 128, Stop: Yes, NxtChar: 33, IsKern: Yes, Kern Idx: 1
+  [58]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: No, Lig char: 18, OpCodes: a:0, b:0, c:0
+  [59]:  Whole skip: 128, Stop: Yes, NxtChar: 45, IsKern: No, Lig char: 21, OpCodes: a:0, b:0, c:0
+  [60]:  Whole skip: 128, Stop: Yes, NxtChar: 60, IsKern: No, Lig char: 19, OpCodes: a:0, b:0, c:0
+  [61]:  Whole skip: 128, Stop: Yes, NxtChar: 62, IsKern: No, Lig char: 20, OpCodes: a:0, b:0, c:0
+  [62]:  Whole skip: 128, Stop: Yes, NxtChar: 96, IsKern: No, Lig char: 23, OpCodes: a:0, b:0, c:0
+  [63]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [64]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [65]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [66]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [67]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [68]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [69]:  Whole skip: 0, Stop: No, NxtChar: 102, IsKern: No, Lig char: 27, OpCodes: a:0, b:0, c:0
+  [70]:  Whole skip: 0, Stop: No, NxtChar: 108, IsKern: No, Lig char: 29, OpCodes: a:0, b:0, c:0
+  [71]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 0
+  [72]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 0
+  [73]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 0
+  [74]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 0
+  [75]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 0
+  [76]:  Whole skip: 0, Stop: No, NxtChar: 33, IsKern: Yes, Kern Idx: 0
+  [77]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [78]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+  [79]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 4
+  [80]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 4
+  [81]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 4
+  [82]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 4
+  [83]:  Whole skip: 0, Stop: No, NxtChar: 117, IsKern: Yes, Kern Idx: 4
+  [84]:  Whole skip: 0, Stop: No, NxtChar: 114, IsKern: Yes, Kern Idx: 4
+  [85]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [86]:  Whole skip: 0, Stop: No, NxtChar: 115, IsKern: Yes, Kern Idx: 4
+  [87]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 4
+  [88]:  Whole skip: 0, Stop: No, NxtChar: 100, IsKern: Yes, Kern Idx: 4
+  [89]:  Whole skip: 0, Stop: No, NxtChar: 103, IsKern: Yes, Kern Idx: 4
+  [90]:  Whole skip: 0, Stop: No, NxtChar: 109, IsKern: Yes, Kern Idx: 4
+  [91]:  Whole skip: 0, Stop: No, NxtChar: 110, IsKern: Yes, Kern Idx: 4
+  [92]:  Whole skip: 0, Stop: No, NxtChar: 112, IsKern: Yes, Kern Idx: 4
+  [93]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 4
+  [94]:  Whole skip: 0, Stop: No, NxtChar: 122, IsKern: Yes, Kern Idx: 4
+  [95]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 4
+  [96]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 4
+  [97]:  Whole skip: 0, Stop: No, NxtChar: 65, IsKern: Yes, Kern Idx: 6
+  [98]:  Whole skip: 0, Stop: No, NxtChar: 140, IsKern: Yes, Kern Idx: 6
+  [99]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [100]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [101]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [102]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [103]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [104]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [105]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [106]:  Whole skip: 0, Stop: No, NxtChar: 118, IsKern: Yes, Kern Idx: 4
+  [107]:  Whole skip: 0, Stop: No, NxtChar: 119, IsKern: Yes, Kern Idx: 7
+  [108]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [109]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [110]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [111]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [112]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [113]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [114]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [115]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [116]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [117]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [118]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [119]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [120]:  Whole skip: 128, Stop: Yes, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [121]:  Whole skip: 0, Stop: No, NxtChar: 65, IsKern: Yes, Kern Idx: 4
+  [122]:  Whole skip: 0, Stop: No, NxtChar: 140, IsKern: Yes, Kern Idx: 4
+  [123]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [124]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [125]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [126]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [127]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [128]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [129]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [130]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [131]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [132]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [133]:  Whole skip: 0, Stop: No, NxtChar: 46, IsKern: Yes, Kern Idx: 4
+  [134]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: Yes, Kern Idx: 4
+  [135]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 5
+  [136]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [137]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [138]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [139]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [140]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [141]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [142]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [143]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [144]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [145]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [146]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [147]:  Whole skip: 128, Stop: Yes, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [148]:  Whole skip: 0, Stop: No, NxtChar: 121, IsKern: Yes, Kern Idx: 7
+  [149]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 4
+  [150]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 4
+  [151]:  Whole skip: 0, Stop: No, NxtChar: 114, IsKern: Yes, Kern Idx: 4
+  [152]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 4
+  [153]:  Whole skip: 0, Stop: No, NxtChar: 117, IsKern: Yes, Kern Idx: 4
+  [154]:  Whole skip: 0, Stop: No, NxtChar: 110, IsKern: Yes, Kern Idx: 4
+  [155]:  Whole skip: 0, Stop: No, NxtChar: 25, IsKern: Yes, Kern Idx: 4
+  [156]:  Whole skip: 128, Stop: Yes, NxtChar: 99, IsKern: Yes, Kern Idx: 4
+  [157]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [158]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [159]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [160]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [161]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [162]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [163]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [164]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 4
+  [165]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 4
+  [166]:  Whole skip: 0, Stop: No, NxtChar: 114, IsKern: Yes, Kern Idx: 4
+  [167]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 4
+  [168]:  Whole skip: 0, Stop: No, NxtChar: 117, IsKern: Yes, Kern Idx: 4
+  [169]:  Whole skip: 0, Stop: No, NxtChar: 110, IsKern: Yes, Kern Idx: 4
+  [170]:  Whole skip: 0, Stop: No, NxtChar: 25, IsKern: Yes, Kern Idx: 4
+  [171]:  Whole skip: 128, Stop: Yes, NxtChar: 99, IsKern: Yes, Kern Idx: 4
+  [172]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: No, Lig char: 16, OpCodes: a:0, b:0, c:0
+  [173]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 1
+  [174]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 1
+  [175]:  Whole skip: 128, Stop: Yes, NxtChar: 33, IsKern: Yes, Kern Idx: 1
+  [176]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [177]:  Whole skip: 0, Stop: No, NxtChar: 89, IsKern: Yes, Kern Idx: 4
+  [178]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [179]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [180]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [181]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [182]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [183]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [184]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [185]:  Whole skip: 128, Stop: Yes, NxtChar: 62, IsKern: No, Lig char: 20, OpCodes: a:0, b:0, c:0
+  [186]:  Whole skip: 128, Stop: Yes, NxtChar: 45, IsKern: No, Lig char: 22, OpCodes: a:0, b:0, c:0
+  [187]:  Whole skip: 0, Stop: No, NxtChar: 105, IsKern: No, Lig char: 28, OpCodes: a:0, b:0, c:0
+  [188]:  Whole skip: 0, Stop: No, NxtChar: 102, IsKern: No, Lig char: 27, OpCodes: a:0, b:0, c:0
+  [189]:  Whole skip: 0, Stop: No, NxtChar: 108, IsKern: No, Lig char: 29, OpCodes: a:0, b:0, c:0
+  [190]:  Whole skip: 0, Stop: No, NxtChar: 39, IsKern: Yes, Kern Idx: 0
+  [191]:  Whole skip: 0, Stop: No, NxtChar: 96, IsKern: Yes, Kern Idx: 0
+  [192]:  Whole skip: 0, Stop: No, NxtChar: 16, IsKern: Yes, Kern Idx: 0
+  [193]:  Whole skip: 0, Stop: No, NxtChar: 17, IsKern: Yes, Kern Idx: 0
+  [194]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 0
+  [195]:  Whole skip: 0, Stop: No, NxtChar: 33, IsKern: Yes, Kern Idx: 0
+  [196]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [197]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+  [198]:  Whole skip: 128, Stop: Yes, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [199]:  Whole skip: 0, Stop: No, NxtChar: 63, IsKern: Yes, Kern Idx: 0
+  [200]:  Whole skip: 0, Stop: No, NxtChar: 33, IsKern: Yes, Kern Idx: 0
+  [201]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [202]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+  [203]:  Whole skip: 0, Stop: No, NxtChar: 87, IsKern: Yes, Kern Idx: 4
+  [204]:  Whole skip: 0, Stop: No, NxtChar: 86, IsKern: Yes, Kern Idx: 4
+  [205]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 5
+  [206]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 5
+  [207]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [208]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [209]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [210]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [211]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [212]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [213]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [214]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [215]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [216]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [217]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [218]:  Whole skip: 128, Stop: Yes, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [219]:  Whole skip: 0, Stop: No, NxtChar: 79, IsKern: Yes, Kern Idx: 7
+  [220]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [221]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [222]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [223]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [224]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [225]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [226]:  Whole skip: 0, Stop: No, NxtChar: 168, IsKern: Yes, Kern Idx: 7
+  [227]:  Whole skip: 0, Stop: No, NxtChar: 142, IsKern: Yes, Kern Idx: 7
+  [228]:  Whole skip: 0, Stop: No, NxtChar: 143, IsKern: Yes, Kern Idx: 7
+  [229]:  Whole skip: 0, Stop: No, NxtChar: 67, IsKern: Yes, Kern Idx: 7
+  [230]:  Whole skip: 0, Stop: No, NxtChar: 71, IsKern: Yes, Kern Idx: 7
+  [231]:  Whole skip: 128, Stop: Yes, NxtChar: 81, IsKern: Yes, Kern Idx: 7
+  [232]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 5
+  [233]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 5
+  [234]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [235]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [236]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [237]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [238]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [239]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [240]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [241]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [242]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [243]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [244]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [245]:  Whole skip: 128, Stop: Yes, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [246]:  Whole skip: 255, Goto: 286
+  [247]:  Whole skip: 255, Goto: 273
+  [248]:  Whole skip: 255, Goto: 261
+  [249]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [250]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [251]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [252]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [253]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [254]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [255]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [256]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [257]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [258]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [259]:  Whole skip: 0, Stop: No, NxtChar: 99, IsKern: Yes, Kern Idx: 7
+  [260]:  Whole skip: 128, Stop: Yes, NxtChar: 152, IsKern: Yes, Kern Idx: 7
+  [261]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [262]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [263]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [264]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [265]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [266]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [267]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [268]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [269]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [270]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [271]:  Whole skip: 0, Stop: No, NxtChar: 46, IsKern: Yes, Kern Idx: 4
+  [272]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: Yes, Kern Idx: 4
+  [273]:  Whole skip: 0, Stop: No, NxtChar: 140, IsKern: Yes, Kern Idx: 4
+  [274]:  Whole skip: 0, Stop: No, NxtChar: 111, IsKern: Yes, Kern Idx: 7
+  [275]:  Whole skip: 0, Stop: No, NxtChar: 159, IsKern: Yes, Kern Idx: 7
+  [276]:  Whole skip: 0, Stop: No, NxtChar: 172, IsKern: Yes, Kern Idx: 7
+  [277]:  Whole skip: 0, Stop: No, NxtChar: 148, IsKern: Yes, Kern Idx: 7
+  [278]:  Whole skip: 0, Stop: No, NxtChar: 149, IsKern: Yes, Kern Idx: 7
+  [279]:  Whole skip: 0, Stop: No, NxtChar: 101, IsKern: Yes, Kern Idx: 7
+  [280]:  Whole skip: 0, Stop: No, NxtChar: 154, IsKern: Yes, Kern Idx: 7
+  [281]:  Whole skip: 0, Stop: No, NxtChar: 155, IsKern: Yes, Kern Idx: 7
+  [282]:  Whole skip: 0, Stop: No, NxtChar: 97, IsKern: Yes, Kern Idx: 7
+  [283]:  Whole skip: 0, Stop: No, NxtChar: 146, IsKern: Yes, Kern Idx: 7
+  [284]:  Whole skip: 0, Stop: No, NxtChar: 46, IsKern: Yes, Kern Idx: 4
+  [285]:  Whole skip: 128, Stop: Yes, NxtChar: 44, IsKern: Yes, Kern Idx: 4
+  [286]:  Whole skip: 0, Stop: No, NxtChar: 41, IsKern: Yes, Kern Idx: 0
+  [287]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
+Completed!
+Done
