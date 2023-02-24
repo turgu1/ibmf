@@ -3,6 +3,7 @@
 # FONTS=(ecti:tcti:EC-Italic:0)
 FONTS=(
   ecrm:tcrm:EC-Regular:0
+  ecss:tcss:ECSans-Regular:0
 )
 # FONTS=(
 #   ecrm:tcrm:EC-Regular:0
@@ -17,13 +18,17 @@ FONTS=(
 #   ecit:tcit:ECTypewriter-Italic:0
 # )
 
-SIZES=(10:1000)
-IN_SIZES=(1000)
-OUT_SIZES=(10)
+SIZES=(12:1200 14:1440)
+IN_SIZES=(1200 1440)
+OUT_SIZES=(12 14)
+# SIZES=(10:1000)
+# IN_SIZES=(1000)
+# OUT_SIZES=(10)
 # SIZES=(8:0800 9:0900 10:1000 12:1200 14:1440 17:1728 24:2488)
 # IN_SIZES=(0800 0900 1000 1200 1440 1728 2488)
 # OUT_SIZES=(8 9 10 12 14 17 24)
-DEVICES=(inkplate6PLUS:212)
+
+DEVICES=(inkplate6PLUS:212 solreader100:100 solreader75:75)
 # DEVICES=(inkplate6:166 inkplate10:150 inkplate6PLUS:212)
 
 mag_step=0

@@ -66,6 +66,7 @@ class IBMFGener {
 
     struct GlyphInfo {
       Glyph glyph;
+      uint8_t * pixels;
       uint8_t old_char_code;
       uint8_t old_lig_kern_idx;
       int new_lig_kern_idx; // need to be larger for cases that goes beyond 255
@@ -129,6 +130,8 @@ class IBMFGener {
         glyph_info->old_char_code    = pk_char_code;
         glyph_info->old_lig_kern_idx = glyph_info->glyph.lig_kern_pgm_index;
         
+        glyph_info->pixels = new uint8_t[glyph_info->glyph.packet_length];
+        memcpy(glyph_info->pixels, pk_glyph.raster, glyph_info->glyph.packet_length);
         glyphs.push_back(glyph_info);
         // fwrite(&glyph, sizeof(Glyph), 1, file);
         // fwrite(pk_glyph.raster, glyph.packet_length, 1, file);
@@ -154,6 +157,8 @@ class IBMFGener {
         glyph_info->old_char_code = pk_char_code;
         glyph_info->old_lig_kern_idx = 255;
 
+        glyph_info->pixels = new uint8_t[glyph_info->glyph.packet_length];
+        memcpy(glyph_info->pixels, pk_glyph.raster, glyph_info->glyph.packet_length);
         glyphs.push_back(glyph_info);
         // fwrite(&glyph, sizeof(Glyph), 1, file);
         // fwrite(pk_glyph.raster, glyph.packet_length, 1, file);
@@ -385,7 +390,7 @@ next:
           lks->remainder.displ_low = (*idx + space_required) & 0xFF;
 
           lig_kerns.insert(lig_kerns.begin() + new_lig_kern_idx, lks);
-          for (auto & g : glyphs) {
+          for (auto g : glyphs) {
             if (g->new_lig_kern_idx == *idx) {
               std::cout << "   Char Code " 
                         << +g->glyph.char_code 
@@ -401,7 +406,7 @@ next:
         }
 
         std::cout << first_idx << " treatment: " << std::endl;
-        for (auto & g : glyphs) {
+        for (auto g : glyphs) {
           if (g->new_lig_kern_idx == first_idx) {
             std::cout << "   Char Code " 
                       << +g->glyph.char_code 
@@ -414,7 +419,7 @@ next:
           }
         }
       
-        for (auto & g : glyphs) {
+        for (auto g : glyphs) {
           if (g->new_lig_kern_idx == -1) {
             g->glyph.lig_kern_pgm_index = 255;
           }
@@ -431,25 +436,28 @@ next:
       return lig_kerns.size();
     }
 
-    void write_everything() {
+    bool
+    write_everything() {
 
       // Header
       header.lig_kern_pgm_count = lig_kerns.size();
       fwrite(&header, sizeof(Header), 1, file);
 
       // Glyphs data
-      for (auto & g : glyphs) {
-        PKFont::Glyph pk_glyph;
-        pk.get_glyph(g->old_char_code, pk_glyph, false);
-
+      for (auto g : glyphs) {
         fwrite(&g->glyph, sizeof(Glyph), 1, file);
-        fwrite(pk_glyph.raster, g->glyph.packet_length, 1, file);
+        if (g->pixels != nullptr) {
+          fwrite(g->pixels, g->glyph.packet_length, 1, file);
+        }
+        else {
+          return false;
+        }
       }
 
       // ligature / kerns struct
 
-      for (auto & lks : lig_kerns) {
-        fwrite(&lks, sizeof(TFM::LigKernStep), 1, file);
+      for (auto lks : lig_kerns) {
+        fwrite(lks, sizeof(TFM::LigKernStep), 1, file);
       }
 
       // Kerns
@@ -460,6 +468,8 @@ next:
 
         fwrite(&k, sizeof(TFM::FIX16), 1, file);
       }
+
+      return true;
     }
 
     void
@@ -550,7 +560,11 @@ next:
       read_glyphs();
       //show();
       read_lig_kerns();
-      write_everything();
-      show();
+      if (!write_everything()) {
+        std::cout << "PROBLEM GENERATING THE OUTPUT FILE!" << std::endl;
+      }
+      else {
+        show();
+      }
     }
 };
