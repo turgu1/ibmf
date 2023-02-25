@@ -73,7 +73,7 @@ class IBMFGener {
     };
 
     std::vector<TFM::LigKernStep *> lig_kerns;
-
+    std::vector<TFM::FIX16> kerns;
     std::vector<GlyphInfo *> glyphs;
 
     // uint8_t compute_max_descender_height() {
@@ -436,6 +436,19 @@ next:
       return lig_kerns.size();
     }
 
+    void 
+    read_kerns() 
+    {
+      kerns.clear();
+
+      for (int i = 0; i < header.kern_count; i++) {
+        TFM::FIX kern = tfm.get_kern(i);
+        TFM::FIX16 k = tfm.to_fix16(tfm.to_double(kern, 20) * factor, 6);
+
+        kerns.push_back(k);
+      }
+    }
+
     bool
     write_everything() {
 
@@ -462,11 +475,8 @@ next:
 
       // Kerns
 
-      for (int i = 0; i < header.kern_count; i++) {
-        TFM::FIX kern = tfm.get_kern(i);
-        TFM::FIX16 k = tfm.to_fix16(tfm.to_double(kern, 20) * factor, 6);
-
-        fwrite(&k, sizeof(TFM::FIX16), 1, file);
+      for (auto kern : kerns) {
+        fwrite(&kern, sizeof(TFM::FIX16), 1, file);
       }
 
       return true;
@@ -540,20 +550,24 @@ next:
         }
 
         std::cout << std::endl;
+
         i++;       
       }
 
-      // i = 0;
-      // std::cout << std::endl << "----------- Ligature / Kern programs: ----------" << std::endl;
+      i = 0;
+      std::cout << std::endl << "----------- Kerns: ----------" << std::endl;
 
-      // for (auto & entry : lig_kerns) {
-      //   std::cout << "  [" << i << "]:  "
+      for (auto kern : kerns) {
+        std::cout << "  [" << i << "]:  "
+                  << ((float) kern / 64.0)
+                  << std::endl;
 
-      //   i++;
-      // }
+        i += 1;
+      }
     }
 
   public:
+
     IBMFGener(FILE * file, char * dpi, TFM & tfm, TFM & tfm2, PKFont & pk, PKFont & pk2, uint8_t char_set) 
       : file(file), tfm(tfm), tfm2(tfm2), pk(pk), pk2(pk2), char_set(char_set) {
       read_header(atoi(dpi), char_set == 0 ? 0xAE : tfm.get_glyph_count());
