@@ -17,21 +17,24 @@ The options 2, 3 and 4 have the advantage of simplifying the releases updates as
     1. The GFX fonts are not used anymore. They can be regenerated as IBMF fonts with some restrictions (no european glyphs, or partial support, or regenerated through TTF/OTF).
     2. The GFX fonts are kept.
 
-4. If the GFX are kept, what method of access is prioritized for them and the IBMF fonts?
+4. From what I can see in the project, the Style class is the location where the GFX fonts are integrated. Please confirm.
 
-    1. Through inheritance (Interface) using a single interface for all access. If so, is there an abstract class already available or there will be a need to create one?
+5. If the GFX are kept, what method of access is prioritized for them and the IBMF fonts?
+
+    1. Through inheritance (Interface) using a single interface for all access. If so, is there an abstract class already available or there will be a need to create one? The Style class could become the abstract class, the GFXfont and GFXglyph may have to change their name and potentially their content (fields).
     2. Through a template (Generics)
     3. Other means?
 
-5. How are GFX fonts are selected and accessed in the application at the moment?
+6. For kerning and ligature, words must be sent to methods that will replace characters and apply spacing adjustments. Where in the source code can we locate the changes to be done? If the answer to the last question above is (1), the methods would become part of the Style class replacement.
 
-6. For kerning and ligature, words must be sent to methods that will replace characters and apply spacing adjustments. Where in the source code can we locate the changes to be done?
-
-7. Which point sizes are needed to be generated for the IBMF Fonts? Normally, points are independant of the resolution (one point = 1/72 inch). The example IBMF Fonts where produced using 100 bpi and 75 bpi resolutions in 12pt and 15pt sizes.
+7. Which point sizes are needed to be generated for the IBMF Fonts? Normally, points are independant of the resolution (one point ~= 1/72 inch). The example IBMF Fonts where produced using 100 bpi and 75 bpi resolutions in 12pt and 14pt sizes.
 
 8. Are Serif and SansSerif required? 
 
 9. Are bold and italic required? Would be a bit more difficult to achieve. We can try generating one and adjust some glyphs to see the potential result.
  
-10. Are bold-italic required? Would be more difficult...
+10. Are bold-italic required? Would be more difficult at the lowest point sizes...
 
+--------
+
+I've seen that you have integrated the complete Adafruit GFX Library. I have ported that library to ESP-IDF 2 years ago. May not be up to date with the current version but could be usefull, if you need it beyond the fonts.
