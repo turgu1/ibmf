@@ -1,4 +1,4 @@
-#include "ibmf_font_v3.hpp"
+#include "ibmf_font_v4.hpp"
 
 IBMFFont font("/home/turgu1/Dev/ibmf/fonts/EC-Regular_212.ibmf", IBMFFont::PixelResolution::EIGHT_BITS);
 
@@ -78,8 +78,8 @@ int
 main()
 {
 
-  if (!font.set_font_size(12)) {
-    std::cerr << "Font size 12 not available!" << std::endl;
+  if (!font.set_font_size(14)) {
+    std::cerr << "Font size 14 not available!" << std::endl;
     return 1;
   }
 

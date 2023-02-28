@@ -5,7 +5,7 @@
 #include <set>
 
 #include "pk_font.hpp"
-#include "tfm_v3.hpp"
+#include "tfm_v4.hpp"
 
 /**
  * @brief Generate a single IBMF font entry
@@ -42,6 +42,8 @@ class IBMFGener {
         uint8_t    space_size;
         uint16_t   glyph_count;
         uint16_t   lig_kern_pgm_count;
+        uint16_t   first_code;
+        uint16_t   last_code;
         uint8_t    kern_count;
       };
 
@@ -106,6 +108,8 @@ class IBMFGener {
       header.lig_kern_pgm_count = tfm.get_lig_kern_pgm_count();
       header.kern_count         = tfm.get_kern_count();
       header.slant_correction   = tfm.to_fix16(tfm.to_double(tfm.get_slant_correction(), 20), 6);
+      header.first_code         = 0;
+      header.last_code          = 173;
       header.descender_height   = tfm.to_fix16(tfm.to_double(tfm.get_max_depth(), 20) * factor, 6) >> 6;
 
       //fwrite(&header, sizeof(Header), 1, file);
@@ -490,6 +494,8 @@ next:
 
       std::cout << "DPI: " << header.dpi
                 << ", point size: "       << +header.point_size
+                << ", first char code: "  << +header.first_code
+                << ", last char code: "   << +header.last_code
                 << ", line height: "      << +header.line_height
                 << ", x height: "         << +((float) header.x_height   / 64.0)        
                 << ", em size: "          << +((float) header.em_size    / 64.0)        

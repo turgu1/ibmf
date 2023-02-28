@@ -70,7 +70,7 @@ for device in ${DEVICES[@]}; do
       
     done
 
-    ../.pio/build/generator_v3/program "." ${ibmf_name} ${dev_dpi} ${char_set} ${font_name} ${comp_name} ${OUT_SIZES[@]}
+    ../.pio/build/generator_v4/program "." ${ibmf_name} ${dev_dpi} ${char_set} ${font_name} ${comp_name} ${OUT_SIZES[@]}
     # rm *pk
     # rm *tfm
   done

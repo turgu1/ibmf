@@ -548,6 +548,8 @@ class IBMFFont
         uint8_t    space_size;
         uint16_t   glyph_count;
         uint16_t   lig_kern_pgm_count;
+        uint16_t   first_code;
+        uint16_t   last_code;
         uint8_t    kern_count;
       };
 
@@ -678,7 +680,7 @@ class IBMFFont
     static constexpr char const * TAG = "IBMFFont";
     
     static constexpr uint8_t MAX_GLYPH_COUNT = 254; // Index Value 0xFE and 0xFF are reserved
-    static constexpr uint8_t IBMF_VERSION    =   3;
+    static constexpr uint8_t IBMF_VERSION    =   4;
 
     bool initialized;
     bool memory_owner_is_the_instance;
@@ -693,8 +695,8 @@ class IBMFFont
 
     Preamble      preamble;
 
-    static constexpr uint8_t PK_REPEAT_COUNT =   14;
-    static constexpr uint8_t PK_REPEAT_ONCE  =   15;
+    static constexpr uint8_t PK_REPEAT_COUNT = 14;
+    static constexpr uint8_t PK_REPEAT_ONCE  = 15;
 
     std::vector<uint32_t> face_offsets;
 
@@ -1260,12 +1262,14 @@ class IBMFFont
     {
       uint32_t glyph_code = no_trans ? (0xFF00 + char_code) : translate(char_code);
 
-      uint8_t           accent      = (glyph_code & 0x0000FF00) >> 8;
-      const GlyphInfo * accent_info = (accent != 0xFF) ? current_face->glyphs[accent] : nullptr;
+      uint8_t           accent_idx  = ((glyph_code & 0x0000FF00) >> 8) -  - current_face->header->first_code;
+      const GlyphInfo * accent_info = (accent_idx != 0xFF) ? current_face->glyphs[accent_idx] : nullptr;
 
+      uint8_t glyph_code_idx = (glyph_code & 0xFF) - current_face->header->first_code;
       if (((glyph_code & 0xFF) == 0xFF) ||
-          ((glyph_code & 0xFF) < current_face->header->glyph_count) && 
-           (current_face->glyphs[glyph_code & 0xFF] == nullptr)) {
+          (((glyph_code & 0xFF) >= current_face->header->first_code) && 
+           ((glyph_code & 0xFF) <= current_face->header->last_code) && 
+           (current_face->glyphs[glyph_code_idx] == nullptr))) {
         std::cerr << "No entry for char code 0x" 
                   << std::hex << char_code
                   << std::endl;         
@@ -1292,7 +1296,7 @@ class IBMFFont
 
       memset(&glyph, 0, sizeof(Glyph));
 
-      const GlyphInfo * glyph_info = current_face->glyphs[glyph_code & 0xFF];
+      const GlyphInfo * glyph_info = current_face->glyphs[glyph_code_idx];
 
       Dim dim     = Dim(glyph_info->bitmap_width, glyph_info->bitmap_height);
       Pos offsets = Pos(0, 0);
@@ -1461,6 +1465,8 @@ class IBMFFont
 
         std::cout << "DPI: "                << face->header->dpi
                   << ", point size: "       << +face->header->point_size
+                  << ", first char code: "  << +face->header->first_code
+                  << ", last char code: "   << +face->header->last_code
                   << ", line height: "      << +face->header->line_height
                   << ", x height: "         << +((float) face->header->x_height   / 64.0)        
                   << ", em size: "          << +((float) face->header->em_size    / 64.0)        

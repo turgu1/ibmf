@@ -3137,7 +3137,7 @@ Number of resulting Ligature/Kern entries: 285 Overflow Count: 3
    Char Code 119 with index in lig/kern 246 is modified for 249
 
 ----------- Header: ----------
-DPI: 212, point size: 14, line height: 41, x height: 18.1719, em size: 40.2031, space size: 0.203125, glyph count: 174, lig kern count: 288, kern_count: 9, slant corr: 0, descender height: 10
+DPI: 212, point size: 14, first char code: 0, last char code: 173, line height: 41, x height: 18.1719, em size: 40.2031, space size: 0.203125, glyph count: 174, lig kern count: 288, kern_count: 9, slant corr: 0, descender height: 10
 
 ----------- Glyphs: ----------
   [0]: char_code : 0, width: 7, height: 6, hoffset: -4, voffset: 26, pkt_len: 6, advance: 20.0938, dyn_f: 13, first_black: 1, Lig_kern_idx: 255, Old Index: 255

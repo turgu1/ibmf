@@ -1,8 +1,8 @@
 #include "pk_font.hpp"
-#include "tfm_v3.hpp"
-#include "ibmf_gener_v3.hpp"
+#include "tfm_v4.hpp"
+#include "ibmf_gener_v4.hpp"
 
-constexpr uint8_t IBMF_VERSION = 3;
+constexpr uint8_t IBMF_VERSION = 4;
 
 constexpr int TEX_FONT_DIR  = 1;
 constexpr int IBMF_PREFIX   = 2;
