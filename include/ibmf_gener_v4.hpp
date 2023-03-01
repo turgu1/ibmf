@@ -41,16 +41,16 @@ class IBMFGener {
         uint8_t    descender_height;
         uint8_t    space_size;
         uint16_t   glyph_count;
-        uint16_t   lig_kern_pgm_count;
+        uint16_t   lig_kern_step_count;
         uint16_t   first_code;
         uint16_t   last_code;
         uint8_t    kern_count;
       };
 
       struct GlyphMetric {
-        unsigned int dyn_f:4;
-        unsigned int first_is_black:1;
-        unsigned int filler:3;
+        uint8_t dyn_f:4;
+        uint8_t first_is_black:1;
+        uint8_t filler:3;
       };
 
       struct Glyph {
@@ -105,7 +105,7 @@ class IBMFGener {
       header.em_size            = tfm.to_fix16(tfm.to_double(tfm.get_em_size(),  20) * factor, 6);
       header.space_size         = trunc(tfm.to_double(tfm.get_space_size(), 20) * factor);
       header.glyph_count        = glyph_count;
-      header.lig_kern_pgm_count = tfm.get_lig_kern_pgm_count();
+      header.lig_kern_step_count = tfm.get_lig_kern_step_count();
       header.kern_count         = tfm.get_kern_count();
       header.slant_correction   = tfm.to_fix16(tfm.to_double(tfm.get_slant_correction(), 20), 6);
       header.first_code         = 0;
@@ -323,7 +323,7 @@ next:
                 std::cout << "Last mark as stop step... " << (lig_kerns.size() - 1) << std::endl;
               }
 
-              if (tfm_idx >= tfm.get_lig_kern_pgm_count()) std::cout << "GOING BEYOND THE END OF THE ARRAY!!!" << tfm_idx << std::endl;
+              if (tfm_idx >= tfm.get_lig_kern_step_count()) std::cout << "GOING BEYOND THE END OF THE ARRAY!!!" << tfm_idx << std::endl;
 
             } while (!lks->skip.s.stop);
 
@@ -436,7 +436,7 @@ next:
         }
       }
 
-      header.lig_kern_pgm_count = lig_kerns.size();
+      header.lig_kern_step_count = lig_kerns.size();
       return lig_kerns.size();
     }
 
@@ -457,7 +457,7 @@ next:
     write_everything() {
 
       // Header
-      header.lig_kern_pgm_count = lig_kerns.size();
+      header.lig_kern_step_count = lig_kerns.size();
       fwrite(&header, sizeof(Header), 1, file);
 
       // Glyphs data
@@ -501,7 +501,7 @@ next:
                 << ", em size: "          << +((float) header.em_size    / 64.0)        
                 << ", space size: "       << +((float) header.space_size / 64.0)        
                 << ", glyph count: "      << +header.glyph_count        
-                << ", lig kern count: "   << +header.lig_kern_pgm_count 
+                << ", lig kern count: "   << +header.lig_kern_step_count 
                 << ", kern_count: "       << +header.kern_count         
                 << ", slant corr: "       << +header.slant_correction   
                 << ", descender height: " << +header.descender_height
@@ -580,6 +580,7 @@ next:
       read_glyphs();
       //show();
       read_lig_kerns();
+      read_kerns();
       if (!write_everything()) {
         std::cout << "PROBLEM GENERATING THE OUTPUT FILE!" << std::endl;
       }

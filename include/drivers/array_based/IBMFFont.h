@@ -3,27 +3,17 @@
 #include "../Font.h"
 #include "IBMFFontLow.h"
 
-class IFont : public Font {
+class IBMFFont {
 private:
     static constexpr char const *TAG = "IBMF";
 
-public:
-    IBMFFontLow *font;
-
-    IFont(IBMFFont &ibmf_font) : Font(FontType::IBMF) /*, font(&ibmf_font)*/ {}
-
-    inline int yAdvance() const { return 10; } // TODO: Adjust with the IBMFFont...
-};
-
-#if 0
     IBMFFont *face;
-    std::mutex mutex;
-    IBMFFont::GlyphInfo *glyph_data;
+    IBMFDefs::Glyph *glyph_data;
 
 public:
-    IBMF(const std::string &filename);
-    IBMF(unsigned char *buffer, int32_t size);
-    ~IBMF();
+    IBMFFont(const std::string &filename);
+    IBMFFont(unsigned char *buffer, int32_t size);
+    ~IBMFFont();
 
     /**
      * @brief Get a glyph object
@@ -36,12 +26,12 @@ public:
      * @return Glyph The glyph associated to the unicode character.
      */
 
-    Glyph *get_glyph(uint32_t charcode, int16_t glyph_size) override;
+    IBMFDefs::Glyph *get_glyph(uint32_t charcode, int16_t glyph_size) override;
 
-    Glyph *get_glyph(uint32_t charcode, uint32_t next_charcode, int16_t glyph_size, int16_t &kern,
+    IBMFDefs::Glyph *get_glyph(uint32_t charcode, uint32_t next_charcode, int16_t glyph_size, int16_t &kern,
                      bool &ignore_next) override;
 
-    Glyph *adjust_ligature_and_kern(Glyph *glyph, uint16_t glyph_size, uint32_t next_charcode,
+    IBMFDefs::Glyph *adjust_ligature_and_kern(Glyph *glyph, uint16_t glyph_size, uint32_t next_charcode,
                                     int16_t &kern, bool &ignore_next);
 
     /**
@@ -51,7 +41,6 @@ public:
      * @return int32_t Normal line height of the face in pixels
      */
     int32_t get_line_height(int16_t glyph_size) {
-        std::scoped_lock guard(mutex);
         if (current_font_size != glyph_size) set_font_size(glyph_size);
         return (face == nullptr) ? 0 : (face->get_line_height());
     }
@@ -63,7 +52,6 @@ public:
      *                 the current font size.
      */
     int32_t get_descender_height(int16_t glyph_size) {
-        std::scoped_lock guard(mutex);
         if (current_font_size != glyph_size) set_font_size(glyph_size);
         return (face == nullptr) ? 0 : (face->get_descender_height());
     }
@@ -100,5 +88,3 @@ private:
 
     inline uint32_t translate(uint32_t charcode) { return face->translate(charcode); }
 };
-
-#endif

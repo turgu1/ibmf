@@ -74,18 +74,13 @@ public:
   //
 
 #pragma pack(push, 1)
-  // struct LigKernStep {
-  //   uint8_t next_char_code;
-  //   uint8_t char_code_or_index;  // Ligature: replacement char code, kern: index in kern array
-  //   unsigned int     stop:1;
-  //   unsigned int     tag:1;               // 0 = Ligature, 1 = Kern
-  // };
+
   union SkipByte
   {
-    unsigned int whole : 8;
+    uint8_t whole : 8;
     struct
     {
-      unsigned int next_step_relative : 7;
+      uint8_t next_step_relative : 7;
       bool stop : 1;
     } s;
   };
@@ -96,14 +91,19 @@ public:
     {
       bool c_op : 1;
       bool b_op : 1;
-      unsigned int a_op : 5;
+      uint8_t a_op : 5;
       bool is_a_kern : 1;
     } op;
     struct
     {
-      unsigned int displ_high : 7;
+      uint8_t displ_high : 7;
       bool is_a_kern : 1;
     } d;
+  };
+
+  union RemainderByte {
+    uint8_t replacement_char : 8;
+    uint8_t displ_low : 8; // Ligature: replacement char code, kern: displacement
   };
 
   struct LigKernStep
@@ -111,11 +111,7 @@ public:
     SkipByte skip;
     uint8_t next_char;
     OpCodeByte op_code;
-    union
-    {
-      unsigned int replacement_char : 8;
-      unsigned int displ_low : 8; // Ligature: replacement char code, kern: displacement
-    } remainder;
+    RemainderByte remainder;
   };
 #pragma pack(pop)
 
@@ -464,7 +460,7 @@ public:
   inline FIX get_x_height() { return params[4]; }
   inline FIX get_em_size() { return params[5]; }
   inline uint16_t get_glyph_count() { return sizes.ec - sizes.bc + 1; }
-  inline uint16_t get_lig_kern_pgm_count() { return sizes.nl; }
+  inline uint16_t get_lig_kern_step_count() { return sizes.nl; }
   inline uint8_t get_kern_count() { return sizes.nk; }
   inline uint8_t get_first_glyph_code() { return sizes.bc; }
   inline uint8_t get_last_glyph_code() { return sizes.ec; }

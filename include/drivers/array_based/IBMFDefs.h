@@ -5,16 +5,18 @@
 
 namespace IBMFDefs {
 
-const constexpr int DEBUG = 1;
+#ifdef DEBUG_IBMF
+  const constexpr int DEBUG = DEBUG_IBMF;
+#else
+  const constexpr int DEBUG = 0;
+#endif
 
 const constexpr uint8_t IBMF_VERSION = 4;
 const constexpr uint8_t MAX_GLYPH_COUNT = 254; // Index Value 0xFE and 0xFF are reserved
 
 enum class PixelResolution : uint8_t { ONE_BIT, EIGHT_BITS };
 
-const constexpr PixelResolution resolution = PixelResolution::ONE_BIT;
-
-typedef int16_t FIX16;
+constexpr PixelResolution resolution = PixelResolution::ONE_BIT;
 
 struct Dim {
     uint8_t width;
@@ -55,6 +57,8 @@ struct Bitmap {
 typedef Bitmap *BitmapPtr;
 
 #pragma pack(push, 1)
+
+typedef int16_t FIX16;
 
 struct Preamble {
     char marker[4];
@@ -135,9 +139,9 @@ typedef FaceHeader *FaceHeaderPtr;
 //
 
 union SkipByte {
-    unsigned int whole : 8;
+    uint8_t whole : 8;
     struct {
-        unsigned int next_step_relative : 7;
+        uint8_t next_step_relative : 7;
         bool stop : 1;
     } s;
 };
@@ -146,18 +150,18 @@ union OpCodeByte {
     struct {
         bool c_op : 1;
         bool b_op : 1;
-        unsigned int a_op : 5;
+        uint8_t a_op : 5;
         bool is_a_kern : 1;
     } op;
     struct {
-        unsigned int displ_high : 7;
+        uint8_t displ_high : 7;
         bool is_a_kern : 1;
     } d;
 };
 
 union RemainderByte {
-    unsigned int replacement_char : 8;
-    unsigned int displ_low : 8; // Ligature: replacement char code, kern: displacement
+    uint8_t replacement_char : 8;
+    uint8_t displ_low : 8; // Ligature: replacement char code, kern: displacement
 };
 
 struct LigKernStep {
@@ -169,9 +173,9 @@ struct LigKernStep {
 typedef LigKernStep *LigKernStepPtr;
 
 struct RLEMetrics {
-    unsigned int dyn_f : 4;
-    unsigned int first_is_black : 1;
-    unsigned int filler : 3;
+    uint8_t dyn_f : 4;
+    uint8_t first_is_black : 1;
+    uint8_t filler : 3;
 };
 
 struct GlyphInfo {

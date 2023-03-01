@@ -1,6 +1,13 @@
-#include "ibmf_font_v4.hpp"
+#include <iostream>
+#include <cstring>
 
-IBMFFont font("/home/turgu1/Dev/ibmf/fonts/EC-Regular_212.ibmf", IBMFFont::PixelResolution::EIGHT_BITS);
+#include "sys/stat.h"
+
+const std::string filename = "/home/turgu1/Dev/ibmf/fonts/EC-Regular_212.ibmf";
+
+#include "drivers/array_based/IBMFFontLow.h"
+
+IBMFFontLow *font;
 
 char matrix[100][200];
 int  col     = 0;
@@ -74,10 +81,53 @@ put(const IBMFFont::Glyph & glyph, int code)
   col += glyph.bitmap_width + 3;
 }
 */
+
 int
 main()
 {
+  struct stat file_stat;
 
+  if (stat(filename.c_str(), &file_stat) != -1) {
+    int memory_length = file_stat.st_size;
+
+    FILE * file = fopen(filename.c_str(), "rb");
+    MemoryPtr memory = new uint8_t[memory_length];
+
+    if (memory != nullptr) {
+      if (fread(memory, memory_length, 1, file) == 1) {
+        std::cout << "Memory size: " << memory_length << std::endl;
+        font = new IBMFFontLow(memory, memory_length);
+
+        if (!font->is_initialized()) {
+          std::cerr << "Font data not recognized!" << std::endl;
+        }
+        else {
+          IBMFFaceLow * face = font->get_face(0);
+          if (face != nullptr) {
+            std::cout << "Face Pt size:  " << +face->get_face_pt_size() << std::endl;
+            face->show_face();
+            Glyph g;
+            if (!face->get_glyph(0x00E9, g, true)) {
+              std::cerr << "Unable to get glyph dt for 'A'" << std::endl;
+            }
+          }
+          else {
+            std::cerr << "Unable to get face at index 0." << std::endl;
+          }
+        }
+      }
+      else {
+        std::cerr << "Unable to read data from file %s!" << filename << std::endl;
+      }
+    }
+
+    fclose(file);
+  }
+  else {
+    std::cerr << "Unable to find font file %s!" << filename << std::endl;
+  }
+  
+/*
   if (!font.set_font_size(14)) {
     std::cerr << "Font size 14 not available!" << std::endl;
     return 1;
@@ -88,7 +138,7 @@ main()
   IBMFFont::BitmapPtr bitmap = font.get_glyph_bitmap('A');
 
   font.show_bitmap(bitmap);
-/*  
+  
   if (!font.set_font_size(12)) {
     std::cerr << "Font size 12 not available!" << std::endl;
     return 1;

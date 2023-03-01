@@ -3606,5 +3606,14 @@ DPI: 212, point size: 14, first char code: 0, last char code: 173, line height: 
   [287]:  Whole skip: 128, Stop: Yes, NxtChar: 93, IsKern: Yes, Kern Idx: 0
 
 ----------- Kerns: ----------
+  [0]:  2.76562
+  [1]:  4.46875
+  [2]:  3.34375
+  [3]:  2.23438
+  [4]:  -3.34375
+  [5]:  -2.23438
+  [6]:  -4.46875
+  [7]:  -1.10938
+  [8]:  1.10938
 Completed!
 Done
