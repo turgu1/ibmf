@@ -6,12 +6,12 @@
 namespace IBMFDefs {
 
 #ifdef DEBUG_IBMF
-  const constexpr int DEBUG = DEBUG_IBMF;
+const constexpr int DEBUG = DEBUG_IBMF;
 #else
-  const constexpr int DEBUG = 0;
+const constexpr int DEBUG = 0;
 #endif
 
-const constexpr uint8_t IBMF_VERSION = 4;
+const constexpr uint8_t IBMF_VERSION    = 4;
 const constexpr uint8_t MAX_GLYPH_COUNT = 254; // Index Value 0xFE and 0xFF are reserved
 
 enum class PixelResolution : uint8_t { ONE_BIT, EIGHT_BITS };
@@ -19,40 +19,40 @@ enum class PixelResolution : uint8_t { ONE_BIT, EIGHT_BITS };
 constexpr PixelResolution resolution = PixelResolution::ONE_BIT;
 
 struct Dim {
-    uint8_t width;
-    uint8_t height;
-    Dim(uint8_t w, uint8_t h) : width(w), height(h) {}
-    Dim() {}
+  uint8_t width;
+  uint8_t height;
+  Dim(uint8_t w, uint8_t h) : width(w), height(h) {}
+  Dim() {}
 };
 
 struct Pos {
-    int8_t x;
-    int8_t y;
-    Pos(int8_t xpos, int8_t ypos) : x(xpos), y(ypos) {}
-    Pos() {}
+  int8_t x;
+  int8_t y;
+  Pos(int8_t xpos, int8_t ypos) : x(xpos), y(ypos) {}
+  Pos() {}
 };
 
 typedef uint8_t *MemoryPtr;
 
 struct RLEBitmap {
-    MemoryPtr pixels;
-    Dim dim;
-    uint16_t length;
-    void clear() {
-        pixels = nullptr;
-        dim = Dim(0, 0);
-        length = 0;
-    }
+  MemoryPtr pixels;
+  Dim       dim;
+  uint16_t  length;
+  void      clear() {
+         pixels = nullptr;
+         dim    = Dim(0, 0);
+         length = 0;
+  }
 };
 typedef RLEBitmap *RLEBitmapPtr;
 
 struct Bitmap {
-    MemoryPtr pixels;
-    Dim dim;
-    void clear() {
-        pixels = nullptr;
-        dim = Dim(0, 0);
-    }
+  MemoryPtr pixels;
+  Dim       dim;
+  void      clear() {
+         pixels = nullptr;
+         dim    = Dim(0, 0);
+  }
 };
 typedef Bitmap *BitmapPtr;
 
@@ -61,29 +61,29 @@ typedef Bitmap *BitmapPtr;
 typedef int16_t FIX16;
 
 struct Preamble {
-    char marker[4];
-    uint8_t face_count;
-    struct {
-        uint8_t version : 5;
-        uint8_t char_set : 3;
-    } bits;
+  char    marker[4];
+  uint8_t face_count;
+  struct {
+    uint8_t version  : 5;
+    uint8_t char_set : 3;
+  } bits;
 };
 typedef Preamble *PreamblePtr;
 
 struct FaceHeader {
-    uint8_t point_size;
-    uint8_t line_height;
-    uint16_t dpi;
-    FIX16 x_height;
-    FIX16 em_size;
-    FIX16 slant_correction;
-    uint8_t descender_height;
-    uint8_t space_size;
-    uint16_t glyph_count;
-    uint16_t lig_kern_step_count;
-    uint16_t first_code;
-    uint16_t last_code;
-    uint8_t kern_count;
+  uint8_t  point_size;
+  uint8_t  line_height;
+  uint16_t dpi;
+  FIX16    x_height;
+  FIX16    em_size;
+  FIX16    slant_correction;
+  uint8_t  descender_height;
+  uint8_t  space_size;
+  uint16_t glyph_count;
+  uint16_t lig_kern_step_count;
+  uint16_t first_code;
+  uint16_t last_code;
+  uint8_t  kern_count;
 };
 typedef FaceHeader *FaceHeaderPtr;
 
@@ -139,81 +139,81 @@ typedef FaceHeader *FaceHeaderPtr;
 //
 
 union SkipByte {
-    uint8_t whole : 8;
-    struct {
-        uint8_t next_step_relative : 7;
-        bool stop : 1;
-    } s;
+  uint8_t whole : 8;
+  struct {
+    uint8_t next_step_relative : 7;
+    bool    stop               : 1;
+  } s;
 };
 
 union OpCodeByte {
-    struct {
-        bool c_op : 1;
-        bool b_op : 1;
-        uint8_t a_op : 5;
-        bool is_a_kern : 1;
-    } op;
-    struct {
-        uint8_t displ_high : 7;
-        bool is_a_kern : 1;
-    } d;
+  struct {
+    bool    c_op      : 1;
+    bool    b_op      : 1;
+    uint8_t a_op      : 5;
+    bool    is_a_kern : 1;
+  } op;
+  struct {
+    uint8_t displ_high : 7;
+    bool    is_a_kern  : 1;
+  } d;
 };
 
 union RemainderByte {
-    uint8_t replacement_char : 8;
-    uint8_t displ_low : 8; // Ligature: replacement char code, kern: displacement
+  uint8_t replacement_char : 8;
+  uint8_t displ_low        : 8; // Ligature: replacement char code, kern: displacement
 };
 
 struct LigKernStep {
-    SkipByte skip;
-    uint8_t next_char;
-    OpCodeByte op_code;
-    RemainderByte remainder;
+  SkipByte      skip;
+  uint8_t       next_char;
+  OpCodeByte    op_code;
+  RemainderByte remainder;
 };
 typedef LigKernStep *LigKernStepPtr;
 
 struct RLEMetrics {
-    uint8_t dyn_f : 4;
-    uint8_t first_is_black : 1;
-    uint8_t filler : 3;
+  uint8_t dyn_f          : 4;
+  uint8_t first_is_black : 1;
+  uint8_t filler         : 3;
 };
 
 struct GlyphInfo {
-    uint8_t char_code;
-    uint8_t bitmap_width;
-    uint8_t bitmap_height;
-    int8_t horizontal_offset;
-    int8_t vertical_offset;
-    uint8_t lig_kern_pgm_index; // = 255 if none
-    uint16_t packet_length;
-    FIX16 advance;
-    RLEMetrics rle_metrics;
+  uint8_t    char_code;
+  uint8_t    bitmap_width;
+  uint8_t    bitmap_height;
+  int8_t     horizontal_offset;
+  int8_t     vertical_offset;
+  uint8_t    lig_kern_pgm_index; // = 255 if none
+  uint16_t   packet_length;
+  FIX16      advance;
+  RLEMetrics rle_metrics;
 };
 typedef GlyphInfo *GlyphInfoPtr;
 
 #pragma pack(pop)
 
 struct GlyphMetrics {
-    int16_t xoff, yoff;
-    int16_t advance;
-    int16_t line_height;
-    int16_t ligature_and_kern_pgm_index;
-    void clear() {
-        xoff = yoff = 0;
-        advance = line_height = 0;
-        ligature_and_kern_pgm_index = 255;
-    }
+  int16_t xoff, yoff;
+  int16_t advance;
+  int16_t line_height;
+  int16_t ligature_and_kern_pgm_index;
+  void    clear() {
+       xoff = yoff = 0;
+       advance = line_height       = 0;
+       ligature_and_kern_pgm_index = 255;
+  }
 };
 
 struct Glyph {
-    GlyphMetrics metrics;
-    Bitmap bitmap;
-    uint8_t point_size;
-    void clear() {
-        metrics.clear();
-        bitmap.clear();
-        point_size = 0;
-    }
+  GlyphMetrics metrics;
+  Bitmap       bitmap;
+  uint8_t      point_size;
+  void         clear() {
+            metrics.clear();
+            bitmap.clear();
+            point_size = 0;
+  }
 };
 
 const constexpr uint16_t set2_translation_latin_1[] = {

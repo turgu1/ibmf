@@ -1,10 +1,10 @@
 #pragma once
 
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <cstring>
 #include <cmath>
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
 #include "sys/stat.h"
 
@@ -16,8 +16,7 @@
  * This class is to validate the comprehension of the author about the TFM file
  * format.
  */
-class TFM
-{
+class TFM {
 public:
   typedef int32_t FIX;
   typedef int16_t FIX16;
@@ -75,49 +74,43 @@ public:
 
 #pragma pack(push, 1)
 
-  union SkipByte
-  {
+  union SkipByte {
     uint8_t whole : 8;
-    struct
-    {
+    struct {
       uint8_t next_step_relative : 7;
-      bool stop : 1;
+      bool    stop               : 1;
     } s;
   };
 
-  union OpCodeByte
-  {
-    struct
-    {
-      bool c_op : 1;
-      bool b_op : 1;
-      uint8_t a_op : 5;
-      bool is_a_kern : 1;
+  union OpCodeByte {
+    struct {
+      bool    c_op      : 1;
+      bool    b_op      : 1;
+      uint8_t a_op      : 5;
+      bool    is_a_kern : 1;
     } op;
-    struct
-    {
+    struct {
       uint8_t displ_high : 7;
-      bool is_a_kern : 1;
+      bool    is_a_kern  : 1;
     } d;
   };
 
   union RemainderByte {
     uint8_t replacement_char : 8;
-    uint8_t displ_low : 8; // Ligature: replacement char code, kern: displacement
+    uint8_t displ_low        : 8; // Ligature: replacement char code, kern: displacement
   };
 
-  struct LigKernStep
-  {
-    SkipByte skip;
-    uint8_t next_char;
-    OpCodeByte op_code;
+  struct LigKernStep {
+    SkipByte      skip;
+    uint8_t       next_char;
+    OpCodeByte    op_code;
     RemainderByte remainder;
   };
 #pragma pack(pop)
 
 private:
-  bool initialized;
-  bool memory_owner_is_the_instance;
+  bool     initialized;
+  bool     memory_owner_is_the_instance;
 
   uint8_t *memory;
   uint32_t memory_length;
@@ -128,8 +121,7 @@ private:
   uint16_t font_dpi;
 
 #pragma pack(push, 1)
-  struct TFMSizes
-  {
+  struct TFMSizes {
     uint16_t lf; // Length of file in 32 bits words
     uint16_t lh; // Length of header data
     uint16_t bc; // First Character code in font
@@ -144,78 +136,66 @@ private:
     uint16_t np; // Number of font parameters
   } sizes;
 
-  union Other
-  {
+  union Other {
     uint32_t data;
-    struct
-    {
+    struct {
       unsigned int seven_bit_safe : 1;
-      unsigned int filler : 23;
+      unsigned int filler         : 23;
       unsigned int parc_face_type : 8;
     } info;
   };
 
-  struct Header
-  {
+  struct Header {
     uint32_t checksum;
-    FIX design_size;
-    char char_coding_scheme[40];
-    char parc_font_identifier[20];
-    Other other;
+    FIX      design_size;
+    char     char_coding_scheme[40];
+    char     parc_font_identifier[20];
+    Other    other;
   } header;
 
-  struct FInfoEntry
-  {
-    unsigned int width_index : 8;
-    unsigned int height_index : 4;
-    unsigned int depth_index : 4;
+  struct FInfoEntry {
+    unsigned int width_index   : 8;
+    unsigned int height_index  : 4;
+    unsigned int depth_index   : 4;
     unsigned int char_ic_index : 6;
-    unsigned int tag_field : 2;
-    unsigned int remainder : 8;
-  } *font_info_entries;
+    unsigned int tag_field     : 2;
+    unsigned int remainder     : 8;
+  } * font_info_entries;
 
 #pragma pack(pop)
 
-  FIX *widths;
-  FIX *heights;
-  FIX *depths;
-  FIX *char_ics;
+  FIX         *widths;
+  FIX         *heights;
+  FIX         *depths;
+  FIX         *char_ics;
   LigKernStep *lig_kern_steps;
-  FIX *kerns;
-  FIX *params;
+  FIX         *kerns;
+  FIX         *params;
 
-  void
-  extract_info_entry(int idx, uint32_t data)
-  {
-    font_info_entries[idx].width_index = (data & 0xFF000000) >> 24;
-    font_info_entries[idx].height_index = (data & 0x00F00000) >> 20;
-    font_info_entries[idx].depth_index = (data & 0x000F0000) >> 16;
-    font_info_entries[idx].char_ic_index = (data & 0x0000FC00) >> 10;
-    font_info_entries[idx].tag_field = (data & 0x00000300) >> 8;
-    font_info_entries[idx].remainder = (data & 0x000000FF);
+  void         extract_info_entry(int idx, uint32_t data) {
+            font_info_entries[idx].width_index   = (data & 0xFF000000) >> 24;
+            font_info_entries[idx].height_index  = (data & 0x00F00000) >> 20;
+            font_info_entries[idx].depth_index   = (data & 0x000F0000) >> 16;
+            font_info_entries[idx].char_ic_index = (data & 0x0000FC00) >> 10;
+            font_info_entries[idx].tag_field     = (data & 0x00000300) >> 8;
+            font_info_entries[idx].remainder     = (data & 0x000000FF);
   }
 
-  bool
-  getnextch(char &ch)
-  {
+  bool getnextch(char &ch) {
     if (memory_ptr >= memory_end)
       return false;
     ch = *memory_ptr++;
     return true;
   }
 
-  bool
-  getnext8(uint8_t &val)
-  {
+  bool getnext8(uint8_t &val) {
     if (memory_ptr >= memory_end)
       return false;
     val = *memory_ptr++;
     return true;
   }
 
-  bool
-  getnext16(uint16_t &val)
-  {
+  bool getnext16(uint16_t &val) {
     if ((memory_ptr + 1) >= memory_end)
       return false;
     val = *memory_ptr++ << 8;
@@ -223,9 +203,7 @@ private:
     return true;
   }
 
-  bool
-  getnext24(uint32_t &val)
-  {
+  bool getnext24(uint32_t &val) {
     if ((memory_ptr + 2) >= memory_end)
       return false;
     val = *memory_ptr++ << 16;
@@ -234,9 +212,7 @@ private:
     return true;
   }
 
-  bool
-  getnext32(uint32_t &val)
-  {
+  bool getnext32(uint32_t &val) {
     if ((memory_ptr + 3) >= memory_end)
       return false;
     val = *memory_ptr++ << 24;
@@ -246,9 +222,7 @@ private:
     return true;
   }
 
-  bool
-  getnextfix(FIX &val)
-  {
+  bool getnextfix(FIX &val) {
     if ((memory_ptr + 3) >= memory_end)
       return false;
     val = *memory_ptr++ << 24;
@@ -258,27 +232,23 @@ private:
     return true;
   }
 
-  bool
-  getnextligkern(LigKernStep &val)
-  {
+  bool getnextligkern(LigKernStep &val) {
     if ((memory_ptr + 3) >= memory_end)
       return false;
     val = *(LigKernStep *)memory_ptr;
     memory_ptr += 4;
-    if (sizeof(LigKernStep) != 4) return false; 
+    if (sizeof(LigKernStep) != 4)
+      return false;
     return true;
   }
 
-  bool
-  getnextstr(char *str, uint8_t length)
-  {
+  bool getnextstr(char *str, uint8_t length) {
     uint8_t l;
     if (!getnext8(l))
       return false;
     if (l >= (length - 1))
       return false;
-    for (int i = 0; i < (length - 1); i++)
-    {
+    for (int i = 0; i < (length - 1); i++) {
       if (!getnextch(str[i]))
         return false;
     }
@@ -287,43 +257,30 @@ private:
     return true;
   }
 
-  bool
-  load_tfm()
-  {
-    memory_ptr = memory;
-    bool result =
-        getnext16(sizes.lf) &&
-        getnext16(sizes.lh) &&
-        getnext16(sizes.bc) &&
-        getnext16(sizes.ec) &&
-        getnext16(sizes.nw) &&
-        getnext16(sizes.nh) &&
-        getnext16(sizes.nd) &&
-        getnext16(sizes.ni) &&
-        getnext16(sizes.nl) &&
-        getnext16(sizes.nk) &&
-        getnext16(sizes.ne) &&
-        getnext16(sizes.np);
+  bool load_tfm() {
+    memory_ptr  = memory;
+    bool result = getnext16(sizes.lf) && getnext16(sizes.lh) && getnext16(sizes.bc) &&
+                  getnext16(sizes.ec) && getnext16(sizes.nw) && getnext16(sizes.nh) &&
+                  getnext16(sizes.nd) && getnext16(sizes.ni) && getnext16(sizes.nl) &&
+                  getnext16(sizes.nk) && getnext16(sizes.ne) && getnext16(sizes.np);
 
-    if (result)
-    {
+    if (result) {
       memset(&header, 0, sizeof(Header));
       result =
           getnext32(header.checksum) &&
-          ((sizes.lh <= 1) || (getnextfix(header.design_size) &&
-                               ((sizes.lh <= 2) ||
-                                getnextstr(header.char_coding_scheme, sizeof(header.char_coding_scheme)) &&
-                                    ((sizes.lh <= 12) ||
-                                     getnextstr(header.parc_font_identifier, sizeof(header.parc_font_identifier)) &&
-                                         ((sizes.lh <= 17)) ||
-                                     getnext32(header.other.data)))));
-      if (result)
-      {
+          ((sizes.lh <= 1) ||
+           (getnextfix(header.design_size) &&
+            ((sizes.lh <= 2) ||
+             getnextstr(header.char_coding_scheme, sizeof(header.char_coding_scheme)) &&
+                 ((sizes.lh <= 12) ||
+                  getnextstr(header.parc_font_identifier, sizeof(header.parc_font_identifier)) &&
+                      ((sizes.lh <= 17)) ||
+                  getnext32(header.other.data)))));
+      if (result) {
         int32_t size = sizes.ec - sizes.bc + 1;
         if ((font_info_entries = new FInfoEntry[size]) == nullptr)
           return false;
-        for (int i = 0; i < size; i++)
-        {
+        for (int i = 0; i < size; i++) {
           uint32_t data;
           if (!getnext32(data))
             return false;
@@ -332,40 +289,35 @@ private:
 
         if ((widths = new FIX[sizes.nw]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.nw; i++)
-        {
+        for (int i = 0; i < sizes.nw; i++) {
           if (!getnextfix(widths[i]))
             return false;
         }
 
         if ((heights = new FIX[sizes.nh]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.nh; i++)
-        {
+        for (int i = 0; i < sizes.nh; i++) {
           if (!getnextfix(heights[i]))
             return false;
         }
 
         if ((depths = new FIX[sizes.nd]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.nd; i++)
-        {
+        for (int i = 0; i < sizes.nd; i++) {
           if (!getnextfix(depths[i]))
             return false;
         }
 
         if ((char_ics = new FIX[sizes.ni]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.ni; i++)
-        {
+        for (int i = 0; i < sizes.ni; i++) {
           if (!getnextfix(char_ics[i]))
             return false;
         }
 
         if ((lig_kern_steps = new LigKernStep[sizes.nl]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.nl; i++)
-        {
+        for (int i = 0; i < sizes.nl; i++) {
           if (!getnextligkern(lig_kern_steps[i]))
             return false;
           // lig_kern_steps[i].stop               = (data & 0x80000000) >> 31;
@@ -376,14 +328,12 @@ private:
 
         if ((kerns = new FIX[sizes.nk]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.nk; i++)
-        {
+        for (int i = 0; i < sizes.nk; i++) {
           if (!getnextfix(kerns[i]))
             return false;
         }
 
-        for (int i = 0; i < sizes.ne; i++)
-        {
+        for (int i = 0; i < sizes.ne; i++) {
           uint32_t dummy;
           if (!getnext32(dummy))
             return false;
@@ -391,8 +341,7 @@ private:
 
         if ((params = new FIX[sizes.np]) == nullptr)
           return false;
-        for (int i = 0; i < sizes.np; i++)
-        {
+        for (int i = 0; i < sizes.np; i++) {
           if (!getnextfix(params[i]))
             return false;
         }
@@ -405,119 +354,95 @@ private:
   }
 
 public:
-  TFM(uint8_t *memory_font, uint32_t size)
-      : memory(memory_font),
-        memory_length(size)
-  {
-    memory_end = memory + memory_length;
-    initialized = load_tfm();
+  TFM(uint8_t *memory_font, uint32_t size) : memory(memory_font), memory_length(size) {
+    memory_end                   = memory + memory_length;
+    initialized                  = load_tfm();
     memory_owner_is_the_instance = false;
   }
 
-  TFM(const std::string filename, uint16_t dpi)
-  {
+  TFM(const std::string filename, uint16_t dpi) {
     struct stat file_stat;
     initialized = false;
-    memory = nullptr;
-    font_dpi = dpi;
-    if (stat(filename.c_str(), &file_stat) != -1)
-    {
-      memory = new uint8_t[memory_length = file_stat.st_size];
-      memory_end = (memory == nullptr) ? nullptr : memory + memory_length;
+    memory      = nullptr;
+    font_dpi    = dpi;
+    if (stat(filename.c_str(), &file_stat) != -1) {
+      memory                       = new uint8_t[memory_length = file_stat.st_size];
+      memory_end                   = (memory == nullptr) ? nullptr : memory + memory_length;
       memory_owner_is_the_instance = true;
-      if (memory != nullptr)
-      {
+      if (memory != nullptr) {
         FILE *file = fopen(filename.c_str(), "rb");
-        if (fread(memory, memory_length, 1, file) == 1)
-        {
+        if (fread(memory, memory_length, 1, file) == 1) {
           initialized = load_tfm();
-        }
-        else
-        {
+        } else {
           std::cerr << "Unable to read file " << filename.c_str() << std::endl;
         }
         fclose(file);
       }
-    }
-    else
-    {
+    } else {
       std::cerr << "Unable to stat file " << filename.c_str() << std::endl;
     }
   }
 
-  ~TFM()
-  {
-    if (memory_owner_is_the_instance && (memory != nullptr))
-    {
+  ~TFM() {
+    if (memory_owner_is_the_instance && (memory != nullptr)) {
       delete[] memory;
       memory = nullptr;
     }
   }
 
-  inline bool is_initialized() { return initialized; }
-  inline FIX get_design_size() { return header.design_size; }
-  inline FIX get_space_size() { return params[1]; }
-  inline FIX get_x_height() { return params[4]; }
-  inline FIX get_em_size() { return params[5]; }
+  inline bool     is_initialized() { return initialized; }
+  inline FIX      get_design_size() { return header.design_size; }
+  inline FIX      get_space_size() { return params[1]; }
+  inline FIX      get_x_height() { return params[4]; }
+  inline FIX      get_em_size() { return params[5]; }
   inline uint16_t get_glyph_count() { return sizes.ec - sizes.bc + 1; }
   inline uint16_t get_lig_kern_step_count() { return sizes.nl; }
-  inline uint8_t get_kern_count() { return sizes.nk; }
-  inline uint8_t get_first_glyph_code() { return sizes.bc; }
-  inline uint8_t get_last_glyph_code() { return sizes.ec; }
+  inline uint8_t  get_kern_count() { return sizes.nk; }
+  inline uint8_t  get_first_glyph_code() { return sizes.bc; }
+  inline uint8_t  get_last_glyph_code() { return sizes.ec; }
   inline FIX get_advance(uint8_t i) { return widths[font_info_entries[i - sizes.bc].width_index]; }
-  inline uint8_t get_lig_kern_pgm_index(uint8_t i) { return (font_info_entries[i - sizes.bc].tag_field == 1) ? font_info_entries[i - sizes.bc].remainder : 255; }
+  inline uint8_t get_lig_kern_pgm_index(uint8_t i) {
+    return (font_info_entries[i - sizes.bc].tag_field == 1)
+               ? font_info_entries[i - sizes.bc].remainder
+               : 255;
+  }
   inline LigKernStep get_lig_kern_step(uint8_t i) { return lig_kern_steps[i]; }
-  inline FIX get_kern(uint8_t i) { return kerns[i]; }
-  inline FIX get_slant_correction() { return params[0]; }
+  inline FIX         get_kern(uint8_t i) { return kerns[i]; }
+  inline FIX         get_slant_correction() { return params[0]; }
 
-  inline FIX get_max_depth()
-  {
-    FIX max = 0;
-    for (int i = 0; i < sizes.nd; i++)
-    {
-      if (depths[i] > max)
+  inline FIX         get_max_depth() {
+            FIX max = 0;
+            for (int i = 0; i < sizes.nd; i++) {
+              if (depths[i] > max)
         max = depths[i];
     }
-    return max;
+            return max;
   }
 
-  double
-  to_double(FIX input, uint8_t fractional_bits)
-  {
+  double to_double(FIX input, uint8_t fractional_bits) {
     return ((double)input / (double)(1 << fractional_bits));
   }
 
-  double
-  to_double(FIX16 input, uint8_t fractional_bits)
-  {
+  double to_double(FIX16 input, uint8_t fractional_bits) {
     return ((double)input / (double)(1 << fractional_bits));
   }
 
   FIX16
-  to_fix16(double val, uint8_t fractional_bits)
-  {
-    return trunc(val * (1 << fractional_bits));
-  }
+  to_fix16(double val, uint8_t fractional_bits) { return trunc(val * (1 << fractional_bits)); }
 
-  std::string
-  to_string(FIX val)
-  {
+  std::string to_string(FIX val) {
     std::stringstream ss;
     ss << to_double(val, 20);
     return ss.str();
   }
 
-  std::string
-  to_string(FIX16 val)
-  {
+  std::string to_string(FIX16 val) {
     std::stringstream ss;
     ss << to_double(val, 6);
     return ss.str();
   }
 
-  void
-  show()
-  {
+  void show() {
     std::cout << "Sizes:" << std::endl
               << "                Length of file in 32 bits words: " << sizes.lf << std::endl
               << "                          Length of header data: " << sizes.lh << std::endl
@@ -541,37 +466,27 @@ public:
 
     double factor = to_double(header.design_size, 20) * font_dpi / 72.27;
 
-    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++)
-    {
-      std::cout << "Char Code: " << (i + sizes.bc)
-                << " ["
-                << to_string(widths[font_info_entries[i].width_index])
-                << ", "
-                << to_string(heights[font_info_entries[i].height_index])
-                << "] "
-                << to_string(depths[font_info_entries[i].depth_index])
-                << " --> ["
-                << to_double(widths[font_info_entries[i].width_index], 20) * factor
-                << ", "
-                << to_double(heights[font_info_entries[i].height_index], 20) * factor
-                << "] "
-                << to_double(depths[font_info_entries[i].depth_index], 20) * factor
-                << " " << ((font_info_entries[i].tag_field == 1) ? +font_info_entries[i].remainder : -1)
+    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
+      std::cout << "Char Code: " << (i + sizes.bc) << " ["
+                << to_string(widths[font_info_entries[i].width_index]) << ", "
+                << to_string(heights[font_info_entries[i].height_index]) << "] "
+                << to_string(depths[font_info_entries[i].depth_index]) << " --> ["
+                << to_double(widths[font_info_entries[i].width_index], 20) * factor << ", "
+                << to_double(heights[font_info_entries[i].height_index], 20) * factor << "] "
+                << to_double(depths[font_info_entries[i].depth_index], 20) * factor << " "
+                << ((font_info_entries[i].tag_field == 1) ? +font_info_entries[i].remainder : -1)
                 << std::endl;
     }
 
-    std::cout << std::endl
-              << "Ligature / Kern programs:" << std::endl;
-    for (int i = 0; i < sizes.nl; i++)
-    {
-      if (lig_kern_steps[i].skip.whole > 128)
-      {
+    std::cout << std::endl << "Ligature / Kern programs:" << std::endl;
+    for (int i = 0; i < sizes.nl; i++) {
+      if (lig_kern_steps[i].skip.whole > 128) {
         std::cout << "  [" << i << "]:  "
                   << "Whole skip: " << +lig_kern_steps[i].skip.whole << ", "
-                  << "Goto: " << +((lig_kern_steps[i].op_code.d.displ_high << 8) + lig_kern_steps[i].remainder.displ_low);
-      }
-      else
-      {
+                  << "Goto: "
+                  << +((lig_kern_steps[i].op_code.d.displ_high << 8) +
+                       lig_kern_steps[i].remainder.displ_low);
+      } else {
         std::cout << "  [" << i << "]:  "
                   << "Whole skip: " << +lig_kern_steps[i].skip.whole << ", "
                   << "Stop: " << (lig_kern_steps[i].skip.s.stop ? "Yes" : "No") << ", "
@@ -579,114 +494,99 @@ public:
                   << "IsKern: " << (lig_kern_steps[i].op_code.d.is_a_kern ? "Yes" : "No") << ", "
                   << (lig_kern_steps[i].op_code.d.is_a_kern ? "Kern Idx: " : "Lig char: ")
                   << (lig_kern_steps[i].op_code.d.is_a_kern
-                          ? +((lig_kern_steps[i].op_code.d.displ_high << 8) + lig_kern_steps[i].remainder.displ_low)
+                          ? +((lig_kern_steps[i].op_code.d.displ_high << 8) +
+                              lig_kern_steps[i].remainder.displ_low)
                           : +lig_kern_steps[i].remainder.replacement_char)
                   << std::dec;
-        if (!lig_kern_steps[i].op_code.d.is_a_kern)
-        {
-          std::cout << ", OpCodes: a:"
-                    << +lig_kern_steps[i].op_code.op.a_op
-                    << ", b:"
-                    << +lig_kern_steps[i].op_code.op.b_op
-                    << ", c:"
-                    << +lig_kern_steps[i].op_code.op.c_op;
+        if (!lig_kern_steps[i].op_code.d.is_a_kern) {
+          std::cout << ", OpCodes: a:" << +lig_kern_steps[i].op_code.op.a_op
+                    << ", b:" << +lig_kern_steps[i].op_code.op.b_op
+                    << ", c:" << +lig_kern_steps[i].op_code.op.c_op;
         }
       }
 
       std::cout << std::endl;
     }
 
-    std::cout << std::endl
-              << "Kerns:" << std::endl;
-    for (int i = 0; i < sizes.nk; i++)
-    {
-      std::cout << "  [" << i << "]: "
-                << to_double(kerns[i], 20)
-                << " (" << (to_double(kerns[i], 20) * factor) << ")"
-                << std::endl;
+    std::cout << std::endl << "Kerns:" << std::endl;
+    for (int i = 0; i < sizes.nk; i++) {
+      std::cout << "  [" << i << "]: " << to_double(kerns[i], 20) << " ("
+                << (to_double(kerns[i], 20) * factor) << ")" << std::endl;
     }
 
-    std::cout << std::endl
-              << "Params:" << std::endl;
-    std::cout << "  Slant: " << to_double(params[0], 20) << " (" << to_fix16(to_double(params[0], 20) * factor, 6) << ")" << std::endl
-              << "  Space: " << to_double(params[1], 20) << " (" << to_fix16(to_double(params[1], 20) * factor, 6) << ")" << std::endl
-              << "  SpStretch: " << to_double(params[2], 20) << " (" << to_fix16(to_double(params[2], 20) * factor, 6) << ")" << std::endl
-              << "  SpShrink: " << to_double(params[3], 20) << " (" << to_fix16(to_double(params[3], 20) * factor, 6) << ")" << std::endl
-              << "  xHeight: " << to_double(params[4], 20) << " (" << to_fix16(to_double(params[4], 20) * factor, 6) << ")" << std::endl
-              << "  Quad: " << to_double(params[5], 20) << " (" << to_fix16(to_double(params[5], 20) * factor, 6) << ")" << std::endl
-              << "  Extra: " << to_double(params[6], 20) << " (" << to_fix16(to_double(params[6], 20) * factor, 6) << ")" << std::endl;
+    std::cout << std::endl << "Params:" << std::endl;
+    std::cout << "  Slant: " << to_double(params[0], 20) << " ("
+              << to_fix16(to_double(params[0], 20) * factor, 6) << ")" << std::endl
+              << "  Space: " << to_double(params[1], 20) << " ("
+              << to_fix16(to_double(params[1], 20) * factor, 6) << ")" << std::endl
+              << "  SpStretch: " << to_double(params[2], 20) << " ("
+              << to_fix16(to_double(params[2], 20) * factor, 6) << ")" << std::endl
+              << "  SpShrink: " << to_double(params[3], 20) << " ("
+              << to_fix16(to_double(params[3], 20) * factor, 6) << ")" << std::endl
+              << "  xHeight: " << to_double(params[4], 20) << " ("
+              << to_fix16(to_double(params[4], 20) * factor, 6) << ")" << std::endl
+              << "  Quad: " << to_double(params[5], 20) << " ("
+              << to_fix16(to_double(params[5], 20) * factor, 6) << ")" << std::endl
+              << "  Extra: " << to_double(params[6], 20) << " ("
+              << to_fix16(to_double(params[6], 20) * factor, 6) << ")" << std::endl;
 
-    std::cout << std::endl
-              << "static constexpr FIX16 advances[] = {";
-    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++)
-    {
+    std::cout << std::endl << "static constexpr FIX16 advances[] = {";
+    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
       if ((i % 10) == 0)
-        std::cout << std::endl
-                  << "  /* " << i << " */  ";
-      std::cout << to_double(to_fix16(to_double(widths[font_info_entries[i].width_index], 20) * factor, 6), 6) << ", ";
+        std::cout << std::endl << "  /* " << i << " */  ";
+      std::cout << to_double(
+                       to_fix16(to_double(widths[font_info_entries[i].width_index], 20) * factor,
+                                6),
+                       6)
+                << ", ";
     }
-    std::cout << std::endl
-              << "};" << std::endl
-              << "static constexpr FIX16 depths[] = {";
-    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++)
-    {
+    std::cout << std::endl << "};" << std::endl << "static constexpr FIX16 depths[] = {";
+    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
       if ((i % 10) == 0)
-        std::cout << std::endl
-                  << "  /* " << i << " */  ";
-      std::cout << to_double(to_fix16(to_double(depths[font_info_entries[i].depth_index], 20) * factor, 6), 6) << ", ";
+        std::cout << std::endl << "  /* " << i << " */  ";
+      std::cout << to_double(
+                       to_fix16(to_double(depths[font_info_entries[i].depth_index], 20) * factor,
+                                6),
+                       6)
+                << ", ";
     }
-    std::cout << std::endl
-              << "};" << std::endl;
+    std::cout << std::endl << "};" << std::endl;
 
-    std::cout << std::endl
-              << "static constexpr LigKernStep lig_kerns[] = {" << std::endl;
-    for (int i = 0; i < sizes.nl; i++)
-    {
+    std::cout << std::endl << "static constexpr LigKernStep lig_kerns[] = {" << std::endl;
+    for (int i = 0; i < sizes.nl; i++) {
       std::cout << "/* " << i << " */  { "
-                << ".next_char_code = 0x" << std::hex << +lig_kern_steps[i].next_char << std::dec << ", ";
-      if (lig_kern_steps[i].op_code.d.is_a_kern)
-      {
-        std::cout << ".u = { .kern_idx = "
-                  << std::dec
-                  << +((lig_kern_steps[i].op_code.d.displ_high << 8) + lig_kern_steps[i].remainder.displ_low)
+                << ".next_char_code = 0x" << std::hex << +lig_kern_steps[i].next_char << std::dec
+                << ", ";
+      if (lig_kern_steps[i].op_code.d.is_a_kern) {
+        std::cout << ".u = { .kern_idx = " << std::dec
+                  << +((lig_kern_steps[i].op_code.d.displ_high << 8) +
+                       lig_kern_steps[i].remainder.displ_low)
                   << " }, ";
-      }
-      else
-      {
-        std::cout << ".u = { .char_code = 0x"
-                  << std::hex
-                  << +lig_kern_steps[i].remainder.replacement_char
-                  << std::dec << " }, ";
+      } else {
+        std::cout << ".u = { .char_code = 0x" << std::hex
+                  << +lig_kern_steps[i].remainder.replacement_char << std::dec << " }, ";
       }
       std::cout << ".stop = " << (lig_kern_steps[i].skip.s.stop ? "Yes" : "No") << ", "
-                << ".is_a_kern = " << (lig_kern_steps[i].op_code.d.is_a_kern ? "Yes" : "No") << " }," << std::endl;
+                << ".is_a_kern = " << (lig_kern_steps[i].op_code.d.is_a_kern ? "Yes" : "No")
+                << " }," << std::endl;
     }
     std::cout << "};" << std::endl;
 
-    std::cout << std::endl
-              << "static constexpr FIX16 kerns[] = {";
-    for (int i = 0; i < sizes.nk; i++)
-    {
+    std::cout << std::endl << "static constexpr FIX16 kerns[] = {";
+    for (int i = 0; i < sizes.nk; i++) {
       if ((i % 10) == 0)
-        std::cout << std::endl
-                  << "  /* " << i << " */  ";
-      std::cout << to_fix16(to_double(kerns[i], 20) * factor, 6)
-                << ", ";
+        std::cout << std::endl << "  /* " << i << " */  ";
+      std::cout << to_fix16(to_double(kerns[i], 20) * factor, 6) << ", ";
     };
-    std::cout << std::endl
-              << "};" << std::endl;
+    std::cout << std::endl << "};" << std::endl;
 
-    std::cout << std::endl
-              << "static constexpr int16_t lig_kern_indexes[] = {";
-    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++)
-    {
+    std::cout << std::endl << "static constexpr int16_t lig_kern_indexes[] = {";
+    for (int i = 0; i < (sizes.ec - sizes.bc + 1); i++) {
       if ((i % 20) == 0)
-        std::cout << std::endl
-                  << "  /* " << i << " */  ";
+        std::cout << std::endl << "  /* " << i << " */  ";
       std::cout << ((font_info_entries[i].tag_field == 1) ? +font_info_entries[i].remainder : -1)
                 << ", ";
     }
-    std::cout << std::endl
-              << "};" << std::endl;
+    std::cout << std::endl << "};" << std::endl;
   }
 };
