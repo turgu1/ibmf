@@ -1262,7 +1262,7 @@ class IBMFFont
     {
       uint32_t glyph_code = no_trans ? (0xFF00 + char_code) : translate(char_code);
 
-      uint8_t           accent_idx  = ((glyph_code & 0x0000FF00) >> 8) -  - current_face->header->first_code;
+      uint8_t           accent_idx  = ((glyph_code & 0x0000FF00) >> 8) - current_face->header->first_code;
       const GlyphInfo * accent_info = (accent_idx != 0xFF) ? current_face->glyphs[accent_idx] : nullptr;
 
       uint8_t glyph_code_idx = (glyph_code & 0xFF) - current_face->header->first_code;
