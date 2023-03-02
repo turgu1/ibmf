@@ -84,6 +84,7 @@ struct FaceHeader {
   uint16_t first_code;
   uint16_t last_code;
   uint8_t  kern_count;
+  uint8_t  max_hight;
 };
 typedef FaceHeader *FaceHeaderPtr;
 

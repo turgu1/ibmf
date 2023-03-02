@@ -65,6 +65,8 @@ public:
     }
   }
 
+  IBMFFontLow() : initialized(false) {}
+
   ~IBMFFontLow() {}
 
   inline uint8_t        get_char_set() { return preamble->bits.char_set; }
@@ -73,5 +75,3 @@ public:
     return (idx < preamble->face_count) ? &faces[idx] : nullptr;
   }
 };
-
-#undef TST

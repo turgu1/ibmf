@@ -37,6 +37,7 @@ class IBMFGener {
         uint16_t   dpi;
         TFM::FIX16 x_height;
         TFM::FIX16 em_size;
+        TFM::FIX16 hight;
         TFM::FIX16 slant_correction;
         uint8_t    descender_height;
         uint8_t    space_size;
