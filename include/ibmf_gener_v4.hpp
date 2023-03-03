@@ -37,7 +37,6 @@ class IBMFGener {
         uint16_t   dpi;
         TFM::FIX16 x_height;
         TFM::FIX16 em_size;
-        TFM::FIX16 hight;
         TFM::FIX16 slant_correction;
         uint8_t    descender_height;
         uint8_t    space_size;
@@ -46,6 +45,7 @@ class IBMFGener {
         uint16_t   first_code;
         uint16_t   last_code;
         uint8_t    kern_count;
+        uint8_t    max_height;
       };
 
       struct GlyphMetric {
@@ -456,7 +456,12 @@ next:
 
     bool
     write_everything() {
-
+      uint8_t max_height;
+      for (auto g : glyphs) {
+        if (max_height < g->glyph.vertical_offset) max_height = g->glyph.vertical_offset;
+      }
+      header.max_height = max_height;
+      
       // Header
       header.lig_kern_step_count = lig_kerns.size();
       fwrite(&header, sizeof(Header), 1, file);
@@ -498,9 +503,10 @@ next:
                 << ", first char code: "  << +header.first_code
                 << ", last char code: "   << +header.last_code
                 << ", line height: "      << +header.line_height
+                << ", max height: "       << +header.max_height      
                 << ", x height: "         << +((float) header.x_height   / 64.0)        
                 << ", em size: "          << +((float) header.em_size    / 64.0)        
-                << ", space size: "       << +((float) header.space_size / 64.0)        
+                << ", space size: "       << +((float) header.space_size / 64.0)  
                 << ", glyph count: "      << +header.glyph_count        
                 << ", lig kern count: "   << +header.lig_kern_step_count 
                 << ", kern_count: "       << +header.kern_count         

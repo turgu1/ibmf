@@ -75,7 +75,7 @@ for device in ${DEVICES[@]}; do
     # rm *pk
     # rm *tfm
     printf "// ----- IBMF Binary Font ${ibmf_name}_${dev_dpi} ----- ${OUT_SIZES[@]} pts -----\n" > ${ibmf_name}_${dev_dpi}.h
-    printf "\n//\n" >> ${ibmf_name}_${dev_dpi}.h
+    printf "\n//\n//  Date: %s\n//\n" "`date`" >> ${ibmf_name}_${dev_dpi}.h
     printf "// Automatically generated on linux using the following commands in a shell script:\n" >> ${ibmf_name}_${dev_dpi}.h
     printf "//\n" >> ${ibmf_name}_${dev_dpi}.h
     printf "//  $ printf \"#pragma once\\\\n\" > ${ibmf_name}_${dev_dpi}.h\n" >> ${ibmf_name}_${dev_dpi}.h

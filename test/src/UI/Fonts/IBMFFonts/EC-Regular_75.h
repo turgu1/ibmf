@@ -1,15 +1,15 @@
-// ----- IBMF Binary Font ECSans-Regular_75 ----- 12
+// ----- IBMF Binary Font EC-Regular_75 ----- 12
 //
 //  Date: Thu 02 Mar 2023 12:23:31 PM EST
 //
 // Automatically generated on linux using the following commands in a shell script:
 //
-//  $ printf "#pragma once\n" > ECSans-Regular_75.h
-//  $ xxd -i -C ECSans-Regular_75.ibmf  | sed -e 's/ = / PROGMEM = /' -e 's/unsigned char/const uint8_t/' -e 's/unsigned/const unsigned/' >> ECSans-Regular_75.h
+//  $ printf "#pragma once\n" > EC-Regular_75.h
+//  $ xxd -i -C EC-Regular_75.ibmf  | sed -e 's/ = / PROGMEM = /' -e 's/unsigned char/const uint8_t/' -e 's/unsigned/const unsigned/' >> EC-Regular_75.h
 
 #pragma once
 
-const uint8_t ECSANS_REGULAR_75_IBMF[] PROGMEM = {
+const uint8_t EC_REGULAR_75_IBMF[] = {
   0x49, 0x42, 0x4d, 0x46, 0x03, 0x04, 0x16, 0x00, 0x00, 0x00, 0xcf, 0x0f,
   0x00, 0x00, 0xa2, 0x20, 0x00, 0x00, 0x0c, 0x0e, 0x11, 0x00, 0x0c, 0x0c,
   0x4b, 0x00, 0x57, 0x01, 0x0c, 0x03, 0x00, 0x00, 0x03, 0x04, 0xae, 0x00,
@@ -1097,4 +1097,4 @@ const uint8_t ECSANS_REGULAR_75_IBMF[] PROGMEM = {
   0x00, 0x59, 0x00, 0x3b, 0x00, 0xa7, 0xff, 0xc5, 0xff, 0x89, 0xff, 0xe3,
   0xff, 0x1d, 0x00
 };
-const unsigned int ECSANS_REGULAR_75_IBMF_LEN PROGMEM = 13023;
+const unsigned int EC_REGULAR_75_IBMF_LEN = 13023;
