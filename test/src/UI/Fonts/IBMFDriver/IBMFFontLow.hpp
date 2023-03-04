@@ -24,7 +24,7 @@ private:
 
     bool initialized;
     PreamblePtr preamble;
-    IBMFFaceLow *faces;
+    IBMFFaceLow faces[MAX_FACE_COUNT];
 
 public:
     IBMFFontLow(MemoryPtr fontData, uint32_t length) {
@@ -38,16 +38,11 @@ public:
     IBMFFontLow() : initialized(false) {}
     ~IBMFFontLow() {}
 
-    inline uint8_t getCharSet() const { return preamble->bits.char_set; }
+    inline uint8_t getCharSet() const { return (isInitialized()) ? preamble->bits.charSet : 0; }
     inline bool isInitialized() const { return initialized; }
 
-    inline IBMFFaceLowPtr getFace(int idx) const {
-        if (isInitialized() && (idx < preamble->face_count)) {
-            return &faces[idx];
-        }
-        else {
-            return nullptr;
-        }
+    inline const IBMFFaceLowPtr getFace(int idx) {
+        return (isInitialized() && (idx < preamble->faceCount)) ? &faces[idx] : nullptr;
     }
 
     bool load(const MemoryPtr fontData, uint32_t length) {
@@ -69,18 +64,20 @@ public:
             return false;
         }
 
-        uint32_t *bin_face_offsets = (uint32_t *)data;
+        if (preamble->faceCount >= 10) {
+            LOGE("Too many faces in the font. Limit is set to %d in IBMFDefs.h", MAX_FACE_COUNT);
+            return false;
+        }
+        uint32_t *binFaceOffsets = (uint32_t *)data;
 
-        uint32_t bin_face_lengths[10];
-        for (int i = 0; i < preamble->face_count; i++) {
-            bin_face_lengths[i] =
-                ((i < (preamble->face_count - 1)) ? bin_face_offsets[i + 1] : length) -
-                bin_face_offsets[i];
+        uint32_t binFaceLengths[MAX_FACE_COUNT];
+        for (int i = 0; i < preamble->faceCount; i++) {
+            binFaceLengths[i] = ((i < (preamble->faceCount - 1)) ? binFaceOffsets[i + 1] : length) -
+                                binFaceOffsets[i];
         }
 
-        faces = new IBMFFaceLow[preamble->face_count];
-        for (int i = 0; i < preamble->face_count; i++) {
-            if (!faces[i].load(fontData + bin_face_offsets[i], bin_face_lengths[i])) {
+        for (int i = 0; i < preamble->faceCount; i++) {
+            if (!faces[i].load(fontData + binFaceOffsets[i], binFaceLengths[i], getCharSet())) {
                 LOGE("IBMFFont: Unable to load face %d", i);
                 return false;
             }

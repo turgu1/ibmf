@@ -2,7 +2,8 @@
 
 #include "UI/Fonts/Fonts.h"
 #include "UI/Fonts/IBMFDriver/IBMFDefs.hpp"
-Font * font = (Font *)&FONT_EC_REGULAR_75BPI17PT;
+
+Font * font = (Font *)&FONT_EC_REGULAR_75BPI14PT;
 
 char * formatStr(const std::string &format, ...)
 {
@@ -15,12 +16,19 @@ char * formatStr(const std::string &format, ...)
 }
 
 
-int main() {
-    std::cout << "allo!" << std::endl;
-
+int main(int argc, char **argv) {
+    IBMFFont * fnt = static_cast<IBMFFont *>(font);
+    const IBMFFaceLow * face = fnt->getFace();
     Bitmap canvas;
-    canvas.dim = Dim(256, 256);
-    canvas.pixels = new uint8_t[((canvas.dim.width + 7) >> 3) * canvas.dim.height];
-
-    static_cast<IBMFFont *>(font)->drawSingleLineOfText(canvas, Pos(010,15), "ABCDEFGH");
+    canvas.dim = Dim(80, 30);
+    if (default_resolution == PixelResolution::ONE_BIT) {
+        canvas.pixels = new uint8_t[((canvas.dim.width + 7) >> 3) * canvas.dim.height];
+        memset(canvas.pixels, 0x00, ((canvas.dim.width + 7) >> 3) * canvas.dim.height);
+    }
+    else {
+        canvas.pixels = new uint8_t[canvas.dim.width * canvas.dim.height];
+        memset(canvas.pixels, WHITE_EIGHT_BITS, (canvas.dim.width * canvas.dim.height));
+    }
+    fnt->drawSingleLineOfText(canvas, Pos(010,15), argv[1]);
+    face->showBitmap(canvas);
 }

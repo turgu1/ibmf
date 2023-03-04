@@ -8,6 +8,8 @@
 
 class IBMFFont : public Font {
 private:
+    static constexpr char const *TAG = "IBMFFont";
+
     IBMFFontLow *font;
     IBMFFaceLow *face;
 
@@ -24,17 +26,27 @@ public:
         }
         if (font->isInitialized()) {
             if ((face = font->getFace(index)) == nullptr) {
-               LOGE("Internal error!!");
+                LOGE("Internal error!!");
             }
         }
     }
 
-    inline bool isInitialized() const { return (face != nullptr) && face->is_initialized(); }
+    inline bool isInitialized() const { return (face != nullptr) && face->isInitialized(); }
+
+    inline const IBMFFaceLow * getFace() { return face; }
+
+    inline void setResolution(PixelResolution res) {
+        if (face != nullptr) face->setResolution(res);
+    }
+
+    inline PixelResolution getResolution() const {
+        return (face != nullptr) ? face->getResolution() : default_resolution;
+    }
 
     inline int yAdvance() const {
         // max-hight is the maximum hight in pixels of all the glyph from the baseline
         // descender-height is the negative number of pixels below the baseline
-        return isInitialized() ? ((int)face->get_max_hight()) - face->get_descender_height() : 0;
+        return isInitialized() ? ((int)face->getMaxHight()) - face->getDescenderHeight() : 0;
     }
 
     void drawSingleLineOfText(IBMFDefs::Bitmap &canvas, IBMFDefs::Pos pos,
@@ -44,15 +56,23 @@ public:
             Glyph glyph;
             glyph.bitmap = canvas;
             for (auto chr : line) {
-                LOGD("IBMFFont: get_glyph of char %d(%c) at pos(%d, %d) in canvas", chr, chr, pos.x,
-                     pos.y);
-                if (face->get_glyph(chr, glyph, true, false, atPos)) {
+                // LOGD("IBMFFont: getGlyph of char %d(%c) at pos(%d, %d) in canvas", chr, chr,
+                // pos.x,
+                //      pos.y);
+                if (face->getGlyph(chr, glyph, true, false, atPos)) {
                     atPos.x += glyph.metrics.advance;
-                    face->show_bitmap(canvas);
+                    // face->showBitmap(canvas);
+
+                    // Glyph glyph2;
+                    // face->getGlyph(chr, glyph2, true);
+                    // face->showGlyph2(glyph2, chr);
                 } else {
-                    LOGW("Unable to retrive glyph for char %d(%c)", chr, chr);
+                    LOGW("Unable to retrieve glyph for char %d(%c)", chr, chr);
                 }
             }
+            // LOGD("Showing Canvas....%p [%d, %d]", canvas.pixels, canvas.dim.width,
+            //      canvas.dim.height);
+            // face->showBitmap(canvas);
         }
     }
 
@@ -75,14 +95,15 @@ public:
         if (isInitialized()) {
             for (auto chr : buffer) {
                 IBMFDefs::Glyph glyph;
-                if (face->get_glyph(chr, glyph, false)) {
+                if (face->getGlyph(chr, glyph, false)) {
                     LOGD("advance value: %d, yoff value: %d", glyph.metrics.advance,
                          glyph.metrics.yoff);
                     dim.width += glyph.metrics.advance;
-                    dim.height =
-                        (dim.height > glyph.metrics.yoff) ? glyph.metrics.yoff : dim.height; // yoff is negative...
+                    dim.height = (dim.height > glyph.metrics.yoff)
+                                     ? glyph.metrics.yoff
+                                     : dim.height; // yoff is negative...
                 } else {
-                    LOGW("Unable to retrive glyph for char %d(%c)", chr, chr);
+                    LOGW("Unable to retrieve glyph for char %d(%c)", chr, chr);
                 }
             }
         }
@@ -96,11 +117,11 @@ public:
         if (isInitialized()) {
             for (auto chr : buffer) {
                 IBMFDefs::Glyph glyph;
-                if (face->get_glyph(chr, glyph, false)) {
-                    LOGD("advance value: %d", glyph.metrics.advance);
+                if (face->getGlyph(chr, glyph, false)) {
+                    // LOGD("advance value: %d", glyph.metrics.advance);
                     width += glyph.metrics.advance;
                 } else {
-                    LOGW("Unable to retrive glyph for char %d(%c)", chr, chr);
+                    LOGW("Unable to retrieve glyph for char %d(%c)", chr, chr);
                 }
             }
         }
@@ -113,11 +134,12 @@ public:
         if (isInitialized()) {
             for (auto chr : buffer) {
                 IBMFDefs::Glyph glyph;
-                if (face->get_glyph(chr, glyph, false)) {
-                    LOGD("yoff value: %d", glyph.metrics.yoff);
-                    if (height > glyph.metrics.yoff) height = glyph.metrics.yoff; // yoff is negative
+                if (face->getGlyph(chr, glyph, false)) {
+                    // LOGD("yoff value: %d", glyph.metrics.yoff);
+                    if (height > glyph.metrics.yoff)
+                        height = glyph.metrics.yoff; // yoff is negative
                 } else {
-                    LOGW("Unable to retrive glyph for char %d(%c)", chr, chr);
+                    LOGW("Unable to retrieve glyph for char %d(%c)", chr, chr);
                 }
             }
         }
