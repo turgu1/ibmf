@@ -401,12 +401,12 @@ public:
   inline uint8_t  get_first_glyph_code() { return sizes.bc; }
   inline uint8_t  get_last_glyph_code() { return sizes.ec; }
   inline FIX get_advance(uint8_t i) { return widths[font_info_entries[i - sizes.bc].width_index]; }
-  inline uint8_t get_lig_kern_pgm_index(uint8_t i) {
+  inline int get_lig_kern_pgm_index(int i) {
     return (font_info_entries[i - sizes.bc].tag_field == 1)
                ? font_info_entries[i - sizes.bc].remainder
                : 255;
   }
-  inline LigKernStep get_lig_kern_step(uint8_t i) { return lig_kern_steps[i]; }
+  inline LigKernStep get_lig_kern_step(int i) { return lig_kern_steps[i]; }
   inline FIX         get_kern(uint8_t i) { return kerns[i]; }
   inline FIX         get_slant_correction() { return params[0]; }
 

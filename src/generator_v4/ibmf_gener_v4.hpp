@@ -30,6 +30,8 @@ class IBMFGener {
     double   factor;
     uint8_t  char_set;
 
+    int last_idx_to_check;
+
     #pragma pack(push, 1)
       struct Header {
         uint8_t    point_size;
@@ -206,6 +208,10 @@ class IBMFGener {
         read_glyph(0xF8, ibmf_char_code++); // ø  0x95
         read_glyph(0xFE, ibmf_char_code++); // þ  0x96
         read_glyph(0xFF, ibmf_char_code++); // ß  0x97
+
+        // For the  lig/kern table, this is the last glyph index to consider
+        last_idx_to_check = 0x97;
+
         read2_glyph(0xA2, ibmf_char_code++); // ¢  0x98
         read2_glyph(0xA4, ibmf_char_code++); // ¤  0x99
         read2_glyph(0xA5, ibmf_char_code++); // ¥  0x9A
@@ -258,19 +264,27 @@ class IBMFGener {
       lig_kerns.clear();
       lig_kerns.reserve(500);
 
+      for (auto & g : glyphs) {
+        g->new_lig_kern_idx = -1;
+      }
+
       std::cout << "Reading and reshuffling Lig/Kern...." << std::endl << std::flush;
 
       int glyph_idx = 0;
+      // Look at targetted glyphs for pointers to the TFM lig/kern pgm array, retrieve
+      // the steps into the lig_kern array
       for (auto & g : glyphs) {
+        std::cout << "Now doing glyph " << glyph_idx << " (0x" << std::hex << glyph_idx << std::dec << ")" << std::endl;
         int tfm_idx;
-        if ((tfm_idx = g->glyph.lig_kern_pgm_index) < 255) {
+        if ((tfm_idx = g->glyph.lig_kern_pgm_index) < 255) { // 255 means no lig/kern pgm
           std::cout << tfm_idx << " a..." << std::endl;
+          // save the old pointer for future use below
           g->old_lig_kern_idx = g->glyph.lig_kern_pgm_index;
 
           int new_idx;
 
           // Check if the same pgm has been used in the preceeding glyphs. If so,
-          // point to that pgm again
+          // point to that pgm again instead of poluting the new steps list
           if ((new_idx = get_new_lig_kern_idx(glyph_idx, g->old_lig_kern_idx)) != -1) {
             g->new_lig_kern_idx = new_idx;
           }
@@ -278,15 +292,19 @@ class IBMFGener {
             // Was not used before, so we create one
             lks = new TFM::LigKernStep;
             *lks = tfm.get_lig_kern_step(tfm_idx);
-            if (lks->skip.whole > 128) {
-              tfm_idx = ((lks->op_code.d.displ_high << 8) + lks->remainder.displ_low);
+            if (lks->skip.whole > 128) { // if > 128, this is a redirect
+              tfm_idx = (((int)lks->op_code.d.displ_high << 8) + lks->remainder.displ_low);
               *lks = tfm.get_lig_kern_step(tfm_idx);
               std::cout << tfm_idx << " b..." << std::endl;
             }
 
-            bool first = true;
+            bool first_to_be_saved = true;
             do {
 next:
+              if (tfm_idx == 405) {
+                std::cout << "We are at 405..." << std::endl;
+              }
+
               std::cout << "loop start" << std::endl;
               int next_char_idx;
               int replacement_char_idx;
@@ -303,23 +321,23 @@ next:
                 lks->next_char = next_char_idx;
                 if (!lks->op_code.d.is_a_kern) lks->remainder.replacement_char = replacement_char_idx;
 
-                if (first) {
-                  first = false;
+                if (first_to_be_saved) {
+                  first_to_be_saved = false;
                   g->new_lig_kern_idx = lig_kerns.size();
                 }
 
+                std::cout << "Old tfm idx " << tfm_idx << " Saved at new idx " << lig_kerns.size() << "..." << std::endl;
                 lig_kerns.push_back(lks);
-                std::cout << tfm_idx << " Saved at idx " << (lig_kerns.size() - 1) << "..." << std::endl;
                 kept = true;
               }
 
               if (!lks->skip.s.stop) {
-                if (kept) lks = new TFM::LigKernStep;
+                if (kept) lks = new TFM::LigKernStep; // If kept, create a new step, else reuse the old one
                 *lks = tfm.get_lig_kern_step(++tfm_idx);
                 std::cout << tfm_idx << " c..." << " stop:" << (lks->skip.s.stop ? "YES" : "no") <<  std::endl;
                 goto next;
               }
-              else if (!kept && !first) {
+              else if (!kept && !first_to_be_saved) {
                 lig_kerns[lig_kerns.size() - 1]->skip.s.stop = true;
                 std::cout << "Last mark as stop step... " << (lig_kerns.size() - 1) << std::endl;
               }
@@ -327,15 +345,10 @@ next:
               if (tfm_idx >= tfm.get_lig_kern_step_count()) std::cout << "GOING BEYOND THE END OF THE ARRAY!!!" << tfm_idx << std::endl;
 
             } while (!lks->skip.s.stop);
-
-            if (first) {
-              g->new_lig_kern_idx = -1;
-            }
           }
         }
-        else {
-          g->new_lig_kern_idx = -1;
-        }
+
+        if (glyph_idx == last_idx_to_check) break;
         glyph_idx += 1;
       }
 
