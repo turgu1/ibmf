@@ -1,3 +1,4 @@
+#include <cinttypes>
 
 #include "IBMFDriver/IBMFFont.hpp"
 #include "IBMFDriver/IBMFFontLow.hpp"

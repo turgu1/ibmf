@@ -8,7 +8,7 @@
 #include "UI/Fonts/Fonts.h"
 #include "UI/Fonts/IBMFDriver/IBMFDefs.hpp"
 
-Font * font = (Font *)&FONT_EC_REGULAR_75BPI17PT;
+Font * font = (Font *)&FONT_EC_REGULAR_75BPI14PT;
 
 int main(int argc, char **argv) {
     IBMFFont * fnt = static_cast<IBMFFont *>(font);
