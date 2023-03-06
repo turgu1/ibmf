@@ -11,11 +11,11 @@
 #include <cstdarg>
 #include <cstdio>
 
-extern char * formatStr(const std::string &format, ...);
+extern char *formatStr(const std::string &format, ...);
 
 #define log_i(format, ...) std::cout << "INFO: " << formatStr(format, ##__VA_ARGS__) << std::endl;
 #define log_w(format, ...)                                                                         \
-    std::cout << "WARNING: " << formatStr(format, ##__VA_ARGS__) << std::endl;
+  std::cout << "WARNING: " << formatStr(format, ##__VA_ARGS__) << std::endl;
 #define log_e(format, ...) std::cout << "ERROR: " << formatStr(format, ##__VA_ARGS__) << std::endl;
 #define log_d(format, ...) std::cout << "DEBUG: " << formatStr(format, ##__VA_ARGS__) << std::endl;
 #endif
@@ -27,7 +27,7 @@ namespace IBMFDefs {
 #define LOGE(format, ...) log_e(format, ##__VA_ARGS__)
 #define LOGD(format, ...) log_d(format, ##__VA_ARGS__)
 
-#define DEBUG_IBMF 1
+#define DEBUG_IBMF        1
 
 #ifdef DEBUG_IBMF
 const constexpr int DEBUG = DEBUG_IBMF;
@@ -43,8 +43,8 @@ const constexpr int DEBUG = 0;
 // The followings have to be adjusted depending on the screen
 // software/hardware/firmware' pixels polarity/color/shading/gray-scale
 
-const constexpr uint8_t BLACK_ONE_BIT = 0;
-const constexpr uint8_t WHITE_ONE_BIT = 1;
+const constexpr uint8_t BLACK_ONE_BIT    = 0;
+const constexpr uint8_t WHITE_ONE_BIT    = 1;
 const constexpr uint8_t BLACK_EIGHT_BITS = 0;
 const constexpr uint8_t WHITE_EIGHT_BITS = 0xFF;
 
@@ -55,59 +55,62 @@ const constexpr uint8_t WHITE_EIGHT_BITS = 0xFF;
 
 //----
 
-const constexpr uint8_t IBMF_VERSION = 4;
-const constexpr uint8_t MAX_GLYPH_COUNT = 175; // Index Value 0xFE and 0xFF are reserved
-const constexpr uint8_t MAX_FACE_COUNT = 10;
+const constexpr uint8_t  IBMF_VERSION        = 4;
+const constexpr uint8_t  MAX_GLYPH_COUNT     = 175; // Index Value 0xFE and 0xFF are reserved
+const constexpr uint8_t  MAX_FACE_COUNT      = 10;
 
-const constexpr uint8_t LATIN_CHARACTER_SET = 0;
-const constexpr uint8_t UTF16_TABLE_SET = 1;
+const constexpr uint8_t  LATIN_CHARACTER_SET = 0;
+const constexpr uint8_t  UTF16_TABLE_SET     = 1;
 
-const constexpr uint16_t NO_GLYPH_CODE = 0x7FF;
-const constexpr uint16_t ACCENT_MASK = 0xF000;
-const constexpr uint8_t ACCENT_SHIFTR = 12; // Shift Right
-const constexpr uint16_t CODED_GRAVE_ACCENT = 0x0F;
-const constexpr uint16_t GLYPH_CODE_MASK = 0x7FF;
-const constexpr uint16_t SPACE_CODE = 0x7FE;
+const constexpr uint16_t NO_GLYPH_CODE       = 0x7FF;
+const constexpr uint16_t ACCENT_MASK         = 0xF000;
+const constexpr uint8_t  ACCENT_SHIFTR       = 12; // Shift Right
+const constexpr uint16_t CODED_GRAVE_ACCENT  = 0x0F;
+const constexpr uint16_t GRAVE_ACCENT        = 0x00;
+const constexpr uint16_t CODED_APOSTROPHE    = 0x0E;
+const constexpr uint16_t APOSTROPHE          = 0x27;
+const constexpr uint16_t GLYPH_CODE_MASK     = 0x7FF;
+const constexpr uint16_t SPACE_CODE          = 0x7FE;
 
 enum class PixelResolution : uint8_t { ONE_BIT, EIGHT_BITS };
 
 constexpr PixelResolution default_resolution = PixelResolution::ONE_BIT;
 
 struct Dim {
-    int16_t width;
-    int16_t height;
-    Dim(uint16_t w, uint16_t h) : width(w), height(h) {}
-    Dim() {}
+  int16_t width;
+  int16_t height;
+  Dim(uint16_t w, uint16_t h) : width(w), height(h) {}
+  Dim() {}
 };
 
 struct Pos {
-    int16_t x;
-    int16_t y;
-    Pos(int16_t xpos, int16_t ypos) : x(xpos), y(ypos) {}
-    Pos() {}
+  int16_t x;
+  int16_t y;
+  Pos(int16_t xpos, int16_t ypos) : x(xpos), y(ypos) {}
+  Pos() {}
 };
 
 typedef uint8_t *MemoryPtr;
 
 struct RLEBitmap {
-    MemoryPtr pixels;
-    Dim dim;
-    uint16_t length;
-    void clear() {
-        pixels = nullptr;
-        dim = Dim(0, 0);
-        length = 0;
-    }
+  MemoryPtr pixels;
+  Dim       dim;
+  uint16_t  length;
+  void      clear() {
+         pixels = nullptr;
+         dim    = Dim(0, 0);
+         length = 0;
+  }
 };
 typedef RLEBitmap *RLEBitmapPtr;
 
 struct Bitmap {
-    MemoryPtr pixels;
-    Dim dim;
-    void clear() {
-        pixels = nullptr;
-        dim = Dim(0, 0);
-    }
+  MemoryPtr pixels;
+  Dim       dim;
+  void      clear() {
+         pixels = nullptr;
+         dim    = Dim(0, 0);
+  }
 };
 typedef Bitmap *BitmapPtr;
 
@@ -116,30 +119,30 @@ typedef Bitmap *BitmapPtr;
 typedef int16_t FIX16;
 
 struct Preamble {
-    char marker[4];
-    uint8_t faceCount;
-    struct {
-        uint8_t version : 5;
-        uint8_t charSet : 3;
-    } bits;
+  char    marker[4];
+  uint8_t faceCount;
+  struct {
+    uint8_t version : 5;
+    uint8_t charSet : 3;
+  } bits;
 };
 typedef Preamble *PreamblePtr;
 
 struct FaceHeader {
-    uint8_t pointSize;
-    uint8_t lineHeight;
-    uint16_t dpi;
-    FIX16 xHeight;
-    FIX16 emHeight;
-    FIX16 slantCorrection;
-    uint8_t descenderHeight;
-    uint8_t spaceSize;
-    uint16_t glyphCount;
-    uint16_t ligKernStepCount;
-    uint16_t firstCode;
-    uint16_t lastCode;
-    uint8_t kernCount;
-    uint8_t maxHight;
+  uint8_t  pointSize;
+  uint8_t  lineHeight;
+  uint16_t dpi;
+  FIX16    xHeight;
+  FIX16    emHeight;
+  FIX16    slantCorrection;
+  uint8_t  descenderHeight;
+  uint8_t  spaceSize;
+  uint16_t glyphCount;
+  uint16_t ligKernStepCount;
+  uint16_t firstCode;
+  uint16_t lastCode;
+  uint8_t  kernCount;
+  uint8_t  maxHight;
 };
 typedef FaceHeader *FaceHeaderPtr;
 
@@ -195,81 +198,82 @@ typedef FaceHeader *FaceHeaderPtr;
 //
 
 union SkipByte {
-    uint8_t whole : 8;
-    struct {
-        uint8_t nextStepRelative : 7;
-        bool stop : 1;
-    } s;
+  uint8_t whole : 8;
+  struct {
+    uint8_t nextStepRelative : 7;
+    bool    stop             : 1;
+  } s;
 };
 
 union OpCodeByte {
-    struct {
-        bool cOp : 1;
-        bool bOp : 1;
-        uint8_t aOp : 5;
-        bool isAKern : 1;
-    } op;
-    struct {
-        uint8_t displHigh : 7;
-        bool isAKern : 1;
-    } d;
+  struct {
+    bool    cOp     : 1;
+    bool    bOp     : 1;
+    uint8_t aOp     : 5;
+    bool    isAKern : 1;
+  } op;
+  struct {
+    uint8_t displHigh : 7;
+    bool    isAKern   : 1;
+  } d;
 };
 
 union RemainderByte {
-    uint8_t replacementChar : 8;
-    uint8_t displLow : 8; // Ligature: replacement char code, kern: displacement
+  uint8_t replacementChar : 8;
+  uint8_t displLow        : 8; // Ligature: replacement char code, kern: displacement
 };
 
 struct LigKernStep {
-    SkipByte skip;
-    uint8_t nextChar;
-    OpCodeByte opCode;
-    RemainderByte remainder;
+  SkipByte      skip;
+  uint8_t       nextChar;
+  OpCodeByte    opCode;
+  RemainderByte remainder;
 };
 typedef LigKernStep *LigKernStepPtr;
 
 struct RLEMetrics {
-    uint8_t dynF : 4;
-    bool firstIsBlack : 1;
-    uint8_t filler : 3;
+  uint8_t dynF         : 4;
+  bool    firstIsBlack : 1;
+  uint8_t filler       : 3;
 };
 
 struct GlyphInfo {
-    uint8_t charCode;
-    uint8_t bitmapWidth;
-    uint8_t bitmapHeight;
-    int8_t horizontalOffset;
-    int8_t verticalOffset;
-    uint8_t ligKernPgmIndex; // = 255 if none
-    uint16_t packetLength;
-    FIX16 advance;
-    RLEMetrics rleMetrics;
+  uint8_t    charCode;
+  uint8_t    bitmapWidth;
+  uint8_t    bitmapHeight;
+  int8_t     horizontalOffset;
+  int8_t     verticalOffset;
+  uint8_t    ligKernPgmIndex; // = 255 if none
+  uint16_t   packetLength;
+  FIX16      advance;
+  RLEMetrics rleMetrics;
 };
 typedef GlyphInfo *GlyphInfoPtr;
 
 #pragma pack(pop)
 
 struct GlyphMetrics {
-    int16_t xoff, yoff;
-    int16_t advance;
-    int16_t lineHeight;
-    int16_t ligatureAndKernPgmIndex;
-    void clear() {
-        xoff = yoff = 0;
-        advance = lineHeight = 0;
-        ligatureAndKernPgmIndex = 255;
-    }
+  int16_t xoff, yoff;
+  int16_t advance;
+  int16_t lineHeight;
+  int16_t ligatureAndKernPgmIndex;
+  void    clear() {
+       xoff = yoff = 0;
+       advance = lineHeight    = 0;
+       ligatureAndKernPgmIndex = 255;
+  }
 };
 
 struct Glyph {
-    GlyphMetrics metrics;
-    Bitmap bitmap;
-    uint8_t pointSize;
-    void clear() {
-        metrics.clear();
-        bitmap.clear();
-        pointSize = 0;
-    }
+  GlyphMetrics metrics;
+  Bitmap       bitmap;
+  uint8_t      pointSize;
+  //---
+  void clear() {
+    metrics.clear();
+    bitmap.clear();
+    pointSize = 0;
+  }
 };
 
 // This table is used in support of the latin character set to identify which character code
@@ -459,7 +463,7 @@ const constexpr uint16_t latinTranslationSet[] = {
     /* 0x146 */ 0xB06E, // ņ
     /* 0x147 */ 0x704E, // Ň
     /* 0x148 */ 0x706E, // ň
-    /* 0x149 */ 0x706E, // ŉ
+    /* 0x149 */ 0xE06E, // ŉ
     /* 0x14A */ 0x0081, // Ŋ
     /* 0x14B */ 0x0088, // ŋ
     /* 0x14C */ 0x904F, // Ō

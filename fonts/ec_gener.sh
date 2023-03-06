@@ -72,8 +72,8 @@ for device in ${DEVICES[@]}; do
     done
 
     ../.pio/build/generator_v4/program "." ${ibmf_name} ${dev_dpi} ${char_set} ${font_name} ${comp_name} ${OUT_SIZES[@]}
-    # rm *pk
-    # rm *tfm
+    rm *pk
+    rm *tfm
     printf "// ----- IBMF Binary Font ${ibmf_name}_${dev_dpi} ----- ${OUT_SIZES[@]} pts -----\n" > ${ibmf_name}_${dev_dpi}.h
     printf "\n//\n//  Date: %s\n//\n" "`date`" >> ${ibmf_name}_${dev_dpi}.h
     printf "// Automatically generated on linux using the following commands in a shell script:\n" >> ${ibmf_name}_${dev_dpi}.h
