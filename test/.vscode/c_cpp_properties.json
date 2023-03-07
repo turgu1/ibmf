@@ -8,22 +8,22 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/home/turgu1/Dev/ibmf/test/include",
-                "/home/turgu1/Dev/ibmf/test/src",
+                "/data/Dev/ibmf/test/include",
+                "/data/Dev/ibmf/test/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/home/turgu1/Dev/ibmf/test/include",
-                    "/home/turgu1/Dev/ibmf/test/src",
+                    "/data/Dev/ibmf/test/include",
+                    "/data/Dev/ibmf/test/src",
                     ""
                 ]
             },
             "defines": [
                 "PLATFORMIO=60106",
                 "DEBUG_IBMF=1",
-                "TESTING=1",
+                "IBMF_TESTING=1",
                 "__PLATFORMIO_BUILD_DEBUG__",
                 ""
             ],

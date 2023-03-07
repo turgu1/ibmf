@@ -3,7 +3,7 @@
 # FONTS=(ecti:tcti:EC-Italic:0)
 FONTS=(
   ecrm:tcrm:EC-Regular:0
-  ecrm:tcrm:ECSans-Regular:0
+  ecss:tcss:ECSans-Regular:0
 )
 # FONTS=(
 #   ecrm:tcrm:EC-Regular:0

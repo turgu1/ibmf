@@ -1,6 +1,6 @@
 // ----- IBMF Binary Font ECSans-Regular_75 ----- 12
 //
-//  Date: Sun 05 Mar 2023 06:28:13 PM EST
+//  Date: Tue 07 Mar 2023 02:23:11 PM EST
 //
 // Automatically generated on linux using the following commands in a shell script:
 //

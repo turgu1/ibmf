@@ -1,6 +1,6 @@
 // ----- IBMF Binary Font EC-Regular_100 ----- 12
 //
-//  Date: Sun 05 Mar 2023 06:28:10 PM EST
+//  Date: Tue 07 Mar 2023 02:22:50 PM EST
 //
 // Automatically generated on linux using the following commands in a shell script:
 //

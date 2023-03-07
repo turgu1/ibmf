@@ -5,9 +5,8 @@
 
 //---  ESP_IDF
 //#include <esp_log.h>
-//#include "sindarin-debug.h"
 
-#if TESTING
+#if IBMF_TESTING
 #define PROGMEM
 #include <cstdarg>
 #include <cstdio>
@@ -20,6 +19,8 @@ extern char * formatStr(const std::string &format, ...);
     std::cout << "WARNING: " << formatStr(format, ##__VA_ARGS__) << std::endl;
 #define log_e(format, ...) std::cout << "ERROR: " << formatStr(format, ##__VA_ARGS__) << std::endl;
 #define log_d(format, ...) std::cout << "DEBUG: " << formatStr(format, ##__VA_ARGS__) << std::endl;
+#else
+#include "sindarin-debug.h"
 #endif
 
 // The following definitions are used by all parts of the driver.
@@ -66,7 +67,31 @@ extern char * formatStr(const std::string &format, ...);
 //             .
 //             .
 //
-
+// The new upcoming format (Version 5) is the following:
+//
+// 
+//  +--------------------+
+//  |                    |  Preamble
+//  |                    |
+//  +--------------------+
+//  |   Unicode Table    |  The table of all  unicode glyphs part of this font
+//  |                    |
+//  |                    |
+//  |                    |
+//  +--------------------+
+//  |     FaceHeaders    |  All face headers are combined in a single table
+//  |                    |
+//  |                    |
+//  |                    |
+//  +--------------------+
+//  |   Glyphs metrics   | All glyphs metrics of all fonts
+//  |                    |
+//  |                    |
+//  |                    |
+//  |                    |
+//  |                    |
+//  +--------------------+
+//
 namespace IBMFDefs {
 
 #define LOGI(format, ...) log_i(format, ##__VA_ARGS__)
@@ -112,9 +137,9 @@ const constexpr uint8_t MAX_FACE_COUNT = 10;
 
 const constexpr uint8_t NO_LIG_KERN_PGM = 0xFF;
 
-// Character Sets being supported (the UTF16_TABLE_SET is forecoming)
+// Character Sets being supported (the UTF32 is forecoming)
 
-enum CharSet : uint8_t { LATIN_CHARACTER_SET = 0, UTF16_TABLE_SET = 1 };
+enum FontFormat : uint8_t { LATIN = 0, UTF32 = 1, UNKNOWN = 7 };
 
 enum class PixelResolution : uint8_t { ONE_BIT, EIGHT_BITS };
 
@@ -168,6 +193,7 @@ typedef Bitmap *BitmapPtr;
 // FIX16 is a floating point value in fixed point notation, 6 bits of fraction
 
 typedef int16_t FIX16;
+typedef int16_t FIX14;
 typedef uint16_t GlyphCode;
 typedef uint8_t SmallGlyphCode;
 
@@ -176,7 +202,7 @@ struct Preamble {
     uint8_t faceCount;
     struct {
         uint8_t version : 5; // Must be IBMF_VERSION
-        CharSet charSet : 3;
+        FontFormat fontFormat : 3;
     } bits;
 };
 typedef Preamble *PreamblePtr;
@@ -248,22 +274,74 @@ typedef FaceHeader *FaceHeaderPtr;
 // characters before and after each consecutive string of characters from the same font.
 // These implicit characters do not appear in the output, but they can affect ligatures
 // and kerning.
+// -----
+//
+// Here is the original LigKern table entry format (4 bytes). Byte 1, 3 and 4 have
+// two different meanings as show below (a big-endian format...):
+//
+//           Byte 1                   Byte 2
+// +------------------------+------------------------+
+// |        whole           |                        |
+// +------------------------+       Next Char        +
+// |Stop| nextStepRelative  |                        |
+// +------------------------+------------------------+
+//
+//
+//           Byte 3                   Byte 4 
+// +------------------------+------------------------+
+// |Kern|       | a | b | c |    Replacement Char    |  <- isAKern (Kern in the diagram) is false
+// +------------------------+------------------------+
+// |isKern|Displacement High|    Displacement Low    |  <- isAKern is true
+// +------------------------+------------------------+
+//
+// The following fields are not used/replaced in this application:
+//
+//    - nextStepRelative
+//    - Ops a, b, and c
+//    - whole can be reduced to one GoTo bit
+//
+// ----
+//
+// Here is the optimized version considering larger characters table
+// and that some fields are not being used (BEWARE: a little-endian format):
+//
+//           Byte 2                   Byte 1
+// +------------------------+------------------------+
+// |Stop|               Next Char                    |
+// +------------------------+------------------------+
+//
+//
+//           Byte 4                   Byte 3 
+// +------------------------+------------------------+
+// |Kern|             Replacement Char               |  <- isAKern (Kern in the diagram) is false
+// +------------------------+------------------------+
+// |Kern|GoTo|      Displacement in FIX14            |  <- isAKern is true and GoTo is false => Kerning value
+// +------------------------+------------------------+
+// |Kern|GoTo|          Displacement                 |  <- isAkern and GoTo are true
+// +------------------------+------------------------+
+//
+// Up to 32765 different glyph codes can be managed through this format.
+// Kerning displacements reduced to 14 bits is not a big issue: kernings are
+// usually small numbers. FIX14 and FIX16 are using 6 bits for the fraction. Their
+// remains 8 bits for FIX14 and 10 bits for FIX16, that is more than enough... 
 //
 
+#define ORIGINAL_FORMAT 1
+#if ORIGINAL_FORMAT
 union SkipByte {
     uint8_t whole : 8;
     struct {
-        uint8_t nextStepRelative : 7;
+        uint8_t nextStepRelative : 7; // Not used
         bool stop : 1;
     } s;
 };
 
 union OpCodeByte {
     struct {
-        bool cOp : 1;
-        bool bOp : 1;
-        uint8_t aOp : 5;
-        bool isAKern : 1;
+        bool cOp : 1;       // Not used
+        bool bOp : 1;       // Not used
+        uint8_t aOp : 5;    // Not used
+        bool isAKern : 1;   // True if Kern, False if ligature
     } op;
     struct {
         uint8_t displHigh : 7;
@@ -282,6 +360,34 @@ struct LigKernStep {
     OpCodeByte opCode;
     RemainderByte remainder;
 };
+#else
+struct Nxt {
+    GlyphCode nextGlyphCode:15;
+    bool stop:1;
+};
+union ReplDisp {
+    struct {
+      GlyphCode replGlyphCode : 15;
+      bool isAKern : 1;
+    } repl;
+    struct {
+      FIX14 kerningValue: 14;
+      bool isAGoTo : 1;
+      bool isAKern : 1;
+    } kern;
+    struct {
+      uint16_t displacement : 14;
+      bool isAGoTo : 1;
+      bool isAKern : 1;
+    } goTo;
+};
+
+struct LigKernStep {
+    Nxt a;
+    ReplDisp b;
+};
+#endif
+
 typedef LigKernStep *LigKernStepPtr;
 
 struct RLEMetrics {
