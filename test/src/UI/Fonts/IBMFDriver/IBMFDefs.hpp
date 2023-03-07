@@ -110,6 +110,8 @@ const constexpr uint8_t IBMF_VERSION = 4;      // Font format version
 const constexpr uint8_t MAX_GLYPH_COUNT = 175; // Index Value 0xFE and 0xFF are reserved
 const constexpr uint8_t MAX_FACE_COUNT = 10;
 
+const constexpr uint8_t NO_LIG_KERN_PGM = 0xFF;
+
 // Character Sets being supported (the UTF16_TABLE_SET is forecoming)
 
 enum CharSet : uint8_t { LATIN_CHARACTER_SET = 0, UTF16_TABLE_SET = 1 };
@@ -166,6 +168,8 @@ typedef Bitmap *BitmapPtr;
 // FIX16 is a floating point value in fixed point notation, 6 bits of fraction
 
 typedef int16_t FIX16;
+typedef uint16_t GlyphCode;
+typedef uint8_t SmallGlyphCode;
 
 struct Preamble {
     char marker[4]; // Must be "IBMF"
@@ -188,8 +192,8 @@ struct FaceHeader {
     uint8_t spaceSize;
     uint16_t glyphCount;
     uint16_t ligKernStepCount;
-    uint16_t firstCode;
-    uint16_t lastCode;
+    GlyphCode firstCode;
+    GlyphCode lastCode;
     uint8_t kernCount;
     uint8_t maxHight;
 };
@@ -268,13 +272,13 @@ union OpCodeByte {
 };
 
 union RemainderByte {
-    uint8_t replacementChar : 8;
+    SmallGlyphCode replacementChar : 8;
     uint8_t displLow : 8; // Ligature: replacement char code, kern: displacement
 };
 
 struct LigKernStep {
     SkipByte skip;
-    uint8_t nextChar;
+    SmallGlyphCode nextChar;
     OpCodeByte opCode;
     RemainderByte remainder;
 };
@@ -287,7 +291,7 @@ struct RLEMetrics {
 };
 
 struct GlyphInfo {
-    uint8_t charCode;
+    SmallGlyphCode charCode;
     uint8_t bitmapWidth;
     uint8_t bitmapHeight;
     int8_t horizontalOffset;
@@ -303,7 +307,7 @@ typedef GlyphInfo *GlyphInfoPtr;
 
 struct GlyphMetrics {
     int16_t xoff, yoff;
-    int16_t advance;
+    FIX16 advance;
     int16_t lineHeight;
     int16_t ligatureAndKernPgmIndex;
     void clear() {
@@ -326,17 +330,17 @@ struct Glyph {
 
 // Latin Character Set constants
 
-const constexpr uint16_t NO_GLYPH_CODE = 0x7FF;
+const constexpr GlyphCode NO_GLYPH_CODE = 0x7FF;
 const constexpr uint16_t ACCENT_MASK = 0xF000;
 const constexpr uint8_t ACCENT_SHIFTR = 12; // Shift Right
 const constexpr uint16_t GLYPH_CODE_MASK = 0x7FF;
 
 const constexpr uint16_t CODED_GRAVE_ACCENT = 0x0F; // Special coding in the table below
 const constexpr uint16_t CODED_APOSTROPHE = 0x0E;
-const constexpr uint16_t GRAVE_ACCENT = 0x00;
-const constexpr uint16_t APOSTROPHE = 0x27;
+const constexpr GlyphCode GRAVE_ACCENT = 0x00;
+const constexpr GlyphCode APOSTROPHE = 0x27;
 
-const constexpr uint16_t SPACE_CODE = 0x7FE;
+const constexpr GlyphCode SPACE_CODE = 0x7FE;
 
 // This table is used in support of the latin character set to identify which character code
 // correspond to which glyph code. A glyph code is an index into the IBMF list of glyphs.
@@ -351,7 +355,7 @@ const constexpr uint16_t SPACE_CODE = 0x7FE;
 //
 // The index in the table corresponds to UTF16 U+00A1 to U+017F character codes.
 
-const constexpr uint16_t latinTranslationSet[] = {
+const constexpr GlyphCode latinTranslationSet[] = {
     /* 0x0A1 */ 0x0020, // ¡
     /* 0x0A2 */ 0x0098, // ¢
     /* 0x0A3 */ 0x008B, // £

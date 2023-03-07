@@ -97,7 +97,7 @@ public:
     inline uint16_t getEmHeight() const { return faceHeader->emHeight >> 6; }
     inline uint8_t getMaxHight() const { return faceHeader->maxHight; }
     inline int16_t getDescenderHeight() const { return -(int16_t)faceHeader->descenderHeight; }
-    inline const LigKernStep &getLigKern(uint8_t idx) const { return (*ligKernSteps)[idx]; }
+    inline const LigKernStepPtr getLigKern(uint8_t idx) const { return &(*ligKernSteps)[idx]; }
     inline FIX16 getKern(uint8_t i) const { return (*kerns)[i]; }
     inline const GlyphInfo &getGlyphInfo(uint8_t glyphCode) const { return *glyphs[glyphCode]; }
     inline void setResolution(PixelResolution res) { resolution = res; }
