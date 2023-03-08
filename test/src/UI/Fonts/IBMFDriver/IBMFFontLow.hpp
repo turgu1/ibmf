@@ -77,7 +77,7 @@ public:
         }
 
         for (int i = 0; i < preamble->faceCount; i++) {
-            if (!faces[i].load(fontData + binFaceOffsets[i], binFaceLengths[i], getFontFormat())) {
+            if (!faces[i].load(fontData + binFaceOffsets[i], binFaceLengths[i], preamble->bits.fontFormat)) {
                 LOGE("Unable to load face %d", i);
                 return false;
             }

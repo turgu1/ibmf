@@ -8,13 +8,13 @@
 #include "UI/Fonts/Fonts.h"
 #include "UI/Fonts/IBMFDriver/IBMFDefs.hpp"
 
-Font * font = (Font *)&FONT_EC_REGULAR_75BPI17PT;
+Font * font = (Font *)&FONT_ECSANS_REGULAR_100BPI14PT;
 
 int main(int argc, char **argv) {
     IBMFFont * fnt = static_cast<IBMFFont *>(font);
     const IBMFFaceLow * face = fnt->getFace();
     Bitmap canvas;
-    canvas.dim = Dim(80, 30);
+    canvas.dim = Dim(90, 40);
     if (default_resolution == PixelResolution::ONE_BIT) {
         canvas.pixels = new uint8_t[((canvas.dim.width + 7) >> 3) * canvas.dim.height];
         memset(canvas.pixels, WHITE_EIGHT_BITS, ((canvas.dim.width + 7) >> 3) * canvas.dim.height);
@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
         canvas.pixels = new uint8_t[canvas.dim.width * canvas.dim.height];
         memset(canvas.pixels, WHITE_EIGHT_BITS, (canvas.dim.width * canvas.dim.height));
     }
-    fnt->drawSingleLineOfText(canvas, Pos(010,15), argv[1]);
+    fnt->drawSingleLineOfText(canvas, Pos(010,25), argv[1]);
     face->showBitmap(canvas);
 }
 

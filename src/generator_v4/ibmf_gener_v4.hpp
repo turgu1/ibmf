@@ -96,7 +96,7 @@ class IBMFGener {
     Header header;
 
     void read_header(uint16_t dpi, uint16_t glyph_count) {
-      std::cout << "Reading Header...." << std::endl << std::flush;
+      // std::cout << "Reading Header...." << std::endl << std::flush;
 
       header.dpi         = dpi;
       header.point_size  = trunc(tfm.to_double(tfm.get_design_size(), 20));
@@ -173,7 +173,7 @@ class IBMFGener {
     }
 
     void read_glyphs() {
-      std::cout << "Reading Glyphs...." << std::endl << std::flush;
+      // std::cout << "Reading Glyphs...." << std::endl << std::flush;
 
       if (char_set == 0) {
         uint8_t ibmf_char_code = 0;
@@ -268,16 +268,16 @@ class IBMFGener {
         g->new_lig_kern_idx = -1;
       }
 
-      std::cout << "Reading and reshuffling Lig/Kern...." << std::endl << std::flush;
+      // std::cout << "Reading and reshuffling Lig/Kern...." << std::endl << std::flush;
 
       int glyph_idx = 0;
       // Look at targetted glyphs for pointers to the TFM lig/kern pgm array, retrieve
       // the steps into the lig_kern array
       for (auto & g : glyphs) {
-        std::cout << "Now doing glyph " << glyph_idx << " (0x" << std::hex << glyph_idx << std::dec << ")" << std::endl;
+        // std::cout << "Now doing glyph " << glyph_idx << " (0x" << std::hex << glyph_idx << std::dec << ")" << std::endl;
         int tfm_idx;
         if ((tfm_idx = g->glyph.lig_kern_pgm_index) < 255) { // 255 means no lig/kern pgm
-          std::cout << tfm_idx << " a..." << std::endl;
+          //std::cout << tfm_idx << " a..." << std::endl;
           // save the old pointer for future use below
           g->old_lig_kern_idx = g->glyph.lig_kern_pgm_index;
 
@@ -295,17 +295,13 @@ class IBMFGener {
             if (lks->skip.whole > 128) { // if > 128, this is a redirect
               tfm_idx = (((int)lks->op_code.d.displ_high << 8) + lks->remainder.displ_low);
               *lks = tfm.get_lig_kern_step(tfm_idx);
-              std::cout << tfm_idx << " b..." << std::endl;
+              //std::cout << tfm_idx << " b..." << std::endl;
             }
 
             bool first_to_be_saved = true;
             do {
 next:
-              if (tfm_idx == 405) {
-                std::cout << "We are at 405..." << std::endl;
-              }
-
-              std::cout << "loop start" << std::endl;
+              // std::cout << "loop start" << std::endl;
               int next_char_idx;
               int replacement_char_idx;
 
@@ -326,7 +322,7 @@ next:
                   g->new_lig_kern_idx = lig_kerns.size();
                 }
 
-                std::cout << "Old tfm idx " << tfm_idx << " Saved at new idx " << lig_kerns.size() << "..." << std::endl;
+                //std::cout << "Old tfm idx " << tfm_idx << " Saved at new idx " << lig_kerns.size() << "..." << std::endl;
                 lig_kerns.push_back(lks);
                 kept = true;
               }
@@ -334,15 +330,15 @@ next:
               if (!lks->skip.s.stop) {
                 if (kept) lks = new TFM::LigKernStep; // If kept, create a new step, else reuse the old one
                 *lks = tfm.get_lig_kern_step(++tfm_idx);
-                std::cout << tfm_idx << " c..." << " stop:" << (lks->skip.s.stop ? "YES" : "no") <<  std::endl;
+                //std::cout << tfm_idx << " c..." << " stop:" << (lks->skip.s.stop ? "YES" : "no") <<  std::endl;
                 goto next;
               }
               else if (!kept && !first_to_be_saved) {
                 lig_kerns[lig_kerns.size() - 1]->skip.s.stop = true;
-                std::cout << "Last mark as stop step... " << (lig_kerns.size() - 1) << std::endl;
+                //std::cout << "Last mark as stop step... " << (lig_kerns.size() - 1) << std::endl;
               }
 
-              if (tfm_idx >= tfm.get_lig_kern_step_count()) std::cout << "GOING BEYOND THE END OF THE ARRAY!!!" << tfm_idx << std::endl;
+              if (tfm_idx >= tfm.get_lig_kern_step_count()) std::cout << "=============> GOING BEYOND THE END OF THE ARRAY!!! <=================" << tfm_idx << std::endl;
 
             } while (!lks->skip.s.stop);
           }
@@ -358,11 +354,11 @@ next:
         if (g->new_lig_kern_idx > 254) overflow_list.insert(g->new_lig_kern_idx);
       }
 
-      std::cout << "Number of resulting Ligature/Kern entries: " 
-                << lig_kerns.size() 
-                << " Overflow Count: "
-                << overflow_list.size()
-                << std::endl;
+      // std::cout << "Number of resulting Ligature/Kern entries: " 
+      //           << lig_kerns.size() 
+      //           << " Overflow Count: "
+      //           << overflow_list.size()
+      //           << std::endl;
 
       if (overflow_list.size() > 0) {
 
@@ -400,7 +396,7 @@ next:
         int new_lig_kern_idx = all[i];
 
         for (auto idx = overflow_list.rbegin(); idx != overflow_list.rend(); idx++) {
-          std::cout << *idx << " treatment: " << std::endl;
+          // std::cout << *idx << " treatment: " << std::endl;
           TFM::LigKernStep * lks = new TFM::LigKernStep;
           memset(lks, 0, sizeof(TFM::LigKernStep));
           lks->skip.whole = 255;
@@ -410,29 +406,29 @@ next:
           lig_kerns.insert(lig_kerns.begin() + new_lig_kern_idx, lks);
           for (auto g : glyphs) {
             if (g->new_lig_kern_idx == *idx) {
-              std::cout << "   Char Code " 
-                        << +g->glyph.char_code 
-                        << " with index in lig/kern " 
-                        << +g->new_lig_kern_idx 
-                        << " is modified for " 
-                        << new_lig_kern_idx 
-                        << std::endl;
+              // std::cout << "   Char Code " 
+              //           << +g->glyph.char_code 
+              //           << " with index in lig/kern " 
+              //           << +g->new_lig_kern_idx 
+              //           << " is modified for " 
+              //           << new_lig_kern_idx 
+              //           << std::endl;
               g->new_lig_kern_idx = -new_lig_kern_idx;
             }
           }
           new_lig_kern_idx++;
         }
 
-        std::cout << first_idx << " treatment: " << std::endl;
+        // std::cout << first_idx << " treatment: " << std::endl;
         for (auto g : glyphs) {
           if (g->new_lig_kern_idx == first_idx) {
-            std::cout << "   Char Code " 
-                      << +g->glyph.char_code 
-                      << " with index in lig/kern " 
-                      << +g->new_lig_kern_idx 
-                      << " is modified for " 
-                      << new_lig_kern_idx 
-                      << std::endl;
+            // std::cout << "   Char Code " 
+            //           << +g->glyph.char_code 
+            //           << " with index in lig/kern " 
+            //           << +g->new_lig_kern_idx 
+            //           << " is modified for " 
+            //           << new_lig_kern_idx 
+            //           << std::endl;
             g->new_lig_kern_idx = first_idx;
           }
         }
@@ -605,7 +601,7 @@ next:
         std::cout << "PROBLEM GENERATING THE OUTPUT FILE!" << std::endl;
       }
       else {
-        show();
+        // show();
       }
     }
 };
