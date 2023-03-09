@@ -1,8 +1,8 @@
 #! /bin/bash
 
 # FONTS=(ecti:tcti:EC-Italic:0)
-FONTS=(
-  ecrm:tcrm:EC-Regular:0
+#  ecrm:tcrm:EC-Regular:0
+ FONTS=(
   ecss:tcss:ECSans-Regular:0
 )
 # FONTS=(
@@ -18,12 +18,12 @@ FONTS=(
 #   ecit:tcit:ECTypewriter-Italic:0
 # )
 
-SIZES=(12:1200 14:1440 17:1728)
-IN_SIZES=(1200 1440 1728)
-OUT_SIZES=(12 14 17)
-# SIZES=(14:1440)
-# IN_SIZES=(1440)
-# OUT_SIZES=(14)
+# SIZES=(12:1200 14:1440 17:1728)
+# IN_SIZES=(1200 1440 1728)
+# OUT_SIZES=(12 14 17)
+SIZES=(14:1440)
+IN_SIZES=(1440)
+OUT_SIZES=(14)
 # SIZES=(10:1000)
 # IN_SIZES=(1000)
 # OUT_SIZES=(10)
@@ -33,7 +33,8 @@ OUT_SIZES=(12 14 17)
 
 # DEVICES=(inkplate6PLUS:212)
 # DEVICES=(inkplate6:166 inkplate10:150 inkplate6PLUS:212)
-DEVICES=(inkplate6PLUS:212 solreader100:100 solreader75:75)
+# DEVICES=(inkplate6PLUS:212 solreader100:100 solreader75:75)
+DEVICES=(solreader75:75)
 
 mag_step=0
 
@@ -71,9 +72,9 @@ for device in ${DEVICES[@]}; do
       
     done
 
-    ../.pio/build/generator_v4/program "." ${ibmf_name} ${dev_dpi} ${char_set} ${font_name} ${comp_name} ${OUT_SIZES[@]}
-    rm *pk
-    rm *tfm
+    ../.pio/build/generator_v4_debug/program "." ${ibmf_name} ${dev_dpi} ${char_set} ${font_name} ${comp_name} ${OUT_SIZES[@]}
+    # rm *pk
+    # rm *tfm
     printf "// ----- IBMF Binary Font ${ibmf_name}_${dev_dpi} ----- ${OUT_SIZES[@]} pts -----\n" > ${ibmf_name}_${dev_dpi}.h
     printf "\n//\n//  Date: %s\n//\n" "`date`" >> ${ibmf_name}_${dev_dpi}.h
     printf "// Automatically generated on linux using the following commands in a shell script:\n" >> ${ibmf_name}_${dev_dpi}.h

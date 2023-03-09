@@ -601,7 +601,7 @@ next:
         std::cout << "PROBLEM GENERATING THE OUTPUT FILE!" << std::endl;
       }
       else {
-        // show();
+        show();
       }
     }
 };

@@ -29,13 +29,16 @@ private:
     FIX16 (*kerns)[];
 
 public:
-    IBMFFaceLow() : initialized(false), fontFormat(FontFormat::UNKNOWN), resolution(default_resolution) {}
+    IBMFFaceLow()
+        : initialized(false), fontFormat(FontFormat::UNKNOWN), resolution(default_resolution) {}
 
     ~IBMFFaceLow() {}
 
     inline static float fromFIX16(FIX16 val) { return (float)val / 64.0; }
     inline static FIX16 toFIX16(float val) { return (FIX16)(val * 64.0); }
-    inline static FIX16 toFIX16(FIX14 val) { return (FIX16)(((val & 0x4000) == 0) ? val : (val | 0xC000)) ; }
+    inline static FIX16 toFIX16(FIX14 val) {
+        return (FIX16)(((val & 0x4000) == 0) ? val : (val | 0xC000));
+    }
     inline static float fromFIX14(FIX14 val) { return (float)toFIX16(val) / 64.0; }
 
     // ---
@@ -110,7 +113,10 @@ public:
     inline const GlyphInfo &getGlyphInfo(GlyphCode glyphCode) const { return *glyphs[glyphCode]; }
 
     inline uint16_t getLigKernPgmIndex(GlyphCode glyphCode) const {
-        return glyphs[glyphCode & GLYPH_CODE_MASK]->ligKernPgmIndex;
+        // LOGD("glyphCode: %d", glyphCode & GLYPH_CODE_MASK);
+        return ((glyphCode & GLYPH_CODE_MASK) < SPACE_CODE)
+                   ? glyphs[glyphCode & GLYPH_CODE_MASK]->ligKernPgmIndex
+                   : NO_LIG_KERN_PGM;
     }
 
     /**
@@ -224,8 +230,8 @@ public:
     bool getGlyph(GlyphCode glyphCode, Glyph &appGlyph, bool loadBitmap, bool caching = true,
                   Pos atPos = Pos(0, 0)) {
 
-        LOGD("glyphCode: %04x, loadBitmap: %s, caching: %s, pos: [%d, %d]", glyphCode,
-             loadBitmap ? "YES" : "NO", caching ? "YES" : "NO", atPos.x, atPos.y);
+        // LOGD("glyphCode: %04x, loadBitmap: %s, caching: %s, pos: [%d, %d]", glyphCode,
+        //      loadBitmap ? "YES" : "NO", caching ? "YES" : "NO", atPos.x, atPos.y);
 
         bool accentIsPresent = false;
         uint8_t accentIdx = 0;
@@ -350,6 +356,11 @@ public:
             glyphOffsets.y = -glyphInfo->verticalOffset;
         }
 
+        if (!caching) {
+            glyphOffsets.x -= glyphInfo->horizontalOffset;
+            accentOffsets.x -= glyphInfo->horizontalOffset;
+        }
+
         if (loadBitmap) {
             if (caching) {
                 uint16_t size = (resolution == PixelResolution::ONE_BIT)
@@ -386,11 +397,12 @@ public:
             }
         }
 
-        appGlyph.metrics = {.xoff = (int16_t) - (glyphOffsets.x + glyphInfo->horizontalOffset),
-                            .yoff = (int16_t) - (glyphOffsets.y + glyphInfo->verticalOffset),
-                            .advance = glyphInfo->advance,
-                            .lineHeight = faceHeader->lineHeight,
-                            .ligatureAndKernPgmIndex = glyphInfo->ligKernPgmIndex};
+        appGlyph.metrics = {
+            .xoff = (int16_t) - (glyphOffsets.x + ((caching) ? glyphInfo->horizontalOffset : 0)),
+            .yoff = (int16_t) - (glyphOffsets.y + ((caching) ? glyphInfo->verticalOffset : 0)),
+            .advance = glyphInfo->advance,
+            .lineHeight = faceHeader->lineHeight,
+            .ligatureAndKernPgmIndex = glyphInfo->ligKernPgmIndex};
 
         // showGlyph(appGlyph, glyphCode & 0xFF);
         return true;
