@@ -2,6 +2,7 @@
 
 #include <cstdio>
 #include <vector>
+#include <bitset>
 #include <set>
 
 #include "pk_font.hpp"
@@ -31,6 +32,8 @@ class IBMFGener {
     uint8_t  char_set;
 
     int last_idx_to_check;
+    typedef uint16_t GlyphCode;
+    typedef int16_t FIX14;
 
     #pragma pack(push, 1)
       struct Header {
@@ -46,8 +49,8 @@ class IBMFGener {
         uint16_t   lig_kern_step_count;
         uint16_t   first_code;
         uint16_t   last_code;
-        uint8_t    kern_count;
         uint8_t    max_height;
+        uint8_t    filler;
       };
 
       struct GlyphMetric {
@@ -57,22 +60,52 @@ class IBMFGener {
       };
 
       struct Glyph {
-        uint8_t     char_code;
+        GlyphCode   char_code;
         uint8_t     bitmap_width;
         uint8_t     bitmap_height;
         int8_t      horizontal_offset;
         int8_t      vertical_offset;
-        uint8_t     lig_kern_pgm_index; // = 255 if none
         uint16_t    packet_length;
         TFM::FIX16  advance;
         GlyphMetric glyph_metric;
+        uint8_t     lig_kern_pgm_index; // = 255 if none
       };
+
+      // Ligature and Kerning table
+      
+      struct Nxt {
+        GlyphCode nextGlyphCode : 15;
+        bool      stop          : 1;
+      };
+
+      union ReplDisp {
+        struct  Repl {
+          GlyphCode replGlyphCode : 15;
+          bool      isAKern       : 1;
+        } repl;
+        struct Kern {
+          FIX14 kerningValue : 14;
+          bool  isAGoTo      : 1;
+          bool  isAKern      : 1;
+        } kern;
+        struct GoTo {
+          uint16_t displacement : 14;
+          bool     isAGoTo      : 1;
+          bool     isAKern      : 1;
+        } goTo;
+      };
+
+      struct NewLigKernStep {
+        Nxt      a;
+        ReplDisp b;
+      };      
+
     #pragma pack(pop)
 
     struct GlyphInfo {
       Glyph glyph;
       uint8_t * pixels;
-      uint8_t old_char_code;
+      uint16_t old_char_code;
       uint8_t old_lig_kern_idx;
       int new_lig_kern_idx; // need to be larger for cases that goes beyond 255
     };
@@ -80,6 +113,8 @@ class IBMFGener {
     std::vector<TFM::LigKernStep *> lig_kerns;
     std::vector<TFM::FIX16> kerns;
     std::vector<GlyphInfo *> glyphs;
+
+    std::vector<NewLigKernStep *> new_lig_kerns;
 
     // uint8_t compute_max_descender_height() {
     //   uint8_t max = 0;
@@ -109,7 +144,6 @@ class IBMFGener {
       header.space_size         = trunc(tfm.to_double(tfm.get_space_size(), 20) * factor);
       header.glyph_count        = glyph_count;
       header.lig_kern_step_count = tfm.get_lig_kern_step_count();
-      header.kern_count         = tfm.get_kern_count();
       header.slant_correction   = tfm.to_fix16(tfm.to_double(tfm.get_slant_correction(), 20), 6);
       header.first_code         = 0;
       header.last_code          = 173;
@@ -118,7 +152,7 @@ class IBMFGener {
       //fwrite(&header, sizeof(Header), 1, file);
     }
 
-    void read_glyph(uint8_t pk_char_code, uint8_t ibmf_char_code) {
+    void read_glyph(uint8_t pk_char_code, uint16_t ibmf_char_code) {
       GlyphInfo * glyph_info = new GlyphInfo;
       PKFont::Glyph pk_glyph;
       if (pk.get_glyph(pk_char_code, pk_glyph, false)) {
@@ -145,7 +179,7 @@ class IBMFGener {
       }
     }
 
-    void read2_glyph(uint8_t pk_char_code, uint8_t ibmf_char_code) {
+    void read2_glyph(uint8_t pk_char_code, uint16_t ibmf_char_code) {
       GlyphInfo * glyph_info = new GlyphInfo;
       PKFont::Glyph pk_glyph;
       if (pk2.get_glyph(pk_char_code, pk_glyph, false)) {
@@ -176,7 +210,7 @@ class IBMFGener {
       // std::cout << "Reading Glyphs...." << std::endl << std::flush;
 
       if (char_set == 0) {
-        uint8_t ibmf_char_code = 0;
+        uint16_t ibmf_char_code = 0;
         for (int i = 0; i < 0x17; i++) read_glyph(i, ibmf_char_code++);
         read_glyph(0xBE, ibmf_char_code++); // ¿  0x17
         for (int i = 0x18; i < 0x20; i++) read_glyph(i, ibmf_char_code++);
@@ -455,7 +489,7 @@ next:
     {
       kerns.clear();
 
-      for (int i = 0; i < header.kern_count; i++) {
+      for (int i = 0; i < tfm.get_kern_count(); i++) {
         TFM::FIX kern = tfm.get_kern(i);
         TFM::FIX16 k = tfm.to_fix16(tfm.to_double(kern, 20) * factor, 6);
 
@@ -488,15 +522,37 @@ next:
 
       // ligature / kerns struct
 
+      NewLigKernStep *nlks;
+
       for (auto lks : lig_kerns) {
-        fwrite(lks, sizeof(TFM::LigKernStep), 1, file);
+        nlks = new NewLigKernStep;
+        memset(nlks, 0, sizeof(NewLigKernStep));
+        nlks->a.nextGlyphCode = lks->next_char;
+        nlks->a.stop = lks->skip.s.stop;
+        nlks->b.kern.isAKern = lks->op_code.op.is_a_kern;
+        if (nlks->b.kern.isAKern) {
+          int16_t idx = ((int16_t)(lks->op_code.d.displ_high << 8)) + lks->remainder.displ_low;
+          nlks->b.kern.kerningValue = kerns[idx];
+        }
+        else {
+          if (lks->skip.whole > 128) {
+            nlks->b.goTo.isAGoTo = true;
+            nlks->b.goTo.isAKern = true; // For a goTo, isAKern must also be true!!!
+            nlks->b.goTo.displacement = ((int16_t)(lks->op_code.d.displ_high << 8)) + lks->remainder.displ_low;
+          }
+          else {
+            nlks->b.repl.replGlyphCode = lks->remainder.replacement_char;
+          }
+        }
+        fwrite(nlks, sizeof(NewLigKernStep), 1, file);
+        new_lig_kerns.push_back(nlks);
       }
 
       // Kerns
 
-      for (auto kern : kerns) {
-        fwrite(&kern, sizeof(TFM::FIX16), 1, file);
-      }
+      // for (auto kern : kerns) {
+      //   fwrite(&kern, sizeof(TFM::FIX16), 1, file);
+      // }
 
       return true;
     }
@@ -505,7 +561,7 @@ next:
     show() {
       int i = 0;
 
-      std::cout << std::endl << "----------- Header: ----------" << std::endl;
+      std::cout << std::endl << "----------- Header: ---------- " << sizeof(Header) << std::endl;
 
       std::cout << "DPI: " << header.dpi
                 << ", point size: "       << +header.point_size
@@ -518,12 +574,11 @@ next:
                 << ", space size: "       << +((float) header.space_size / 64.0)  
                 << ", glyph count: "      << +header.glyph_count        
                 << ", lig kern count: "   << +header.lig_kern_step_count 
-                << ", kern_count: "       << +header.kern_count         
                 << ", slant corr: "       << +header.slant_correction   
                 << ", descender height: " << +header.descender_height
                 << std::endl;
 
-      std::cout << std::endl << "----------- Glyphs: ----------" << std::endl;
+      std::cout << std::endl << "----------- Glyphs: ---------- " << sizeof(Glyph) << std::endl;
       for (auto & g : glyphs) {
 
         std::cout << "  [" << i << "]: "
@@ -585,6 +640,30 @@ next:
                   << std::endl;
 
         i += 1;
+      }
+
+      i = 0;
+      std::cout << std::endl << "----------- NEW Ligature / Kern programs: ---------- " << sizeof(NewLigKernStep) << std::endl;
+      for (auto entry : new_lig_kerns) {
+        if (entry->b.goTo.isAGoTo) {
+          std::cout << "  [" << i << "]:  "
+                    << "Goto: " << entry->b.goTo.displacement;
+        }
+        else {
+          std::cout << "  [" << i << "]:  "
+                    << "Stop: "       << (entry->a.stop ? "Yes" : "No") << ", "
+                    << "NxtGlyphCode: "    << +entry->a.nextGlyphCode << ", "
+                    << "IsKern: "     << (entry->b.kern.isAKern ? "Yes" : "No") << ", "
+                    << (entry->b.kern.isAKern ? "Kern Value: " : "Lig char: ");
+          if (entry->b.kern.isAKern) {
+            std::cout << ((float)entry->b.kern.kerningValue / 64.0);
+          }
+          else {
+            std::cout << entry->b.repl.replGlyphCode;
+          }
+        }
+        std::cout << std::endl;
+        i++;
       }
     }
 

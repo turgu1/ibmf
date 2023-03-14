@@ -53,6 +53,7 @@
         "iomanip": "cpp",
         "compare": "cpp",
         "concepts": "cpp",
-        "numbers": "cpp"
+        "numbers": "cpp",
+        "bitset": "cpp"
     }
 }
