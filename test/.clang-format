@@ -1,0 +1,20 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+ColumnLimit: 100
+IndentWidth: 4
+# Note(john): I prefer `IndentAccessModifiers: true` here but that's not supported
+# until clang-format 13 (unreleased as of 10/14/21)
+AccessModifierOffset: -4
+# Configs for sorting #include lines
+IncludeBlocks: Regroup
+IncludeCategories:
+  # (implied) Header file for the current cpp file
+  # All "Library" <> headers
+  - Regex:           '<[[:alnum:].\/_-]+>'
+    Priority:        1
+  # All other headers
+  - Regex:           '.*'
+    Priority:        2
+AllowShortIfStatementsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: true

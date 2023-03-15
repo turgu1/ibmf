@@ -9,12 +9,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) Debug",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/home/turgu1/Dev/ibmf/test/.pio/build/stable/program",
+            "program": "/home/turgu1/Dev/ibmf/test/.pio/build/debug/program",
             "args": [
-                "Bingley."
+                "VAV Bingley."
             ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
@@ -38,21 +38,21 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/data/Dev/ibmf/test/.pio/build/stable/program",
-            "projectEnvName": "stable",
+            "executable": "/data/Dev/ibmf/test/.pio/build/sanitize/program",
+            "projectEnvName": "sanitize",
             "toolchainBinDir": "/usr/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
-                "task": "Pre-Debug"
+                "task": "Pre-Debug (sanitize)"
             }
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/data/Dev/ibmf/test/.pio/build/stable/program",
-            "projectEnvName": "stable",
+            "executable": "/data/Dev/ibmf/test/.pio/build/sanitize/program",
+            "projectEnvName": "sanitize",
             "toolchainBinDir": "/usr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         },
@@ -60,8 +60,8 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "/data/Dev/ibmf/test/.pio/build/stable/program",
-            "projectEnvName": "stable",
+            "executable": "/data/Dev/ibmf/test/.pio/build/sanitize/program",
+            "projectEnvName": "sanitize",
             "toolchainBinDir": "/usr/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"

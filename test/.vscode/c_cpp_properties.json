@@ -24,7 +24,6 @@
                 "PLATFORMIO=60106",
                 "DEBUG_IBMF=1",
                 "IBMF_TESTING=1",
-                "__PLATFORMIO_BUILD_DEBUG__",
                 ""
             ],
             "cppStandard": "c++17",

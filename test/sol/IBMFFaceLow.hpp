@@ -86,6 +86,14 @@ public:
             return false;
         }
 
+        kerns = (FIX16(*)[])memoryPtr;
+
+        memoryPtr += sizeof(FIX16) * faceHeader->kernCount;
+        if (memoryPtr > memoryEnd) {
+            LOGE("IBMFFace: End of memory reached reading kerns!!");
+            return false;
+        }
+
         // showFace();
         initialized = true;
         return true;
@@ -489,25 +497,40 @@ public:
             uint16_t i;
             for (i = 0; i < faceHeader->ligKernStepCount; i++) {
                 LigKernStepPtr entry = &(*ligKernSteps)[i];
-                if (entry->b.goTo.isAKern && entry->b.goTo.isAGoTo) {
+                if (entry->skip.whole > 128) {
                     std::cout << "  [" << i << "]:  "
+                              << "Whole skip: " << +entry->skip.whole << ", "
                               << "Goto: "
-                              << entry->b.goTo.displacement;
+                              << +((entry->opCode.d.displHigh << 8) + entry->remainder.displLow);
                 } else {
                     std::cout << "  [" << i << "]:  "
-                              << "Stop: " << (entry->a.stop ? "Yes" : "No") << ", "
-                              << "NxtGlyphCode: " << +entry->a.nextGlyphCode << ", "
-                              << "IsKern: " << (entry->b.kern.isAKern ? "Yes" : "No") << ", "
-                              << (entry->b.kern.isAKern ? "Kern Value: " : "Lig char: ");
-                    if (entry->b.kern.isAKern) { 
-                        std::cout << (float)(entry->b.kern.kerningValue / 64.0);
-                    }
-                    else {
-                        std::cout << entry->b.repl.replGlyphCode;
+                              << "Whole skip: " << +entry->skip.whole << ", "
+                              << "Stop: " << (entry->skip.s.stop ? "Yes" : "No") << ", "
+                              << "NxtChar: " << +entry->nextChar << ", "
+                              << "IsKern: " << (entry->opCode.d.isAKern ? "Yes" : "No") << ", "
+                              << (entry->opCode.d.isAKern ? "Kern Idx: " : "Lig char: ")
+                              << (entry->opCode.d.isAKern ? +((entry->opCode.d.displHigh << 8) +
+                                                              entry->remainder.displLow)
+                                                          : +entry->remainder.replacementChar)
+                              << std::dec;
+                    if (!entry->opCode.d.isAKern) {
+                        std::cout << ", OpCodes: a:" << +entry->opCode.op.aOp
+                                  << ", b:" << +entry->opCode.op.bOp
+                                  << ", c:" << +entry->opCode.op.cOp;
                     }
                 }
 
                 std::cout << std::endl;
+            }
+        }
+    }
+
+    void showKerns() const {
+        if constexpr (DEBUG) {
+            std::cout << std::endl << "----------- Kerns: ----------" << std::endl;
+
+            for (int i = 0; i < faceHeader->kernCount; i++) {
+                std::cout << "  [" << i << "]:  " << ((*kerns)[i] / 64.0) << std::endl;
             }
         }
     }
@@ -518,8 +541,8 @@ public:
             std::cout << std::endl << "----------- Header: ----------" << std::endl;
 
             std::cout << "DPI: " << faceHeader->dpi << ", point size: " << +faceHeader->pointSize
-                      << ", first glyph code: " << +faceHeader->firstCode
-                      << ", last glyph code: " << +faceHeader->lastCode
+                      << ", first char code: " << +faceHeader->firstCode
+                      << ", last char code: " << +faceHeader->lastCode
                       << ", line height: " << +faceHeader->lineHeight
                       << ", max height: " << +faceHeader->maxHight
                       << ", x height: " << +((float)faceHeader->xHeight / 64.0)
@@ -527,6 +550,7 @@ public:
                       << ", space size: " << +((float)faceHeader->spaceSize / 64.0)
                       << ", glyph count: " << +faceHeader->glyphCount
                       << ", lig kern count: " << +faceHeader->ligKernStepCount
+                      << ", kernCount: " << +faceHeader->kernCount
                       << ", slant corr: " << +faceHeader->slantCorrection
                       << ", descender height: " << +faceHeader->descenderHeight << std::endl;
 
@@ -537,6 +561,8 @@ public:
             }
 
             showLigKerns();
+
+            showKerns();
         }
     }
 };

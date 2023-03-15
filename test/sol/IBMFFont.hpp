@@ -43,8 +43,8 @@ private:
         uint16_t lkIdx = face->getLigKernPgmIndex(glyphCode1);
         if (lkIdx == NO_LIG_KERN_PGM) return false;
         LigKernStepPtr lk = face->getLigKernStep(lkIdx);
-        if (lk->b.goTo.isAKern && lk->b.goTo.isAGoTo) {
-            lkIdx = lk->b.goTo.displacement;
+        if (lk->skip.whole > 128) {
+            lkIdx = (((int16_t)lk->opCode.d.displHigh << 8) + lk->remainder.displLow);
             lk = face->getLigKernStep(lkIdx);
         }
 
@@ -58,16 +58,17 @@ private:
                 first = false;
             }
 
-            if (lk->a.nextGlyphCode == code) {
-                if (lk->b.kern.isAKern) {
-                    *kern = lk->b.kern.kerningValue;
-                    return false; // No other iteration to be done
+            if (lk->nextChar == code) {
+                if (lk->opCode.d.isAKern) {
+                    *kern = face->getKern(
+                        (((int16_t)lk->opCode.d.displHigh << 8) + lk->remainder.displLow));
+                    return false;
                 } else {
-                    *glyphCode2 = lk->b.repl.replGlyphCode;
+                    *glyphCode2 = lk->remainder.replacementChar;
                     return true;
                 }
             }
-        } while (!lk->a.stop);
+        } while (!lk->skip.s.stop);
         return false;
     }
 
