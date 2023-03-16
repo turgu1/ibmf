@@ -1,6 +1,6 @@
 
-#include "IBMFDriver/IBMFFont.hpp"
-#include "IBMFDriver/IBMFFontLow.hpp"
+#include "IBMFDriver/IBMFFont.h"
+#include "IBMFDriver/IBMFFontLow.h"
 #include "IBMFFonts/EC-Regular_100.h"
 #include "IBMFFonts/EC-Regular_75.h"
 #include "IBMFFonts/ECSans-Regular_100.h"

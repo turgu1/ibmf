@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "cstdio": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "*.tcc": "cpp",
+        "memory": "cpp",
+        "istream": "cpp",
+        "tuple": "cpp"
     }
 }

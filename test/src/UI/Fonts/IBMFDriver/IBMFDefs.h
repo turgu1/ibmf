@@ -146,7 +146,7 @@ enum FontFormat : uint8_t { LATIN = 0, UTF32 = 1, UNKNOWN = 7 };
 
 enum class PixelResolution : uint8_t { ONE_BIT, EIGHT_BITS };
 
-constexpr PixelResolution default_resolution = PixelResolution::ONE_BIT;
+const constexpr PixelResolution DEFAULT_RESOLUTION = PixelResolution::ONE_BIT;
 
 struct Dim {
     int16_t width;

@@ -4,16 +4,16 @@
 #include <cstdio>
 #include <functional>
 
-#include "IBMFFontLow.hpp"
+#include "IBMFFontLow.h"
 #include "UI/Fonts/Font.h"
-#include "UI/Fonts/IBMFDriver/UTF8Iterator.hpp"
+#include "UTF8Iterator.h"
 
 class IBMFFont : public Font {
 private:
     static constexpr char const *TAG = "IBMFFont";
 
-    IBMFFontLow *font;
-    IBMFFaceLow *face;
+    IBMFFontLow *font_;
+    IBMFFaceLow *face_;
 
     // Maximum size of an allocated buffer to do vsnprintf formatting
     const int MAX_SIZE = 100;
@@ -39,13 +39,13 @@ private:
     /// @param kern Out. When a kerning entry is found in the program, kern will receive the value.
     /// @return True if a ligature was found, false otherwise.
     ///
-    bool ligKern(const GlyphCode glyphCode1, GlyphCode *glyphCode2, FIX16 *kern) const {
-        uint16_t lkIdx = face->getLigKernPgmIndex(glyphCode1);
+    auto ligKern(const GlyphCode glyphCode1, GlyphCode *glyphCode2, FIX16 *kern) const -> bool {
+        uint16_t lkIdx = face_->getLigKernPgmIndex(glyphCode1);
         if (lkIdx == NO_LIG_KERN_PGM) return false;
-        LigKernStepPtr lk = face->getLigKernStep(lkIdx);
+        LigKernStepPtr lk = face_->getLigKernStep(lkIdx);
         if (lk->b.goTo.isAKern && lk->b.goTo.isAGoTo) {
             lkIdx = lk->b.goTo.displacement;
-            lk = face->getLigKernStep(lkIdx);
+            lk = face_->getLigKernStep(lkIdx);
         }
 
         GlyphCode code = *glyphCode2 & GLYPH_CODE_MASK;
@@ -80,77 +80,79 @@ private:
     /// @param line In. The UTF8 compliant string of character.
     /// @param handler Call. The callback closure handler.
     ///
-    void ligKernUTF8Map(const std::string &line, LigKernMappingHandler handler) const {
+    auto ligKernUTF8Map(const std::string &line, LigKernMappingHandler handler) const -> void {
         if (line.length() != 0) {
             UTF8Iterator iter = line.begin();
-            GlyphCode glyphCode1 = face->translate(*iter++);
-            GlyphCode glyphCode2 = (iter == line.end()) ? NO_GLYPH_CODE : face->translate(*iter++);
+            GlyphCode glyphCode1 = face_->translate(*iter++);
+            GlyphCode glyphCode2 = (iter == line.end()) ? NO_GLYPH_CODE : face_->translate(*iter++);
             FIX16 kern;
             while (glyphCode1 != NO_GLYPH_CODE) {
                 kern = (FIX16)0;
                 // Ligature loop
                 while (ligKern(glyphCode1, &glyphCode2, &kern)) {
                     glyphCode1 = glyphCode2;
-                    glyphCode2 = (iter == line.end()) ? NO_GLYPH_CODE : face->translate(*iter++);
+                    glyphCode2 = (iter == line.end()) ? NO_GLYPH_CODE : face_->translate(*iter++);
                 }
                 (handler)(glyphCode1, kern);
                 glyphCode1 = glyphCode2;
-                glyphCode2 = (iter == line.end()) ? NO_GLYPH_CODE : face->translate(*iter++);
+                glyphCode2 = (iter == line.end()) ? NO_GLYPH_CODE : face_->translate(*iter++);
             }
         }
     }
 
 public:
     IBMFFont(IBMFFontLow &ibmFont, const uint8_t *data, unsigned int length, int index)
-        : Font(FontType::IBMF), font(&ibmFont) {
+        : Font(FontType::IBMF), font_(&ibmFont) {
         if constexpr (IBMF_TRACING) {
             LOGD("IBMFFont initialisation with data of length %d and face index %d.", length,
                  index);
         }
-        if (!font->isInitialized()) {
-            if (!font->load((MemoryPtr)data, length)) {
+        if (!font_->isInitialized()) {
+            if (!font_->load((MemoryPtr)data, length)) {
                 LOGE("Unable to initialize an IBMFFont!!");
             }
         }
-        if (font->isInitialized()) {
-            if ((face = font->getFace(index)) == nullptr) {
+        if (font_->isInitialized()) {
+            if ((face_ = font_->getFace(index)) == nullptr) {
                 LOGE("Internal error!!");
             }
         }
     }
 
-    inline bool isInitialized() const { return (face != nullptr) && face->isInitialized(); }
+    inline auto isInitialized() const -> bool {
+        return (face_ != nullptr) && face_->isInitialized();
+    }
 
-    inline const IBMFFaceLow *getFace() { return face; }
+    inline auto getFace() -> const IBMFFaceLow * { return face_; }
 
-    inline void setResolution(PixelResolution res) {
+    inline auto setResolution(PixelResolution res) -> void {
         if constexpr (IBMF_TRACING) {
             LOGD("setResolution()");
         }
-        if (face != nullptr) {
-            face->setResolution(res);
+        if (face_ != nullptr) {
+            face_->setResolution(res);
         }
     }
 
-    inline PixelResolution getResolution() const {
+    inline auto getResolution() const -> PixelResolution {
         if constexpr (IBMF_TRACING) {
             LOGD("getResolution()");
         }
-        return (face != nullptr) ? face->getResolution() : default_resolution;
+        return (face_ != nullptr) ? face_->getResolution() : DEFAULT_RESOLUTION;
     }
 
-    inline int yAdvance() const {
+    inline auto yAdvance() const -> int {
         if constexpr (IBMF_TRACING) {
             LOGD("yAdvance()");
             if (!isInitialized()) LOGE("Not initialized!!!");
         }
         // max-hight is the maximum hight in pixels of all the glyph from the baseline
         // descender-height is the negative number of pixels below the baseline
-        return isInitialized() ? ((int)face->getMaxHight()) - face->getDescenderHeight() : 0;
+        return isInitialized() ? ((int)face_->getMaxHight()) - face_->getDescenderHeight() : 0;
     }
 
-    void drawSingleLineOfText(IBMFDefs::Bitmap &canvas, IBMFDefs::Pos pos,
-                              const std::string &line) const {
+    auto drawSingleLineOfText(IBMFDefs::Bitmap &canvas, IBMFDefs::Pos pos,
+                              const std::string &line) const -> void {
         if constexpr (IBMF_TRACING) {
             LOGD("drawSingleLineOfText()");
         }
@@ -160,7 +162,7 @@ public:
             glyph.bitmap = canvas;
 
             ligKernUTF8Map(line, [this, &glyph, &atPos](GlyphCode glyphCode, FIX16 kern) {
-                if (this->face->getGlyph(glyphCode, glyph, true, false, atPos)) {
+                if (this->face_->getGlyph(glyphCode, glyph, true, false, atPos)) {
                     atPos.x += (glyph.metrics.advance + kern + 32) >> 6;
                 } else {
                     LOGW("Unable to retrieve glyph for glyphCode %d", glyphCode);
@@ -169,7 +171,7 @@ public:
         }
     }
 
-    void printFormatted(IBMFDefs::Bitmap &canvas, IBMFDefs::Pos pos, char *fmt, ...) const {
+    auto printFormatted(IBMFDefs::Bitmap &canvas, IBMFDefs::Pos pos, char *fmt, ...) const -> void {
         if constexpr (IBMF_TRACING) {
             LOGD("printFormatted()");
         }
@@ -186,7 +188,7 @@ public:
         }
     }
 
-    IBMFDefs::Dim getTextBounds(const std::string &buffer) {
+    auto getTextBounds(const std::string &buffer) -> IBMFDefs::Dim {
         if constexpr (IBMF_TRACING) {
             LOGD("getTextBounds()");
         }
@@ -194,7 +196,7 @@ public:
         if (isInitialized()) {
             ligKernUTF8Map(buffer, [this, &dim](GlyphCode glyphCode, FIX16 kern) {
                 IBMFDefs::Glyph glyph;
-                if (face->getGlyph(glyphCode, glyph, false)) { // retrieves only the metrics
+                if (face_->getGlyph(glyphCode, glyph, false)) { // retrieves only the metrics
                     // LOGD("Advance value: %f, yoff value: %d",
                     //      IBMFFaceLow::fromFIX16(glyph.metrics.advance), glyph.metrics.yoff);
                     dim.width += (glyph.metrics.advance + kern) >> 6;
@@ -211,7 +213,7 @@ public:
         return dim;
     }
 
-    int getTextWidth(const std::string &buffer) {
+    auto getTextWidth(const std::string &buffer) -> int {
         if constexpr (IBMF_TRACING) {
             LOGD("getTextWidth()");
         }
@@ -219,7 +221,7 @@ public:
         if (isInitialized()) {
             ligKernUTF8Map(buffer, [this, &width](GlyphCode glyphCode, FIX16 kern) {
                 IBMFDefs::Glyph glyph;
-                if (face->getGlyph(glyphCode, glyph, false)) { // retrieves only the metrics
+                if (face_->getGlyph(glyphCode, glyph, false)) { // retrieves only the metrics
                     // LOGD("Advance value: %f, kern: %f",
                     //     IBMFFaceLow::fromFIX16(glyph.metrics.advance),
                     //     IBMFFaceLow::fromFIX16(kern));
@@ -233,7 +235,7 @@ public:
         return width;
     }
 
-    int getTextHeight(const std::string &buffer) {
+    auto getTextHeight(const std::string &buffer) -> int {
         if constexpr (IBMF_TRACING) {
             LOGD("getTextHeight()");
         }
@@ -241,7 +243,7 @@ public:
         if (isInitialized()) {
             // for (UTF8Iterator chrIter = buffer.begin(); chrIter != buffer.end(); chrIter++) {
             //     IBMFDefs::Glyph glyph;
-            //     if (face->getGlyph(*chrIter, glyph, false)) {
+            //     if (face_->getGlyph(*chrIter, glyph, false)) {
             //         // LOGD("yoff value: %d", glyph.metrics.yoff);
             //         if (height > glyph.metrics.yoff)
             //             height = glyph.metrics.yoff; // yoff is negative
@@ -249,7 +251,7 @@ public:
             //         LOGW("Unable to retrieve glyph for char %d(%c)", *chrIter, *chrIter);
             //     }
             // }
-            height = face->getEmHeight();
+            height = face_->getEmHeight();
         }
         // LOGD("TextHeight: %d", height);
         return height;

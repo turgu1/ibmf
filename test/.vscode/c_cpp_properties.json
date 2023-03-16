@@ -8,15 +8,15 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/data/Dev/ibmf/test/include",
-                "/data/Dev/ibmf/test/src",
+                "/home/turgu1/Dev/ibmf/test/include",
+                "/home/turgu1/Dev/ibmf/test/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/data/Dev/ibmf/test/include",
-                    "/data/Dev/ibmf/test/src",
+                    "/home/turgu1/Dev/ibmf/test/include",
+                    "/home/turgu1/Dev/ibmf/test/src",
                     ""
                 ]
             },
@@ -24,6 +24,7 @@
                 "PLATFORMIO=60106",
                 "DEBUG_IBMF=1",
                 "IBMF_TESTING=1",
+                "__PLATFORMIO_BUILD_DEBUG__",
                 ""
             ],
             "cppStandard": "c++17",
