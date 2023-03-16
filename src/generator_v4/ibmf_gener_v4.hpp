@@ -305,10 +305,16 @@ class IBMFGener {
       // std::cout << "Reading and reshuffling Lig/Kern...." << std::endl << std::flush;
 
       int glyph_idx = 0;
+      bool found_it = false;
       // Look at targetted glyphs for pointers to the TFM lig/kern pgm array, retrieve
       // the steps into the lig_kern array
       for (auto & g : glyphs) {
         // std::cout << "Now doing glyph " << glyph_idx << " (0x" << std::hex << glyph_idx << std::dec << ")" << std::endl;
+
+        if (glyph_idx == 102) {
+          std::cout << "Found it!" << std::endl;
+          found_it = true;
+        }
         int tfm_idx;
         if ((tfm_idx = g->glyph.lig_kern_pgm_index) < 255) { // 255 means no lig/kern pgm
           //std::cout << tfm_idx << " a..." << std::endl;
@@ -416,12 +422,14 @@ next:
         
         while (true) {
           if ((all[i] + space_required) >= 255) {
-            i -= 1;
             space_required += 1;
             overflow_list.insert(all[i]);
+            i -= 1;
           }
           else break;
         }
+
+        overflow_list.insert(all[i]);
 
         // Starting at index all[i], all items must go down for an amount of space_required
         // The corresponding indices in the glyphs table must be adjusted accordingly.
@@ -434,8 +442,8 @@ next:
           TFM::LigKernStep * lks = new TFM::LigKernStep;
           memset(lks, 0, sizeof(TFM::LigKernStep));
           lks->skip.whole = 255;
-          lks->op_code.d.displ_high = (*idx + space_required) >> 8;
-          lks->remainder.displ_low = (*idx + space_required) & 0xFF;
+          lks->op_code.d.displ_high = (*idx + space_required + 1) >> 8;
+          lks->remainder.displ_low = (*idx + space_required + 1) & 0xFF;
 
           lig_kerns.insert(lig_kerns.begin() + new_lig_kern_idx, lks);
           for (auto g : glyphs) {
@@ -451,20 +459,6 @@ next:
             }
           }
           new_lig_kern_idx++;
-        }
-
-        // std::cout << first_idx << " treatment: " << std::endl;
-        for (auto g : glyphs) {
-          if (g->new_lig_kern_idx == first_idx) {
-            // std::cout << "   Char Code " 
-            //           << +g->glyph.char_code 
-            //           << " with index in lig/kern " 
-            //           << +g->new_lig_kern_idx 
-            //           << " is modified for " 
-            //           << new_lig_kern_idx 
-            //           << std::endl;
-            g->new_lig_kern_idx = first_idx;
-          }
         }
       
         for (auto g : glyphs) {

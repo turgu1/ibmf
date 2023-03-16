@@ -35,6 +35,7 @@ OUT_SIZES=(12 14 17)
 # DEVICES=(inkplate6:166 inkplate10:150 inkplate6PLUS:212)
 DEVICES=(inkplate6PLUS:212 solreader100:100 solreader75:75)
 # DEVICES=(solreader75:75)
+# DEVICES=(solreader100:100)
 
 mag_step=0
 
