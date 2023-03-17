@@ -5,8 +5,8 @@
 
 #ifdef TEST_IBMF
 
-#include "UI/Fonts/Fonts.h"
-#include "UI/Fonts/IBMFDriver/IBMFDefs.h"
+#include "UI/Fonts/Fonts.hpp"
+#include "UI/Fonts/IBMFDriver/IBMFDefs.hpp"
 
 Font *font = static_cast<Font *>(&FONT_ECSANS_REGULAR_75BPI14PT);
 

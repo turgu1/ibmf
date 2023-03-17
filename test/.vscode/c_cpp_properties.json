@@ -8,15 +8,15 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/home/turgu1/Dev/ibmf/test/include",
-                "/home/turgu1/Dev/ibmf/test/src",
+                "/data/Dev/ibmf/test/include",
+                "/data/Dev/ibmf/test/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/home/turgu1/Dev/ibmf/test/include",
-                    "/home/turgu1/Dev/ibmf/test/src",
+                    "/data/Dev/ibmf/test/include",
+                    "/data/Dev/ibmf/test/src",
                     ""
                 ]
             },

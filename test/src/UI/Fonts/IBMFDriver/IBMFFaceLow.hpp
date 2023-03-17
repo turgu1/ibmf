@@ -2,8 +2,8 @@
 
 #include <cstring>
 
-#include "IBMFDefs.h"
-#include "RLEExtractor.h"
+#include "IBMFDefs.hpp"
+#include "RLEExtractor.hpp"
 
 using namespace IBMFDefs;
 
@@ -98,126 +98,81 @@ public:
     inline auto getMaxHight() const -> uint8_t {
         return (faceHeader_ != nullptr) ? faceHeader_->maxHight : 0;
     }
-    inline auto getDescenderHeight() const -> int16_t { return -(int16_t)faceHeader_->descenderHeight; }
-    inline auto getLigKernStep(uint16_t idx) const -> LigKernStepPtr { return &(*ligKernSteps_)[idx]; }
+    inline auto getDescenderHeight() const -> int16_t {
+        return -(int16_t)faceHeader_->descenderHeight;
+    }
+    inline auto getLigKernStep(uint16_t idx) const -> LigKernStepPtr {
+        return &(*ligKernSteps_)[idx];
+    }
     inline auto setResolution(PixelResolution res) -> void { resolution_ = res; }
     inline auto getResolution() const -> PixelResolution { return resolution_; }
 
-    inline auto getGlyphInfo(GlyphCode glyphCode) const -> const GlyphInfo & { return *glyphs_[glyphCode]; }
+    inline auto getGlyphInfo(GlyphCode glyphCode) const -> const GlyphInfo & {
+        return *glyphs_[glyphCode];
+    }
 
     inline auto getLigKernPgmIndex(GlyphCode glyphCode) const -> uint16_t {
         // LOGD("glyphCode: %d", glyphCode & GLYPH_CODE_MASK);
-        return ((glyphCode & GLYPH_CODE_MASK) < SPACE_CODE)
-                   ? glyphs_[glyphCode & GLYPH_CODE_MASK]->ligKernPgmIndex
-                   : NO_LIG_KERN_PGM;
+        if ((fontFormat_ == FontFormat::LATIN) && (glyphCode != SPACE_CODE)) {
+            glyphCode &= LATIN_GLYPH_CODE_MASK;
+        }
+        return (glyphCode < SPACE_CODE) ? glyphs_[glyphCode]->ligKernPgmIndex : NO_LIG_KERN_PGM;
     }
 
-    /**
-     * @brief Translate UTF32 charCode to it's internal représentation
-     *
-     * All supported character sets must use this method to get the internal
-     * glyph code correponding to the character code
-     *
-     * Latin Char Set Translation
-     *
-     * The class allow for latin1+ characters to be plotted into a bitmap. As the
-     * font doesn't contains all accented glyphs, a combination of glyphs must be
-     * used to draw a single bitmap. This method translate some of the supported
-     * unicode values to that combination. The least significant byte will contains
-     * the main glyph code and the next byte will contain the accent code.
-     *
-     * The supported UTF16 character codes supported are the following:
-     *
-     *      U+0020 to U+007F
-     *      U+00A1 to U+017f
-     *
-     *   and the following:
-     *
-     * |  UTF16  | Description          |
-     * |:-------:|----------------------|
-     * | U+02BB  | reverse apostrophe
-     * | U+02BC  | apostrophe
-     * | U+02C6  | circumflex
-     * | U+02DA  | ring
-     * | U+02DC  | tilde ~
-     * | U+2013  | endash (Not available with CM Typewriter)
-     * | U+2014  | emdash (Not available with CM Typewriter)
-     * | U+2018  | quote left
-     * | U+2019  | quote right
-     * | U+201A  | comma like ,
-     * | U+201C  | quoted left "
-     * | U+201D  | quoted right
-     * | U+2032  | minute '
-     * | U+2033  | second "
-     * | U+2044  | fraction /
-     * | U+20AC  | euro
-     *
-     * @param charcode The UTF16 character code
-     * @return The internal representation of a character (glyphCode)
-     */
-    auto translate(char32_t charcode) const -> GlyphCode {
-        GlyphCode glyphCode;
-
-        if (fontFormat_ == FontFormat::LATIN) {
-            if ((charcode > 0x20) && (charcode < 0x7F)) {
-                glyphCode = charcode; // ASCII codes No accent
-            } else if ((charcode >= 0xA1) && (charcode <= 0x1FF)) {
-                glyphCode = latinTranslationSet[charcode - 0xA1];
-            } else {
-                switch (charcode) {
-                case 0x2013: // endash
-                    glyphCode = 0x0015;
-                    break;
-                case 0x2014: // emdash
-                    glyphCode = 0x0016;
-                    break;
-                case 0x2018: // quote left
-                case 0x02BB: // reverse apostrophe
-                    glyphCode = 0x0060;
-                    break;
-                case 0x2019: // quote right
-                case 0x02BC: // apostrophe
-                    glyphCode = 0x0027;
-                    break;
-                case 0x201C: // quoted left "
-                    glyphCode = 0x0010;
-                    break;
-                case 0x201D: // quoted right
-                    glyphCode = 0x0011;
-                    break;
-                case 0x02C6: // circumflex
-                    glyphCode = 0x005E;
-                    break;
-                case 0x02DA: // ring
-                    glyphCode = 0x0006;
-                    break;
-                case 0x02DC: // tilde ~
-                    glyphCode = 0x007E;
-                    break;
-                case 0x201A: // comma like ,
-                    glyphCode = 0x000D;
-                    break;
-                case 0x2032: // minute '
-                    glyphCode = 0x0027;
-                    break;
-                case 0x2033: // second "
-                    glyphCode = 0x0022;
-                    break;
-                case 0x2044: // fraction /
-                    glyphCode = 0x002F;
-                    break;
-                case 0x20AC: // euro
-                    glyphCode = 0x00AD;
-                    break;
-                default:
-                    glyphCode = SPACE_CODE;
-                }
-            }
-        } else {
-            glyphCode = NO_GLYPH_CODE;
+    /// @brief Search Ligature and Kerning table
+    ///
+    /// Using the LigKern program of **glyphCode1**, find the first entry in the
+    /// program for which **glyphCode2** is the next character. If a ligature is
+    /// found, sets **glyphCode2** with the new code and returns *true*. If a
+    /// kerning entry is found, it sets the kern parameter with the value
+    /// in the table and return *false*. If the LigKern pgm is empty or there
+    /// is no entry for **glyphCode2**, it returns *false*.
+    ///
+    /// Note: character codes have to be translated to internal GlyphCode before
+    /// calling this method.
+    ///
+    /// @param glyphCode1 In. The GlyhCode for which to find a LigKern entry in its program.
+    /// @param glyphCode2 InOut. The GlyphCode that must appear in the program as the next
+    ///                   character in sequence. Will be replaced with the target
+    ///                   ligature GlyphCode if found.
+    /// @param kern Out. When a kerning entry is found in the program, kern will receive the value.
+    /// @return True if a ligature was found, false otherwise.
+    ///
+    auto ligKern(const GlyphCode glyphCode1, GlyphCode *glyphCode2, FIX16 *kern) const -> bool {
+        uint16_t lkIdx = getLigKernPgmIndex(glyphCode1);
+        if (lkIdx == NO_LIG_KERN_PGM) {
+            return false;
+        }
+        LigKernStepPtr lk = getLigKernStep(lkIdx);
+        if (lk->b.goTo.isAKern && lk->b.goTo.isAGoTo) {
+            lkIdx = lk->b.goTo.displacement;
+            lk = getLigKernStep(lkIdx);
         }
 
-        return glyphCode;
+        GlyphCode code = *glyphCode2;
+        if (fontFormat_ == FontFormat::LATIN) {
+            code &= LATIN_GLYPH_CODE_MASK;
+        }
+        bool first = true;
+
+        do {
+            if (!first) {
+                lk++;
+            } else {
+                first = false;
+            }
+
+            if (lk->a.nextGlyphCode == code) {
+                if (lk->b.kern.isAKern) {
+                    *kern = lk->b.kern.kerningValue;
+                    return false; // No other iteration to be done
+                } else {
+                    *glyphCode2 = lk->b.repl.replGlyphCode;
+                    return true;
+                }
+            }
+        } while (!lk->a.stop);
+        return false;
     }
 
     auto getGlyph(GlyphCode glyphCode, Glyph &appGlyph, bool loadBitmap, bool caching = true,
@@ -227,37 +182,37 @@ public:
         //      loadBitmap ? "YES" : "NO", caching ? "YES" : "NO", atPos.x, atPos.y);
 
         bool accentIsPresent = false;
-        uint8_t accentIdx = 0;
+        uint16_t accentIdx = 0;
+        GlyphCode latinCode;
         GlyphInfoPtr accentInfo = nullptr;
 
-        if (caching) appGlyph.clear();
-
-        if (fontFormat_ == FontFormat::LATIN) {
-            accentIsPresent = (glyphCode & ACCENT_MASK) != 0;
-            if (accentIsPresent) {
-                accentIdx = (glyphCode & ACCENT_MASK) >> ACCENT_SHIFTR;
-                if (accentIdx == CODED_GRAVE_ACCENT)
-                    accentIdx = GRAVE_ACCENT;
-                else if (accentIdx == CODED_APOSTROPHE)
-                    accentIdx = APOSTROPHE;
-                accentInfo = glyphs_[accentIdx];
-            }
-        } else if (fontFormat_ == FontFormat::UTF32) {
-            // Next release of the IBMF file format will have a table to support
-            // direct usage of predefined UTF-16 characters. Up to 1022 characters
-            // will be possible, unless extended to use more space in memory.
-            //
-            // It will be known as UTF32
-            LOGW("Support for UTF32 not ready.");
-            return false;
-        } else {
-            LOGE("Unknown character set: %d", fontFormat_);
+        if (caching) {
+            appGlyph.clear();
         }
 
-        uint8_t glyphIdx = (glyphCode & GLYPH_CODE_MASK) - faceHeader_->firstCode;
-        if (((glyphCode & GLYPH_CODE_MASK) == NO_GLYPH_CODE) ||
-            ((glyphIdx < faceHeader_->glyphCount) && (glyphs_[glyphIdx] == nullptr))) {
-            glyphCode = SPACE_CODE;
+        if (fontFormat_ == FontFormat::LATIN) {
+            latinCode = glyphCode;
+            if (glyphCode != SPACE_CODE) {
+                accentIsPresent = (glyphCode & ACCENT_MASK) != 0;
+                if (accentIsPresent) {
+                    accentIdx = (glyphCode & ACCENT_MASK) >> ACCENT_SHIFTR;
+                    if (accentIdx == CODED_GRAVE_ACCENT) {
+                        accentIdx = GRAVE_ACCENT;
+                    } else if (accentIdx == CODED_APOSTROPHE) {
+                        accentIdx = APOSTROPHE;
+                    }
+                    accentInfo = glyphs_[accentIdx];
+                }
+                glyphCode &= LATIN_GLYPH_CODE_MASK;
+                if ((glyphCode < faceHeader_->glyphCount) && (glyphs_[glyphCode] == nullptr)) {
+                    glyphCode = SPACE_CODE;
+                }
+            }
+        } else if (fontFormat_ == FontFormat::UTF32) {
+            //
+        } else {
+            LOGE("Unknown character set: %d", fontFormat_);
+            return false;
         }
 
         if (glyphCode == SPACE_CODE) { // send as a space character
@@ -267,11 +222,15 @@ public:
             return true;
         }
 
-        if (glyphIdx >= faceHeader_->glyphCount) return false;
+        if (glyphCode >= faceHeader_->glyphCount) {
+            return false;
+        }
 
-        GlyphInfoPtr glyphInfo = glyphs_[glyphIdx];
+        GlyphInfoPtr glyphInfo = glyphs_[glyphCode];
 
-        if (glyphInfo == nullptr) return false;
+        if (glyphInfo == nullptr) {
+            return false;
+        }
 
         Dim dim = Dim(glyphInfo->bitmapWidth, glyphInfo->bitmapHeight);
         Pos glyphOffsets = Pos(0, 0);
@@ -279,7 +238,7 @@ public:
 
         if (accentIsPresent) {
 
-            if (glyphCode == 0xE06E) { // Apostrophe n
+            if (latinCode == 0xE06E) { // Apostrophe n
                 // offsets.x = 0; // already set
                 glyphOffsets.x =
                     accentInfo->bitmapWidth + 1 -
@@ -287,9 +246,9 @@ public:
                 dim.width = glyphOffsets.x + glyphInfo->bitmapWidth;
             } else {
                 // Horizontal adjustment
-                if (glyphCode == 0xC041) { // Ą
+                if (latinCode == 0xC041) { // Ą
                     accentOffsets.x = glyphInfo->bitmapWidth - accentInfo->bitmapWidth;
-                } else if ((glyphCode == 0xC061) || (glyphCode == 0xC045)) { // ą or Ę
+                } else if ((latinCode == 0xC061) || (latinCode == 0xC045)) { // ą or Ę
                     accentOffsets.x =
                         glyphInfo->bitmapWidth - accentInfo->bitmapWidth -
                         ((((int32_t)glyphInfo->bitmapHeight) * faceHeader_->slantCorrection) >> 6);
@@ -325,7 +284,9 @@ public:
                     int16_t addedHeightBelow =
                         (glyphInfo->bitmapHeight - glyphInfo->verticalOffset) -
                         ((-accentInfo->verticalOffset) + accentInfo->bitmapHeight);
-                    if (addedHeightBelow < 0) dim.height += -addedHeightBelow;
+                    if (addedHeightBelow < 0) {
+                        dim.height += -addedHeightBelow;
+                    }
                     accentOffsets.y = glyphInfo->verticalOffset - accentInfo->verticalOffset;
                 }
             } else {
@@ -373,7 +334,7 @@ public:
                 appGlyph.bitmap.dim = dim;
             }
 
-            RLEBitmapPtr glyphBitmap = &bitmaps_[glyphIdx];
+            RLEBitmapPtr glyphBitmap = &bitmaps_[glyphCode];
             if (glyphBitmap != nullptr) {
                 RLEExtractor rle(resolution_);
 
@@ -452,10 +413,11 @@ public:
         }
     }
 
-    auto showGlyph(const Glyph &glyph, GlyphCode glyphCode, char16_t charCode = ' ') const -> void {
+    auto showGlyph(const Glyph &glyph, GlyphCode glyphCode, char32_t codePoint = ' ') const
+        -> void {
         if constexpr (DEBUG) {
             std::wcout << "Glyph Base Code: 0x" << std::hex << glyphCode << std::dec << "("
-                       << charCode << ")" << std::endl
+                       << codePoint << ")" << std::endl
                        << "  Metrics: [" << std::dec << glyph.bitmap.dim.width << ", "
                        << glyph.bitmap.dim.height << "] " << std::endl
                        << "  Position: [" << glyph.metrics.xoff << ", " << glyph.metrics.yoff << ']'
@@ -469,12 +431,14 @@ public:
         }
     }
 
-    auto showGlyph2(const Glyph &glyph, char16_t charCode) const -> void { showGlyph(glyph, 0, charCode); }
+    auto showGlyph2(const Glyph &glyph, char32_t codePoint) const -> void {
+        showGlyph(glyph, 0, codePoint);
+    }
 
     auto showGlyphInfo(GlyphCode i, GlyphInfo &g) const -> void {
         if constexpr (DEBUG) {
             std::cout << "  [" << i << "]: "
-                      << "charCode : " << +g.charCode << ", width: " << +g.bitmapWidth
+                      << "glyphCode : " << +g.glyphCode << ", width: " << +g.bitmapWidth
                       << ", height: " << +g.bitmapHeight << ", hoffset: " << +g.horizontalOffset
                       << ", voffset: " << +g.verticalOffset << ", pktLen: " << +g.packetLength
                       << ", advance: " << +((float)g.advance / 64.0)
@@ -484,7 +448,7 @@ public:
         }
     }
 
-    auto showLigKerns() const -> void{
+    auto showLigKerns() const -> void {
         if constexpr (DEBUG) {
             std::cout << std::endl
                       << "----------- Ligature / Kern programs: ----------" << std::endl;
@@ -512,14 +476,12 @@ public:
         }
     }
 
-    auto showFace() const -> void{
+    auto showFace() const -> void {
         if constexpr (DEBUG) {
 
-            std::cout << std::endl << "----------- Header: ----------" << std::endl;
+            std::cout << std::endl << "----------- Face Header: ----------" << std::endl;
 
             std::cout << "DPI: " << faceHeader_->dpi << ", point size: " << +faceHeader_->pointSize
-                      << ", first glyph code: " << +faceHeader_->firstCode
-                      << ", last glyph code: " << +faceHeader_->lastCode
                       << ", line height: " << +faceHeader_->lineHeight
                       << ", max height: " << +faceHeader_->maxHight
                       << ", x height: " << +((float)faceHeader_->xHeight / 64.0)

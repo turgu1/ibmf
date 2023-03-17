@@ -2,10 +2,10 @@
 
 #include <cinttypes>
 
-#include "Font.h"
+#include "Font.hpp"
 //---
-#include "IBMFDriver/IBMFFont.h"
-#include "IBMFDriver/IBMFFontLow.h"
+#include "IBMFDriver/IBMFFont.hpp"
+#include "IBMFDriver/IBMFFontLow.hpp"
 
 // For the IBMF Fonts, a single file contains multiple "face" sizes. A single
 // object is created using the IBMFFontLow class that manage the whole .h file

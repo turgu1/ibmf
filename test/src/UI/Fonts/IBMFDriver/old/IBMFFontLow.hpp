@@ -4,8 +4,8 @@
 #include <fstream>
 #include <iostream>
 
-#include "IBMFDefs.h"
-#include "IBMFFaceLow.h"
+#include "IBMFDefs.hpp"
+#include "IBMFFaceLow.hpp"
 
 using namespace IBMFDefs;
 
