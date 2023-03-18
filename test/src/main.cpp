@@ -8,7 +8,7 @@
 #include "UI/Fonts/Fonts.hpp"
 #include "UI/Fonts/IBMFDriver/IBMFDefs.hpp"
 
-Font *font = static_cast<Font *>(&FONT_ECSANS_REGULAR_75BPI14PT);
+Font *font = static_cast<Font *>(&FONT_EC_REGULAR_UTF32_75BPI14PT);
 
 auto main(int argc, char **argv) -> int {
     if (argc != 2) {

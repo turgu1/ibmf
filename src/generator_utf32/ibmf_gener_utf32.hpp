@@ -212,70 +212,9 @@ private:
   void read_glyphs() {
     // std::cout << "Reading Glyphs...." << std::endl << std::flush;
 
-    if (char_set == 0) {
-      uint16_t ibmf_char_code = 0;
-      for (int i = 0; i < 0x17; i++) read_glyph(i, ibmf_char_code++);
-      read_glyph(0xBE, ibmf_char_code++); // ¿  0x17
-      for (int i = 0x18; i < 0x20; i++) read_glyph(i, ibmf_char_code++);
-      read_glyph(0xBD, ibmf_char_code++); // ¡  0x20
-      for (int i = 0x21; i < 0x7F; i++) read_glyph(i, ibmf_char_code++);
-
-      read_glyph(0x89, ibmf_char_code++); // Ľ  0x7F
-      read_glyph(0x8A, ibmf_char_code++); // Ł  0x80
-      read_glyph(0x8D, ibmf_char_code++); // Ŋ  0x81
-      read_glyph(0x9C, ibmf_char_code++); // Ĳ  0x82
-      read_glyph(0x9E, ibmf_char_code++); // đ  0x83
-      read_glyph(0x9F, ibmf_char_code++); // §  0x84
-      read_glyph(0xA4, ibmf_char_code++); // ď  0x85
-      read_glyph(0xA9, ibmf_char_code++); // ľ  0x86
-      read_glyph(0xAA, ibmf_char_code++); // ł  0x87
-      read_glyph(0xAD, ibmf_char_code++); // ŋ  0x88
-      read_glyph(0xB4, ibmf_char_code++); // ť  0x89
-      read_glyph(0xBC, ibmf_char_code++); // ĳ  0x8A
-      read_glyph(0xBF, ibmf_char_code++); // £  0x8B
-      read_glyph(0xC6, ibmf_char_code++); // Æ  0x8C
-      read_glyph(0xD0, ibmf_char_code++); // Ð  0x8D
-      read_glyph(0xD7, ibmf_char_code++); // Œ  0x8E
-      read_glyph(0xD8, ibmf_char_code++); // Ø  0x8F
-      read_glyph(0xDE, ibmf_char_code++); // Þ  0x90
-      read_glyph(0xDF, ibmf_char_code++); // SS 0x91
-      read_glyph(0xE6, ibmf_char_code++); // æ  0x92
-      read_glyph(0xF0, ibmf_char_code++); // ð  0x93
-      read_glyph(0xF7, ibmf_char_code++); // œ  0x94
-      read_glyph(0xF8, ibmf_char_code++); // ø  0x95
-      read_glyph(0xFE, ibmf_char_code++); // þ  0x96
-      read_glyph(0xFF, ibmf_char_code++); // ß  0x97
-
-      // For the  lig/kern table, this is the last glyph index to consider
-      last_idx_to_check = 0x97;
-
-      read2_glyph(0xA2, ibmf_char_code++); // ¢  0x98
-      read2_glyph(0xA4, ibmf_char_code++); // ¤  0x99
-      read2_glyph(0xA5, ibmf_char_code++); // ¥  0x9A
-      read2_glyph(0xA6, ibmf_char_code++); // ¦  0x9B
-      read2_glyph(0xA9, ibmf_char_code++); // ©  0x9C
-      read2_glyph(0xAA, ibmf_char_code++); // ª  0x9D
-      read2_glyph(0xAC, ibmf_char_code++); // ¬  0x9E
-      read2_glyph(0xAE, ibmf_char_code++); // ®  0x9F
-      read2_glyph(0xB1, ibmf_char_code++); // ±  0xA0
-      read2_glyph(0xB2, ibmf_char_code++); // ²  0xA1
-      read2_glyph(0xB3, ibmf_char_code++); // ³  0xA2
-      read2_glyph(0xB5, ibmf_char_code++); // µ  0xA3
-      read2_glyph(0xB6, ibmf_char_code++); // ¶  0xA4
-      read2_glyph(0xB7, ibmf_char_code++); // middle dot  0xA5
-      read2_glyph(0xB9, ibmf_char_code++); // ¹  0xA6
-      read2_glyph(0xBA, ibmf_char_code++); // º  0xA7
-      read2_glyph(0xD6, ibmf_char_code++); // ×  0xA8
-      read2_glyph(0xBC, ibmf_char_code++); // ¼  0xA9
-      read2_glyph(0xBD, ibmf_char_code++); // ½  0xAA
-      read2_glyph(0xBE, ibmf_char_code++); // ¾  0xAB
-      read2_glyph(0xF6, ibmf_char_code++); // ÷  0xAC
-      read2_glyph(0xBF, ibmf_char_code++); // Euro  0xAD
-    } else {
-      for (int i = tfm.get_first_glyph_code(); i <= tfm.get_last_glyph_code(); i++) {
-        read_glyph(i, i);
-      }
-    }
+    uint16_t ibmf_char_code = 0;
+    for (int i = 0x21; i < 0x7F; i++) read_glyph(i, ibmf_char_code++);
+    last_idx_to_check = 0x7E;
   }
 
   int get_char_idx(uint8_t pk_char_code) {
@@ -651,7 +590,7 @@ public:
   IBMFGener(FILE *file, char *dpi, TFM &tfm, TFM &tfm2, PKFont &pk, PKFont &pk2, uint8_t char_set)
       : file(file), tfm(tfm), tfm2(tfm2), pk(pk), pk2(pk2), char_set(char_set) {
     currentPoolIdx = 0;
-    read_header(atoi(dpi), char_set == 0 ? 0xAE : tfm.get_glyph_count());
+    read_header(atoi(dpi), 0x7f - 0x21);
     read_glyphs();
     // show();
     read_lig_kerns();

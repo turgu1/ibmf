@@ -3,7 +3,7 @@
 //     ".", "EC-Regular", "75", "0", "ecrm", "tcrm", "12"
 // ]
 
-#include "ibmf_gener_v4.hpp"
+#include "ibmf_gener_utf32.hpp"
 #include "pk_font.hpp"
 #include "tfm_v4.hpp"
 
@@ -18,6 +18,29 @@ constexpr int TEX2_PREFIX  = 6;
 constexpr int FIRST_POINT  = 7;
 
 constexpr int MIN_ARG_COUNT = 8;
+
+typedef uint16_t GlyphCode;
+
+#pragma pack(push, 1)
+
+struct Plane {
+  uint16_t  codePointBundlesIdx; // Index of the plane in the CodePointBundles table
+  uint16_t  entriesCount;        // The number of entries in the CodePointBungles table
+  GlyphCode firstGlyphCode;      // glyphCode corresponding to the first codePoint in the bundles
+};
+
+struct CodePointBundle {
+  char16_t firstCodePoint; // The first UTF16 codePoint of the bundle
+  char16_t
+      endCodePoint; // Codepoint corresponding to the one after the last codePoint of that bundle
+};
+
+typedef Plane Planes[4];
+
+#pragma pack(pop)
+
+typedef CodePointBundle (*CodePointBundlesPtr)[];
+typedef Planes *PlanesPtr;
 
 auto main(int argc, char **argv) -> int {
   if (argc < MIN_ARG_COUNT) {
@@ -47,7 +70,7 @@ auto main(int argc, char **argv) -> int {
 #pragma pack(pop)
 
     bits.version = IBMF_VERSION;
-    bits.charSet = 0;
+    bits.charSet = 1;
 
     fwrite("IBMF", 4, 1, file);
     fwrite(&count, 1, 1, file);
@@ -68,6 +91,22 @@ auto main(int argc, char **argv) -> int {
     long facesIdxLoc = ftell(file);
 
     for (int i = FIRST_POINT; i < argc; i++) { fwrite(&offset, 4, 1, file); }
+
+    // Write simple UTF32 table
+
+    Planes planes;
+    planes[0] = {.codePointBundlesIdx = 0, .entriesCount = 1, .firstGlyphCode = 0};
+    planes[1] = {.codePointBundlesIdx = 1, .entriesCount = 0, .firstGlyphCode = 0x7F - 0x21};
+    planes[2] = {.codePointBundlesIdx = 1, .entriesCount = 0, .firstGlyphCode = 0x7F - 0x21};
+    planes[3] = {.codePointBundlesIdx = 1, .entriesCount = 0, .firstGlyphCode = 0x7F - 0x21};
+
+    fwrite(&planes, sizeof(Planes), 1, file);
+
+    CodePointBundle bundle = {.firstCodePoint = static_cast<char16_t>(0x21),
+                              .endCodePoint   = static_cast<char16_t>(0x7F)};
+
+    fwrite(&bundle, sizeof(CodePointBundle), 1, file);
+
     for (int i = FIRST_POINT; i < argc; i++) {
       offset = ftell(file);
       fseek(file, (i - FIRST_POINT) * 4 + facesIdxLoc, SEEK_SET);
