@@ -108,7 +108,7 @@ const constexpr uint8_t MAX_FACE_COUNT = 10;
 
 const constexpr uint8_t NO_LIG_KERN_PGM = 0xFF;
 
-// Character Sets being supported (the UTF32 is forecoming)
+// Character Sets
 
 enum FontFormat : uint8_t { LATIN = 0, UTF32 = 1, UNKNOWN = 7 };
 
