@@ -309,9 +309,9 @@ registerParser(() => {
 						read(2); let first = getNumberValue();
 						read(2); let last = getNumberValue();
 						addRow("firstCodePoint", "U+" + decimalToHex(first, 4), "First UTF16 CodePoint");
-						addRow("endCodePoint", "U+" + decimalToHex(last, 4), "Last UTF16 CodePoint + 1");
-						addRow("Length", last - first, "Computed Number of codePoints");
-						codePointBundles.push({first: first, last: last, size: (last - first)}); 
+						addRow("lastCodePoint", "U+" + decimalToHex(last, 4), "Last UTF16 CodePoint");
+						addRow("Length", last - first + 1, "(Computed) Number of codePoints");
+						codePointBundles.push({first: first, last: last, size: (last - first + 1)}); 
 					}
 				});
 			}
@@ -329,7 +329,7 @@ registerParser(() => {
 					read(1); addRow("lineHeight", getNumberValue(), "In pixels");
 					read(2); addRow("dpi", getNumberValue(), "Pixels per inch");
 					read(2); addRow("xHeight", fix16(getNumberValue()), "Hight of character 'x' in pixels");
-					read(2); addRow("emHeight", fix16(getNumberValue()), "Hight of character 'M' in pixels");
+					read(2); addRow("emHeight", fix16(getNumberValue()), "em size in pixels");
 					read(2); addRow("slantCorrection", fix16(getNumberValue()), "When an italic face");
 					read(1); addRow("descenderHeight", getNumberValue(), "The height of the descending below the origin");
 					read(1); addRow("spaceSize", getNumberValue(), "Size of a space character in pixels");
@@ -381,27 +381,31 @@ registerParser(() => {
 
 				readRowWithDetails("LIGATURE AND KERN", () => {
 					for (let i = 0; i < ligKernCount; i++) {
-						let isGoto = false;
 						read(2); a = getNumberValue();
 						read(2); b = getNumberValue();
-						let descrip = "NEXT: " + utf32(a & 0x7FFF);
-
+						let descrip = "";
+						let value = "";
 						if ((b & 0x8000) == 0x8000) { // kern or goto
 							if ((b & 0xC000) == 0xC000) { // goto
-								descrip += " GOTO " + (b & 0x3FFF).toString();
-								isGoto = true;
+								descrip = "GOTO " + (b & 0x3FFF).toString();
+								value = "GOTO";
 							}
 							else { // kern
+								descrip = "NEXT: " + utf32(a & 0x7FFF);
 								k = (b & 0x3FFF);
 								if (k & 0x2000) k |= 0xFFFFC000;
 								descrip += " KERN: " + fix16(k) + " (" + decimalToHex(b & 0x3FFF, 4) + ")";
+								if ((a & 0x8000) != 0) descrip += " STOP";
+								value = "KERN";
 							}
 						}
 						else {
+							descrip = "NEXT: " + utf32(a & 0x7FFF);
 							descrip += " LIGATURE: " + utf32(b);
+							if ((a & 0x8000) != 0) descrip += " STOP";
+							value = "LIG";
 						}
-						if ((a & 0x8000) & !isGoto) descrip += " STOP";
-						addRow(i.toString(), "", descrip);
+						addRow(i.toString(), value, descrip);
 					}
 				});
 				return {};

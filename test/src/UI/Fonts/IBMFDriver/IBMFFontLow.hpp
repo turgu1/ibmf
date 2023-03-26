@@ -99,7 +99,7 @@ public:
             codePointBundles_ = nullptr;
         }
 
-        // Check for discrepancies 
+        // Check for discrepancies
         if ((*binFaceOffsets)[0] != static_cast<uint32_t>(data - fontData)) {
             LOGE("Wrong faces offset in font file, got %08x, expected %08x.", (*binFaceOffsets)[0],
                  static_cast<uint32_t>(data - fontData));
@@ -244,11 +244,11 @@ public:
                 int gCode = (*planes_)[planeIdx].firstGlyphCode;
                 int i = 0;
                 while (i < entriesCount) {
-                    if (u16 < (*codePointBundles_)[codePointBundleIdx].endCodePoint) {
+                    if (u16 <= (*codePointBundles_)[codePointBundleIdx].lastCodePoint) {
                         break;
                     }
-                    gCode += ((*codePointBundles_)[codePointBundleIdx].endCodePoint -
-                              (*codePointBundles_)[codePointBundleIdx].firstCodePoint);
+                    gCode += ((*codePointBundles_)[codePointBundleIdx].lastCodePoint -
+                              (*codePointBundles_)[codePointBundleIdx].firstCodePoint + 1);
                     i++;
                     codePointBundleIdx++;
                 }

@@ -103,7 +103,7 @@ const constexpr int DEBUG = 0;
 
 //----
 
-const constexpr uint8_t IBMF_VERSION = 4;      // Font format version
+const constexpr uint8_t IBMF_VERSION = 4; // Font format version
 const constexpr uint8_t MAX_FACE_COUNT = 10;
 
 const constexpr uint8_t NO_LIG_KERN_PGM = 0xFF;
@@ -439,8 +439,7 @@ struct Plane {
 
 struct CodePointBundle {
     char16_t firstCodePoint; // The first UTF16 codePoint of the bundle
-    char16_t
-        endCodePoint; // Codepoint corresponding to the one after the last codePoint of that bundle
+    char16_t lastCodePoint;  // The last UTF16 codePoint of the bundle
 };
 
 typedef Plane Planes[4];
