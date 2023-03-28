@@ -50,8 +50,8 @@ private:
     uint16_t   glyph_count;
     uint16_t   lig_kern_step_count;
     uint32_t   pixelsPoolSize;
-    uint8_t    max_height;
-    uint8_t    filler[3];
+    // uint8_t    max_height;
+    // uint8_t    filler[3];
   };
 
   struct GlyphMetric {
@@ -134,11 +134,11 @@ private:
   void read_header(uint16_t dpi, uint16_t glyph_count) {
     // std::cout << "Reading Header...." << std::endl << std::flush;
 
-    header.dpi         = dpi;
-    header.point_size  = trunc(tfm.to_double(tfm.get_design_size(), 20));
-    header.line_height = trunc(((double) (header.dpi * header.point_size)) / 72.27 + 0.5);
+    header.dpi                 = dpi;
+    header.point_size          = trunc(tfm.to_double(tfm.get_design_size(), 20));
+    header.line_height         = trunc(((double)(header.dpi * header.point_size)) / 72.27 + 0.5);
 
-    factor = tfm.to_double(tfm.get_design_size(), 20) * dpi / 72.27;
+    factor                     = tfm.to_double(tfm.get_design_size(), 20) * dpi / 72.27;
 
     header.x_height            = tfm.to_fix16(tfm.to_double(tfm.get_x_height(), 20) * factor, 6);
     header.em_size             = tfm.to_fix16(tfm.to_double(tfm.get_em_size(), 20) * factor, 6);
@@ -168,10 +168,10 @@ private:
       glyph_info->glyph.lig_kern_pgm_index          = tfm.get_lig_kern_pgm_index(pk_char_code);
       glyph_info->pixelsIndex                       = currentPoolIdx;
 
-      glyph_info->old_char_code    = pk_char_code;
-      glyph_info->old_lig_kern_idx = glyph_info->glyph.lig_kern_pgm_index;
+      glyph_info->old_char_code                     = pk_char_code;
+      glyph_info->old_lig_kern_idx                  = glyph_info->glyph.lig_kern_pgm_index;
 
-      glyph_info->pixels = new uint8_t[glyph_info->glyph.packet_length];
+      glyph_info->pixels                            = new uint8_t[glyph_info->glyph.packet_length];
       memcpy(glyph_info->pixels, pk_glyph.raster, glyph_info->glyph.packet_length);
       currentPoolIdx += glyph_info->glyph.packet_length;
       glyphs.push_back(glyph_info);
@@ -197,10 +197,10 @@ private:
       glyph_info->glyph.lig_kern_pgm_index          = 255;
       glyph_info->pixelsIndex                       = currentPoolIdx;
 
-      glyph_info->old_char_code    = pk_char_code;
-      glyph_info->old_lig_kern_idx = 255;
+      glyph_info->old_char_code                     = pk_char_code;
+      glyph_info->old_lig_kern_idx                  = 255;
 
-      glyph_info->pixels = new uint8_t[glyph_info->glyph.packet_length];
+      glyph_info->pixels                            = new uint8_t[glyph_info->glyph.packet_length];
       memcpy(glyph_info->pixels, pk_glyph.raster, glyph_info->glyph.packet_length);
       currentPoolIdx += glyph_info->glyph.packet_length;
       glyphs.push_back(glyph_info);
@@ -213,7 +213,8 @@ private:
     // std::cout << "Reading Glyphs...." << std::endl << std::flush;
 
     uint16_t ibmf_char_code = 0;
-    for (int i = 0x21; i < 0x7F; i++) read_glyph(i, ibmf_char_code++);
+    for (int i = 0x21; i < 0x7F; i++)
+      read_glyph(i, ibmf_char_code++);
     last_idx_to_check = 0x7E;
   }
 
@@ -237,7 +238,9 @@ private:
     lig_kerns.clear();
     lig_kerns.reserve(500);
 
-    for (auto &g : glyphs) { g->new_lig_kern_idx = -1; }
+    for (auto &g : glyphs) {
+      g->new_lig_kern_idx = -1;
+    }
 
     // std::cout << "Reading and reshuffling Lig/Kern...." << std::endl << std::flush;
 
@@ -266,14 +269,14 @@ private:
           lks  = new TFM::LigKernStep;
           *lks = tfm.get_lig_kern_step(tfm_idx);
           if (lks->skip.whole > 128) { // if > 128, this is a redirect
-            tfm_idx = (((int) lks->op_code.d.displ_high << 8) + lks->remainder.displ_low);
+            tfm_idx = (((int)lks->op_code.d.displ_high << 8) + lks->remainder.displ_low);
             *lks    = tfm.get_lig_kern_step(tfm_idx);
             // std::cout << tfm_idx << " b..." << std::endl;
           }
 
           bool first_to_be_saved = true;
           do {
-          next:
+next:
             // std::cout << "loop start" << std::endl;
             int next_char_idx;
             int replacement_char_idx;
@@ -362,7 +365,8 @@ private:
           space_required += 1;
           overflow_list.insert(all[i]);
           i -= 1;
-        } else break;
+        } else
+          break;
       }
 
       overflow_list.insert(all[i]);
@@ -424,26 +428,30 @@ private:
   }
 
   bool write_everything() {
-    uint8_t max_height = 0;
-    for (auto g : glyphs) {
-      if (max_height < g->glyph.vertical_offset) max_height = g->glyph.vertical_offset;
-    }
+    // uint8_t max_height = 0;
+    // for (auto g : glyphs) {
+    //   if (max_height < g->glyph.vertical_offset) max_height = g->glyph.vertical_offset;
+    // }
 
     // 32 bits alignment
     int alignment = (4 - ((currentPoolIdx + (header.glyph_count * sizeof(Glyph))) & 3)) & 3;
 
     // Header
-    header.max_height = max_height;
+    // header.max_height = max_height;
     header.pixelsPoolSize =
         (currentPoolIdx + alignment); // alignment hidden in the pixels pool size
     header.lig_kern_step_count = lig_kerns.size();
     fwrite(&header, sizeof(Header), 1, file);
 
     // Glyphs' pixel indexes
-    for (auto g : glyphs) { fwrite(&g->pixelsIndex, sizeof(uint32_t), 1, file); }
+    for (auto g : glyphs) {
+      fwrite(&g->pixelsIndex, sizeof(uint32_t), 1, file);
+    }
 
     // Glyphs data
-    for (auto g : glyphs) { fwrite(&g->glyph, sizeof(Glyph), 1, file); }
+    for (auto g : glyphs) {
+      fwrite(&g->glyph, sizeof(Glyph), 1, file);
+    }
 
     // Pixels pool
     for (auto g : glyphs) {
@@ -471,14 +479,14 @@ private:
       nlks->a.stop          = lks->skip.s.stop;
       nlks->b.kern.isAKern  = lks->op_code.op.is_a_kern;
       if (nlks->b.kern.isAKern) {
-        int16_t idx = ((int16_t) (lks->op_code.d.displ_high << 8)) + lks->remainder.displ_low;
+        int16_t idx = ((int16_t)(lks->op_code.d.displ_high << 8)) + lks->remainder.displ_low;
         nlks->b.kern.kerningValue = kerns[idx];
       } else {
         if (lks->skip.whole > 128) {
           nlks->b.goTo.isAGoTo = true;
           nlks->b.goTo.isAKern = true; // For a goTo, isAKern must also be true!!!
           nlks->b.goTo.displacement =
-              ((int16_t) (lks->op_code.d.displ_high << 8)) + lks->remainder.displ_low;
+              ((int16_t)(lks->op_code.d.displ_high << 8)) + lks->remainder.displ_low;
         } else {
           nlks->b.repl.replGlyphCode = lks->remainder.replacement_char;
         }
@@ -496,10 +504,11 @@ private:
     std::cout << std::endl << "----------- Header: ---------- " << sizeof(Header) << std::endl;
 
     std::cout << "DPI: " << header.dpi << ", point size: " << +header.point_size
-              << ", line height: " << +header.line_height << ", max height: " << +header.max_height
-              << ", x height: " << +((float) header.x_height / 64.0)
-              << ", em size: " << +((float) header.em_size / 64.0)
-              << ", space size: " << +((float) header.space_size / 64.0)
+              << ", line height: "
+              << +header.line_height //<< ", max height: " << +header.max_height
+              << ", x height: " << +((float)header.x_height / 64.0)
+              << ", em size: " << +((float)header.em_size / 64.0)
+              << ", space size: " << +((float)header.space_size / 64.0)
               << ", glyph count: " << +header.glyph_count
               << ", lig kern count: " << +header.lig_kern_step_count
               << ", pixels pool size: " << +header.pixelsPoolSize
@@ -515,7 +524,7 @@ private:
                 << ", hoffset: " << +g->glyph.horizontal_offset
                 << ", voffset: " << +g->glyph.vertical_offset
                 << ", pkt_len: " << +g->glyph.packet_length
-                << ", advance: " << +((float) g->glyph.advance / 64.0)
+                << ", advance: " << +((float)g->glyph.advance / 64.0)
                 << ", dyn_f: " << +g->glyph.glyph_metric.dyn_f
                 << ", first_black: " << +g->glyph.glyph_metric.first_is_black
                 << ", Lig_kern_idx: " << +g->glyph.lig_kern_pgm_index
@@ -556,7 +565,7 @@ private:
     std::cout << std::endl << "----------- Kerns: ----------" << std::endl;
 
     for (auto kern : kerns) {
-      std::cout << "  [" << i << "]:  " << ((float) kern / 64.0) << std::endl;
+      std::cout << "  [" << i << "]:  " << ((float)kern / 64.0) << std::endl;
 
       i += 1;
     }
@@ -576,7 +585,7 @@ private:
                   << "IsKern: " << (entry->b.kern.isAKern ? "Yes" : "No") << ", "
                   << (entry->b.kern.isAKern ? "Kern Value: " : "Lig char: ");
         if (entry->b.kern.isAKern) {
-          std::cout << ((float) entry->b.kern.kerningValue / 64.0);
+          std::cout << ((float)entry->b.kern.kerningValue / 64.0);
         } else {
           std::cout << entry->b.repl.replGlyphCode;
         }

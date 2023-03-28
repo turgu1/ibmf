@@ -84,9 +84,9 @@ public:
     inline auto getFacePtSize() const -> uint8_t { return faceHeader_->pointSize; }
     inline auto getLineHeight() const -> uint16_t { return faceHeader_->lineHeight; }
     inline auto getEmHeight() const -> uint16_t { return faceHeader_->emHeight >> 6; }
-    inline auto getMaxHight() const -> uint8_t {
-        return (faceHeader_ != nullptr) ? faceHeader_->maxHight : 0;
-    }
+    // inline auto getMaxHight() const -> uint8_t {
+    //     return (faceHeader_ != nullptr) ? faceHeader_->maxHight : 0;
+    // }
     inline auto getDescenderHeight() const -> int16_t {
         return -(int16_t)faceHeader_->descenderHeight;
     }
@@ -105,7 +105,8 @@ public:
         if ((fontFormat_ == FontFormat::LATIN) && (glyphCode != SPACE_CODE)) {
             glyphCode &= LATIN_GLYPH_CODE_MASK;
         }
-        return (glyphCode < SPACE_CODE) ? (*glyphsInfo_)[glyphCode].ligKernPgmIndex : NO_LIG_KERN_PGM;
+        return (glyphCode < SPACE_CODE) ? (*glyphsInfo_)[glyphCode].ligKernPgmIndex
+                                        : NO_LIG_KERN_PGM;
     }
 
     /// @brief Search Ligature and Kerning table
@@ -132,7 +133,7 @@ public:
         if (lkIdx == NO_LIG_KERN_PGM) {
             return false;
         }
-        LigKernStep * lk = getLigKernStep(lkIdx);
+        LigKernStep *lk = getLigKernStep(lkIdx);
         if (lk->b.goTo.isAKern && lk->b.goTo.isAGoTo) {
             lkIdx = lk->b.goTo.displacement;
             lk = getLigKernStep(lkIdx);
@@ -173,7 +174,7 @@ public:
         bool accentIsPresent = false;
         uint16_t accentIdx = 0;
         GlyphCode latinCode;
-        GlyphInfo * accentInfo = nullptr;
+        GlyphInfo *accentInfo = nullptr;
 
         if (caching) {
             appGlyph.clear();
@@ -212,7 +213,7 @@ public:
             return false;
         }
 
-        GlyphInfo * glyphInfo = &(*glyphsInfo_)[glyphCode];
+        GlyphInfo *glyphInfo = &(*glyphsInfo_)[glyphCode];
 
         if (glyphInfo == nullptr) {
             return false;
@@ -320,11 +321,10 @@ public:
                 appGlyph.bitmap.dim = dim;
             }
 
-            RLEBitmap glyphBitmap = {
-                .pixels = &(*pixelsPool_)[(*glyphsPixelPoolIndexes_)[glyphCode]],
-                .dim = Dim(glyphInfo->bitmapWidth, glyphInfo->bitmapHeight),
-                .length = glyphInfo->packetLength
-            };
+            RLEBitmap glyphBitmap = {.pixels =
+                                         &(*pixelsPool_)[(*glyphsPixelPoolIndexes_)[glyphCode]],
+                                     .dim = Dim(glyphInfo->bitmapWidth, glyphInfo->bitmapHeight),
+                                     .length = glyphInfo->packetLength};
             RLEExtractor rle(resolution_);
 
             Pos outPos = Pos(atPos.x + accentOffsets.x, atPos.y + accentOffsets.y);
@@ -332,10 +332,8 @@ public:
                 RLEBitmap accentBitmap = {
                     .pixels = &(*pixelsPool_)[(*glyphsPixelPoolIndexes_)[accentIdx]],
                     .dim = Dim(accentInfo->bitmapWidth, accentInfo->bitmapHeight),
-                    .length = accentInfo->packetLength
-                };
-                rle.retrieveBitmap(accentBitmap, appGlyph.bitmap, outPos,
-                                    accentInfo->rleMetrics);
+                    .length = accentInfo->packetLength};
+                rle.retrieveBitmap(accentBitmap, appGlyph.bitmap, outPos, accentInfo->rleMetrics);
 
                 showBitmap(appGlyph.bitmap);
             }
@@ -446,7 +444,7 @@ public:
                       << "----------- Ligature / Kern programs: ----------" << std::endl;
             uint16_t i;
             for (i = 0; i < faceHeader_->ligKernStepCount; i++) {
-                LigKernStep * entry = &(*ligKernSteps_)[i];
+                LigKernStep *entry = &(*ligKernSteps_)[i];
                 if (entry->b.goTo.isAKern && entry->b.goTo.isAGoTo) {
                     std::cout << "  [" << i << "]:  "
                               << "Goto: " << entry->b.goTo.displacement;
@@ -474,8 +472,9 @@ public:
             std::cout << std::endl << "----------- Face Header: ----------" << std::endl;
 
             std::cout << "DPI: " << faceHeader_->dpi << ", point size: " << +faceHeader_->pointSize
-                      << ", line height: " << +faceHeader_->lineHeight
-                      << ", max height: " << +faceHeader_->maxHight
+                      << ", line height: "
+                      << +faceHeader_->lineHeight
+                      //   << ", max height: " << +faceHeader_->maxHight
                       << ", x height: " << +((float)faceHeader_->xHeight / 64.0)
                       << ", em size: " << +((float)faceHeader_->emHeight / 64.0)
                       << ", space size: " << +((float)faceHeader_->spaceSize / 64.0)

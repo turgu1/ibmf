@@ -336,8 +336,8 @@ registerParser(() => {
 					read(2); addRow("glyphCount", glyphCount = getNumberValue(), "Must be the same for all face");
 					read(2); addRow("ligKernStepCount", ligKernCount = getNumberValue(), "Length of the Ligature/Kerning table");
 					read(4); addRow("pixelsPoolSize", poolSize = getNumberValue(), "Size of the Pixels Pool");
-					read(1); addRow("maxHight", getNumberValue(), "The maximum hight in pixels of every glyph in the face");
-					read(3); addRow("filler", getNumberValue(), "To keep the struct to be at a frontier of 32 bits");
+					// read(1); addRow("maxHight", getNumberValue(), "The maximum hight in pixels of every glyph in the face");
+					// read(3); addRow("filler", getNumberValue(), "To keep the struct to be at a frontier of 32 bits");
 					return {};
 				});
 

@@ -50,8 +50,8 @@ private:
     uint16_t   glyph_count;
     uint16_t   lig_kern_step_count;
     uint32_t   pixelsPoolSize;
-    uint8_t    max_height;
-    uint8_t    filler[3];
+    // uint8_t    max_height;
+    // uint8_t    filler[3];
   };
 
   struct GlyphMetric {
@@ -491,16 +491,16 @@ next:
   }
 
   bool write_everything() {
-    uint8_t max_height = 0;
-    for (auto g : glyphs) {
-      if (max_height < g->glyph.vertical_offset) max_height = g->glyph.vertical_offset;
-    }
+    // uint8_t max_height = 0;
+    // for (auto g : glyphs) {
+    //   if (max_height < g->glyph.vertical_offset) max_height = g->glyph.vertical_offset;
+    // }
 
     // 32 bits alignment
     int alignment = (4 - ((currentPoolIdx + (header.glyph_count * sizeof(Glyph))) & 3)) & 3;
 
     // Header
-    header.max_height = max_height;
+    // header.max_height = max_height;
     header.pixelsPoolSize =
         (currentPoolIdx + alignment); // alignment hidden in the pixels pool size
     header.lig_kern_step_count = lig_kerns.size();
@@ -567,7 +567,8 @@ next:
     std::cout << std::endl << "----------- Header: ---------- " << sizeof(Header) << std::endl;
 
     std::cout << "DPI: " << header.dpi << ", point size: " << +header.point_size
-              << ", line height: " << +header.line_height << ", max height: " << +header.max_height
+              << ", line height: "
+              << +header.line_height // << ", max height: " << +header.max_height
               << ", x height: " << +((float)header.x_height / 64.0)
               << ", em size: " << +((float)header.em_size / 64.0)
               << ", space size: " << +((float)header.space_size / 64.0)
