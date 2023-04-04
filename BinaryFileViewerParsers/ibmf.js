@@ -366,7 +366,9 @@ registerParser(() => {
 							let info = (val != 255) && (val >= ligKernCount) ? 
 								" LigKern: INDEX OUT OF BOUNDS! (" + val.toString() + ")" : 
 								((val != 255) ? " LigKernIdx: " + val.toString() : "");
-							return {description: utf32(j) + info };
+						    read(2); addRow("mainCode", val = getNumberValue(), "Composite main code");
+							let info2 = (val == j) ? "" : " Composite: " + val.toString();
+							return {description: utf32(j) + info + info2};
 						});
 					}
 					return {};

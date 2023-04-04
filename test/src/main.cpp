@@ -8,7 +8,7 @@
 #include "UI/Fonts/Fonts.hpp"
 #include "UI/Fonts/IBMFDriver/IBMFDefs.hpp"
 
-Font *font = static_cast<Font *>(&FONT_EC_REGULAR_UTF32_75BPI14PT);
+Font *font = static_cast<Font *>(&fontTahoma75BPI12PT);
 
 auto main(int argc, char **argv) -> int {
     if (argc != 2) {
@@ -17,8 +17,8 @@ auto main(int argc, char **argv) -> int {
     }
     auto *fnt = static_cast<IBMFFont *>(font);
     const IBMFFaceLow *face = fnt->getFace();
-    IBMFDefs::Bitmap canvas;
-    canvas.dim = IBMFDefs::Dim(90, 40);
+    ibmf_defs::Bitmap canvas;
+    canvas.dim = ibmf_defs::Dim(90, 40);
     if (DEFAULT_RESOLUTION == PixelResolution::ONE_BIT) {
         canvas.pixels = new uint8_t[static_cast<int32_t>(
             static_cast<int16_t>((canvas.dim.width + 7) >> 3) * canvas.dim.height)];
@@ -27,9 +27,10 @@ auto main(int argc, char **argv) -> int {
                                     canvas.dim.height));
     } else {
         canvas.pixels = new uint8_t[static_cast<int32_t>(canvas.dim.width * canvas.dim.height)];
-        memset(canvas.pixels, WHITE_EIGHT_BITS, static_cast<int32_t>(canvas.dim.width * canvas.dim.height));
+        memset(canvas.pixels, WHITE_EIGHT_BITS,
+               static_cast<int32_t>(canvas.dim.width * canvas.dim.height));
     }
-    fnt->drawSingleLineOfText(canvas, IBMFDefs::Pos(010, 25), argv[1]);
+    fnt->drawSingleLineOfText(canvas, ibmf_defs::Pos(010, 25), argv[1]);
     face->showBitmap(canvas);
 
     delete[] canvas.pixels;
@@ -39,7 +40,7 @@ auto main(int argc, char **argv) -> int {
 
 #ifdef TEST_UTF8
 
-#include "UI/Fonts/IBMFDriver/Utf8Iterator.hpp"
+#include "UI/Fonts/IBMFDriver/UTF8Iterator.hpp"
 
 int main() {
     const std::string testStr = "Alélo";

@@ -6,7 +6,18 @@
 //---  ESP_IDF
 //#include <esp_log.h>
 
-const constexpr bool IBMF_TRACING = true;
+const constexpr bool IBMF_TRACING = false;
+
+#define LATIN_SUPPORT 0
+#define OPTICAL_KERNING 1
+
+#if OPTICAL_KERNING
+const constexpr int K_BUFF_WIDTH = 40;
+const constexpr int K_BUFF_HEIGHT = 25;
+const constexpr int K_ORIGIN_X = 5;
+const constexpr int K_ORIGIN_Y = 19;
+const constexpr int KERNING_SIZE = 1;
+#endif
 
 // The following is used when testing the driver outside of this application
 #if IBMF_TESTING
@@ -80,7 +91,7 @@ extern char *formatStr(const std::string &format, ...);
 //
 // clang-format on
 
-namespace IBMFDefs {
+namespace ibmf_defs {
 
 #define LOGI(format, ...) log_i(format, ##__VA_ARGS__)
 #define LOGW(format, ...) log_w(format, ##__VA_ARGS__)
@@ -108,7 +119,7 @@ const constexpr uint8_t MAX_FACE_COUNT = 10;
 
 const constexpr uint8_t NO_LIG_KERN_PGM = 0xFF;
 
-// Character Sets
+// Character Sets being supported (the UTF32 is forecoming)
 
 enum FontFormat : uint8_t { LATIN = 0, UTF32 = 1, UNKNOWN = 7 };
 
@@ -123,14 +134,14 @@ struct Dim {
     int16_t width;
     int16_t height;
     Dim(uint16_t w, uint16_t h) : width(w), height(h) {}
-    Dim() {}
+    Dim() = default;
 };
 
 struct Pos {
     int16_t x;
     int16_t y;
     Pos(int16_t xpos, int16_t ypos) : x(xpos), y(ypos) {}
-    Pos() {}
+    Pos() = default;
 };
 
 typedef uint8_t *MemoryPtr;
@@ -215,8 +226,6 @@ struct FaceHeader {
     uint16_t glyphCount;       // Must be the same for all face
     uint16_t ligKernStepCount; // Length of the Ligature/Kerning table
     uint32_t pixelsPoolSize;   // Size of the Pixels Pool
-    // uint8_t maxHight;          // The maximum hight in pixels of every glyph in the face
-    // uint8_t filler[3];         // To keep the struct to be at a frontier of 32 bits
 };
 typedef FaceHeader *FaceHeaderPtr;
 typedef uint8_t (*PixelsPoolPtr)[];
@@ -408,6 +417,7 @@ struct GlyphInfo {
     FIX16 advance;           // Normal advance to the next glyph position in line
     RLEMetrics rleMetrics;   // RLE Compression information
     uint8_t ligKernPgmIndex; // = 255 if none, Index in the ligature/kern array
+    GlyphCode mainCode;      // Main composite (or not) glyphCode for kerning matching algo
 };
 typedef GlyphInfo (*GlyphsInfoPtr)[];
 
@@ -476,6 +486,7 @@ struct Glyph {
 const constexpr GlyphCode SPACE_CODE = 0x7FFE;
 const constexpr GlyphCode NO_GLYPH_CODE = 0x7FFF;
 
+#if LATIN_SUPPORT
 // Latin Character Set constants (FontFormat 0)
 
 const constexpr uint16_t LATIN_GLYPH_CODE_MASK = 0x7FF;
@@ -500,7 +511,7 @@ const constexpr GlyphCode APOSTROPHE = 0x27;
 //
 // The index in the table corresponds to UTF16 U+00A1 to U+017F CodePoints.
 
-const constexpr GlyphCode latinTranslationSet[] = {
+const constexpr GlyphCode LATIN_TRANSLATION_SET[] = {
     /* 0x0A1 */ 0x0020, // ¡
     /* 0x0A2 */ 0x0098, // ¢
     /* 0x0A3 */ 0x008B, // £
@@ -734,4 +745,6 @@ const constexpr GlyphCode latinTranslationSet[] = {
     /* 0x17F */ 0x00FF  // ſ   ???
 };
 
-} // namespace IBMFDefs
+#endif
+
+} // namespace ibmf_defs

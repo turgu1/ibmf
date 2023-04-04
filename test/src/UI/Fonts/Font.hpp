@@ -7,8 +7,8 @@ private:
     FontType type_;
 
 public:
-    inline auto isA(FontType fontType) const -> bool { return fontType == type_; }
-    virtual auto yAdvance() const -> int = 0;
+    [[nodiscard]] inline auto isA(FontType fontType) const -> bool { return fontType == type_; }
+    [[nodiscard]] virtual auto yAdvance() const -> int = 0;
 
 protected:
     Font(FontType fontType) : type_(fontType) {}
